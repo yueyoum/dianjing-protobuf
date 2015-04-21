@@ -1,0 +1,25 @@
+package Dianjing.protocol.character;
+
+message Character {
+    required int32 id = 1;
+    required string name = 2;
+}
+
+message CharacterNotify {
+    required bytes session = 1;
+    required Character char = 2;
+}
+
+
+// 创建玩家
+message CreateCharacterRequest {
+    required bytes session = 1;
+    required string name = 2;
+}
+
+message CreateCharacterResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+

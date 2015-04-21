@@ -1,0 +1,25 @@
+package Dianjing.protocol.server;
+
+message Server {
+    enum ServerStatus {
+        NEW = 1;
+        HOT = 2;
+    }
+
+    required int32 id = 1;
+    required string name = 2; 
+    required ServerStatus status = 3;
+}
+
+
+message GetServerListRequest {
+    required bytes session = 1;
+}
+
+message GetServerListResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Server servers = 3;
+}
+
+

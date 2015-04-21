@@ -1,0 +1,67 @@
+package Dianjing.protocol.account;
+
+import "world.proto";
+
+// 游客
+message AnonymousAccount {
+    required string token = 1;
+}
+
+// 自有帐号
+message RegularAccount {
+    required string email = 1;
+    required string password = 2;
+}
+
+// 第三方帐号
+message ThirdAccount {
+    required string platform = 1;       // 平台
+    required string uid = 2;            // 第三方帐号在平台的ID
+    optional string param = 3;          // 其他参数
+}
+
+message Account {
+    enum AccountType {
+        NOACCOUNT = 0;
+        ANONYMOUS = 1;
+        REGULAR = 2;
+        THIRD = 3;
+    }
+
+    required AccountType tp = 1;
+    optional AnonymousAccount anonymous = 2;
+    optional RegularAccount regular = 3;
+    optional ThirdAccount third = 4;
+}
+
+
+// 注册
+message RegisterRequest {
+    required bytes session = 1;                // 填充为空
+    required RegularAccount account = 2;
+}
+
+message RegisterResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional RegularAccount account = 3;
+}
+
+// 登录
+message LoginRequest {
+    required bytes session = 1;     // 空
+    required Account account = 2;
+}
+
+message LoginResponse {
+    enum LoginNextStep {
+        OK = 1;             // 一切正常，直接进入游戏
+        CREATE_CHAR = 2;    // 需要创建角色
+        CREATE_CLUB = 3;    // 需要创建俱乐部
+    }
+
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional LoginNextStep step = 3;
+}
+

@@ -1,0 +1,33 @@
+package Dianjing.protocol.club;
+
+message Club {
+    required int32 id = 1;
+    required string name = 2;
+    required string manager = 3;    // 经理人， 玩家名字
+    required int32 flag = 4;        // 战旗
+    required int32 level = 5;       // 等级
+    required int32 renown = 6;      // 声望
+    required int32 vip = 7;
+    required int32 exp = 8;
+    required int32 gold = 9;
+    required int32 sycee = 10;
+}
+
+
+message ClubNotify {
+    required bytes session = 1;
+    required Club club = 2;
+}
+
+
+// 创建俱乐部
+message CreateClubRequest {
+    required bytes session = 1;
+    required string name = 2;
+    required int32 flag = 3;
+}
+
+message CreateClubResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
