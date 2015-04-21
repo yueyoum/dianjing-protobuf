@@ -1,7 +1,5 @@
 package Dianjing.protocol.account;
 
-import "world.proto";
-
 // 游客
 message AnonymousAccount {
     required string token = 1;
