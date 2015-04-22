@@ -3,6 +3,8 @@
         <namespace name="server">
             <protocol name="GetServerListRequest" type="100" command="/servers/" />
             <protocol name="GetServerListResponse" type="101" />
+            <protocol name="StartGameRequest" type="102" command="/start/" />
+            <protocol name="StartGameResponse" type="103" />
         </namespace>
         
         <namespace name="account">

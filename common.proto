@@ -1,0 +1,7 @@
+package Dianjing.protocol.common;
+
+enum NextOperate {
+    OPT_OK = 1;             // 无
+    OPT_CREATE_CHAR = 2;    // 建立角色
+    OPT_CREATE_CLUB = 3;    // 建立俱乐部
+}

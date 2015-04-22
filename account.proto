@@ -1,10 +1,5 @@
 package Dianjing.protocol.account;
 
-// 游客
-message AnonymousAccount {
-    required string token = 1;
-}
-
 // 自有帐号
 message RegularAccount {
     required string email = 1;
@@ -20,16 +15,13 @@ message ThirdAccount {
 
 message Account {
     enum AccountType {
-        NOACCOUNT = 0;
-        ANONYMOUS = 1;
-        REGULAR = 2;
-        THIRD = 3;
+        REGULAR = 1;
+        THIRD = 2;
     }
 
     required AccountType tp = 1;
-    optional AnonymousAccount anonymous = 2;
-    optional RegularAccount regular = 3;
-    optional ThirdAccount third = 4;
+    optional RegularAccount regular = 2;
+    optional ThirdAccount third = 3;
 }
 
 
@@ -52,14 +44,7 @@ message LoginRequest {
 }
 
 message LoginResponse {
-    enum LoginNextStep {
-        OK = 1;             // 一切正常，直接进入游戏
-        CREATE_CHAR = 2;    // 需要创建角色
-        CREATE_CLUB = 3;    // 需要创建俱乐部
-    }
-
     required int32 ret = 1;
     required bytes session = 2;
-    optional LoginNextStep step = 3;
 }
 

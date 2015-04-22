@@ -1,5 +1,7 @@
 package Dianjing.protocol.character;
 
+import "common.proto";
+
 message Character {
     required int32 id = 1;
     required string name = 2;
@@ -20,6 +22,7 @@ message CreateCharacterRequest {
 message CreateCharacterResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Dianjing.protocol.common.NextOperate next = 3;
 }
 
 
