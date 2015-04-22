@@ -1,4 +1,4 @@
-package Dianjing.protocol.server;
+package Dianjing.protocol;
 
 import "common.proto";
 
@@ -33,6 +33,6 @@ message StartGameRequest {
 message StartGameResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Dianjing.protocol.common.NextOperate next = 3;
+    optional NextOperate next = 3;
 }
 

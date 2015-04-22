@@ -1,4 +1,4 @@
-package Dianjing.protocol.account;
+package Dianjing.protocol;
 
 // 自有帐号
 message RegularAccount {

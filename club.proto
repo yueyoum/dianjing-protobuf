@@ -1,4 +1,4 @@
-package Dianjing.protocol.club;
+package Dianjing.protocol;
 
 message Club {
     required int32 id = 1;
