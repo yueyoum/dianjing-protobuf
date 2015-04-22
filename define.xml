@@ -1,27 +1,27 @@
 <namespace name="protocol">
-    <namespace name="server">
+    <file name="server">
         <protocol name="GetServerListRequest" type="100" command="/servers/" />
         <protocol name="GetServerListResponse" type="101" />
         <protocol name="StartGameRequest" type="102" command="/start/" />
         <protocol name="StartGameResponse" type="103" />
-    </namespace>
+    </file>
     
-    <namespace name="account">
+    <file name="account">
         <protocol name="RegisterRequest" type="200" command="/account/register/" />
         <protocol name="RegisterResponse" type="201" />
         <protocol name="LoginRequest" type="202" command="/account/login/" />
         <protocol name="LoginResponse" type="203" />
-    </namespace>
+    </file>
     
-    <namespace name="character">
+    <file name="character">
         <protocol name="CharacterNotify" type="300" />
         <protocol name="CreateCharacterRequest" type="301" command="/character/create/" />
         <protocol name="CreateCharacterResponse" type="302" />
-    </namespace>
+    </file>
     
-    <namespace name="club">
+    <file name="club">
         <protocol name="ClubNotify" type="400" />
         <protocol name="CreateClubRequest" type="401" command="/club/create/" />
         <protocol name="CreateClubResponse" type="402" />
-    </namespace>
+    </file>
 </namespace>

@@ -1,4 +1,4 @@
-package Dianjing.protocol.common;
+package Dianjing.protocol;
 
 enum NextOperate {
     OPT_OK = 1;             // 无
