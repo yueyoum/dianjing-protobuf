@@ -22,7 +22,7 @@ message CreateCharacterRequest {
 message CreateCharacterResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional NextOperate next = 3;
+    optional NextOperate next = 3 [default = OPT_OK];
 }
 
 
