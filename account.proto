@@ -27,7 +27,7 @@ message Account {
 
 // 注册
 message RegisterRequest {
-    required bytes session = 1;                // 填充为空
+    required bytes session = 1;                // session为空
     required RegularAccount account = 2;
 }
 
@@ -39,12 +39,13 @@ message RegisterResponse {
 
 // 登录
 message LoginRequest {
-    required bytes session = 1;     // 空
+    required bytes session = 1;                 // session为空
     required Account account = 2;
 }
 
 message LoginResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Account account = 3;
 }
 
