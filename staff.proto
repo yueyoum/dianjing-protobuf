@@ -1,0 +1,71 @@
+package "Dianjing.staff";
+
+import "common.proto";
+
+message Staff {
+    message StaffSkill {
+        required int32 id = 1;      // skill id
+        required int32 level = 2;   // skill level
+    }
+
+    message TrainingQueue {
+        required int32 id = 1;      // 训练日程ID;
+        required int32 end_at = 2;    // 结束的UTC时间戳
+    }
+
+    required int32 id = 1;
+    required int32 oid = 2;
+    required int32 level = 3;
+    required int32 cur_exp = 4;     // 当前经验
+    required int32 max_exp = 5;     // 当前等级最大经验
+    required int32 status = 6;      // 状态， 对应 staff_status.json
+
+    required int32 jingong = 7;     // 进攻
+    required int32 qianzhi = 8;     // 牵制
+    required int32 xintai = 9;      // 心态
+    required int32 baobing = 10;    // 暴兵
+    required int32 fangshou = 11;   // 防守
+    required int32 yunying = 12;    // 运营
+    required int32 yishi = 13;      // 意识
+    required int32 caozuo = 14;     // 操作
+
+    repeated StaffSkill skills = 15;
+
+    repeated TrainingQueue training_queue = 16;     // 查看其他俱乐部员工的时候不填充
+}
+
+
+message StaffNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Staff staffs = 3;
+}
+
+
+message StaffRemoveNotify {
+    required bytes session = 1;
+    repeated int32 id = 2;
+}
+
+message StaffTrainingRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;    // 员工ID
+    required int32 training_id = 3; // 训练日程ID
+}
+
+message StaffTrainingResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message StaffTrainingGetRewardRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;    // 员工ID
+    required int32 training_id = 3; // 训练日程ID
+}
+
+message StaffTrainingGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+

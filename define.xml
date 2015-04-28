@@ -24,4 +24,13 @@
         <protocol name="CreateClubRequest" type="401" command="/game/club/create/" />
         <protocol name="CreateClubResponse" type="402" reqtype="401" />
     </file>
+
+    <file name="staff">
+        <protocol name="StaffNotify" type="500" />
+        <protocol name="StaffRemoveNotify" type="501" />
+        <protocol name="StaffTrainingRequest" type="502" command="/game/staff/training/" />
+        <protocol name="StaffTrainingResponse" type="503" reqtype="502" />
+        <protocol name="StaffTrainingGetRewardRequest" type="504" command="/game/staff/training/getreward/" />
+        <protocol name="StaffTrainingGetRewardResponse" type="505" reqtype="504" />
+    </file>
 </namespace>
