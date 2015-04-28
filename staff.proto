@@ -1,4 +1,4 @@
-package "Dianjing.staff";
+package Dianjing.protocol;
 
 import "common.proto";
 
