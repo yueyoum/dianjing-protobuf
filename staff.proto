@@ -8,8 +8,8 @@ message Staff {
         required int32 level = 2;   // skill level
     }
 
-    message TrainingSlot = {
-        enum TrainingSlotStatus = {
+    message TrainingSlot {
+        enum TrainingSlotStatus {
             TS_CLOSED = 1;          // 未开启的插槽
             TS_EMPTY = 2;           // 空训练插槽
             TS_QUEUE = 3;           // 有排队的训练
