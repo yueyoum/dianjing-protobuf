@@ -1,4 +1,8 @@
 <namespace name="protocol">
+    <file name="common">
+        <protocol name="UTCNotify" type="10" />
+    </file>
+
     <file name="server">
         <protocol name="GetServerListRequest" type="100" command="/game/servers/" />
         <protocol name="GetServerListResponse" type="101" reqtype="100" />

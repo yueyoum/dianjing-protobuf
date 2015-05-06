@@ -13,3 +13,7 @@ enum Action {
     ACT_UPDATE = 3;         // 更新
 }
 
+
+message UTCNotify {
+    required int64 timestamp = 1;     // utc timestamp
+}
