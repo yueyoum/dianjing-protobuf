@@ -18,8 +18,9 @@ message Staff {
         }
 
         required TrainingSlotStatus status = 1;
-        optional int32 id = 2;      // 训练日程ID
-        optional int64 end_at = 3;  // 结束的UTC时间戳
+        optional int64 slot_id = 2 [default = 0];     // 插槽ID  没有训练的填充0
+        optional int32 training_id = 3; // 训练日程ID
+        optional int64 end_at = 4;      // 结束的UTC时间戳
     }
 
     required int32 id = 1;
@@ -69,8 +70,7 @@ message StaffTrainingResponse {
 
 message StaffTrainingGetRewardRequest {
     required bytes session = 1;
-    required int32 staff_id = 2;    // 员工ID
-    required int32 training_id = 3; // 训练日程ID
+    required int64 slot_id = 2;    // 插槽ID
 }
 
 message StaffTrainingGetRewardResponse {
