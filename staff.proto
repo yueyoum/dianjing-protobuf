@@ -8,9 +8,18 @@ message Staff {
         required int32 level = 2;   // skill level
     }
 
-    message TrainingQueue {
-        required int32 id = 1;      // 训练日程ID;
-        required int32 end_at = 2;    // 结束的UTC时间戳
+    message TrainingSlot = {
+        enum TrainingSlotStatus = {
+            TS_CLOSED = 1;          // 未开启的插槽
+            TS_EMPTY = 2;           // 空训练插槽
+            TS_QUEUE = 3;           // 有排队的训练
+            TS_TRAINING = 4;        // 有已经开始的训练
+            TS_FINISHED = 5;        // 已经结束的训练
+        }
+
+        required TrainingSlotStatus status = 1;
+        optional int32 id = 1;      // 训练日程ID
+        optional int32 end_at = 2;  // 结束的UTC时间戳
     }
 
     required int32 id = 1;
@@ -31,7 +40,7 @@ message Staff {
 
     repeated StaffSkill skills = 15;
 
-    repeated TrainingQueue training_queue = 16;     // 查看其他俱乐部员工的时候不填充
+    repeated TrainingSlot training_slots = 16;     // 查看其他俱乐部员工的时候不填充
 }
 
 
