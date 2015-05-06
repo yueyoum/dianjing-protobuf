@@ -15,5 +15,6 @@ enum Action {
 
 
 message UTCNotify {
-    required int64 timestamp = 1;     // utc timestamp
+    required bytes session = 1;
+    required int64 timestamp = 2;     // utc timestamp
 }
