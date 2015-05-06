@@ -18,8 +18,8 @@ message Staff {
         }
 
         required TrainingSlotStatus status = 1;
-        optional int32 id = 1;      // 训练日程ID
-        optional int32 end_at = 2;  // 结束的UTC时间戳
+        optional int32 id = 2;      // 训练日程ID
+        optional int32 end_at = 3;  // 结束的UTC时间戳
     }
 
     required int32 id = 1;
