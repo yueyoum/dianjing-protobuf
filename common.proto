@@ -13,6 +13,18 @@ enum Action {
     ACT_UPDATE = 3;         // 更新
 }
 
+enum LeagueLevel {
+    LEAGUE_LEVEL_1 = 1;     // 青铜三
+    LEAGUE_LEVEL_2 = 1;     // 青铜二
+    LEAGUE_LEVEL_3 = 1;     // 青铜一
+    LEAGUE_LEVEL_4 = 1;     // 白银三
+    LEAGUE_LEVEL_5 = 1;     // 白银二
+    LEAGUE_LEVEL_6 = 1;     // 白银一
+    LEAGUE_LEVEL_7 = 1;     // 黄金三
+    LEAGUE_LEVEL_8 = 1;     // 黄金二
+    LEAGUE_LEVEL_9 = 1;     // 黄金一
+}
+
 
 message UTCNotify {
     required bytes session = 1;

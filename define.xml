@@ -37,4 +37,8 @@
         <protocol name="StaffTrainingGetRewardRequest" type="504" command="/game/staff/training/getreward/" />
         <protocol name="StaffTrainingGetRewardResponse" type="505" reqtype="504" />
     </file>
+
+    <file name="league">
+        <protocol name="LeagueNotify" type="600" />
+    </file>
 </namespace>

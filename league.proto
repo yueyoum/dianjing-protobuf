@@ -1,0 +1,45 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+// 联赛信息
+message League {
+    message LeagueRank {
+        // 排名
+        required int32 id = 1;
+        required string name = 2;
+        required bool is_npc = 3;
+
+        required int32 battle_times = 4;    // 已赛场数
+        required int32 score = 5;           // 积分
+        required int32 winning_rate = 6;    // 胜率
+    }
+
+    message LeaguePair {
+        // 比赛对手
+        message Club {
+            required int32 id = 1;
+            required string name = 2;
+            required bool is_npc = 3;
+            required bool win = 4;  // 如果没有开始， 这里填充false
+        }
+
+        message Club club_one = 1;
+        message Club club_two = 2;
+        message int32 start_at = 3; // UTC timestamp, 0 表示已经结束了
+    }
+
+
+    required LeagueLevel level = 1;     // 联赛等级
+    required int32 current_order=  2;   // 当前第几轮
+
+    repeated LeagueRank ranks = 3;      // 排名
+    repeated LeaguePair pairs = 4;      // 比赛排序
+}
+
+
+message LeagueNotify {
+    required bytes session = 1;
+    required League league = 2;
+}
+
