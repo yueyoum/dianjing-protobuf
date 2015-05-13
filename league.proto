@@ -24,9 +24,9 @@ message League {
             required bool win = 4;  // 如果没有开始， 这里填充false
         }
 
-        message Club club_one = 1;
-        message Club club_two = 2;
-        message int32 start_at = 3; // UTC timestamp, 0 表示已经结束了
+        required Club club_one = 1;
+        required Club club_two = 2;
+        required int32 start_at = 3; // UTC timestamp, 0 表示已经结束了
     }
 
 
