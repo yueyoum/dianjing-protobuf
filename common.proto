@@ -26,6 +26,11 @@ enum LeagueLevel {
 }
 
 
+enum ClubType {
+    CLUB_TYPE_REAL = 1;     // 真实的俱乐部
+    CLUB_TYPE_NPC = 2;      // NPC 俱乐部
+}
+
 message UTCNotify {
     required bytes session = 1;
     required int64 timestamp = 2;     // utc timestamp

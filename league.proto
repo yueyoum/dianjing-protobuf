@@ -6,9 +6,9 @@ import "common.proto";
 message League {
     message LeagueRank {
         // 排名
-        required int32 id = 1;
+        required string id = 1;
         required string name = 2;
-        required bool is_npc = 3;
+        required ClubType tp = 3;
 
         required int32 battle_times = 4;    // 已赛场数
         required int32 score = 5;           // 积分
@@ -18,9 +18,9 @@ message League {
     message LeaguePair {
         // 比赛对手
         message Club {
-            required int32 id = 1;
+            required string id = 1;
             required string name = 2;
-            required bool is_npc = 3;
+            required ClubType tp = 3;
             required bool win = 4;  // 如果没有开始， 这里填充false
         }
 
