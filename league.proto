@@ -86,7 +86,7 @@ message LeagueGetBattleLogResponse {
         }
 
         required LeagueStaff club_one_staff = 1;
-        required LeagueStaff club_two_staff = 1;
+        required LeagueStaff club_two_staff = 2;
     }
 
 
