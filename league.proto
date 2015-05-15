@@ -24,9 +24,10 @@ message League {
             required bool win = 4;  // 如果没有开始， 这里填充false
         }
 
-        required Club club_one = 1;
-        required Club club_two = 2;
-        required int32 start_at = 3; // UTC timestamp, 0 表示已经结束了
+        required string pair_id = 1;
+        required Club club_one = 2;
+        required Club club_two = 3;
+        required int32 battle_at = 4; // UTC timestamp
     }
 
 
@@ -41,5 +42,57 @@ message League {
 message LeagueNotify {
     required bytes session = 1;
     required League league = 2;
+}
+
+
+
+
+// 获取统计请求
+message LeagueGetStatisticsRequest {
+    required bytes session = 1;
+    required string id = 2;
+    required ClubType tp = 3;
+}
+
+
+message LeagueGetStatisticsResponse {
+    message LeagueStatistics {
+        required int32 staff_oid = 1;
+        required int32 winning_rate_to_terran = 2;  // 对人族胜率
+        required int32 winning_rate_to_zerg = 3;    // 对种族胜率
+        required int32 winning_rate_to_protoss = 4; // 对神族胜率
+    }
+
+
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated LeagueStatistics statistics = 3;
+}
+
+
+
+// 查看一场比赛
+message LeagueGetBattleLogRequest {
+    required bytes session = 1;
+    required string pair_id = 2;
+}
+
+message LeagueGetBattleLogResponse {
+    message LeagueBattleLog {
+        message LeagueStaff {
+            required int32 staff_oid = 1;
+            required int32 level = 2;
+            required bool win = 3;
+        }
+
+        required LeagueStaff club_one_staff = 1;
+        required LeagueStaff club_two_staff = 1;
+    }
+
+
+    required int32 ret = 1;
+    required bytes session = 2;
+
+    repeated LeagueBattleLog logs = 3;
 }
 

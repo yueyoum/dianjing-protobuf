@@ -40,5 +40,9 @@
 
     <file name="league">
         <protocol name="LeagueNotify" type="600" />
+        <protocol name="LeagueGetStatisticsRequest" type="601" command="/game/league/statistics/" />
+        <protocol name="LeagueGetStatisticsResponse" type="602" reqtype="601" />
+        <protocol name="LeagueGetBattleLogRequest" type="603" command="/game/league/log/" />
+        <protocol name="LeagueGetBattleLogResponse" type="604" reqtype="603" />
     </file>
 </namespace>
