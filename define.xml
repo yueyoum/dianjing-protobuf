@@ -36,6 +36,12 @@
         <protocol name="StaffTrainingResponse" type="503" reqtype="502" />
         <protocol name="StaffTrainingGetRewardRequest" type="504" command="/game/staff/training/getreward/" />
         <protocol name="StaffTrainingGetRewardResponse" type="505" reqtype="504" />
+
+        <protocol name="StaffRecruitNotify" type="520" />
+        <protocol name="StaffRecruitRefreshRequest" type="521" command="/game/staff/recruit/refresh/" />
+        <protocol name="StaffRecruitRefreshResponse" type="522" reqtype="521" />
+        <protocol name="StaffRecruitRequest" type="523" command="/game/staff/recruit/" />
+        <protocol name="staffRecruitResponse" type="524" reqtype="523" />
     </file>
 
     <file name="league">

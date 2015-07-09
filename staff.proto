@@ -2,6 +2,46 @@ package Dianjing.protocol;
 
 import "common.proto";
 
+
+message StaffRecruitNotify {
+    message Recruit {
+        required int32 staff_id = 1;
+        required bool has_recruit = 2;
+    }
+
+    required bytes session = 1;
+    repeated Recruit recruits = 2;
+}
+
+message StaffRecruitRefreshRequest {
+    enum StaffRecruitType {
+        HOT = 1;
+        NORMAL = 2;
+        GOLD = 3;
+        DIAMOND = 4;
+    }
+
+    required bytes session = 1;
+    required StaffRecruitType tp = 2;
+}
+
+message StaffRecruitRefreshResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message StaffRecruitRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+}
+
+message StaffRecruitResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+
 message Staff {
     message StaffSkill {
         required int32 id = 1;      // skill id
