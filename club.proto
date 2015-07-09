@@ -10,7 +10,7 @@ message Club {
     required int32 vip = 7;
     required int32 exp = 8;
     required int32 gold = 9;
-    required int32 sycee = 10;
+    required int32 diamond = 10;
 
     required int32 max_renown = 11; // 当前等级升级最大声望
 }
