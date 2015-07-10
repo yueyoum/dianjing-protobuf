@@ -2,6 +2,12 @@ package Dianjing.protocol;
 
 import "common.proto";
 
+enum StaffRecruitType {
+    RECRUIT_HOT = 1;
+    RECRUIT_NORMAL = 2;
+    RECRUIT_GOLD = 3;
+    RECRUIT_DIAMOND = 4;
+}
 
 message StaffRecruitNotify {
     message Recruit {
@@ -10,17 +16,11 @@ message StaffRecruitNotify {
     }
 
     required bytes session = 1;
-    repeated Recruit recruits = 2;
+    required StaffRecruitType tp = 2;
+    repeated Recruit recruits = 3;
 }
 
 message StaffRecruitRefreshRequest {
-    enum StaffRecruitType {
-        HOT = 1;
-        NORMAL = 2;
-        GOLD = 3;
-        DIAMOND = 4;
-    }
-
     required bytes session = 1;
     required StaffRecruitType tp = 2;
 }
