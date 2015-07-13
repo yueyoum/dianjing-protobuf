@@ -35,3 +35,10 @@ message UTCNotify {
     required bytes session = 1;
     required int64 timestamp = 2;     // utc timestamp
 }
+
+
+message StaffBaseInfo {
+    required int32 id = 1;
+    required int32 level = 2;
+}
+

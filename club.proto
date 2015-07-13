@@ -1,5 +1,7 @@
 package Dianjing.protocol;
 
+import "common.proto";
+
 message Club {
     required int32 id = 1;
     required string name = 2;
@@ -13,6 +15,8 @@ message Club {
     required int32 diamond = 10;
 
     required int32 max_renown = 11; // 当前等级升级最大声望
+
+    repeated StaffBaseInfo match_staffs = 12;    // 出战成员
 }
 
 
