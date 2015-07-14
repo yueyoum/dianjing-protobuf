@@ -17,6 +17,7 @@ message Club {
     required int32 max_renown = 11; // 当前等级升级最大声望
 
     repeated StaffBaseInfo match_staffs = 12;    // 出战成员
+    optional int32 policy = 13;                  // 战术ID
 }
 
 
