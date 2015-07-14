@@ -27,6 +27,11 @@
         <protocol name="ClubNotify" type="400" />
         <protocol name="CreateClubRequest" type="401" command="/game/club/create/" />
         <protocol name="CreateClubResponse" type="402" reqtype="401" />
+
+        <protocol name="ClubSetPolicyRequest" type="410" command="/game/club/policy/" />
+        <protocol name="ClubSetPolicyResponse" type="411" reqtype="410" />
+        <protocol name="ClubSetMatchStaffRequest" type="412" command="/game/club/matchstaff/" />
+        <protocol name="ClubSetMatchStaffResponse" type="413" reqtype="412" />
     </file>
 
     <file name="staff">

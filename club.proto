@@ -16,8 +16,8 @@ message Club {
 
     required int32 max_renown = 11; // 当前等级升级最大声望
 
-    repeated StaffBaseInfo match_staffs = 12;    // 出战成员
-    optional int32 policy = 13;                  // 战术ID
+    repeated StaffBaseInfo match_staffs = 12;        // 出战成员
+    optional int32 policy = 13;                      // 战术ID
 }
 
 
@@ -38,3 +38,30 @@ message CreateClubResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
+
+
+// 设置战术
+message ClubSetPolicyRequest {
+    required bytes session = 1;
+    required int32 policy_id = 2;
+}
+
+message ClubSetPolicyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+
+
+// 安排参赛队员
+message ClubSetMatchStaffRequest {
+    required bytes session = 1;
+    repeated int32 staff_ids = 2;
+}
+
+message ClubSetMatchStaffResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
