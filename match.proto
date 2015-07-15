@@ -12,8 +12,9 @@ message Round {
         required int32 advantage_end = 4;      // 战斗后优势值
     }
 
-    required Staff staff_one = 1;
-    required Staff staff_two = 2;
+    required int32 round_index = 1;
+    required Staff staff_one = 2;
+    required Staff staff_two = 3;
 }
 
 
