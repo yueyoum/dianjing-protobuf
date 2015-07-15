@@ -4,7 +4,8 @@ import "match.proto";
 
 
 message ChallengeNotify {
-    required int32 id = 1;      // 当前要打的挑战赛ID, 0表示全部打完了
+    required bytes session = 1;
+    required int32 id = 2;      // 当前要打的挑战赛ID, 0表示全部打完了
 }
 
 
