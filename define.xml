@@ -56,4 +56,10 @@
         <protocol name="LeagueGetBattleLogRequest" type="603" command="/game/league/log/" />
         <protocol name="LeagueGetBattleLogResponse" type="604" reqtype="603" />
     </file>
+
+    <file name="challenge">
+        <protocol name="ChallengeNotify" type="700" />
+        <protocol name="ChallengeStartRequest" type="701" command="/game/challenge/start/" />
+        <protocol name="ChallengeStartResponse" type="702" reqtype="701" />
+    </file>
 </namespace>

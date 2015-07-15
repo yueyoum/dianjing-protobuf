@@ -1,0 +1,22 @@
+package Dianjing.protocol;
+
+import "match.proto";
+
+
+message ChallengeNotify {
+    required int32 id = 1;      // 当前要打的挑战赛ID, 0表示全部打完了
+}
+
+
+message ChallengeStartRequest {
+    required bytes session = 1;
+}
+
+message ChallengeStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional ClubMatch match = 3;
+}
+
+
+
