@@ -52,13 +52,13 @@ message Staff {
         enum TrainingSlotStatus {
             TS_CLOSED = 1;          // 未开启的插槽
             TS_EMPTY = 2;           // 空训练插槽
-            TS_QUEUE = 3;           // 有排队的训练
-            TS_TRAINING = 4;        // 有已经开始的训练
+            TS_QUEUE = 3;           // 排队中
+            TS_TRAINING = 4;        // 正在训练
             TS_FINISHED = 5;        // 已经结束的训练
         }
 
         required TrainingSlotStatus status = 1;
-        optional int64 slot_id = 2 [default = 0];     // 插槽ID  没有训练的填充0
+        required int32 slot_id = 2;
         optional int32 training_id = 3; // 训练日程ID
         optional int64 end_at = 4;      // 结束的UTC时间戳
     }
@@ -109,7 +109,8 @@ message StaffTrainingResponse {
 
 message StaffTrainingGetRewardRequest {
     required bytes session = 1;
-    required int64 slot_id = 2;    // 插槽ID
+    required int32 staff_id = 2;
+    required int32 slot_id = 3;    // 插槽ID
 }
 
 message StaffTrainingGetRewardResponse {

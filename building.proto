@@ -23,3 +23,14 @@ message BuildingLevelUpResponse {
     required bytes session = 2;
 }
 
+message TrainingBuyRequest {
+    required bytes session = 1;
+    required int32 id = 2;      // 训练ID
+}
+
+message TrainingBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+

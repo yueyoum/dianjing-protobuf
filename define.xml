@@ -67,5 +67,7 @@
         <protocol name="BuildingNotify" type="800" />
         <protocol name="BuildingLevelUpRequest" type="801" command="/game/building/levelup/" />
         <protocol name="BuildingLevelUpResponse" type="802" reqtype="801" />
+        <protocol name="TrainingBuyRequest" type="803" command="/game/building/training/buy/" />
+        <protocol name="TrainingBuyResponse" type="804" reqtype="803" />
     </file>
 </namespace>
