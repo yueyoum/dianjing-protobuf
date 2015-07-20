@@ -1,0 +1,25 @@
+package Dianjing.protocol;
+
+
+message BuildingNotify {
+    message Building {
+        required int32 id = 1;
+        required int32 level = 2;   // 当前等级，不能升级的建筑等级为0
+    }
+
+    required bytes session = 1;
+    repeated Building buildings = 2;
+}
+
+
+message BuildingLevelUpRequest {
+    required bytes session = 1;
+    required int32 id = 2;      // 建筑ID
+}
+
+
+message BuildingLevelUpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+

@@ -62,4 +62,10 @@
         <protocol name="ChallengeStartRequest" type="701" command="/game/challenge/start/" />
         <protocol name="ChallengeStartResponse" type="702" reqtype="701" />
     </file>
+
+    <file name="building">
+        <protocol name="BuildingNotify" type="800" />
+        <protocol name="BuildingLevelUpRequest" type="801" command="/game/building/levelup/" />
+        <protocol name="BuildingLevelUpResponse" type="802" reqtype="801" />
+    </file>
 </namespace>
