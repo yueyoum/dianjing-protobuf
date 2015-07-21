@@ -2,6 +2,15 @@ package Dianjing.protocol;
 
 import "common.proto";
 
+
+// 已经拥有的训练
+message TrainingNotify {
+    required bytes session = 1;
+    repeated int32 ids = 2;
+}
+
+
+
 enum StaffRecruitType {
     RECRUIT_HOT = 1;
     RECRUIT_NORMAL = 2;

@@ -47,6 +47,8 @@
         <protocol name="StaffRecruitRefreshResponse" type="522" reqtype="521" />
         <protocol name="StaffRecruitRequest" type="523" command="/game/staff/recruit/" />
         <protocol name="StaffRecruitResponse" type="524" reqtype="523" />
+
+        <protocol name="TrainingNotify" type="525" />
     </file>
 
     <file name="league">
