@@ -73,6 +73,6 @@
         <protocol name="TrainingNotify" type="900" />
         <protocol name="TrainingRemoveNotify" type="901" />
         <protocol name="TrainingBuyRequest" type="902" command="/game/training/buy/" />
-        <protocol name="TrainingBuyResponse" type="903" reqtype="901" />
+        <protocol name="TrainingBuyResponse" type="903" reqtype="902" />
     </file>    
 </namespace>
