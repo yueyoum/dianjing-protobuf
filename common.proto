@@ -9,8 +9,7 @@ enum NextOperate {
 
 enum Action {
     ACT_INIT = 1;           // 初始化
-    ACT_ADD = 2;            // 添加
-    ACT_UPDATE = 3;         // 更新
+    ACT_UPDATE = 2;         // 更新
 }
 
 enum LeagueLevel {
