@@ -1,0 +1,29 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+message Training {                                                           
+    required int32 id = 1;                                                   
+    required int32 amount = 2;                                               
+}                                                                            
+
+message TrainingNotify {                                                         
+    required bytes session = 1;                                                  
+    required Action act = 2;
+    repeated Training trainings = 3;                                             
+}      
+
+message TrainingRemoveNotify {
+    required bytes session = 1;
+    repeated int32 ids = 2;
+}
+
+message TrainingBuyRequest {
+    required bytes session = 1;
+    required int32 id = 2;      // 训练ID
+}
+
+message TrainingBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}

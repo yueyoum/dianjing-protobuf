@@ -47,8 +47,6 @@
         <protocol name="StaffRecruitRefreshResponse" type="522" reqtype="521" />
         <protocol name="StaffRecruitRequest" type="523" command="/game/staff/recruit/" />
         <protocol name="StaffRecruitResponse" type="524" reqtype="523" />
-
-        <protocol name="TrainingNotify" type="525" />
     </file>
 
     <file name="league">
@@ -69,7 +67,12 @@
         <protocol name="BuildingNotify" type="800" />
         <protocol name="BuildingLevelUpRequest" type="801" command="/game/building/levelup/" />
         <protocol name="BuildingLevelUpResponse" type="802" reqtype="801" />
-        <protocol name="TrainingBuyRequest" type="803" command="/game/building/training/buy/" />
-        <protocol name="TrainingBuyResponse" type="804" reqtype="803" />
     </file>
+
+    <file name="training">
+        <protocol name="TrainingNotify" type="900" />
+        <protocol name="TrainingRemoveNotify" type="901" />
+        <protocol name="TrainingBuyRequest" type="902" command="/game/training/buy/" />
+        <protocol name="TrainingBuyResponse" type="903" reqtype="901" />
+    </file>    
 </namespace>
