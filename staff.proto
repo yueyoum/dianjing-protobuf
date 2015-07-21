@@ -5,8 +5,13 @@ import "common.proto";
 
 // 已经拥有的训练
 message TrainingNotify {
+    message Training {
+        required int32 id = 1;
+        required int32 amount = 2;
+    }
+
     required bytes session = 1;
-    repeated int32 ids = 2;
+    repeated Training trainings = 2;
 }
 
 
