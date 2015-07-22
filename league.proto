@@ -1,5 +1,6 @@
 package Dianjing.protocol;
 
+import "common.proto";
 import "club.proto";
 
 // 联赛小组信息
