@@ -1,18 +1,17 @@
 package Dianjing.protocol;
 
-import "common.proto";
+import "club.proto";
 
-// 联赛信息
+// 联赛小组信息
 message League {
     message LeagueRank {
         // 排名
         required string id = 1;
         required string name = 2;
-        required ClubType tp = 3;
 
-        required int32 battle_times = 4;    // 已赛场数
-        required int32 score = 5;           // 积分
-        required int32 winning_rate = 6;    // 胜率
+        required int32 battle_times = 3;    // 已赛场数
+        required int32 score = 4;           // 积分
+        required int32 winning_rate = 5;    // 胜率
     }
 
     message LeaguePair {
@@ -20,8 +19,7 @@ message League {
         message Club {
             required string id = 1;
             required string name = 2;
-            required ClubType tp = 3;
-            required bool win = 4;  // 如果没有开始， 这里填充false
+            required bool win = 3;          // 如果没有开始， 这里填充false
         }
 
         required string pair_id = 1;
@@ -46,18 +44,16 @@ message LeagueNotify {
 
 
 
-
 // 获取统计请求
 message LeagueGetStatisticsRequest {
     required bytes session = 1;
     required string id = 2;
-    required ClubType tp = 3;
 }
 
 
 message LeagueGetStatisticsResponse {
     message LeagueStatistics {
-        required int32 staff_oid = 1;
+        required int32 staff_id = 1;
         required int32 winning_rate_to_terran = 2;  // 对人族胜率
         required int32 winning_rate_to_zerg = 3;    // 对种族胜率
         required int32 winning_rate_to_protoss = 4; // 对神族胜率
@@ -78,21 +74,9 @@ message LeagueGetBattleLogRequest {
 }
 
 message LeagueGetBattleLogResponse {
-    message LeagueBattleLog {
-        message LeagueStaff {
-            required int32 staff_oid = 1;
-            required int32 level = 2;
-            required bool win = 3;
-        }
-
-        required LeagueStaff club_one_staff = 1;
-        required LeagueStaff club_two_staff = 2;
-    }
-
-
     required int32 ret = 1;
     required bytes session = 2;
 
-    repeated LeagueBattleLog logs = 3;
+    optional ClubMatch match_log = 3;
 }
 
