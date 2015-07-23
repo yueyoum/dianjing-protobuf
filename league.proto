@@ -2,39 +2,42 @@ package Dianjing.protocol;
 
 import "common.proto";
 import "match.proto";
+import "club.proto";
 
 // 联赛小组信息
 message League {
     message LeagueRank {
         // 排名
-        required string id = 1;
-        required string name = 2;
+        required string club_id = 1;
 
-        required int32 battle_times = 3;    // 已赛场数
-        required int32 score = 4;           // 积分
-        required int32 winning_rate = 5;    // 胜率
+        required int32 battle_times = 2;    // 已赛场数
+        required int32 score = 3;           // 积分
+        required int32 winning_rate = 4;    // 胜率
     }
 
-    message LeaguePair {
-        // 比赛对手
-        message Club {
-            required string id = 1;
-            required string name = 2;
-            required bool win = 3;          // 如果没有开始， 这里填充false
+    message LeagueEvent {
+        // 定点分组比赛 一周14组，里面有7对比赛
+        message LeaguePair {
+            // 比赛对手
+            required string pair_id = 1;
+            required string club_one_id = 2;
+            required string club_two_id = 3;
+            required bool club_one_win = 4;
         }
 
-        required string pair_id = 1;
-        required Club club_one = 2;
-        required Club club_two = 3;
-        required int32 battle_at = 4; // UTC timestamp
+        required int32 battle_at = 1; // UTC timestamp
+        required bool finished = 2;   // 是否结束
+        repeated LeaguePair pairs = 3;
     }
 
 
     required LeagueLevel level = 1;     // 联赛等级
     required int32 current_order=  2;   // 当前第几轮
 
-    repeated LeagueRank ranks = 3;      // 排名
-    repeated LeaguePair pairs = 4;      // 比赛排序
+    repeated Club clubs = 3;
+
+    repeated LeagueRank ranks = 4;      // 排名
+    repeated LeagueEvent events = 5;    // 场次
 }
 
 
