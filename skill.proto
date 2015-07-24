@@ -1,0 +1,40 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+message Skill {
+    required int32 id = 1;
+    required int32 level = 2;
+    required bool locked = 3;
+}
+
+message SkillNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    required int32 staff_id = 3;
+    repeated Skill skills = 4;
+}
+
+
+message SkillLockToggleRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+    required int32 skill_id = 3;
+}
+
+
+message SkillLockToggleResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message SkillWashRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+}
+
+message SkillWashResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}

@@ -44,11 +44,6 @@ message StaffRecruitResponse {
 
 
 message Staff {
-    message StaffSkill {
-        required int32 id = 1;      // skill id
-        required int32 level = 2;   // skill level
-    }
-
     message TrainingSlot {
         enum TrainingSlotStatus {
             TS_CLOSED = 1;          // 未开启的插槽
@@ -79,9 +74,7 @@ message Staff {
     required int32 yishi = 12;      // 意识
     required int32 caozuo = 13;     // 操作
 
-    repeated StaffSkill skills = 14;
-
-    repeated TrainingSlot training_slots = 15;     // 查看其他俱乐部员工的时候不填充
+    repeated TrainingSlot training_slots = 14;     // 查看其他俱乐部员工的时候不填充
 }
 
 

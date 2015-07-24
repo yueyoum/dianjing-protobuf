@@ -75,4 +75,12 @@
         <protocol name="TrainingBuyRequest" type="902" command="/game/training/buy/" />
         <protocol name="TrainingBuyResponse" type="903" reqtype="902" />
     </file>    
+
+    <file name="skill">
+        <protocol name="SkillNotify" type="1000" />
+        <protocol name="SkillLockToggleRequest" type="1001" command="/game/skill/locktoggle/" />
+        <protocol name="SkillLockToggleResponse" type="1002" reqtype="1001" />
+        <protocol name="SkillWashRequest" type="1003" command="/game/skill/wash/" />
+        <protocol name="SkillWashResponse" type="1004" reqtype="1003" />
+    </file>
 </namespace>
