@@ -41,7 +41,15 @@ message StaffRecruitResponse {
     required bytes session = 2;
 }
 
+message StaffFireRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+}
 
+message StaffFireResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 
 message Staff {
     message TrainingSlot {
