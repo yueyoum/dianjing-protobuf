@@ -52,8 +52,6 @@ message ClubSetPolicyResponse {
 }
 
 
-
-
 // 安排参赛队员
 message ClubSetMatchStaffRequest {
     required bytes session = 1;
@@ -61,6 +59,17 @@ message ClubSetMatchStaffRequest {
 }
 
 message ClubSetMatchStaffResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+// 俱乐部升级
+message ClubLevelUpRequest {
+    required bytes session = 1;
+}
+
+message ClubLevelUpResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }

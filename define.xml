@@ -32,6 +32,8 @@
         <protocol name="ClubSetPolicyResponse" type="411" reqtype="410" />
         <protocol name="ClubSetMatchStaffRequest" type="412" command="/game/club/matchstaff/" />
         <protocol name="ClubSetMatchStaffResponse" type="413" reqtype="412" />
+        <protocol name="ClubLevelUpRequest" type="414" command="/game/club/levelup/" />
+        <protocol name="ClubLevelUpResponse" type="415" reqtype="414" />
     </file>
 
     <file name="staff">
