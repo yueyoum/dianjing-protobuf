@@ -1,0 +1,35 @@
+package Dianjing.protocol;
+
+
+message TaskNotify {
+    message Task {
+        required int32 id = 1;      //  task id
+        required int32 num = 2;     //  progress num
+        required int32 status = 3;
+    }
+
+    required bytes session = 1;
+    repeated Task task = 2;
+}
+
+
+message TaskReceivedRequest {
+    required bytes session = 1;
+    required int32 id = 2;          // task ID
+}
+
+
+message TaskReceivedResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message TaskRewardedRequest {
+    required bytes session = 1;
+    required int32 id = 2;          // task ID
+}
+
+message TaskRewardedResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
