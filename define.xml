@@ -88,9 +88,9 @@
     <file name="task">
         <protocol name="TaskNotify" type="1100" />
         <protocol name="TaskReceivedRequest" type="1101" command="/game/task/received/" />
-        <protocol name="TaskReceivedResponse" type="1102" reqtype="901" />
+        <protocol name="TaskReceivedResponse" type="1102" reqtype="1101" />
         <protocol name="TaskRewardedRequest" type="1103" command="/game/task/rewarded/" />
-        <protocol name="TaskRewardedResponse" type="1104" reqtype="903" />
+        <protocol name="TaskRewardedResponse" type="1104" reqtype="1103" />
     </file>
 
 

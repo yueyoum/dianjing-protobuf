@@ -1,11 +1,16 @@
 package Dianjing.protocol;
 
+enum TaskStatus{
+    TASK_DOING = 1;
+    TASK_DONE = 2;
+    TASK_FINISH = 3;
+}
 
 message TaskNotify {
     message Task {
-        required int32 id = 1;      //  task id
-        required int32 num = 2;     //  progress num
-        required int32 status = 3;
+        required int32 id = 1;              //  task id
+        required int32 num = 2;             //  progress num
+        required TaskStatus status = 3;     //  task status
     }
 
     required bytes session = 1;
@@ -13,23 +18,25 @@ message TaskNotify {
 }
 
 
-message TaskReceivedRequest {
+message TaskAcquireRequest {
     required bytes session = 1;
     required int32 id = 2;          // task ID
 }
 
 
-message TaskReceivedResponse {
+message TaskAcquireResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
 
-message TaskRewardedRequest {
+
+message TaskGetRewardRequest {
     required bytes session = 1;
     required int32 id = 2;          // task ID
 }
 
-message TaskRewardedResponse {
+
+message TaskGetRewardedResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
