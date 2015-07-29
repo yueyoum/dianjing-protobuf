@@ -70,6 +70,15 @@ message FriendRemoveResponse {
     required bytes session = 2;
 }
 
+message FriendAcceptRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message FriendAcceptResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 
 message FriendMatchRequest {
     required bytes session = 1;

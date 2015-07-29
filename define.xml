@@ -105,6 +105,8 @@
         <protocol name="FriendRemoveResponse" type="1207" reqtype="1206" />
         <protocol name="FriendMatchRequest" type="1208" command="/game/friend/match/" />
         <protocol name="FriendMatchResponse" type="1209" reqtype="1208" />
+        <protocol name="FriendAcceptRequest" type="1210" command="/game/friend/accept/" />
+        <protocol name="FriendAcceptResponse" type="1211" reqtype="1210" />
     </file>
 
 </namespace>
