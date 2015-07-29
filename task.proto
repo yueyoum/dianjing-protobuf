@@ -1,9 +1,10 @@
 package Dianjing.protocol;
 
 enum TaskStatus{
+    TASK_UNRECEIVED = 0;
     TASK_DOING = 1;
-    TASK_DONE = 2;
-    TASK_FINISH = 3;
+    TASK_FINISH = 2;
+    TASK_END = 3;
 }
 
 message TaskNotify {
