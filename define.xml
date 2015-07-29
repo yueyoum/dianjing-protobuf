@@ -94,4 +94,17 @@
         <protocol name="TaskGetRewardResponse" type="1104" reqtype="1103" />
     </file>
 
+    <file name="friend">
+        <protocol name="FriendNotify" type="1200" />
+        <protocol name="FriendRemoveNotify" type="1201" />
+        <protocol name="FriendGetInfoRequest" type="1202" command="/game/friend/info/" />
+        <protocol name="FriendGetInfoResponse" type="1203" reqtype="1202" />
+        <protocol name="FriendAddRequest" type="1204" command="/game/friend/add/" />
+        <protocol name="FriendAddResponse" type="1205" reqtype="1204" />
+        <protocol name="FriendRemoveRequest" type="1206" command="/game/friend/remove/" />
+        <protocol name="FriendRemoveResponse" type="1207" reqtype="1206" />
+        <protocol name="FriendMatchRequest" type="1208" command="/game/friend/match/" />
+        <protocol name="FriendMatchResponse" type="1209" reqtype="1208" />
+    </file>
+
 </namespace>

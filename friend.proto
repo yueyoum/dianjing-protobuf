@@ -1,0 +1,86 @@
+package Dianjing.protocol;
+
+import "character.proto";
+import "club.proto";
+import "common.proto";
+import "match.proto";
+
+enum FriendStatus {
+    FRIEND_NOT = 1;                     // 不是好友
+    FRIEND_NEED_PEER_CONFIRM = 2;       // 需要对方确认 自己添加别人
+    FRIEND_NEED_SELF_CONFIRM = 3;       // 需要自己确认 别人添加自己
+    FRIEND_OK = 4;                      // 好友
+}
+
+message FriendNotify {
+    message Friend {
+        required FriendStatus status = 1;
+        required int32 id = 2;
+        required string name = 3;
+        required string avatar = 4;
+        required string club_name = 5;
+        required int32 club_flag = 6;
+        required int32 club_gold = 7;
+        required int32 club_level = 8;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Friend friends = 3;
+}
+
+message FriendRemoveNotify {
+    required bytes session = 1;
+    repeated int32 ids = 2;
+}
+
+
+message FriendGetInfoRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+
+message FriendGetInfoResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+
+    required Character char = 3;
+    required Club club = 4;
+}
+
+
+message FriendAddRequest {
+    required bytes session = 1;
+    required string name = 2;
+}
+
+message FriendAddResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message FriendRemoveRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message FriendRemoveResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message FriendMatchRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+
+message FriendMatchResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional ClubMatch match = 3;
+}
+
+
