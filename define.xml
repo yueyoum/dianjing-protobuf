@@ -85,6 +85,7 @@
         <protocol name="SkillWashRequest" type="1003" command="/game/skill/wash/" />
         <protocol name="SkillWashResponse" type="1004" reqtype="1003" />
     </file>
+
     <file name="task">
         <protocol name="TaskNotify" type="1100" />
         <protocol name="TaskReceivedRequest" type="1101" command="/game/task/received/" />
@@ -92,6 +93,5 @@
         <protocol name="TaskRewardedRequest" type="1103" command="/game/task/rewarded/" />
         <protocol name="TaskRewardedResponse" type="1104" reqtype="1103" />
     </file>
-
-
+    
 </namespace>
