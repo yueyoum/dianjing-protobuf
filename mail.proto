@@ -1,0 +1,84 @@
+package Dianjing.protocol;
+
+import "character.proto";
+import "common.proto";
+import "package.proto";
+
+enum MailFromType {
+    MAIL_FROM_SYSTEM = 1;
+    MAIL_FROM_USER = 2;
+}
+
+message MailFrom {
+    required MailFromType from_type = 1;
+    optional Character char = 2;
+}
+
+message Mail {
+    required string id = 1;
+    required MailFrom mail_from = 2;
+    required string title = 3;
+    required string content = 4;
+    required bool has_read = 5;
+    required int32 create_at = 6;   // UTC timestamp
+    required int32 remained_seconds = 7;    // 到自动删除，剩余秒数
+    optional Package attachment = 8;       // 附件
+}
+
+
+message MailNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Mail mails = 3;
+}
+
+
+message MailSendRequest {
+    required bytes session = 1;
+    required int32 id = 2;      // 角色ID
+}
+
+message MailSendResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message MailRemoveNotify {
+    required bytes session = 1;
+    repeated int32 ids = 2;
+}
+
+
+message MailOpenRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+message MailOpenResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message MailDeleteRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+message MailDeleteResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message MailGetAttachmentRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message MailGetAttachmentResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Package attachment = 3;
+}
+
