@@ -34,14 +34,16 @@ message MailNotify {
 
 message MailRemoveNotify {
     required bytes session = 1;
-    repeated int32 ids = 2;
+    repeated string ids = 2;
 }
 
 
 message MailSendRequest {
     required bytes session = 1;
-    required int32 id = 2;      // 角色ID
+    required int32 to_id = 2;      // 角色ID
+    required string content = 3;
 }
+
 
 message MailSendResponse {
     required int32 ret = 1;
