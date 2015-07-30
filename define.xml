@@ -1,112 +1,125 @@
-<namespace name="protocol">
-    <file name="common">
-        <protocol name="UTCNotify" type="10" />
+<namespace name = "protocol">
+    <file name = "common">
+        <protocol name = "UTCNotify" type = "10" />
     </file>
 
-    <file name="server">
-        <protocol name="GetServerListRequest" type="100" command="/game/servers/" />
-        <protocol name="GetServerListResponse" type="101" reqtype="100" />
-        <protocol name="StartGameRequest" type="102" command="/game/start/" />
-        <protocol name="StartGameResponse" type="103" reqtype="102" />
+    <file name = "server">
+        <protocol name = "GetServerListRequest" type = "100" command = "/game/servers/" />
+        <protocol name = "GetServerListResponse" type = "101" reqtype = "100" />
+        <protocol name = "StartGameRequest" type = "102" command = "/game/start/" />
+        <protocol name = "StartGameResponse" type = "103" reqtype = "102" />
     </file>
     
-    <file name="account">
-        <protocol name="RegisterRequest" type="200" command="/game/account/register/" />
-        <protocol name="RegisterResponse" type="201" reqtype="200" />
-        <protocol name="LoginRequest" type="202" command="/game/account/login/" />
-        <protocol name="LoginResponse" type="203" reqtype="202" />
+    <file name = "account">
+        <protocol name = "RegisterRequest" type = "200" command = "/game/account/register/" />
+        <protocol name = "RegisterResponse" type = "201" reqtype = "200" />
+        <protocol name = "LoginRequest" type = "202" command = "/game/account/login/" />
+        <protocol name = "LoginResponse" type = "203" reqtype = "202" />
     </file>
     
-    <file name="character">
-        <protocol name="CharacterNotify" type="300" />
-        <protocol name="CreateCharacterRequest" type="301" command="/game/character/create/" />
-        <protocol name="CreateCharacterResponse" type="302" reqtype="301" />
+    <file name = "character">
+        <protocol name = "CharacterNotify" type = "300" />
+        <protocol name = "CreateCharacterRequest" type = "301" command = "/game/character/create/" />
+        <protocol name = "CreateCharacterResponse" type = "302" reqtype = "301" />
     </file>
     
-    <file name="club">
-        <protocol name="ClubNotify" type="400" />
-        <protocol name="CreateClubRequest" type="401" command="/game/club/create/" />
-        <protocol name="CreateClubResponse" type="402" reqtype="401" />
+    <file name = "club">
+        <protocol name = "ClubNotify" type = "400" />
+        <protocol name = "CreateClubRequest" type = "401" command = "/game/club/create/" />
+        <protocol name = "CreateClubResponse" type = "402" reqtype = "401" />
 
-        <protocol name="ClubSetPolicyRequest" type="410" command="/game/club/policy/" />
-        <protocol name="ClubSetPolicyResponse" type="411" reqtype="410" />
-        <protocol name="ClubSetMatchStaffRequest" type="412" command="/game/club/matchstaff/" />
-        <protocol name="ClubSetMatchStaffResponse" type="413" reqtype="412" />
+        <protocol name = "ClubSetPolicyRequest" type = "410" command = "/game/club/policy/" />
+        <protocol name = "ClubSetPolicyResponse" type = "411" reqtype = "410" />
+        <protocol name = "ClubSetMatchStaffRequest" type = "412" command = "/game/club/matchstaff/" />
+        <protocol name = "ClubSetMatchStaffResponse" type = "413" reqtype = "412" />
     </file>
 
-    <file name="staff">
-        <protocol name="StaffNotify" type="500" />
-        <protocol name="StaffRemoveNotify" type="501" />
-        <protocol name="StaffTrainingRequest" type="502" command="/game/staff/training/" />
-        <protocol name="StaffTrainingResponse" type="503" reqtype="502" />
-        <protocol name="StaffTrainingGetRewardRequest" type="504" command="/game/staff/training/getreward/" />
-        <protocol name="StaffTrainingGetRewardResponse" type="505" reqtype="504" />
+    <file name = "staff">
+        <protocol name = "StaffNotify" type = "500" />
+        <protocol name = "StaffRemoveNotify" type = "501" />
+        <protocol name = "StaffTrainingRequest" type = "502" command = "/game/staff/training/" />
+        <protocol name = "StaffTrainingResponse" type = "503" reqtype = "502" />
+        <protocol name = "StaffTrainingGetRewardRequest" type = "504" command = "/game/staff/training/getreward/" />
+        <protocol name = "StaffTrainingGetRewardResponse" type = "505" reqtype = "504" />
 
-        <protocol name="StaffRecruitNotify" type="520" />
-        <protocol name="StaffRecruitRefreshRequest" type="521" command="/game/staff/recruit/refresh/" />
-        <protocol name="StaffRecruitRefreshResponse" type="522" reqtype="521" />
-        <protocol name="StaffRecruitRequest" type="523" command="/game/staff/recruit/" />
-        <protocol name="StaffRecruitResponse" type="524" reqtype="523" />
-        <protocol name="StaffFireRequest" type="525" command="/game/staff/fire/" />
-        <protocol name="StaffFireResponse" type="526" reqtype="525" />
+        <protocol name = "StaffRecruitNotify" type = "520" />
+        <protocol name = "StaffRecruitRefreshRequest" type = "521" command = "/game/staff/recruit/refresh/" />
+        <protocol name = "StaffRecruitRefreshResponse" type = "522" reqtype = "521" />
+        <protocol name = "StaffRecruitRequest" type = "523" command = "/game/staff/recruit/" />
+        <protocol name = "StaffRecruitResponse" type = "524" reqtype = "523" />
+        <protocol name = "StaffFireRequest" type = "525" command = "/game/staff/fire/" />
+        <protocol name = "StaffFireResponse" type = "526" reqtype = "525" />
     </file>
 
-    <file name="league">
-        <protocol name="LeagueNotify" type="600" />
-        <protocol name="LeagueGetStatisticsRequest" type="601" command="/game/league/statistics/" />
-        <protocol name="LeagueGetStatisticsResponse" type="602" reqtype="601" />
-        <protocol name="LeagueGetBattleLogRequest" type="603" command="/game/league/log/" />
-        <protocol name="LeagueGetBattleLogResponse" type="604" reqtype="603" />
+    <file name = "league">
+        <protocol name = "LeagueNotify" type = "600" />
+        <protocol name = "LeagueGetStatisticsRequest" type = "601" command = "/game/league/statistics/" />
+        <protocol name = "LeagueGetStatisticsResponse" type = "602" reqtype = "601" />
+        <protocol name = "LeagueGetBattleLogRequest" type = "603" command = "/game/league/log/" />
+        <protocol name = "LeagueGetBattleLogResponse" type = "604" reqtype = "603" />
     </file>
 
-    <file name="challenge">
-        <protocol name="ChallengeNotify" type="700" />
-        <protocol name="ChallengeStartRequest" type="701" command="/game/challenge/start/" />
-        <protocol name="ChallengeStartResponse" type="702" reqtype="701" />
+    <file name = "challenge">
+        <protocol name = "ChallengeNotify" type = "700" />
+        <protocol name = "ChallengeStartRequest" type = "701" command = "/game/challenge/start/" />
+        <protocol name = "ChallengeStartResponse" type = "702" reqtype = "701" />
     </file>
 
-    <file name="building">
-        <protocol name="BuildingNotify" type="800" />
-        <protocol name="BuildingLevelUpRequest" type="801" command="/game/building/levelup/" />
-        <protocol name="BuildingLevelUpResponse" type="802" reqtype="801" />
+    <file name = "building">
+        <protocol name = "BuildingNotify" type = "800" />
+        <protocol name = "BuildingLevelUpRequest" type = "801" command = "/game/building/levelup/" />
+        <protocol name = "BuildingLevelUpResponse" type = "802" reqtype = "801" />
     </file>
 
-    <file name="training">
-        <protocol name="TrainingNotify" type="900" />
-        <protocol name="TrainingRemoveNotify" type="901" />
-        <protocol name="TrainingBuyRequest" type="902" command="/game/training/buy/" />
-        <protocol name="TrainingBuyResponse" type="903" reqtype="902" />
+    <file name = "training">
+        <protocol name = "TrainingNotify" type = "900" />
+        <protocol name = "TrainingRemoveNotify" type = "901" />
+        <protocol name = "TrainingBuyRequest" type = "902" command = "/game/training/buy/" />
+        <protocol name = "TrainingBuyResponse" type = "903" reqtype = "902" />
     </file>    
 
-    <file name="skill">
-        <protocol name="SkillNotify" type="1000" />
-        <protocol name="SkillLockToggleRequest" type="1001" command="/game/skill/locktoggle/" />
-        <protocol name="SkillLockToggleResponse" type="1002" reqtype="1001" />
-        <protocol name="SkillWashRequest" type="1003" command="/game/skill/wash/" />
-        <protocol name="SkillWashResponse" type="1004" reqtype="1003" />
+    <file name = "skill">
+        <protocol name = "SkillNotify" type = "1000" />
+        <protocol name = "SkillLockToggleRequest" type = "1001" command = "/game/skill/locktoggle/" />
+        <protocol name = "SkillLockToggleResponse" type = "1002" reqtype = "1001" />
+        <protocol name = "SkillWashRequest" type = "1003" command = "/game/skill/wash/" />
+        <protocol name = "SkillWashResponse" type = "1004" reqtype = "1003" />
     </file>
 
-    <file name="task">
-        <protocol name="TaskNotify" type="1100" />
-        <protocol name="TaskAcquireRequest" type="1101" command="/game/task/acquire/" />
-        <protocol name="TaskAcquireResponse" type="1102" reqtype="1101" />
-        <protocol name="TaskGetRewardRequest" type="1103" command="/game/task/getreward/" />
-        <protocol name="TaskGetRewardResponse" type="1104" reqtype="1103" />
+    <file name = "task">
+        <protocol name = "TaskNotify" type = "1100" />
+        <protocol name = "TaskAcquireRequest" type = "1101" command = "/game/task/acquire/" />
+        <protocol name = "TaskAcquireResponse" type = "1102" reqtype = "1101" />
+        <protocol name = "TaskGetRewardRequest" type = "1103" command = "/game/task/getreward/" />
+        <protocol name = "TaskGetRewardResponse" type = "1104" reqtype = "1103" />
     </file>
 
-    <file name="friend">
-        <protocol name="FriendNotify" type="1200" />
-        <protocol name="FriendRemoveNotify" type="1201" />
-        <protocol name="FriendGetInfoRequest" type="1202" command="/game/friend/info/" />
-        <protocol name="FriendGetInfoResponse" type="1203" reqtype="1202" />
-        <protocol name="FriendAddRequest" type="1204" command="/game/friend/add/" />
-        <protocol name="FriendAddResponse" type="1205" reqtype="1204" />
-        <protocol name="FriendRemoveRequest" type="1206" command="/game/friend/remove/" />
-        <protocol name="FriendRemoveResponse" type="1207" reqtype="1206" />
-        <protocol name="FriendMatchRequest" type="1208" command="/game/friend/match/" />
-        <protocol name="FriendMatchResponse" type="1209" reqtype="1208" />
-        <protocol name="FriendAcceptRequest" type="1210" command="/game/friend/accept/" />
-        <protocol name="FriendAcceptResponse" type="1211" reqtype="1210" />
+    <file name = "friend">
+        <protocol name = "FriendNotify" type = "1200" />
+        <protocol name = "FriendRemoveNotify" type = "1201" />
+        <protocol name = "FriendGetInfoRequest" type = "1202" command = "/game/friend/info/" />
+        <protocol name = "FriendGetInfoResponse" type = "1203" reqtype = "1202" />
+        <protocol name = "FriendAddRequest" type = "1204" command = "/game/friend/add/" />
+        <protocol name = "FriendAddResponse" type = "1205" reqtype = "1204" />
+        <protocol name = "FriendRemoveRequest" type = "1206" command = "/game/friend/remove/" />
+        <protocol name = "FriendRemoveResponse" type = "1207" reqtype = "1206" />
+        <protocol name = "FriendMatchRequest" type = "1208" command = "/game/friend/match/" />
+        <protocol name = "FriendMatchResponse" type = "1209" reqtype = "1208" />
+        <protocol name = "FriendAcceptRequest" type = "1210" command = "/game/friend/accept/" />
+        <protocol name = "FriendAcceptResponse" type = "1211" reqtype = "1210" />
+    </file>
+
+    <file name = "mail">
+        <protocol name = "MailNotify" type = "1300" />
+        <protocol name = "MailRemoveNotify" type = "1301" />
+        <protocol name = "MailSendRequest" type = "1302" command = "/game/mail/send/" />
+        <protocol name = "MailSendResponse" type = "1303" reqtype = "1302" />
+        <protocol name = "MailOpenRequest" type = "1304" command = "/game/mail/open/" />
+        <protocol name = "MailOpenResponse" type = "1305" reqtype = "1304" />
+        <protocol name = "MailDeleteRequest" type = "1306" command = "/game/mail/delete/" />
+        <protocol name = "MailDeleteResponse" type = "1307" reqtype = "1306" />
+        <protocol name = "MailGetAttachmentRequest" type = "1308" command = "/game/mail/getattachment/" />
+        <protocol name = "MailGetAttachmentResponse" type = "1309" reqtype = "1308" />
     </file>
 
 </namespace>
