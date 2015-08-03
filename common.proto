@@ -41,3 +41,15 @@ message StaffBaseInfo {
     required int32 level = 2;
 }
 
+
+message SyncRequest {
+    required bytes session = 1;
+}
+
+
+message SyncResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+

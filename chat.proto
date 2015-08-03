@@ -1,0 +1,36 @@
+package Dianjing.protocol;
+
+
+enum ChatChannel {
+    CHAT_CHANNEL_SYSTEM = 1;
+    CHAT_CHANNEL_PUBLIC = 2;
+    CHAT_CHANNEL_UNION = 3;
+}
+
+message ChatCharacter {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 vip = 3;
+}
+
+message ChatMessage {
+    required ChatChannel channel = 1;
+    required ChatCharacter char = 2;
+    required string msg = 3;
+}
+
+message ChatNotify {
+    required bytes session = 1;
+    repeated ChatMessage msgs = 2;
+}
+
+message ChatSendRequest {
+    required bytes session = 1;
+    required string msg = 2;
+}
+
+message ChatSendResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+

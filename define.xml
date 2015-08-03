@@ -1,6 +1,8 @@
 <namespace name = "protocol">
     <file name = "common">
         <protocol name = "UTCNotify" type = "10" />
+        <protocol name = "SyncRequest" type = "11" command = "/game/sync/" />
+        <protocol name = "SyncResponse" type = "12" reqtype = "11" />
     </file>
 
     <file name = "server">
@@ -120,6 +122,12 @@
         <protocol name = "MailDeleteResponse" type = "1307" reqtype = "1306" />
         <protocol name = "MailGetAttachmentRequest" type = "1308" command = "/game/mail/getattachment/" />
         <protocol name = "MailGetAttachmentResponse" type = "1309" reqtype = "1308" />
+    </file>
+
+    <file name = "chat">
+        <protocol name = "ChatNotify" type="1400" />
+        <protocol name = "ChatSendRequest" type="1401" command = "/game/chat/send/" />
+        <protocol name = "ChatSendResponse" type="1402" reqtype = "1401" />
     </file>
 
 </namespace>
