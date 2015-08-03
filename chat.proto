@@ -26,7 +26,8 @@ message ChatNotify {
 
 message ChatSendRequest {
     required bytes session = 1;
-    required string msg = 2;
+    required ChatChannel channel = 2;
+    required string msg = 3;
 }
 
 message ChatSendResponse {
