@@ -1,6 +1,8 @@
 package Dianjing.protocol;
 
 
+import "common.proto";
+
 enum ChatChannel {
     CHAT_CHANNEL_SYSTEM = 1;
     CHAT_CHANNEL_PUBLIC = 2;
@@ -21,7 +23,8 @@ message ChatMessage {
 
 message ChatNotify {
     required bytes session = 1;
-    repeated ChatMessage msgs = 2;
+    required Action act = 2;
+    repeated ChatMessage msgs = 3;
 }
 
 message ChatSendRequest {
