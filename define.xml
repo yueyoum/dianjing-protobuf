@@ -130,4 +130,9 @@
         <protocol name = "ChatSendResponse" type="1402" reqtype = "1401" />
     </file>
 
+    <file name = "notification">
+        <protocol name = "NotificationNotify" type = "1500" />
+    </file>
+
 </namespace>
+
