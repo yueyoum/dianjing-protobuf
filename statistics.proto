@@ -1,0 +1,8 @@
+package Dianjing.protocol;
+
+message FinanceStatisticsNotify {
+    required bytes session = 1;
+    repeated int64 income = 2;
+    repeated int32 expense = 3;
+}
+

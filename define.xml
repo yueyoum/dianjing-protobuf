@@ -134,5 +134,9 @@
         <protocol name = "NotificationNotify" type = "1500" />
     </file>
 
+    <file name = "statistics">
+        <protocol name = "FinanceStatisticsNotify" type = "1600" />
+    </file>
+
 </namespace>
 
