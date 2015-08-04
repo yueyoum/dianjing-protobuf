@@ -4,9 +4,11 @@ import "common.proto";
 
 
 message Notification {
-    required int64 timestamp = 1;
-    required int32 tp = 2;
-    repeated string args = 3;
+    required string id = 1;
+    required int64 timestamp = 2;
+    required int32 tp = 3;
+    repeated string args = 4;
+    required bool opened = 5;
 }
 
 
@@ -14,6 +16,17 @@ message NotificationNotify {
     required bytes session = 1;
     required Action act = 2;
     repeated Notification notifications = 3;
+}
+
+
+message NotificationOpenRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+message NotificationOpenResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
 }
 
 

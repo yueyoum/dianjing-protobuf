@@ -132,6 +132,8 @@
 
     <file name = "notification">
         <protocol name = "NotificationNotify" type = "1500" />
+        <protocol name = "NotificationOpenRequest" type = "1501" command = "/game/notification/open/" />
+        <protocol name = "NotificationOpenResponse" type = "1502" reqtype = "1501" />
     </file>
 
     <file name = "statistics">
