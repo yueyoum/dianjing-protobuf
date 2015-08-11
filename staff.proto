@@ -101,7 +101,7 @@ message StaffRemoveNotify {
 message StaffTrainingRequest {
     required bytes session = 1;
     required int32 staff_id = 2;    // 员工ID
-    required int32 training_id = 3; // 训练日程ID
+    required string training_id = 3; // 训练日程ID
 }
 
 message StaffTrainingResponse {
