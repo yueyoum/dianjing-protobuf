@@ -1,11 +1,30 @@
 package Dianjing.protocol;
 
 import "common.proto";
+import "package.proto";
+
 
 message Training {                                                           
-    required int32 id = 1;                                                   
-    required int32 amount = 2;                                               
+    required string id = 1;                                                   
+    required int32 oid = 2;
+    optional Item item = 3;
 }                                                                            
+
+// 训练商店
+message TrainingStoreNotify {
+    required bytes session = 1;
+    repeated Training trainings = 2;
+}
+
+message TrainingStoreRefreshRequest {
+    required bytes session = 1;
+}
+
+message TrainingStoreRefreshResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 
 message TrainingNotify {                                                         
     required bytes session = 1;                                                  
@@ -13,17 +32,19 @@ message TrainingNotify {
     repeated Training trainings = 3;                                             
 }      
 
+
 message TrainingRemoveNotify {
     required bytes session = 1;
-    repeated int32 ids = 2;
+    repeated string ids = 2;
 }
 
 message TrainingBuyRequest {
     required bytes session = 1;
-    required int32 id = 2;      // 训练ID
+    required string id = 2;      // 训练ID
 }
 
 message TrainingBuyResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
+
