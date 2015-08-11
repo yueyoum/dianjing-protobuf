@@ -81,6 +81,7 @@
         <protocol name = "TrainingStoreNotify" type = "904" />
         <protocol name = "TrainingStoreRefreshRequest" type = "905" command = "/game/training/refresh/" />
         <protocol name = "TrainingStoreRefreshResponse" type = "906" reqtype = "905" />
+        <protocol name = "TrainingStoreRemoveNotify" type = "907" />
     </file>    
 
     <file name = "skill">

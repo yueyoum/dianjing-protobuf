@@ -13,7 +13,13 @@ message Training {
 // 训练商店
 message TrainingStoreNotify {
     required bytes session = 1;
-    repeated Training trainings = 2;
+    required Action act = 2;
+    repeated Training trainings = 3;
+}
+
+message TrainingStoreRemoveNotify {
+    required bytes session = 1;
+    repeated string ids = 2;
 }
 
 message TrainingStoreRefreshRequest {
@@ -24,6 +30,7 @@ message TrainingStoreRefreshResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
+
 
 
 message TrainingNotify {                                                         
