@@ -1,0 +1,49 @@
+package Dianjing.protocol;
+
+import "match.proto";
+
+message LadderClub {
+    required string id = 1;
+    required string name = 2;
+    required int32 flag = 3;
+    required int32 order = 4;
+}
+
+
+message LadderLog {
+    required int32 template_id = 1;
+    repeated string args = 2;
+}
+
+
+message LadderNotify {
+    required bytes session = 1;
+    repeated LadderClub clubs = 2;
+    required int32 remained_times = 3;  // 剩余次数
+    required int32 my_order = 4;        // 我的排名
+    repeated LadderLog logs = 5;        // 战报
+}
+
+message LadderRefreshRequest {
+    required bytes session = 1;
+}
+
+message LadderRefreshResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message LadderMatchRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+
+message LadderMatchResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional ClubMatch match = 3;
+}
+
+

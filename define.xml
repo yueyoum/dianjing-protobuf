@@ -144,5 +144,13 @@
         <protocol name = "FinanceStatisticsNotify" type = "1600" />
     </file>
 
+    <file name = "ladder">
+        <protocol name = "LadderNotify" type = "1700" />
+        <protocol name = "LadderRefreshRequest" type = "1701" command = "/game/ladder/refresh/" />
+        <protocol name = "LadderRefreshResponse" type = "1702" reqtype = "1701" />
+        <protocol name = "LadderMatchRequest" type = "1703" command = "/game/ladder/match/" />
+        <protocol name = "LadderMatchResponse" type = "1704" reqtype = "1703" />
+    </file>
+
 </namespace>
 
