@@ -15,7 +15,7 @@ enum FriendStatus {
 message FriendNotify {
     message Friend {
         required FriendStatus status = 1;
-        required int32 id = 2;
+        required string id = 2;
         required string name = 3;
         required string avatar = 4;
         required string club_name = 5;
@@ -31,13 +31,13 @@ message FriendNotify {
 
 message FriendRemoveNotify {
     required bytes session = 1;
-    repeated int32 ids = 2;
+    repeated string ids = 2;
 }
 
 
 message FriendGetInfoRequest {
     required bytes session = 1;
-    required int32 id = 2;
+    required string id = 2;
 }
 
 
@@ -62,7 +62,7 @@ message FriendAddResponse {
 
 message FriendRemoveRequest {
     required bytes session = 1;
-    required int32 id = 2;
+    required string id = 2;
 }
 
 message FriendRemoveResponse {
@@ -72,7 +72,7 @@ message FriendRemoveResponse {
 
 message FriendAcceptRequest {
     required bytes session = 1;
-    required int32 id = 2;
+    required string id = 2;
 }
 
 message FriendAcceptResponse {
@@ -82,7 +82,7 @@ message FriendAcceptResponse {
 
 message FriendMatchRequest {
     required bytes session = 1;
-    required int32 id = 2;
+    required string id = 2;
 }
 
 

@@ -40,7 +40,7 @@ message MailRemoveNotify {
 
 message MailSendRequest {
     required bytes session = 1;
-    required int32 to_id = 2;      // 角色ID
+    required string to_id = 2;      // 角色ID
     required string content = 3;
 }
 
