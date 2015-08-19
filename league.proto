@@ -8,7 +8,7 @@ import "club.proto";
 message League {
     message LeagueRank {
         // 排名
-        required string league_club_id = 1;
+        required string club_id = 1;
 
         required int32 battle_times = 2;    // 已赛场数
         required int32 score = 3;           // 积分
@@ -20,8 +20,8 @@ message League {
         message LeaguePair {
             // 比赛对手
             required string pair_id = 1;
-            required string league_club_one_id = 2;
-            required string league_club_two_id = 3;
+            required string club_one_id = 2;
+            required string club_two_id = 3;
             required bool club_one_win = 4;
         }
 
@@ -30,16 +30,11 @@ message League {
         repeated LeaguePair pairs = 3;
     }
 
-    message LeagueClub {
-        required string league_club_id = 1;
-        required Club club = 2;
-    }
-
 
     required LeagueLevel level = 1;     // 联赛等级
     required int32 current_order=  2;   // 当前第几轮
 
-    repeated LeagueClub clubs = 3;
+    repeated Club clubs = 3;
 
     repeated LeagueRank ranks = 4;      // 排名
     repeated LeagueEvent events = 5;    // 场次
