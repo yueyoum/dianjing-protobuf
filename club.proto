@@ -3,7 +3,7 @@ package Dianjing.protocol;
 import "common.proto";
 
 message Club {
-    required int32 id = 1;
+    required string id = 1;
     required string name = 2;
     required string manager = 3;    // 经理人， 玩家名字
     required int32 flag = 4;        // 战旗
