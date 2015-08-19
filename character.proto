@@ -3,7 +3,7 @@ package Dianjing.protocol;
 import "common.proto";
 
 message Character {
-    required int32 id = 1;
+    required string id = 1;
     required string name = 2;
     required string avatar = 3;
     required int32 gender = 4;
