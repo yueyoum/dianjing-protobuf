@@ -22,7 +22,8 @@ message LadderNotify {
     repeated LadderClub clubs = 2;
     required int32 remained_times = 3;  // 剩余次数
     required int32 my_order = 4;        // 我的排名
-    repeated LadderLog logs = 5;        // 战报
+    required int32 my_score = 5;        // 我的积分
+    repeated LadderLog logs = 6;        // 战报
 }
 
 message LadderRefreshRequest {
@@ -57,7 +58,8 @@ message LadderStoreItem {
 
 message LadderStoreNotify {
     required bytes session = 1;
-    repeated LadderStoreItem items = 2;
+    required int64 next_refresh_time = 2;   // UTC timestamp
+    repeated LadderStoreItem items = 3;
 }
 
 
