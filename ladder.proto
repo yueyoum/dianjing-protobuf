@@ -1,6 +1,7 @@
 package Dianjing.protocol;
 
 import "match.proto";
+import "package.proto";
 
 message LadderClub {
     required string id = 1;
@@ -46,4 +47,28 @@ message LadderMatchResponse {
     optional ClubMatch match = 3;
 }
 
+
+
+message LadderStoreItem {
+    required string id = 1;
+    required int32 oid = 2;
+    required Item item = 3;
+}
+
+message LadderStoreNotify {
+    required bytes session = 1;
+    repeated LadderStoreItem items = 2;
+}
+
+
+message LadderStoreBuyRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+
+message LadderStoreBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 

@@ -150,6 +150,9 @@
         <protocol name = "LadderRefreshResponse" type = "1702" reqtype = "1701" />
         <protocol name = "LadderMatchRequest" type = "1703" command = "/game/ladder/match/" />
         <protocol name = "LadderMatchResponse" type = "1704" reqtype = "1703" />
+        <protocol name = "LadderStoreNotify" type = "1705" />
+        <protocol name = "LadderStoreBuyRequest" type = "1706" command = "/game/ladder/store/buy/" />
+        <protocol name = "LadderStoreBuyResponse" type = "1707" reqtype = "1706" />
     </file>
 
 </namespace>
