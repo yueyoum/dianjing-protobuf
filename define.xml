@@ -129,9 +129,9 @@
     </file>
 
     <file name = "chat">
-        <protocol name = "ChatNotify" type="1400" />
-        <protocol name = "ChatSendRequest" type="1401" command = "/game/chat/send/" />
-        <protocol name = "ChatSendResponse" type="1402" reqtype = "1401" />
+        <protocol name = "ChatNotify" type = "1400" />
+        <protocol name = "ChatSendRequest" type = "1401" command = "/game/chat/send/" />
+        <protocol name = "ChatSendResponse" type = "1402" reqtype = "1401" />
     </file>
 
     <file name = "notification">
@@ -153,6 +153,13 @@
         <protocol name = "LadderStoreNotify" type = "1705" />
         <protocol name = "LadderStoreBuyRequest" type = "1706" command = "/game/ladder/store/buy/" />
         <protocol name = "LadderStoreBuyResponse" type = "1707" reqtype = "1706" />
+    </file>
+
+    <file name = "cup">
+        <protocol name = "CupInfomationRequest" type = "1800" command = "/game/cup/infomation/" />
+        <protocol name = "CupInfomationResponse" type = "1801" reqtype = "1800" />
+        <protocol name = "CupJoinRequest" type = "1802" command = "/game/cup/join/" />
+        <protocol name = "CupJoinResponse" type = "1803" reqtype = "1802" />
     </file>
 
 </namespace>

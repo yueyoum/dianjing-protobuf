@@ -1,0 +1,55 @@
+package Dianjing.protocol;
+
+import "club.proto";
+
+
+// 杯赛进程
+enum CupProcess {
+    CUP_PROCESS_PREPARE = 1   // 报名中
+    CUP_PROCESS_64 = 2        // 刚确定出64强
+    CUP_PROCESS_32 = 3        // 刚确定出32强
+    CUP_PROCESS_16 = 4        // 刚确定出16强
+    CUP_PROCESS_8 = 5         // 刚确定出8强
+    CUP_PROCESS_4 = 6         // 刚确定出4强
+    CUP_PROCESS_FINISHED = 7  // 结束
+}
+
+
+message Cup {
+    message ClubPair {
+        required string club_one_id = 1;
+        required string club_two_id = 2;
+    }
+
+    required CupProcess process = 1;        // 进程
+    required bool joined = 2;               // 是否参加
+    required int64 next_time = 2;           // 本次杯赛结束后，下次开始前，这里是0
+    repeated int32 match_staffs = 3;        // 上阵员工id列表
+    repeated Club clubs = 4;                // 所有参赛的64支俱乐部
+    repeated ClubPair match64_pairs = 5;    // 64强
+    repeated ClubPair match32_pairs = 6;    // 32强
+    repeated ClubPair match16_pairs = 7;    // 16强
+    repeated ClubPair match8_pairs = 8;     // 8强
+    repeated ClubPair match4_pairs = 9;     // 4强
+}
+
+message CupInfomationRequest {
+    required bytes session = 1;
+}
+
+
+message CupInfomationResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message CupJoinRequest {
+    required bytes session = 1;
+}
+
+message CupJoinResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
