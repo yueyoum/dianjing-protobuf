@@ -23,14 +23,14 @@ message Cup {
 
     required CupProcess process = 1;        // 进程
     required bool joined = 2;               // 是否参加
-    required int64 next_time = 2;           // 本次杯赛结束后，下次开始前，这里是0
-    repeated int32 match_staffs = 3;        // 上阵员工id列表
-    repeated Club clubs = 4;                // 所有参赛的64支俱乐部
-    repeated ClubPair match64_pairs = 5;    // 64强
-    repeated ClubPair match32_pairs = 6;    // 32强
-    repeated ClubPair match16_pairs = 7;    // 16强
-    repeated ClubPair match8_pairs = 8;     // 8强
-    repeated ClubPair match4_pairs = 9;     // 4强
+    required int64 next_time = 3;           // 本次杯赛结束后，下次开始前，这里是0
+    repeated int32 match_staffs = 4;        // 上阵员工id列表
+    repeated Club clubs = 5;                // 所有参赛的64支俱乐部
+    repeated ClubPair match64_pairs = 6;    // 64强
+    repeated ClubPair match32_pairs = 7;    // 32强
+    repeated ClubPair match16_pairs = 8;    // 16强
+    repeated ClubPair match8_pairs = 9;     // 8强
+    repeated ClubPair match4_pairs = 10;     // 4强
 }
 
 message CupInfomationRequest {
