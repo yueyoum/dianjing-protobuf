@@ -5,13 +5,13 @@ import "club.proto";
 
 // 杯赛进程
 enum CupProcess {
-    CUP_PROCESS_PREPARE = 1   // 报名中
-    CUP_PROCESS_64 = 2        // 刚确定出64强
-    CUP_PROCESS_32 = 3        // 刚确定出32强
-    CUP_PROCESS_16 = 4        // 刚确定出16强
-    CUP_PROCESS_8 = 5         // 刚确定出8强
-    CUP_PROCESS_4 = 6         // 刚确定出4强
-    CUP_PROCESS_FINISHED = 7  // 结束
+    CUP_PROCESS_PREPARE = 1;   // 报名中
+    CUP_PROCESS_64 = 2;        // 刚确定出64强
+    CUP_PROCESS_32 = 3;        // 刚确定出32强
+    CUP_PROCESS_16 = 4;        // 刚确定出16强
+    CUP_PROCESS_8 = 5;         // 刚确定出8强
+    CUP_PROCESS_4 = 6;         // 刚确定出4强
+    CUP_PROCESS_FINISHED = 7;  // 结束
 }
 
 
