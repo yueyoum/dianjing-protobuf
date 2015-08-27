@@ -26,10 +26,9 @@ message Cup {
 
     required CupProcess process = 1;        // 当前进程
     required bool joined = 2;               // 是否参加
-    repeated int32 match_staffs = 3;        // 上阵员工id列表
-    repeated Club clubs = 4;                // 所有参赛的32支俱乐部
-    repeated CupLevel levels = 5;           // 杯赛等级， 32强，16强...
-    repeated string top_four = 6;           // 前四
+    repeated Club clubs = 3;                // 所有参赛的32支俱乐部
+    repeated CupLevel levels = 4;           // 杯赛等级， 32强，16强...
+    repeated string top_four = 5;           // 前四
 }
 
 message CupInfomationRequest {
