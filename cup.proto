@@ -25,11 +25,12 @@ message Cup {
     }
 
     required int32 order = 1;               // 第几界
-    required CupProcess process = 2;        // 当前进程
-    required bool joined = 3;               // 是否参加
-    repeated Club clubs = 4;                // 所有参赛的32支俱乐部
-    repeated CupLevel levels = 5;           // 杯赛等级， 32强，16强...
-    repeated string top_four = 6;           // 前四
+    optional Club last_champion = 2;        // 上一届冠军
+    required CupProcess process = 3;        // 当前进程
+    required bool joined = 4;               // 是否参加
+    repeated Club clubs = 5;                // 所有参赛的32支俱乐部
+    repeated CupLevel levels = 6;           // 杯赛等级， 32强，16强...
+    repeated string top_four = 7;           // 前四
 }
 
 message CupInfomationRequest {
