@@ -6,31 +6,34 @@ import "club.proto";
 // 杯赛进程
 enum CupProcess {
     CUP_PROCESS_PREPARE = 1;   // 报名中
-    CUP_PROCESS_64 = 2;        // 刚确定出64强
-    CUP_PROCESS_32 = 3;        // 刚确定出32强
-    CUP_PROCESS_16 = 4;        // 刚确定出16强
-    CUP_PROCESS_8 = 5;         // 刚确定出8强
-    CUP_PROCESS_4 = 6;         // 刚确定出4强
-    CUP_PROCESS_FINISHED = 7;  // 结束
+    CUP_PROCESS_32 = 2;        // 32强
+    CUP_PROCESS_16 = 3;        // 16强
+    CUP_PROCESS_8 = 4;         // 8强
+    CUP_PROCESS_4 = 5;         // 4强
+    CUP_PROCESS_2 = 6;         // 2强 半决赛
+    CUP_PROCESS_1 = 7;         // 1强 决赛 结束
 }
 
 
 message Cup {
-    message ClubPair {
-        required string club_one_id = 1;
-        required string club_two_id = 2;
+    message CupLevel {
+        // 杯赛等级
+        message ClubPair {
+            required string club_one_id = 1;
+            required string club_two_id = 2;
+        }
+
+        required CupProcess process = 1;
+        repeated ClubPair pairs = 2;
     }
 
-    required CupProcess process = 1;        // 进程
+    required CupProcess process = 1;        // 当前进程
     required bool joined = 2;               // 是否参加
     required int64 next_time = 3;           // 本次杯赛结束后，下次开始前，这里是0
     repeated int32 match_staffs = 4;        // 上阵员工id列表
-    repeated Club clubs = 5;                // 所有参赛的64支俱乐部
-    repeated ClubPair match64_pairs = 6;    // 64强
-    repeated ClubPair match32_pairs = 7;    // 32强
-    repeated ClubPair match16_pairs = 8;    // 16强
-    repeated ClubPair match8_pairs = 9;     // 8强
-    repeated ClubPair match4_pairs = 10;     // 4强
+    repeated Club clubs = 5;                // 所有参赛的32支俱乐部
+    repeated CupMatch levels = 6;           // 杯赛等级， 32强，16强...
+    optional string champion = 7;           // 冠军
 }
 
 message CupInfomationRequest {
