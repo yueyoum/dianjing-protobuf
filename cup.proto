@@ -5,13 +5,14 @@ import "club.proto";
 
 // 杯赛进程
 enum CupProcess {
-    CUP_PROCESS_PREPARE = 1;   // 报名中
-    CUP_PROCESS_32 = 2;        // 32强
-    CUP_PROCESS_16 = 3;        // 16强
-    CUP_PROCESS_8 = 4;         // 8强
-    CUP_PROCESS_4 = 5;         // 4强
-    CUP_PROCESS_2 = 6;         // 2强 半决赛
-    CUP_PROCESS_1 = 7;         // 1强 决赛 结束
+    CUP_PROCESS_APPLY = 1000;   // 报名中
+    CUP_PROCESS_PREPARE = 1001; // 报名结束，预选赛
+    CUP_PROCESS_32 = 32;        // 出32强
+    CUP_PROCESS_16 = 16;        // 出16强
+    CUP_PROCESS_8 = 8;          // 出8强
+    CUP_PROCESS_4 = 4;          // 出4强 半决赛
+    CUP_PROCESS_2 = 2;          // 出2强 总决赛
+    CUP_PROCESS_1 = 1;          // 出冠军 结束
 }
 
 
