@@ -32,7 +32,7 @@ message Cup {
     required int64 next_time = 3;           // 本次杯赛结束后，下次开始前，这里是0
     repeated int32 match_staffs = 4;        // 上阵员工id列表
     repeated Club clubs = 5;                // 所有参赛的32支俱乐部
-    repeated CupMatch levels = 6;           // 杯赛等级， 32强，16强...
+    repeated CupLevel levels = 6;           // 杯赛等级， 32强，16强...
     optional string champion = 7;           // 冠军
 }
 
