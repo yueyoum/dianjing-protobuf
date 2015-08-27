@@ -19,22 +19,17 @@ enum CupProcess {
 message Cup {
     message CupLevel {
         // 杯赛等级
-        message ClubPair {
-            required string club_one_id = 1;
-            required string club_two_id = 2;
-        }
-
         required CupProcess process = 1;
-        repeated ClubPair pairs = 2;
+        required int64 match_time = 2;
+        repeated string club_ids = 3;
     }
 
     required CupProcess process = 1;        // 当前进程
     required bool joined = 2;               // 是否参加
-    required int64 next_time = 3;           // 本次杯赛结束后，下次开始前，这里是0
-    repeated int32 match_staffs = 4;        // 上阵员工id列表
-    repeated Club clubs = 5;                // 所有参赛的32支俱乐部
-    repeated CupLevel levels = 6;           // 杯赛等级， 32强，16强...
-    optional string champion = 7;           // 冠军
+    repeated int32 match_staffs = 3;        // 上阵员工id列表
+    repeated Club clubs = 4;                // 所有参赛的32支俱乐部
+    repeated CupLevel levels = 5;           // 杯赛等级， 32强，16强...
+    repeated string top_four = 6;           // 前四
 }
 
 message CupInfomationRequest {
@@ -45,6 +40,7 @@ message CupInfomationRequest {
 message CupInfomationResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    required Cup cup = 3;
 }
 
 
