@@ -11,6 +11,26 @@ message Item {
 }
 
 
+message Resource {
+    required string resource_id = 1;
+    required int32 value = 2;
+}
+
+// 货物
+// 软妹币，钻石，经验，声望，
+// 训练道具
+message Goods {
+    message Trainings {
+        required int32 id = 1;
+        required int32 amount = 2;
+    }
+
+    repeated Resource resources = 1;
+    repeated Trainings trainings = 2;
+}
+
+
+
 message Package {
     message Trainings {
         required int32 id = 1;

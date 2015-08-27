@@ -1,6 +1,7 @@
 package Dianjing.protocol;
 
 import "match.proto";
+import "package.proto";
 
 
 message ChallengeNotify {
@@ -17,7 +18,6 @@ message ChallengeStartResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional ClubMatch match = 3;
+    optional Goods drop = 4;
 }
-
-
 
