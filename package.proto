@@ -1,25 +1,14 @@
 package Dianjing.protocol;
 
-
-message Item {
-    message ItemAttribute {
-        required string resource_id = 1;
-        required int32 value = 2;
-    }
-
-    repeated ItemAttribute items = 1;
-}
-
-
 message Resource {
     required string resource_id = 1;
     required int32 value = 2;
 }
 
-// 货物
-// 软妹币，钻石，经验，声望，
+// 货物 - 可以直接加到角色/俱乐部身上
+// 软妹币，钻石，经验，声望， 联赛积分，天梯赛积分
 // 训练道具
-message Goods {
+message Drop {
     message Trainings {
         required int32 id = 1;
         required int32 amount = 2;
@@ -30,25 +19,8 @@ message Goods {
 }
 
 
-
-message Package {
-    message Trainings {
-        required int32 id = 1;
-        required int32 amount = 2;
-    }
-
-    required int32 jingong = 1;
-    required int32 qianzhi = 2;
-    required int32 xintai = 3;
-    required int32 baobing = 4;
-    required int32 fangshou = 5;
-    required int32 yunying = 6;
-    required int32 yishi = 7;
-    required int32 caozuo = 8;
-    required int32 gold = 9;
-    required int32 diamond = 10;
-    required int32 staff_exp = 11;
-    required int32 club_renown = 12;
-    repeated Trainings trainings = 13;
+// 训练道具
+message TrainingItem {
+    repeated Resource resources = 1;
 }
 

@@ -18,6 +18,6 @@ message ChallengeStartResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional ClubMatch match = 3;
-    optional Goods drop = 4;
+    optional Drop drop = 4;
 }
 

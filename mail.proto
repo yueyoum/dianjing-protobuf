@@ -22,7 +22,7 @@ message Mail {
     required bool has_read = 5;
     required int32 create_at = 6;   // UTC timestamp
     required int32 remained_seconds = 7;    // 到自动删除，剩余秒数
-    optional Package attachment = 8;       // 附件
+    optional Drop attachment = 8;       // 附件
 }
 
 
@@ -80,6 +80,6 @@ message MailGetAttachmentRequest {
 message MailGetAttachmentResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Package attachment = 3;
+    optional Drop attachment = 3;
 }
 

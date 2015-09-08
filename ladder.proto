@@ -53,7 +53,7 @@ message LadderMatchResponse {
 message LadderStoreItem {
     required string id = 1;
     required int32 oid = 2;
-    required Item item = 3;
+    required Drop item = 3;
 }
 
 message LadderStoreNotify {
