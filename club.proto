@@ -10,14 +10,13 @@ message Club {
     required int32 level = 5;       // 等级
     required int32 renown = 6;      // 声望
     required int32 vip = 7;
-    required int32 exp = 8;
-    required int32 gold = 9;
-    required int32 diamond = 10;
+    required int32 gold = 8;
+    required int32 diamond = 9;
 
-    required int32 max_renown = 11; // 当前等级升级最大声望
+    required int32 max_renown = 10; // 当前等级升级最大声望
 
-    repeated StaffBaseInfo match_staffs = 12;        // 出战成员
-    optional int32 policy = 13;                      // 战术ID
+    repeated StaffBaseInfo match_staffs = 11;        // 出战成员
+    optional int32 policy = 12;                      // 战术ID
 }
 
 

@@ -7,9 +7,8 @@ import "club.proto";
 message Round {
     message Staff {
         required int32 unit_id = 1;     // 兵种ID
-        required int32 unit_des = 2;    // 兵种描述ID
-        required int32 advantage_begin = 3;    // 战斗前优势值
-        required int32 advantage_end = 4;      // 战斗后优势值
+        required int32 advantage_begin = 2;    // 战斗前优势值
+        required int32 advantage_end = 3;      // 战斗后优势值
     }
 
     required int32 round_index = 1;
