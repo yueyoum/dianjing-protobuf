@@ -138,6 +138,9 @@
         <protocol name = "NotificationNotify" type = "1500" />
         <protocol name = "NotificationOpenRequest" type = "1501" command = "/game/notification/open/" />
         <protocol name = "NotificationOpenResponse" type = "1502" reqtype = "1501" />
+        <protocol name = "NotificationRemoveNotify" type = "1503" />
+        <protocol name = "NotificationDeleteRequest" type = "1504" command = "/game/notification/delete/" />
+        <protocol name = "NotificationDeleteResponse" type = "1505" reqtype = "1504" />
     </file>
 
     <file name = "statistics">

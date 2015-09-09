@@ -20,7 +20,7 @@ message Mail {
     required string title = 3;
     required string content = 4;
     required bool has_read = 5;
-    required int32 create_at = 6;   // UTC timestamp
+    required int64 create_at = 6;   // UTC timestamp
     required int32 remained_seconds = 7;    // 到自动删除，剩余秒数
     optional Drop attachment = 8;       // 附件
 }

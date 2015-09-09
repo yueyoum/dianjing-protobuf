@@ -18,6 +18,11 @@ message NotificationNotify {
     repeated Notification notifications = 3;
 }
 
+message NotificationRemoveNotify {
+    required bytes session = 1;
+    repeated string ids = 2; 
+}
+
 
 message NotificationOpenRequest {
     required bytes session = 1;
@@ -25,6 +30,17 @@ message NotificationOpenRequest {
 }
 
 message NotificationOpenResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message NotificationDeleteRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+
+message NotificationDeleteResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
