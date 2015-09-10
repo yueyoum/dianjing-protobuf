@@ -6,7 +6,7 @@ message Resource {
 }
 
 // 货物 - 可以直接加到角色/俱乐部身上
-// 软妹币，钻石，经验，声望， 联赛积分，天梯赛积分
+// 软妹币，钻石，声望， 联赛积分，天梯赛积分
 // 训练道具
 message Drop {
     message Trainings {
@@ -21,6 +21,12 @@ message Drop {
 
 // 训练道具
 message TrainingItem {
+    message TrainingSkill {
+        required int32 id = 1;
+        required int32 level = 2;
+    }
+
     repeated Resource resources = 1;
+    optional TrainingSkill skill = 2;
 }
 
