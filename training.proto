@@ -7,7 +7,7 @@ import "package.proto";
 message Training {                                                           
     required string id = 1;                                                   
     required int32 oid = 2;
-    optional TrainingItem item = 3;
+    required TrainingItem item = 3;
 }                                                                            
 
 // 训练商店

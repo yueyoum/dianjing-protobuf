@@ -2,11 +2,14 @@ package Dianjing.protocol;
 
 import "match.proto";
 
+
 message LadderClub {
     required string id = 1;
     required string name = 2;
     required int32 flag = 3;
-    required int32 order = 4;
+    required int32 order = 4;       // 排名
+    required int32 power = 5;       // 战力
+    required int32 score = 6;       // 积分
 }
 
 
@@ -64,5 +67,16 @@ message LadderStoreBuyRequest {
 message LadderStoreBuyResponse {
     required int32 ret = 1;
     required bytes session = 2;
+}
+
+// 天梯排行榜
+message LadderLeaderBoardRequest {
+    required bytes session = 1;
+}
+
+message LadderLeaderBoardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated LadderClub clubs = 3;
 }
 

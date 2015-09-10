@@ -156,6 +156,8 @@
         <protocol name = "LadderStoreNotify" type = "1705" />
         <protocol name = "LadderStoreBuyRequest" type = "1706" command = "/game/ladder/store/buy/" />
         <protocol name = "LadderStoreBuyResponse" type = "1707" reqtype = "1706" />
+        <protocol name = "LadderLeaderBoardRequest" type = "1708" command = "/game/ladder/leaderboard/" />
+        <protocol name = "LadderLeaderBoardResponse" type = "1709" reqtype = "1708" />
     </file>
 
     <file name = "cup">
