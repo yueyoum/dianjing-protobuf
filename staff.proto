@@ -1,6 +1,7 @@
 package Dianjing.protocol;
 
 import "common.proto";
+import "package.proto";
 
 
 enum StaffRecruitType {
@@ -63,8 +64,9 @@ message Staff {
 
         required TrainingSlotStatus status = 1;
         required int32 slot_id = 2;
-        optional int32 training_id = 3; // 训练日程ID
-        optional int64 end_at = 4;      // 结束的UTC时间戳
+        optional int32 training_id = 3;             // 训练日程ID
+        optional TrainingItem training_item = 4;
+        optional int64 end_at = 5;      // 结束的UTC时间戳
     }
 
     required int32 id = 1;
