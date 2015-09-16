@@ -158,6 +158,8 @@
         <protocol name = "LadderStoreBuyResponse" type = "1707" reqtype = "1706" />
         <protocol name = "LadderLeaderBoardRequest" type = "1708" command = "/game/ladder/leaderboard/" />
         <protocol name = "LadderLeaderBoardResponse" type = "1709" reqtype = "1708" />
+        <protocol name = "LadderStoreRefreshRequest" type = "1710" command = "/game/ladder/store/refresh/" />
+        <protocol name = "LadderStoreRefreshResponse" type = "1711" reqtype = "1710" />
     </file>
 
     <file name = "cup">

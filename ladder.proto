@@ -69,6 +69,15 @@ message LadderStoreBuyResponse {
     required bytes session = 2;
 }
 
+message LadderStoreRefreshRequest {
+    required bytes session = 1;
+}
+
+message LadderStoreRefreshResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 // 天梯排行榜
 message LadderLeaderBoardRequest {
     required bytes session = 1;
