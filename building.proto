@@ -1,5 +1,6 @@
 package Dianjing.protocol;
 
+import "common.proto";
 
 message BuildingNotify {
     message Building {
@@ -9,6 +10,7 @@ message BuildingNotify {
 
     required bytes session = 1;
     repeated Building buildings = 2;
+    required Action act = 3;
 }
 
 
