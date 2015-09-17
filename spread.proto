@@ -15,10 +15,11 @@ message SponsorNotify {
         repeated string args = 2;
     }
 
-    repeated Sponsor sponsors = 1;
-    repeated SponsorLog logs = 2;
-    required string sponsor_to = 3;         // 空表示没有赞助的人
-    required int32 total_income = 4;
+    required bytes session = 1;
+    repeated Sponsor sponsors = 2;
+    repeated SponsorLog logs = 3;
+    required string sponsor_to = 4;         // 空表示没有赞助的人
+    required int32 total_income = 5;
 }
 
 
