@@ -5,7 +5,7 @@ message SponsorNotify {
     // 赞助商
     message Sponsor {
         required int32 club_flag = 1;
-        required int32 club_name = 2;
+        required string club_name = 2;
         required int32 sponsor_amount = 3;
         required int32 income = 4;
     }
