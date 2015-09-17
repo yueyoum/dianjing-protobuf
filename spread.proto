@@ -1,0 +1,58 @@
+package Dianjing.protocol;
+
+// 赞助通知
+message SponsorNotify {
+    // 赞助商
+    message Sponsor {
+        required int32 club_flag = 1;
+        required int32 club_name = 2;
+        required int32 sponsor_amount = 3;
+        required int32 income = 4;
+    }
+
+    message SponsorLog {
+        required int32 template_id = 1;
+        repeated string args = 2;
+    }
+
+    repeated Sponsor sponsors = 1;
+    repeated SponsorLog logs = 2;
+    required string sponsor_to = 3;         // 空表示没有赞助的人
+    required int32 total_income = 4;
+}
+
+
+// 邀请赞助
+message SponsorInviteRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+message SponsorInviteResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+// 赞助
+message SponsorRequest {
+    required bytes session = 1; 
+}
+
+message SponsorResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+// 领取收益
+message SponsorGetIncomeRequest {
+    required bytes session = 1;
+}
+
+message SponsorGetIncomeResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+

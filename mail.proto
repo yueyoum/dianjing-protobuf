@@ -9,6 +9,11 @@ enum MailFromType {
     MAIL_FROM_USER = 2;
 }
 
+enum MailFunction {
+    MAIL_FUNCTION_NONE = 1;                 // 没有功能
+    MAIL_FUNCTION_SPONSOR_INVITE = 2;       // 邀请赞助 - 发展下线
+}
+
 message MailFrom {
     required MailFromType from_type = 1;
     optional Character char = 2;
@@ -20,9 +25,10 @@ message Mail {
     required string title = 3;
     required string content = 4;
     required bool has_read = 5;
-    required int64 create_at = 6;   // UTC timestamp
-    required int32 remained_seconds = 7;    // 到自动删除，剩余秒数
-    optional Drop attachment = 8;       // 附件
+    required int64 create_at = 6;                       // UTC timestamp
+    required int32 remained_seconds = 7;                // 到自动删除，剩余秒数
+    optional Drop attachment = 8;                       // 附件
+    optional MailFunction function = 9 [default = MAIL_FUNCTION_NONE];   // 功能
 }
 
 
