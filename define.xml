@@ -171,8 +171,6 @@
 
     <file name = "spread">
         <protocol name = "SponsorNotify" type = "1900" />
-        <protocol name = "SponsorInviteRequest" type = "1901" command = "/game/sponsor/invite/" />
-        <protocol name = "SponsorInviteResponse" type = "1902" reqtype = "1901" />
         <protocol name = "SponsorRequest" type = "1903" command = "/game/sponsor/" />
         <protocol name = "SponsorResponse" type = "1904" reqtype = "1903" />
         <protocol name = "SponsorGetIncomeRequest" type = "1905" command = "/game/sponsor/getincome/" />

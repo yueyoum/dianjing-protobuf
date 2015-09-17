@@ -23,21 +23,10 @@ message SponsorNotify {
 }
 
 
-// 邀请赞助
-message SponsorInviteRequest {
-    required bytes session = 1;
-    required string id = 2;
-}
-
-message SponsorInviteResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-
 // 赞助
 message SponsorRequest {
     required bytes session = 1; 
+    required string id = 2;
 }
 
 message SponsorResponse {
@@ -55,5 +44,4 @@ message SponsorGetIncomeResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
-
 
