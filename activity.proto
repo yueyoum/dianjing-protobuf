@@ -10,7 +10,7 @@ message ActivityCategoryNotify {
     }
 
     required bytes session = 1;
-    repeated ActivityCategory actegories = 2;
+    repeated ActivityCategory categories = 2;
 }
 
 // 签到
