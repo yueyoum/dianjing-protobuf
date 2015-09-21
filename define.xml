@@ -177,5 +177,12 @@
         <protocol name = "SponsorGetIncomeResponse" type = "1906" reqtype = "1905" />
     </file>
 
+    <file name = "activity">
+        <protocol name = "ActivityCategoryNotify" type = "2000" />
+        <protocol name = "ActivitySignInNotify" type = "2001" />
+        <protocol name = "ActivitySignInRequest" type = "2002" command = "/game/signin/" />
+        <protocol name = "ActivitySignInResponse" type = "2003" reqtype = "2002" />
+    </file>
+
 </namespace>
 

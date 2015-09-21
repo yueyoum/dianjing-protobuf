@@ -1,0 +1,39 @@
+package Dianjing.protocol;
+
+import "common.proto";
+import "package.proto";
+
+message ActivityCategoryNotify {
+    message ActivityCategory {
+        required int32 id = 1;
+        optional int64 end_at = 2;      // 结束于 不填充表示不结束
+    }
+
+    required bytes session = 1;
+    repeated ActivityCategory actegories = 2;
+}
+
+// 签到
+message ActivitySignInNotify {
+    message ActivitySignIn {
+        required int32 id = 1;
+        required int64 next_get_time = 2;   // 0表示可以立即领取
+        required Drop drop = 3;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated ActivitySignIn signins = 3;
+}
+
+message ActivitySignInRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message ActivitySignInResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
