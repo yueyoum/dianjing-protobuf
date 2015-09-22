@@ -98,6 +98,8 @@
         <protocol name = "TaskAcquireResponse" type = "1102" reqtype = "1101" />
         <protocol name = "TaskGetRewardRequest" type = "1103" command = "/game/task/getreward/" />
         <protocol name = "TaskGetRewardResponse" type = "1104" reqtype = "1103" />
+        <protocol name = "TaskDoingRequest" type = "1105" command = "/game/task/doing/" />
+        <protocol name = "TaskDoingResponse" type = "1106" reqtype = "1105" />
     </file>
 
     <file name = "friend">
