@@ -1,6 +1,7 @@
 package Dianjing.protocol;
 
 import "common.proto";
+import "package.proto";
 
 enum TaskStatus{
     TASK_UNRECEIVED = 0;
@@ -14,6 +15,7 @@ message TaskNotify {
         required int32 id = 1;              //  task id
         required int32 num = 2;             //  progress num
         required TaskStatus status = 3;     //  task status
+        required Drop drop = 4;
     }
 
     required bytes session = 1;
@@ -43,6 +45,7 @@ message TaskGetRewardRequest {
 message TaskGetRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
 
 
