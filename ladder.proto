@@ -1,6 +1,7 @@
 package Dianjing.protocol;
 
 import "match.proto";
+import "package.proto";
 
 
 message LadderClub {
@@ -48,6 +49,7 @@ message LadderMatchResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional ClubMatch match = 3;
+    optional Drop drop = 4;
 }
 
 
