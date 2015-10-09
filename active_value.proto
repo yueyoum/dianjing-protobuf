@@ -1,0 +1,47 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+enum ActiveValueRewardStatus {
+    ACTIVE_VALUE_REWARD_UNABLE = 1;     // 无法领取
+    ACTIVE_VALUE_REWARD_ENABLE = 2;     // 可以领取
+    ACTIVE_VALUE_REWARD_DONE = 3;       // 已经领取
+}
+
+
+// 活跃度和奖励通知
+message ActiveValueNotify {
+    message ActiveValueReward {
+        required int32 id = 1;
+        required ActiveValueRewardStatus status = 2;
+    }
+
+    required bytes session = 1;
+    required int32 value = 2;           // 当前活跃度
+    repeated ActiveValueReward rewards = 3;
+}
+
+
+// 活跃度功能次数通知
+message ActiveFunctionNotify {
+    message ActiveFunction {
+        required string function_name = 1;
+        required int32 current_times = 2;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated ActiveFunction functions = 3;
+}
+
+
+message ActiveValueGetRewardRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message ActiveValueGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
