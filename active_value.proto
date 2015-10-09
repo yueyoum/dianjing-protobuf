@@ -1,6 +1,7 @@
 package Dianjing.protocol;
 
 import "common.proto";
+import "package.proto";
 
 enum ActiveValueRewardStatus {
     ACTIVE_VALUE_REWARD_UNABLE = 1;     // 无法领取
@@ -43,5 +44,6 @@ message ActiveValueGetRewardRequest {
 message ActiveValueGetRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
 
