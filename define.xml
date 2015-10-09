@@ -192,7 +192,7 @@
     <file name = "active_value">
         <protocol name = "ActiveValueNotify" type = "2100" />
         <protocol name = "ActiveFunctionNotify" type = "2101" />
-        <protocol name = "ActiveValueGetRewardRequest" type = "2102" command = "/activevalue/getreward/" />
+        <protocol name = "ActiveValueGetRewardRequest" type = "2102" command = "/game/activevalue/getreward/" />
         <protocol name = "ActiveValueGetRewardResponse" type = "2103" reqtype = "2102" />
     </file>
 
