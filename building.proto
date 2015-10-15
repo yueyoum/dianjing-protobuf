@@ -6,7 +6,7 @@ message BuildingNotify {
     message Building {
         required int32 id = 1;
         required int32 level = 2;   // 当前等级，不能升级的建筑等级为0
-        required int64 time = 3;    // 升级剩余时间
+        required int64 up_finish_time = 3;    // 升级完成时间戳, -1表示没有升级
     }
 
     required bytes session = 1;
@@ -22,6 +22,16 @@ message BuildingLevelUpRequest {
 
 
 message BuildingLevelUpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message BuildingLevelUpFinishConfirm{
+    required bytes session = 1;
+    required int32 id = 2;    //建筑ID
+}
+
+message BuildingLevelFinishResponse{
     required int32 ret = 1;
     required bytes session = 2;
 }
