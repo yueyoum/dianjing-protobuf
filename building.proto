@@ -6,6 +6,7 @@ message BuildingNotify {
     message Building {
         required int32 id = 1;
         required int32 level = 2;   // 当前等级，不能升级的建筑等级为0
+        required int64 time = 3;    // 升级剩余时间
     }
 
     required bytes session = 1;
