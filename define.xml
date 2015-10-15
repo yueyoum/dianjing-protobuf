@@ -72,7 +72,7 @@
         <protocol name = "BuildingLevelUpRequest" type = "801" command = "/game/building/levelup/" />
         <protocol name = "BuildingLevelUpResponse" type = "802" reqtype = "801" />
         <protocol name = "BuildingLevelUpFinishConfirmRequest" type = "803" command="/game/building/levelup/confirm/" />
-        <protocol name = "BuildingLevelUpFinishResponse" type = "804" reqtype = "803" />
+        <protocol name = "BuildingLevelUpFinishConfirmResponse" type = "804" reqtype = "803" />
     </file>
 
     <file name = "training">
