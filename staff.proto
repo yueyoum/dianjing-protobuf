@@ -65,6 +65,8 @@ message Staff {
     required int32 yunying = 11;    // 运营
     required int32 yishi = 12;      // 意识
     required int32 caozuo = 13;     // 操作
+
+    required int32 training_exp_need_gold = 14;
 }
 
 
