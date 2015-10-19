@@ -69,21 +69,14 @@ message TrainingExpGetRewardResponse {
     optional Drop drop = 3;
 }
 
-enum TrainingPropertyStatus {
-    TRAINING_PROPERTY_EMPTY = 1;    // 没有训练
-    TRAINING_PROPERTY_DOING = 2;    // 正在训练
-    TRAINING_PROPERTY_WAITING = 3;  // 等待
-    TRAINING_PROPERTY_FINISH = 4;   // 可以领奖
-}
 
 // 属性训练
 message TrainingPropertyNotify {
     message TrainingStaff {
         message TrainingItem {
             required int32 slot_id = 1;  // 从1开始
-            required TrainingPropertyStatus status = 2;
-            optional int32 training_id = 3;
-            optional int64 end_at = 4;
+            required int32 training_id = 2;  // 如果为空，这里是0
+            required int64 end_at = 3;
         }
 
         required int32 staff_id = 1;
