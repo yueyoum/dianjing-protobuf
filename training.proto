@@ -9,7 +9,7 @@ message TrainingExpSlotNotify {
     message TrainingExpSlot {
         message TrainingStaff {
             required int32 id = 1;          // 员工ID
-            required int64 start_at = 2;    // 开始时间戳
+            required int32 got_exp = 2;     // 当前获得的经验
             required int64 end_at = 3;      // 结束时间戳
         }
 
