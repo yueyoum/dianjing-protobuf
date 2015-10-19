@@ -43,7 +43,6 @@ message TrainingExpCancelRequest {
 message TrainingExpCancelResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Drop drop = 3;
 }
 
 // 经验加速
@@ -66,7 +65,7 @@ message TrainingExpGetRewardRequest {
 message TrainingExpGetRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Drop drop = 3;
+    optional Property property = 3;
 }
 
 
@@ -135,6 +134,6 @@ message TrainingPropertyGetRewardRequest {
 message TrainingPropertyGetRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Drop drop = 3;
+    optional Property property = 3;
 }
 

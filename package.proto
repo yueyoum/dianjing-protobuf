@@ -18,6 +18,11 @@ message Drop {
     repeated Trainings trainings = 2;
 }
 
+// 员工属性
+message Property {
+    repeated Resource resources = 1;
+}
+
 
 // 训练道具
 message TrainingItem {
