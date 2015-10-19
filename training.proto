@@ -82,7 +82,7 @@ message TrainingPropertyNotify {
         message TrainingItem {
             required int32 slot_id = 1;  // 从1开始
             required TrainingPropertyStatus status = 2;
-            optional training_id = 3;
+            optional int32 training_id = 3;
             optional int64 end_at = 4;
         }
 
