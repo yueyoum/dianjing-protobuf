@@ -6,6 +6,7 @@ message Skill {
     required int32 id = 1;
     required int32 level = 2;
     required bool locked = 3;
+    required int64 upgrade_end_at = 4;  // 升级结束时间戳，-1 表示没有升级
 }
 
 message SkillNotify {
@@ -42,3 +43,15 @@ message SkillWashResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
+
+message SkillUpgradeSpeedupRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+    required int32 skill_id = 3;
+}
+
+message SkillUpgradeSpeedupResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+

@@ -4,54 +4,144 @@ import "common.proto";
 import "package.proto";
 
 
-message Training {                                                           
-    required string id = 1;                                                   
-    required int32 oid = 2;
-    required TrainingItem item = 3;
-}                                                                            
+// 经验训练
+message TrainingExpSlotNotify {
+    message TrainingExpSlot {
+        message TrainingStaff {
+            required int32 id = 1;          // 员工ID
+            required int64 start_at = 2;    // 开始时间戳
+            required int64 end_at = 3;      // 结束时间戳
+        }
 
-// 训练商店
-message TrainingStoreNotify {
+        required int32 id = 1;              // 训练位ID， 从1开始
+        optional TrainingStaff staff = 2;
+    }
+
     required bytes session = 1;
     required Action act = 2;
-    repeated Training trainings = 3;
+    repeated TrainingExpSlot slots = 3;
 }
 
-message TrainingStoreRemoveNotify {
+// 开始经验训练
+message TrainingExpStartRequest {
     required bytes session = 1;
-    repeated string ids = 2;
+    required int32 slot_id = 2;
+    required int32 staff_id = 3;
 }
 
-message TrainingStoreRefreshRequest {
+message TrainingExpStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 经验取消
+message TrainingExpCancelRequest {
     required bytes session = 1;
+    required int32 slot_id = 2;
 }
 
-message TrainingStoreRefreshResponse {
+message TrainingExpCancelResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+// 经验加速
+message TrainingExpSpeedupRequest {
+    required bytes session = 1;
+    required int32 slot_id = 2;
+}
+
+message TrainingExpSpeedupResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 经验领奖
+message TrainingExpGetRewardRequest {
+    required bytes session = 1;
+    required int32 slot_id = 2;
+}
+
+message TrainingExpGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+enum TrainingPropertyStatus {
+    TRAINING_PROPERTY_EMPTY = 1;    // 没有训练
+    TRAINING_PROPERTY_DOING = 2;    // 正在训练
+    TRAINING_PROPERTY_WAITING = 3;  // 等待
+    TRAINING_PROPERTY_FINISH = 4;   // 可以领奖
+}
+
+// 属性训练
+message TrainingPropertyNotify {
+    message TrainingStaff {
+        message TrainingItem {
+            required int32 slot_id = 1;  // 从1开始
+            required TrainingPropertyStatus status = 2;
+            optional training_id = 3;
+            optional int64 end_at = 4;
+        }
+
+        required int32 staff_id = 1;
+        repeated TrainingItem trainings = 2;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated TrainingStaff staffs = 3;
+}
+
+// 属性开始
+message TrainingPropertyStartRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+    required int32 training_id = 3;
+}
+
+message TrainingPropertyStartResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
 
 
-
-message TrainingNotify {                                                         
-    required bytes session = 1;                                                  
-    required Action act = 2;
-    repeated Training trainings = 3;                                             
-}      
-
-
-message TrainingRemoveNotify {
+// 属性取消
+message TrainingPropertyCancelRequest {
     required bytes session = 1;
-    repeated string ids = 2;
+    required int32 staff_id = 2;
+    required int32 slot_id = 3;
 }
 
-message TrainingBuyRequest {
-    required bytes session = 1;
-    required string id = 2;      // 训练ID
-}
-
-message TrainingBuyResponse {
+message TrainingPropertyCancelResponse {
     required int32 ret = 1;
     required bytes session = 2;
+}
+
+// 属性加速
+message TrainingPropertySpeedupRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+    required int32 slot_id = 3;
+}
+
+message TrainingPropertySpeedupResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 属性领奖
+message TrainingPropertyGetRewardRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+    required int32 slot_id = 3;
+}
+
+message TrainingPropertyGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
 }
 

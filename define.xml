@@ -39,11 +39,6 @@
     <file name = "staff">
         <protocol name = "StaffNotify" type = "500" />
         <protocol name = "StaffRemoveNotify" type = "501" />
-        <protocol name = "StaffTrainingRequest" type = "502" command = "/game/staff/training/" />
-        <protocol name = "StaffTrainingResponse" type = "503" reqtype = "502" />
-        <protocol name = "StaffTrainingGetRewardRequest" type = "504" command = "/game/staff/training/getreward/" />
-        <protocol name = "StaffTrainingGetRewardResponse" type = "505" reqtype = "504" />
-
         <protocol name = "StaffRecruitNotify" type = "520" />
         <protocol name = "StaffRecruitRefreshRequest" type = "521" command = "/game/staff/recruit/refresh/" />
         <protocol name = "StaffRecruitRefreshResponse" type = "522" reqtype = "521" />
@@ -76,14 +71,25 @@
     </file>
 
     <file name = "training">
-        <protocol name = "TrainingNotify" type = "900" />
-        <protocol name = "TrainingRemoveNotify" type = "901" />
-        <protocol name = "TrainingBuyRequest" type = "902" command = "/game/training/buy/" />
-        <protocol name = "TrainingBuyResponse" type = "903" reqtype = "902" />
-        <protocol name = "TrainingStoreNotify" type = "904" />
-        <protocol name = "TrainingStoreRefreshRequest" type = "905" command = "/game/training/refresh/" />
-        <protocol name = "TrainingStoreRefreshResponse" type = "906" reqtype = "905" />
-        <protocol name = "TrainingStoreRemoveNotify" type = "907" />
+        <protocol name = "TrainingExpSlotNotify" type = "900" />
+        <protocol name = "TrainingExpStartRequest" type = "901" command = "/game/training/exp/start/" />
+        <protocol name = "TrainingExpStartResponse" type = "902" reqtype = "901" />
+        <protocol name = "TrainingExpCancelRequest" type = "903" command = "/game/training/exp/cancel/" />
+        <protocol name = "TrainingExpCancelResponse" type = "904" reqtype = "903" />
+        <protocol name = "TrainingExpSpeedupRequest" type = "905" command = "/game/training/exp/speedup/" />
+        <protocol name = "TrainingExpSpeedupResponse" type = "906" reqtype = "905" />
+        <protocol name = "TrainingExpGetRewardRequest" type = "907" command = "/game/training/exp/getreward/" />
+        <protocol name = "TrainingExpGetRewardResponse" type = "908" reqtype = "907" />
+
+        <protocol name = "TrainingPropertyNotify" type = "920" />
+        <protocol name = "TrainingPropertyStartRequest" type = "921" command = "/game/training/property/start/" />
+        <protocol name = "TrainingPropertyStartResponse" type = "922" reqtype = "921" />
+        <protocol name = "TrainingPropertyCancelRequest" type = "923" command = "/game/training/property/cancel/" />
+        <protocol name = "TrainingPropertyCancelResponse" type = "924" reqtype = "923" />
+        <protocol name = "TrainingPropertySpeedupRequest" type = "925" command = "/game/training/property/speedup/" />
+        <protocol name = "TrainingPropertySpeedupResponse" type = "926" reqtype = "925" />
+        <protocol name = "TrainingPropertyGetRewardRequest" type = "927" command = "/game/training/property/getreward/" />
+        <protocol name = "TrainingPropertyGetRewardResponse" type = "928" reqtype = "927" />
     </file>    
 
     <file name = "skill">
@@ -92,6 +98,8 @@
         <protocol name = "SkillLockToggleResponse" type = "1002" reqtype = "1001" />
         <protocol name = "SkillWashRequest" type = "1003" command = "/game/skill/wash/" />
         <protocol name = "SkillWashResponse" type = "1004" reqtype = "1003" />
+        <protocol name = "SkillUpgradeSpeedupRequest" type = "1005" command = "/game/skill/upgrade/speedup/" />
+        <protocol name = "SkillUpgradeSpeedupResponse" type = "1006" reqtype = "1005" />
     </file>
 
     <file name = "task">

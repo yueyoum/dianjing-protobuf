@@ -53,22 +53,6 @@ message StaffFireResponse {
 }
 
 message Staff {
-    message TrainingSlot {
-        enum TrainingSlotStatus {
-            TS_CLOSED = 1;          // 未开启的插槽
-            TS_EMPTY = 2;           // 空训练插槽
-            TS_QUEUE = 3;           // 排队中
-            TS_TRAINING = 4;        // 正在训练
-            TS_FINISHED = 5;        // 已经结束的训练
-        }
-
-        required TrainingSlotStatus status = 1;
-        required int32 slot_id = 2;
-        optional int32 training_id = 3;             // 训练日程ID
-        optional TrainingItem training_item = 4;
-        optional int64 end_at = 5;      // 结束的UTC时间戳
-    }
-
     required int32 id = 1;
     required int32 level = 2;
     required int32 cur_exp = 3;     // 当前经验
@@ -83,8 +67,6 @@ message Staff {
     required int32 yunying = 11;    // 运营
     required int32 yishi = 12;      // 意识
     required int32 caozuo = 13;     // 操作
-
-    repeated TrainingSlot training_slots = 14;     // 查看其他俱乐部员工的时候不填充
 }
 
 
@@ -98,27 +80,5 @@ message StaffNotify {
 message StaffRemoveNotify {
     required bytes session = 1;
     repeated int32 id = 2;
-}
-
-message StaffTrainingRequest {
-    required bytes session = 1;
-    required int32 staff_id = 2;    // 员工ID
-    required string training_id = 3; // 训练日程ID
-}
-
-message StaffTrainingResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-message StaffTrainingGetRewardRequest {
-    required bytes session = 1;
-    required int32 staff_id = 2;
-    required int32 slot_id = 3;    // 插槽ID
-}
-
-message StaffTrainingGetRewardResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
 }
 
