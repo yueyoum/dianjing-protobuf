@@ -208,5 +208,12 @@
         <protocol name = "ActiveValueGetRewardResponse" type = "2103" reqtype = "2102" />
     </file>
 
+    <file name = "bag">
+        <protocol name = "TrainingSkillItemNotify" type = "2200" />
+        <protocol name = "TrainingSkillItemRemoveNotify" type = "2201" />
+        <protocol name = "ItemNotify" type = "2202" />
+        <protocol name = "ItemRemoveNotify" type = "2203" />
+    </file>
+
 </namespace>
 
