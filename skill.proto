@@ -44,6 +44,18 @@ message SkillWashResponse {
     required bytes session = 2;
 }
 
+message SkillUpgradeRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+    required int32 skill_id = 3;
+}
+
+message SkillUpgradeResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
 message SkillUpgradeSpeedupRequest {
     required bytes session = 1;
     required int32 staff_id = 2;

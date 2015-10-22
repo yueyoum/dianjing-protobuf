@@ -100,6 +100,8 @@
         <protocol name = "SkillWashResponse" type = "1004" reqtype = "1003" />
         <protocol name = "SkillUpgradeSpeedupRequest" type = "1005" command = "/game/skill/upgrade/speedup/" />
         <protocol name = "SkillUpgradeSpeedupResponse" type = "1006" reqtype = "1005" />
+        <protocol name = "SkillUpgradeRequest" type = "1007" command = "/game/skill/upgrade/" />
+        <protocol name = "SkillUpgradeResponse" type = "1008" reqtype = "1007" />
     </file>
 
     <file name = "task">
