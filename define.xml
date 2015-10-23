@@ -90,6 +90,24 @@
         <protocol name = "TrainingPropertySpeedupResponse" type = "926" reqtype = "925" />
         <protocol name = "TrainingPropertyGetRewardRequest" type = "927" command = "/game/training/property/getreward/" />
         <protocol name = "TrainingPropertyGetRewardResponse" type = "928" reqtype = "927" />
+
+        <protocol name = "TrainingBroadcastNotify" type = "930" />
+        <protocol name = "TrainingBroadcastStartRequest" type = "931" command = "/game/training/broadcast/start/" />
+        <protocol name = "TrainingBroadcastStartResponse" type = "932" reqtype = "931" />
+        <protocol name = "TrainingBroadcastCancelRequest" type = "933" command = "/game/training/broadcast/cancel/" />
+        <protocol name = "TrainingBroadcastCancelResponse" type = "934" reqtype = "933" />
+        <protocol name = "TrainingBroadcastSpeedupRequest" type = "935" command = "/game/training/broadcast/speedup/" />
+        <protocol name = "TrainingBroadcastSpeedupResponse" type = "936" reqtype = "935" />
+        <protocol name = "TrainingBroadcastGetRewardRequest" type = "937" command = "/game/training/broadcast/getreward/" />
+        <protocol name = "TrainingBroadcastGetRewardResponse" type = "938" reqtype = "937" />
+
+        <protocol name = "TrainingShopNotify" type = "940" />
+        <protocol name = "TrainingShopStartRequest" type = "941" command = "/game/training/shop/start/" />
+        <protocol name = "TrainingShopStartResponse" type = "942" reqtype = "941" />
+
+        <protocol name = "TrainingSponsorNotify" type = "950" />
+        <protocol name = "TrainingSponsorStartRequest" type = "951" command = "/game/training/sponsor/start/" />
+        <protocol name = "TrainingSponsorStartResponse" type = "952" reqtype = "951" />
     </file>    
 
     <file name = "skill">
