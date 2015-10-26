@@ -188,6 +188,7 @@ message TrainingBroadcastCancelRequest {
 message TrainingBroadcastCancelResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
 
 // 直播加速
@@ -213,6 +214,7 @@ message TrainingBroadcastGetRewardRequest {
 message TrainingBroadcastGetRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
 
 // 网店
