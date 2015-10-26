@@ -182,7 +182,6 @@ message TrainingBroadcastStartResponse {
 message TrainingBroadcastCancelRequest {
     required bytes session = 1;
     required int32 slot_id = 2;
-    required int32 staff_id = 3;
 }
 
 message TrainingBroadcastCancelResponse {
@@ -195,7 +194,6 @@ message TrainingBroadcastCancelResponse {
 message TrainingBroadcastSpeedupRequest {
     required bytes session = 1;
     required int32 slot_id = 2;
-    required int32 staff_id = 3;
 }
 
 message TrainingBroadcastSpeedupResponse {
@@ -207,8 +205,6 @@ message TrainingBroadcastSpeedupResponse {
 message TrainingBroadcastGetRewardRequest {
     required bytes session = 1;
     required int32 slot_id = 2;
-    required int32 staff_id = 3;
-
 }
 
 message TrainingBroadcastGetRewardResponse {
@@ -247,6 +243,7 @@ message TrainingSponsorNotify {
     message SponsorSlot {
         required int32 id = 1;
         required TrainingSlotStatus status = 2;
+        optional int32 remained_days = 3;   // 剩余天数
     }
 
     required bytes session = 1;
