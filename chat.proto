@@ -1,6 +1,5 @@
 package Dianjing.protocol;
 
-
 import "common.proto";
 
 enum ChatChannel {
@@ -9,15 +8,15 @@ enum ChatChannel {
     CHAT_CHANNEL_UNION = 3;
 }
 
-message ChatCharacter {
+message ChatClub {
     required string id = 1;
-    required string name = 2;
+    required string name = 2;   // club name
     required int32 vip = 3;
 }
 
 message ChatMessage {
     required ChatChannel channel = 1;
-    required ChatCharacter char = 2;
+    required ChatClub club = 2;
     required string msg = 3;
 }
 
