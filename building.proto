@@ -5,8 +5,8 @@ import "common.proto";
 message BuildingNotify {
     message Building {
         required int32 id = 1;
-        required int32 level = 2;   // 当前等级，不能升级的建筑等级为0
-        required int64 up_finish_timestamp = 3;    // 升级完成时间戳, -1表示没有升级
+        required int32 level = 2;       // 当前等级，不能升级的建筑等级为0
+        required int64 end_at = 3;      // 升级完成时间戳, 0表示没有升级
     }
 
     required bytes session = 1;
@@ -25,16 +25,4 @@ message BuildingLevelUpResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
-
-message BuildingLevelUpFinishConfirmRequest{
-    required bytes session = 1;
-    required int32 id = 2;    //建筑ID
-}
-
-message BuildingLevelUpFinishConfirmResponse{
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-
 
