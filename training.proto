@@ -20,8 +20,9 @@ message TrainingExpSlotNotify {
             required int64 end_at = 3;      // 结束时间戳
         }
 
-        required int32 id = 1;              // 训练位ID， 从1开始
-        optional TrainingStaff staff = 2;
+        required int32 id = 1;              // 训练位ID， 从1开始   全部发送
+        required TrainingSlotStatus status = 2;
+        optional TrainingStaff staff = 3;
     }
 
     required bytes session = 1;
@@ -82,8 +83,9 @@ message TrainingPropertyNotify {
     message TrainingStaff {
         message TrainingItem {
             required int32 slot_id = 1;  // 从1开始
-            required int32 training_id = 2;  // 如果为空，这里是0
-            required int64 end_at = 3;
+            required TrainingSlotStatus status = 2;     // EMPTY, FINISH, TRAINING
+            required int32 training_id = 3;  // 如果为空，这里是0
+            required int64 end_at = 4;       // 如果为空，这里是0
         }
 
         required int32 staff_id = 1;
@@ -162,7 +164,7 @@ message TrainingBroadcastNotify {
 
     required bytes session = 1;
     required Action act = 2;
-    repeated BroadcastSlot slots = 3;
+    repeated BroadcastSlot slots = 3;   // 全发
 }
 
 // 直播开始
@@ -217,7 +219,7 @@ message TrainingBroadcastGetRewardResponse {
 message TrainingShopNotify {
     message ShopSlot {
         required int32 id = 1;
-        required TrainingSlotStatus status = 2;
+        required TrainingSlotStatus status = 2; // NOT_OPEN 没有开启, EMPTY 没人, TRAINING 有人
         optional int32 staff_id = 3;
     }
 
@@ -242,7 +244,7 @@ message TrainingShopStartResponse {
 message TrainingSponsorNotify {
     message SponsorSlot {
         required int32 id = 1;
-        required TrainingSlotStatus status = 2;
+        required TrainingSlotStatus status = 2; // NOT_OPEN 没有开启, EMPTY 没有赞助, TRAINING 正在赞助
         optional int32 remained_days = 3;   // 剩余天数
     }
 
