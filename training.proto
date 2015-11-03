@@ -8,6 +8,7 @@ enum TrainingSlotStatus {
     TRAINING_SLOT_EMPTY = 2;
     TRAINING_SLOT_TRAINING = 3;
     TRAINING_SLOT_FINISH = 4;
+    TRAINING_SLOT_WAITING = 5;      // 只在熟悉训练中使用
 }
 
 
