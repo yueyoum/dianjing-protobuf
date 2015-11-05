@@ -3,6 +3,7 @@ package Dianjing.protocol;
 message ItemShopBuyRequest {
     required bytes session = 1;
     required int32 id = 2;  // item id
+    required int32 amount = 3;
 }
 
 message ItemShopBuyResponse {
