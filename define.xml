@@ -233,5 +233,10 @@
         <protocol name = "ItemRemoveNotify" type = "2203" />
     </file>
 
+    <file name = "shop">
+        <protocol name = "ItemShopBuyRequest" type = "2300" command = "/game/itemshop/buy/" />
+        <protocol name = "ItemShopBuyResponse" type = "2301" reqtype = "2300" />
+    </file>
+
 </namespace>
 
