@@ -130,6 +130,7 @@
         <protocol name = "TaskDoingResponse" type = "1106" reqtype = "1105" />
         <protocol name = "RandomEventDoneRequest" type = "1107" command = "/game/randomevent/done/" />
         <protocol name = "RandomEventDoneResponse" type = "1108" reqtype = "1107" />
+        <protocol name = "RandomEventNotify" type = "1109" />
     </file>
 
     <file name = "friend">
