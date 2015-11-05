@@ -60,14 +60,8 @@ message TaskDoingResponse {
 }
 
 message RandomEventNotify {
-    message Event {
-        required int32 id = 1;
-        required int32 times = 2;
-    }
-
     required bytes session = 1;
-    required Action act = 2;
-    repeated Event events = 3;
+    required int32 times = 2;
 }
 
 message RandomEventDoneRequest {
