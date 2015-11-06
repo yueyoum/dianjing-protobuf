@@ -3,6 +3,8 @@
         <protocol name = "UTCNotify" type = "10" />
         <protocol name = "SyncRequest" type = "11" command = "/game/sync/" />
         <protocol name = "SyncResponse" type = "12" reqtype = "11" />
+        <protocol name = "PingRequest" type = "13" command = "/game/ping/" />
+        <protocol name = "PingResponse" type = "14" reqtype = "11" />
     </file>
 
     <file name = "server">

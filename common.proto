@@ -42,6 +42,7 @@ message StaffBaseInfo {
 }
 
 
+// 全部同步 相当与登录
 message SyncRequest {
     required bytes session = 1;
 }
@@ -53,3 +54,12 @@ message SyncResponse {
 }
 
 
+// 之同步即时消息
+message PingRequest {
+    required bytes session = 1;
+}
+
+message PingResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
