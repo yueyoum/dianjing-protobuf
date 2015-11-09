@@ -6,7 +6,7 @@ message Skill {
     required int32 id = 1;
     required int32 level = 2;
     required bool locked = 3;
-    required int64 upgrade_end_at = 4;  // 升级结束时间戳，-1 表示没有升级
+    required int64 upgrade_end_at = 4;  // 升级结束时间戳，0 表示没有升级
 }
 
 message SkillNotify {

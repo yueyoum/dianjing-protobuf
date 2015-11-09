@@ -23,6 +23,7 @@ message League {
             required string club_one_id = 2;
             required string club_two_id = 3;
             required bool club_one_win = 4;
+            repeated int32 points = 5;  // 比分
         }
 
         required int32 battle_at = 1; // UTC timestamp
