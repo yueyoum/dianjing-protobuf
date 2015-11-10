@@ -61,3 +61,18 @@ message ClubSetMatchStaffResponse {
 }
 
 
+// 队员格子
+message ClubStaffSlotsAmountNotify {
+    required bytes session = 1;
+    required int32 amount = 2;
+    required int32 cost_diamond = 3;
+}
+
+message ClubStaffSlotBuyRequest {
+    required bytes session = 1;
+}
+
+message ClubStaffSlotBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}

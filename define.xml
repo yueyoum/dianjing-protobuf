@@ -36,6 +36,9 @@
         <protocol name = "ClubSetPolicyResponse" type = "411" reqtype = "410" />
         <protocol name = "ClubSetMatchStaffRequest" type = "412" command = "/game/club/matchstaff/" />
         <protocol name = "ClubSetMatchStaffResponse" type = "413" reqtype = "412" />
+        <protocol name = "ClubStaffSlotsAmountNotify" type = "420" />
+        <protocol name = "ClubStaffSlotBuyRequest" type = "421" command = "/game/club/staffslots/buy/" />
+        <protocol name = "ClubStaffSlotBuyResponse" type = "422" reqtype = "421" />
     </file>
 
     <file name = "staff">
