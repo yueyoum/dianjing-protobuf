@@ -10,10 +10,15 @@ enum TaskStatus{
     TASK_END = 3;
 }
 
+message Target{
+    required int32 id = 1;
+    required int32 value = 2;
+}
+
 message TaskNotify {
     message Task {
         required int32 id = 1;              //  task id
-        required int32 num = 2;             //  progress num
+        repeated Target target = 2;
         required TaskStatus status = 3;     //  task status
         required Drop drop = 4;
     }
