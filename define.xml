@@ -127,8 +127,6 @@
 
     <file name = "task">
         <protocol name = "TaskNotify" type = "1100" />
-        <protocol name = "TaskAcquireRequest" type = "1101" command = "/game/task/acquire/" />
-        <protocol name = "TaskAcquireResponse" type = "1102" reqtype = "1101" />
         <protocol name = "TaskGetRewardRequest" type = "1103" command = "/game/task/getreward/" />
         <protocol name = "TaskGetRewardResponse" type = "1104" reqtype = "1103" />
         <protocol name = "TaskDoingRequest" type = "1105" command = "/game/task/doing/" />

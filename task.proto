@@ -4,10 +4,8 @@ import "common.proto";
 import "package.proto";
 
 enum TaskStatus{
-    TASK_UNRECEIVED = 0;
     TASK_DOING = 1;
     TASK_FINISH = 2;
-    TASK_END = 3;
 }
 
 message Target{
@@ -18,9 +16,8 @@ message Target{
 message TaskNotify {
     message Task {
         required int32 id = 1;              //  task id
-        repeated Target target = 2;
-        required TaskStatus status = 3;     //  task status
-        required Drop drop = 4;
+        required TaskStatus status = 2;     //  task status
+        repeated Target targets = 3;        // 如果任务完成了，就不发
     }
 
     required bytes session = 1;
@@ -28,17 +25,6 @@ message TaskNotify {
     repeated Task task = 3;
 }
 
-
-message TaskAcquireRequest {
-    required bytes session = 1;
-    required int32 id = 2;          // task ID
-}
-
-
-message TaskAcquireResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
 
 
 message TaskGetRewardRequest {
