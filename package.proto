@@ -9,29 +9,23 @@ message Resource {
 // 软妹币，钻石，声望， 联赛积分，天梯赛积分
 // 训练道具
 message Drop {
-    message Trainings {
+    message TrainingSkill {
+        required int32 id = 1;
+        required int32 amount = 2;
+    }
+
+    message Item {
         required int32 id = 1;
         required int32 amount = 2;
     }
 
     repeated Resource resources = 1;
-    repeated Trainings trainings = 2;
+    repeated TrainingSkill trainings = 2;
+    repeated Item items = 3;
 }
 
 // 员工属性
 message Property {
     repeated Resource resources = 1;
-}
-
-
-// 训练道具
-message TrainingItem {
-    message TrainingSkill {
-        required int32 id = 1;
-        required int32 level = 2;
-    }
-
-    repeated Resource resources = 1;
-    optional TrainingSkill skill = 2;
 }
 
