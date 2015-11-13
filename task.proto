@@ -9,11 +9,10 @@ enum TaskStatus{
     TASK_DONE = 3;
 }
 
-message Target{
+message Target {
     required int32 id = 1;
     required int32 param = 2;
-    required int32 value = 3;
-    required int32 current_value = 4;
+    required int32 current_value = 3;
 }
 
 message TaskNotify {
