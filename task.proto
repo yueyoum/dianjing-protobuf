@@ -11,7 +11,9 @@ enum TaskStatus{
 
 message Target{
     required int32 id = 1;
-    required int32 value = 2;
+    required int32 param = 2;
+    required int32 value = 3;
+    required int32 current_value = 4;
 }
 
 message TaskNotify {
@@ -29,7 +31,7 @@ message TaskNotify {
 
 message TaskRemoveNotify {
     required bytes session = 1;
-    required int32 ids = 2;          // task ID
+    required int32 id = 2;          // task ID
 }
 
 
