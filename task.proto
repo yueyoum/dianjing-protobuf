@@ -6,6 +6,7 @@ import "package.proto";
 enum TaskStatus{
     TASK_DOING = 1;
     TASK_FINISH = 2;
+    TASK_DONE = 3;
 }
 
 message Target{
@@ -25,6 +26,11 @@ message TaskNotify {
     repeated Task task = 3;
 }
 
+
+message TaskRemoveNotify {
+    required bytes session = 1;
+    required int32 ids = 2;          // task ID
+}
 
 
 message TaskGetRewardRequest {
