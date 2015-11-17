@@ -29,3 +29,25 @@ message Property {
     repeated Resource resources = 1;
 }
 
+
+message ItemSellRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+    required int32 amount = 3;
+}
+
+message ItemSellResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message TrainingSkillSellRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+    required int32 amount = 3;
+}
+
+message TrainingSkillSellResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}

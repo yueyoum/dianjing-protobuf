@@ -243,5 +243,12 @@
         <protocol name = "ItemShopBuyResponse" type = "2301" reqtype = "2300" />
     </file>
 
+    <file name = "package">
+        <protocol name = "ItemSellRequest" type = "2400" command = "/game/sell/item/" />
+        <protocol name = "ItemSellResponse" type = "2401" reqtype = "2400" />
+        <protocol name = "TrainingSkillSellRequest" type = "2402" command = "/game/sell/trainingskill/" />
+        <protocol name = "TrainingSkillSellResponse" type = "2403" reqtype = "2402" />
+    </file>
+
 </namespace>
 
