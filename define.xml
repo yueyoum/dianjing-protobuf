@@ -150,6 +150,8 @@
         <protocol name = "FriendMatchResponse" type = "1209" reqtype = "1208" />
         <protocol name = "FriendAcceptRequest" type = "1210" command = "/game/friend/accept/" />
         <protocol name = "FriendAcceptResponse" type = "1211" reqtype = "1210" />
+        <protocol name = "FriendCandidatesRequest" type = "1212" command = "/game/friend/candidates/" />
+        <protocol name = "FriendCandidatesResponse" type = "1213" reqtype = "1212" />
     </file>
 
     <file name = "mail">

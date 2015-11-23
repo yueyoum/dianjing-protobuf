@@ -12,18 +12,18 @@ enum FriendStatus {
     FRIEND_OK = 4;                      // 好友
 }
 
-message FriendNotify {
-    message Friend {
-        required FriendStatus status = 1;
-        required string id = 2;
-        required string name = 3;
-        required string avatar = 4;
-        required string club_name = 5;
-        required int32 club_flag = 6;
-        required int32 club_gold = 7;
-        required int32 club_level = 8;
-    }
+message Friend {
+    required FriendStatus status = 1;
+    required string id = 2;
+    required string name = 3;
+    required string avatar = 4;
+    required string club_name = 5;
+    required int32 club_flag = 6;
+    required int32 club_gold = 7;
+    required int32 club_level = 8;
+}
 
+message FriendNotify {
     required bytes session = 1;
     required Action act = 2;
     repeated Friend friends = 3;
@@ -33,7 +33,6 @@ message FriendRemoveNotify {
     required bytes session = 1;
     repeated string ids = 2;
 }
-
 
 message FriendGetInfoRequest {
     required bytes session = 1;
@@ -47,6 +46,16 @@ message FriendGetInfoResponse {
 
     required Character char = 3;
     required Club club = 4;
+}
+
+message FriendCandidatesRequest {
+    required bytes session = 1;    
+}
+
+message FriendCandidatesResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Friend friends = 3;
 }
 
 
