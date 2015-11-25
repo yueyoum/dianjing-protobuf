@@ -6,6 +6,11 @@ enum NextOperate {
     OPT_CREATE_CLUB = 3;    // 建立俱乐部
 }
 
+enum UploadStatus {
+    UPLOAD_NONE = 1;
+    UPLOAD_VERIFY = 2;
+    UPLOAD_DONE = 3;
+}
 
 enum Action {
     ACT_INIT = 1;           // 初始化

@@ -25,6 +25,8 @@
         <protocol name = "CharacterNotify" type = "300" />
         <protocol name = "CreateCharacterRequest" type = "301" command = "/game/character/create/" />
         <protocol name = "CreateCharacterResponse" type = "302" reqtype = "301" />
+        <protocol name = "CharacterUploadAvatarRequest" type = "303" command = "/game/character/avatar/upload/" />
+        <protocol name = "CharacterUploadAvatarResponse" type = "304" reqtype = "303" />
     </file>
     
     <file name = "club">

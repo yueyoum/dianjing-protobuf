@@ -10,6 +10,8 @@ message Character {
     required int32 age = 5;
     required int32 profession = 6;
     required string des = 7;
+    
+    required UploadStatus avatar_status = 8;
 }
 
 message CharacterNotify {
@@ -30,4 +32,15 @@ message CreateCharacterResponse {
     optional NextOperate next = 3 [default = OPT_OK];
 }
 
+
+// 上传头像
+message CharacterUploadAvatarRequest {
+    required bytes session = 1;
+    required bytes data = 2;
+}
+
+message CharacterUploadAvatarResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 
