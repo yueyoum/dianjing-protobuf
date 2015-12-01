@@ -4,9 +4,9 @@ import "match.proto";
 import "package.proto";
 
 enum AreaStatus {
-    NOT_OPEN = 1;
-    OPEN = 2;
-    FINISH = 3;
+    CHALLENGE_NOT_OPEN = 1;
+    CHALLENGE_OPEN = 2;
+    CHALLENGE_FINISH = 3;
 }
 
 message Area {
