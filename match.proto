@@ -16,14 +16,19 @@ message Round {
     required Staff staff_two = 3;
 }
 
+// 一场员工比赛
+message OneMatch {
+    repeated Round rounds = 1;
+    required bool staff_one_win = 2;
+}
 
-// 一场比赛
-message Match {
-    // 员工， 参赛者
+
+// 员工比赛
+message StaffMatch {
     required int32 staff_one_id = 1;
     required int32 staff_two_id = 2;
 
-    repeated Round rounds = 3;
+    repeated OneMatch match = 3;
     required bool staff_one_win = 4;
 }
 
@@ -32,8 +37,7 @@ message ClubMatch {
     required Club club_one = 1;
     required Club club_two = 2;
 
-    repeated Match match = 3;
+    repeated StaffMatch match = 3;
     required bool club_one_win = 4;
 }
-
 
