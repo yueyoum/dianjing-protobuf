@@ -3,15 +3,27 @@ package Dianjing.protocol;
 import "match.proto";
 import "package.proto";
 
+enum AreaStatus {
+    NOT_OPEN = 1;
+    OPEN = 2;
+    FINISH = 3;
+}
+
+message Area {
+    required int32 id = 1;
+    required AreaStatus status = 2;
+    optional int32 challenge_id = 3;    // 将要打的关卡ID
+}
 
 message ChallengeNotify {
     required bytes session = 1;
-    required int32 id = 2;      // 当前要打的挑战赛ID, 0表示全部打完了
+    required int32 current_area_id = 2;
+    repeated Area area = 3;
 }
-
 
 message ChallengeStartRequest {
     required bytes session = 1;
+    required int32 area_id = 2;
 }
 
 message ChallengeStartResponse {
@@ -19,5 +31,15 @@ message ChallengeStartResponse {
     required bytes session = 2;
     optional ClubMatch match = 3;
     optional Drop drop = 4;
+}
+
+message ChallengeAreaSwitchRequest {
+    required bytes session = 1;
+    required int32 area_id = 2;
+}
+
+message ChallengeAreaSwitchResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
 }
 

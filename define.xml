@@ -67,6 +67,8 @@
         <protocol name = "ChallengeNotify" type = "700" />
         <protocol name = "ChallengeStartRequest" type = "701" command = "/game/challenge/start/" />
         <protocol name = "ChallengeStartResponse" type = "702" reqtype = "701" />
+        <protocol name = "ChallengeAreaSwitchRequest" type = "703" command = "/game/challenge/area/switch/" />
+        <protocol name = "ChallengeAreaSwitchResponse" type = "704" reqtype = "703" />
     </file>
 
     <file name = "building">
