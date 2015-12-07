@@ -26,3 +26,13 @@ message BuildingLevelUpResponse {
     required bytes session = 2;
 }
 
+message BuildingLevelSpeedUpRequest {
+    required bytes session = 1;
+    required int32 id = 2;      // 建筑ID
+}
+
+message buildinglevelspeedupResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
