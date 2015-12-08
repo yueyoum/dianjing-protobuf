@@ -1,0 +1,53 @@
+package Dianjing.protocol;
+
+import "common.proto";
+import "package.proto";
+
+enum OppositeClubStatus {
+    TRAINING_MATCH_CLUB_PASS = 1;       // 通过
+    TRAINING_MATCH_CLUB_FAIL = 2;       // 失败
+    TRAINING_MATCH_CLUB_OPEN = 3;       // 开启，可以打
+    TRAINING_MATCH_CLUB_NOT_OPEN = 4;   // 未开启
+    TRAINING_MATCH_CLUB_DONE = 5;
+}
+
+message OppositeClub {
+    required int32 index = 1;   // 序号，从0开始
+    required int32 flag = 2;
+    required string name = 3;
+    required int32 level = 4;
+    required int32 power = 5;
+
+    required OppositeClubStatus status = 6;
+}
+
+
+message TrainingMatchNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    required int32 remained_relive_times = 3;   // 剩余复活次数
+    repeated OppositeClub clubs = 4;
+}
+
+message TrainingMatchStartRequest {
+    required bytes session = 1;
+    required int32 club_index = 2;
+}
+
+message TrainingMatchStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+message TrainingMatchGetAdditionalRewardRequest {
+    required bytes session = 1;
+    required int32 club_index = 2;
+}
+
+message TrainingMatchGetAdditionalRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+

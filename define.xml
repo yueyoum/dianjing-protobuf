@@ -257,6 +257,14 @@
         <protocol name = "TrainingSkillSellRequest" type = "2402" command = "/game/sell/trainingskill/" />
         <protocol name = "TrainingSkillSellResponse" type = "2403" reqtype = "2402" />
     </file>
+    
+    <file name = "training_match">
+        <protocol name = "TrainingMatchNotify" type = "2500" />
+        <protocol name = "TrainingMatchStartRequest" type = "2501" command = "/game/trainingmatch/start/" />
+        <protocol name = "TrainingMatchStartResponse" type = "2502" reqtype = "2501" />
+        <protocol name = "TrainingMatchGetAdditionalRewardRequest" type = "2503" command = "/game/trainingmatch/reward/" />
+        <protocol name = "TrainingMatchGetAdditionalRewardResponse" type = "2504" reqtype = "2503" />
+    </file>
 
 </namespace>
 
