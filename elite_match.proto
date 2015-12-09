@@ -17,7 +17,7 @@ message EliteArea {
     }
 
     required int32 id = 1;
-    required AreaStatus status = 2;
+    required EliteAreaStatus status = 2;
     repeated Match match = 3;
 }
 
