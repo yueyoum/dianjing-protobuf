@@ -266,5 +266,12 @@
         <protocol name = "TrainingMatchGetAdditionalRewardResponse" type = "2504" reqtype = "2503" />
     </file>
 
+    <file name = "elite_match">
+        <protocol name = "EliteNotify" type = "2600" />
+        <protocol name = "EliteTimesNotify" type = "2601" />
+        <protocol name = "EliteStartRequest" type = "2602" command = "/game/elite/start/" />
+        <protocol name = "EliteStartResponse" type = "2603" reqtype = "2602" />
+    </file>
+
 </namespace>
 
