@@ -4,13 +4,13 @@ import "common.proto";
 import "package.proto";
 import "match.proto";
 
-enum AreaStatus {
+enum EliteAreaStatus {
     ELITE_AREA_NOT_OPEN = 1;
     ELITE_AREA_OPEN = 2;
     ELITE_AREA_FINISH = 3;
 }
 
-message Area {
+message EliteArea {
     message Match {
         required int32 id = 1;
         required int32 cur_times = 2;   // 已经打过的次数，-1表示不能打
@@ -24,7 +24,7 @@ message Area {
 message EliteNotify {
     required bytes session = 1;
     required Action act = 2;
-    repeated Area area = 3;
+    repeated EliteArea area = 3;
 }
 
 message EliteTimesNotify {
