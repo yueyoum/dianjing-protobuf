@@ -37,7 +37,7 @@ message EliteTimesNotify {
 
 message EliteStartRequest {
     required bytes session = 1;
-    required int32 area_id = 2;
+    required int32 match_id = 2;        // 关卡ID
 }
 
 message EliteStartResponse {
