@@ -19,8 +19,7 @@ message AuctionItem{
     required int32 min_price = 8;       // 最低价
     required int32 max_price = 9;       // 最高价(一口价)
 
-    required int32 bidder = 10;         // 当前竞标者
-    required int32 bidding = 11;        // 当前竞标价格
+    required int32 bidding = 10;        // 当前竞标价格
 }
 
 // 玩家拍卖物品通知
