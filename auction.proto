@@ -71,7 +71,7 @@ message StaffAuctionCancelResponse{
 message StaffAuctionBidingRequest{
     required bytes session = 1;
     required int32 item_id = 2;
-    required int32 price = 2;
+    required int32 price = 3;
 }
 
 // 竞标回复
