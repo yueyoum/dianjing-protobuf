@@ -29,7 +29,7 @@ message AuctionItem{
 
 // 查询拍卖物品()
 message StaffAuctionSearchRequest{
-    required byte session = 1;
+    required bytes session = 1;
 }
 
 // 查询拍卖物品回复
@@ -41,7 +41,7 @@ message StaffAuctionSearchResponse{
 
 // 请求拍卖员工
 message StaffAuctionSellRequest{
-    required byte session = 1;
+    required bytes session = 1;
     required int32 staff_id = 2;
     required int32 tp = 3;             // 拍卖税收比率
     required int32 min_price = 4;      // 最低价
@@ -57,12 +57,12 @@ message StaffAuctionSellResponse{
 
 // 取消拍卖
 message StaffAuctionCancelRequest{
-    required byte session = 1;
+    required bytes session = 1;
     required int32 staff_id = 2;
 }
 
 // 取消拍卖回复
 message StaffAuctionCancelResponse{
     required int32 ret = 1;
-    required byte session = 2;
+    required bytes session = 2;
 }
