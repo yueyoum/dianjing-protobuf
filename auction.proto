@@ -4,9 +4,9 @@ import "common.proto";
 import "staff.proto";
 
 enum AuctionItemTaxType{
-    hours_8 = 1,
-    hours_16 = 2,
-    hours_24 = 3,
+    hours_8 = 1;
+    hours_16 = 2;
+    hours_24 = 3;
 }
 
 
@@ -23,8 +23,6 @@ message AuctionItem{
     required int32 min_price = 6;       // 最低价
     required int32 max_price = 7;       // 最高价(一口价)
     required int32 bidding = 8;        // 当前竞标价格
-
-    //required int32 auction_inc = 6;     // 竞拍累加价格
 }
 
 // 玩家拍卖物品通知
