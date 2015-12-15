@@ -89,3 +89,8 @@ message StaffAuctionBiddingResponse{
     required int32 ret = 1;
     required bytes session = 2;
 }
+
+message StaffAuctionUserItemRemoveNotify{
+    required bytes session = 1;
+    repeated string item_   id = 2;
+}
