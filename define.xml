@@ -284,6 +284,7 @@
         <protocol name = "StaffAuctionCancelResponse" type = "2707" reqtype = "2706" />
         <protocol name = "StaffAuctionBidingRequest" type = "2708" command = "/game/auction/bidding/" />
         <protocol name = "StaffAuctionBiddingResponse" type = "2709" reqtype = "2708" />
+        <protocol name = "StaffAuctionUserItemRemoveNotify" type = "2710" />
     </file>
 
 </namespace>
