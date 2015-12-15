@@ -4,13 +4,6 @@ import "common.proto";
 import "staff.proto";
 
 
-// 拍卖物品成功通知
-message StaffAuctionUserNotify{
-    required bytes session = 1;
-    required Action act = 2;
-    repeated AuctionItem items = 3;
-}
-
 message AuctionItem{
     required int32 item_id = 1;         // 物品id
 
@@ -19,12 +12,29 @@ message AuctionItem{
     required Staff staff = 3;
 
     //拍卖设置
-    required int64 start_time = 4;     // 拍卖开始时间
-    required int64 end_at = 5;         // 拍卖结束时间
-    required int32 tp = 6;             // 拍卖税收比率
-    required int32 auction_inc = 7;    // 竞拍累加价格
-    required int32 min_price = 8;      // 最低价
-    required int32 max_price = 9;      // 最高价(一口价)
+    required int64 start_time = 4;      // 拍卖开始时间
+    required int64 end_at = 5;          // 拍卖结束时间
+    required int32 tp = 6;              // 拍卖税收比率
+    required int32 auction_inc = 7;     // 竞拍累加价格
+    required int32 min_price = 8;       // 最低价
+    required int32 max_price = 9;       // 最高价(一口价)
+
+    required int32 bidder = 10;         // 当前竞标者
+    required int32 bidding = 11;        // 当前竞标价格
+}
+
+// 玩家拍卖物品通知
+message StaffAuctionUserNotify{
+    required bytes session = 1;
+    required Action act = 2;
+    repeated AuctionItem items = 3;
+}
+
+// 服务器拍卖物品通知
+message StaffAuctionNotify{
+    required bytes session = 1;
+    required Action act = 2;
+    repeated AuctionItem items = 3;
 }
 
 // 查询拍卖物品()
@@ -34,9 +44,8 @@ message StaffAuctionSearchRequest{
 
 // 查询拍卖物品回复
 message StaffAuctionSearchResponse{
-    required bytes session = 1;
-    required Action act = 2;
-    repeated AuctionItem items = 3;
+    required int32 ret = 1;
+    required bytes session = 2;
 }
 
 // 请求拍卖员工
@@ -48,17 +57,16 @@ message StaffAuctionSellRequest{
     required int32 max_price = 5;      // 最高价(一口价)
 }
 
-// 请求拍卖员工回复
+// 拍卖员工回复
 message StaffAuctionSellResponse{
     required int32 ret = 1;
     required bytes session = 2;
-    repeated AuctionItem items = 3;
 }
 
-// 取消拍卖
+// 请求取消拍卖
 message StaffAuctionCancelRequest{
     required bytes session = 1;
-    required int32 staff_id = 2;
+    required int32 item_id = 2;
 }
 
 // 取消拍卖回复
