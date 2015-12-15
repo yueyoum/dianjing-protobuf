@@ -8,7 +8,7 @@ message AuctionItem{
     required int32 item_id = 1;         // 物品id
 
     //员工属性
-    required string char_id = 2;        // 角色ID
+    required string club_name = 2;        // 出售俱乐部
     required Staff staff = 3;
 
     //拍卖设置
