@@ -3,23 +3,28 @@ package Dianjing.protocol;
 import "common.proto";
 import "staff.proto";
 
+enum AuctionItemTaxType{
+    hours_8 = 1,
+    hours_16 = 2,
+    hours_24 = 3,
+}
+
 
 message AuctionItem{
-    required int32 item_id = 1;         // 物品id
+    required string item_id = 1;         // 物品id
 
     //员工属性
     required string club_name = 2;        // 出售俱乐部
-    required Staff staff = 3;
+    required int32 staff_id = 3;
 
     //拍卖设置
     required int64 start_time = 4;      // 拍卖开始时间
     required int64 end_at = 5;          // 拍卖结束时间
-    required int32 tp = 6;              // 拍卖税收比率
-    required int32 auction_inc = 7;     // 竞拍累加价格
-    required int32 min_price = 8;       // 最低价
-    required int32 max_price = 9;       // 最高价(一口价)
+    required int32 min_price = 6;       // 最低价
+    required int32 max_price = 7;       // 最高价(一口价)
+    required int32 bidding = 8;        // 当前竞标价格
 
-    required int32 bidding = 10;        // 当前竞标价格
+    //required int32 auction_inc = 6;     // 竞拍累加价格
 }
 
 // 玩家拍卖物品通知
