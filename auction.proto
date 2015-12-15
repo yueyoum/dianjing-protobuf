@@ -68,7 +68,7 @@ message StaffAuctionSellResponse{
 // 请求取消拍卖
 message StaffAuctionCancelRequest{
     required bytes session = 1;
-    required int32 item_id = 2;
+    required string item_id = 2;
 }
 
 // 取消拍卖回复
@@ -80,7 +80,7 @@ message StaffAuctionCancelResponse{
 // 竞标
 message StaffAuctionBidingRequest{
     required bytes session = 1;
-    required int32 item_id = 2;
+    required string item_id = 2;
     required int32 price = 3;
 }
 
