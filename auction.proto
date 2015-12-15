@@ -3,6 +3,14 @@ package Dianjing.protocol;
 import "common.proto";
 import "staff.proto";
 
+
+// 拍卖物品成功通知
+message StaffAuctionUserNotify{
+    required bytes session = 1;
+    required Action act = 2;
+    repeated AuctionItem items = 3;
+}
+
 message AuctionItem{
     required int32 item_id = 1;         // 物品id
 
@@ -19,18 +27,42 @@ message AuctionItem{
     required int32 max_price = 9;      // 最高价(一口价)
 }
 
+// 查询拍卖物品()
+message StaffAuctionSearchRequest{
+    required byte session = 1;
+}
+
 // 查询拍卖物品回复
-message AuctionItemResponse{
+message StaffAuctionSearchResponse{
     required bytes session = 1;
     required Action act = 2;
     repeated AuctionItem items = 3;
 }
 
-// 玩家拍卖物品状态通知
-message UserAuctionNotify{
-    required bytes session = 1;
-    required Action act = 2;
+// 请求拍卖员工
+message StaffAuctionSellRequest{
+    required byte session = 1;
+    required int32 staff_id = 2;
+    required int32 tp = 3;             // 拍卖税收比率
+    required int32 min_price = 4;      // 最低价
+    required int32 max_price = 5;      // 最高价(一口价)
+}
+
+// 请求拍卖员工回复
+message StaffAuctionSellResponse{
+    required int32 ret = 1;
+    required bytes session = 2;
     repeated AuctionItem items = 3;
 }
 
-// 拍卖物品成功通知 
+// 取消拍卖
+message StaffAuctionCancelRequest{
+    required byte session = 1;
+    required int32 staff_id = 2;
+}
+
+// 取消拍卖回复
+message StaffAuctionCancelResponse{
+    required int32 ret = 1;
+    required byte session = 2;
+}

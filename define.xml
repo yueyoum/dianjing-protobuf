@@ -273,5 +273,15 @@
         <protocol name = "EliteStartResponse" type = "2603" reqtype = "2602" />
     </file>
 
+    <file name = "staff_auction">
+        <protocol name = "StaffAuctionUserNotify" type = "2700" />
+        <protocol name = "StaffAuctionSearchRequest" type = "2701" command = "/game/auction/search/" />
+        <protocol name = "StaffAuctionSearchResponse" type = "2702" reqtype = "2701" />
+        <protocol name = "StaffAuctionSellRequest" type = "2703" command = "/game/auction/sell/" />
+        <protocol name = "StaffAuctionSellResponse" type = "2704" reqtype = "2703" />
+        <protocol name = "StaffAuctionCancelRequest" type = "2705" command = "/game/auction/cancel/" />
+        <protocol name = "StaffAuctionCancelResponse" type = "2706" reqtype = "2705" />
+    </file>
+
 </namespace>
 
