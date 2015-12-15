@@ -16,7 +16,7 @@ message AuctionItem{
 
     //员工属性
     required string char_id = 2;        // 角色ID
-    required Staff staff = 3
+    required Staff staff = 3;
 
     //拍卖设置
     required int64 start_time = 4;     // 拍卖开始时间
