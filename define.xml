@@ -285,7 +285,7 @@
         <protocol name = "StaffAuctionBidingRequest" type = "2708" command = "/game/auction/bidding/" />
         <protocol name = "StaffAuctionBiddingResponse" type = "2709" reqtype = "2708" />
         <protocol name = "StaffAuctionUserItemRemoveNotify" type = "2710" />
-        <protocol name = "StaffAuctionListRequest" type = "2711" />
+        <protocol name = "StaffAuctionListRequest" type = "2711" command = "/game/auction/list/"/>
         <protocol name = "StaffAuctionListResponse" type = "2712" reqtype = "2711" />
         <protocol name = "StaffAuctionListNotify" type = "2713" />
     </file>
