@@ -273,7 +273,7 @@
         <protocol name = "EliteStartResponse" type = "2603" reqtype = "2602" />
     </file>
 
-    <file name = "staff_auction">
+    <file name = "auction">
         <protocol name = "StaffAuctionUserNotify" type = "2700" />
         <protocol name = "StaffAuctionNotify" type = "2701" />
         <protocol name = "StaffAuctionSearchRequest" type = "2702" command = "/game/auction/search/" />
