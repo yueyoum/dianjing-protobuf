@@ -27,8 +27,8 @@ message AuctionItem{
 }
 
 message SearchCondition{
-    required int32 type = 1;
-    required int32 value = 1;
+    required int32 tp = 1;
+    required int32 value = 2;
 }
 
 // 玩家拍卖物品通知
