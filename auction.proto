@@ -23,7 +23,6 @@ message AuctionItem{
     required int32 min_price = 7;       // 最低价
     required int32 max_price = 8;       // 最高价(一口价)
     required int32 bidding = 9;         // 当前竞标价格
-    required int32 my_bid = 10;         // 我的出价 0: 没有竞标
 }
 
 message SearchCondition{
@@ -112,7 +111,13 @@ message StaffAuctionListResponse{
     required bytes session = 2;
 }
 
+message AuctionStaffItem{
+    required AuctionItem items = 1;
+    required int32 my_bid = 2;
+}
+
+// 通知玩家竞价列表信息
 message StaffAuctionListNotify{
     required bytes session = 1;
-    repeated AuctionItem item_id = 2;
+    repeated AuctionStaffItem item_info = 2;
 }
