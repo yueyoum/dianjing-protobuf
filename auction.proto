@@ -101,16 +101,6 @@ message StaffAuctionUserItemRemoveNotify{
     required string item_id = 2;
 }
 
-// 请求玩家竞标列表
-message StaffAuctionListRequest{
-    required bytes session = 1;
-}
-
-message StaffAuctionListResponse{
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
 message AuctionStaffItem{
     required AuctionItem items = 1;
     required int32 my_bid = 2;
@@ -119,5 +109,12 @@ message AuctionStaffItem{
 // 通知玩家竞价列表信息
 message StaffAuctionListNotify{
     required bytes session = 1;
-    repeated AuctionStaffItem item_info = 2;
+    required Action act = 2;
+    repeated AuctionStaffItem item_info = 3;
+}
+
+// 通知竞标物品移除
+message StaffAuctionRemoveNotify{
+    required bytes session = 1;
+    required string item_id = 2;
 }
