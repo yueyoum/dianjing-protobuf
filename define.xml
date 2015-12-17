@@ -274,8 +274,9 @@
     </file>
 
     <file name = "auction">
-        <protocol name = "StaffAuctionUserNotify" type = "2700" />
-        <protocol name = "StaffAuctionNotify" type = "2701" />
+        <protocol name = "StaffAuctionSellListNotify" type = "2700" />
+        <protocol name = "StaffAuctionSellRemoveNotify" type = "2701" />
+        
         <protocol name = "StaffAuctionSearchRequest" type = "2702" command = "/game/auction/search/" />
         <protocol name = "StaffAuctionSearchResponse" type = "2703" reqtype = "2702" />
         <protocol name = "StaffAuctionSellRequest" type = "2704" command = "/game/auction/sell/" />
@@ -284,9 +285,9 @@
         <protocol name = "StaffAuctionCancelResponse" type = "2707" reqtype = "2706" />
         <protocol name = "StaffAuctionBidingRequest" type = "2708" command = "/game/auction/bidding/" />
         <protocol name = "StaffAuctionBiddingResponse" type = "2709" reqtype = "2708" />
-        <protocol name = "StaffAuctionUserItemRemoveNotify" type = "2710" />
-        <protocol name = "StaffAuctionListNotify" type = "2711" />
-        <protocol name = "StaffAuctionRemoveNotify" type = "2712" />
+
+        <protocol name = "StaffAuctionBidingListNotify" type = "2710" />
+        <protocol name = "StaffAuctionBidingRemoveNotify" type = "2711" />
     </file>
 
 </namespace>

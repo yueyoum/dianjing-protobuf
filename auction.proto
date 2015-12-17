@@ -4,11 +4,10 @@ import "common.proto";
 import "staff.proto";
 
 enum AuctionItemTaxType{
-    hours_8 = 1;
-    hours_16 = 2;
-    hours_24 = 3;
+    AUCTION_HOURS_8 = 1;
+    AUCTION_HOURS_16 = 2;
+    AUCTION_HOURS_24 = 3;
 }
-
 
 message AuctionItem{
     required string item_id = 1;         // 物品id
@@ -30,17 +29,10 @@ message SearchCondition{
     required int32 value = 2;
 }
 
-// 玩家拍卖物品通知
-message StaffAuctionUserNotify{
-    required bytes session = 1;
-    required Action act = 2;
-    repeated AuctionItem items = 3;
-}
-
-// 查询拍卖物品()
+// 查询拍卖物品
 message StaffAuctionSearchRequest{
     required bytes session = 1;
-    required int32 timestamp = 2;               // 页面查询依赖
+    required int64 timestamp = 2;               // 页面查询依赖
     repeated SearchCondition condition = 3;
 }
 
@@ -55,7 +47,7 @@ message StaffAuctionSearchResponse{
 message StaffAuctionSellRequest{
     required bytes session = 1;
     required int32 staff_id = 2;
-    required int32 tp = 3;             // 拍卖税收比率
+    required AuctionItemTaxType tp = 3;// 拍卖税收比率
     required int32 min_price = 4;      // 最低价
     required int32 max_price = 5;      // 最高价(一口价)
 }
@@ -78,6 +70,20 @@ message StaffAuctionCancelResponse{
     required bytes session = 2;
 }
 
+
+// 玩家拍卖物品通知
+message StaffAuctionSellListNotify{
+    required bytes session = 1;
+    required Action act = 2;
+    repeated AuctionItem items = 3;
+}
+
+//通知用户拍卖物品移除
+message StaffAuctionSellRemoveNotify{
+    required bytes session = 1;
+    required string item_id = 2;
+}
+
 // 竞标
 message StaffAuctionBidingRequest{
     required bytes session = 1;
@@ -91,26 +97,21 @@ message StaffAuctionBiddingResponse{
     required bytes session = 2;
 }
 
-//通知用户拍卖物品移除
-message StaffAuctionUserItemRemoveNotify{
-    required bytes session = 1;
-    required string item_id = 2;
-}
-
-message AuctionStaffItem{
-    required AuctionItem items = 1;
-    required int32 my_bid = 2;
-}
-
 // 通知玩家竞价列表信息
-message StaffAuctionListNotify{
+message StaffAuctionBidingListNotify{
+    message AuctionBidingItem {
+        required AuctionItem item = 1;
+        required int32 my_bid = 2;
+    }
+
     required bytes session = 1;
     required Action act = 2;
-    repeated AuctionStaffItem item_info = 3;
+    repeated AuctionBidingItem item_info = 3;
 }
 
 // 通知竞标物品移除
-message StaffAuctionRemoveNotify{
+message StaffAuctionBidingRemoveNotify{
     required bytes session = 1;
     required string item_id = 2;
 }
+
