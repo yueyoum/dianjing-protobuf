@@ -106,7 +106,7 @@ message StaffAuctionBidingListNotify{
 
     required bytes session = 1;
     required Action act = 2;
-    repeated AuctionBidingItem item_info = 3;
+    repeated AuctionBidingItem items = 3;
 }
 
 // 通知竞标物品移除
