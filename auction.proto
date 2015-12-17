@@ -37,23 +37,18 @@ message StaffAuctionUserNotify{
     repeated AuctionItem items = 3;
 }
 
-// 服务器拍卖物品通知
-message StaffAuctionNotify{
-    required bytes session = 1;
-    required Action act = 2;
-    repeated AuctionItem items = 3;
-}
-
 // 查询拍卖物品()
 message StaffAuctionSearchRequest{
     required bytes session = 1;
-    repeated SearchCondition condition = 2;
+    required int32 timestamp = 2;               // 页面查询依赖
+    repeated SearchCondition condition = 3;
 }
 
 // 查询拍卖物品回复
 message StaffAuctionSearchResponse{
     required int32 ret = 1;
     required bytes session = 2;
+    repeated AuctionItem items = 3;
 }
 
 // 请求拍卖员工
@@ -96,6 +91,7 @@ message StaffAuctionBiddingResponse{
     required bytes session = 2;
 }
 
+//通知用户拍卖物品移除
 message StaffAuctionUserItemRemoveNotify{
     required bytes session = 1;
     required string item_id = 2;
