@@ -57,15 +57,23 @@ message Staff {
     required int32 max_exp = 4;     // 当前等级最大经验
     required int32 status = 5;      // 状态， 对应 staff_status.json
 
-    required int32 jingong = 6;     // 进攻
-    required int32 qianzhi = 7;     // 牵制
-    required int32 xintai = 8;      // 心态
-    required int32 baobing = 9;    // 暴兵
-    required int32 fangshou = 10;   // 防守
-    required int32 yunying = 11;    // 运营
-    required int32 yishi = 12;      // 意识
-    required int32 caozuo = 13;     // 操作
-    required int32 zhimingdu = 14;  // 知名度
+    required int32 luoji = 6;       // 逻辑
+    required int32 minjie = 7;      // 敏捷
+    required int32 lilun = 8;       // 理论
+    required int32 wuxing = 9;      // 五行
+    required int32 meili = 10;      // 魅力
+
+    required int32 caozuo = 11;      // 操作
+    required int32 jingying = 12;    // 经营
+    required int32 baobing = 13;    // 暴兵
+    required int32 zhanshu = 14;    // 战术
+
+    required int32 biaoyan = 15;    // 表演
+    required int32 youmo = 16;      // 幽默
+    required int32 yingxiao = 17;   // 营销
+    required int32 shichang = 18;   // 市场
+
+    required int32 zhimingdu = 19;  // 知名度
 }
 
 
