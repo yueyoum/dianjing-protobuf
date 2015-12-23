@@ -1,35 +1,19 @@
 package Dianjing.protocol;
 
-
 import "club.proto";
-
-// 一轮比赛
-message Round {
-    message Staff {
-        required int32 unit_id = 1;     // 兵种ID
-        required int32 advantage_begin = 2;    // 战斗前优势值
-        required int32 advantage_end = 3;      // 战斗后优势值
-    }
-
-    required int32 round_index = 1;
-    required Staff staff_one = 2;
-    required Staff staff_two = 3;
-}
-
-// 一场员工比赛
-message OneMatch {
-    repeated Round rounds = 1;
-    required bool staff_one_win = 2;
-}
-
 
 // 员工比赛
 message StaffMatch {
-    required int32 staff_one_id = 1;
-    required int32 staff_two_id = 2;
+    message MatchStaff {
+        required int32 id = 1;
+        required int32 caozuo = 2;      // 操作
+        required int32 jingying = 3;    // 经营
+        required int32 baobing = 4;    // 暴兵
+        required int32 zhanshu = 5;    // 战术
+    }
 
-    repeated OneMatch match = 3;
-    required bool staff_one_win = 4;
+    required MatchStaff staff_one = 1;
+    required MatchStaff staff_two = 2;
 }
 
 // 俱乐部比赛
@@ -37,6 +21,7 @@ message ClubMatch {
     required Club club_one = 1;
     required Club club_two = 2;
 
-    optional int32 seed = 3;    // 随机种子
+    repeated StaffMatch match = 3;
+    optional int32 seed = 4;    // 随机种子
 }
 

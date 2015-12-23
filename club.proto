@@ -6,11 +6,6 @@ message MatchStaff {
     required int32 id = 1;
     required int32 level = 2;
     repeated int32 qianban = 3;     // 激活的牵绊ID
-
-    required int32 caozuo = 4;      // 操作
-    required int32 jingying = 5;    // 经营
-    required int32 baobing = 6;    // 暴兵
-    required int32 zhanshu = 7;    // 战术
 }
 
 message Club {
