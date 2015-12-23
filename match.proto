@@ -37,7 +37,6 @@ message ClubMatch {
     required Club club_one = 1;
     required Club club_two = 2;
 
-    repeated StaffMatch match = 3;
-    required bool club_one_win = 4;
+    optional int32 seed = 3;    // 随机种子
 }
 
