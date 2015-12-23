@@ -69,11 +69,9 @@ message Staff {
     required int32 zhanshu = 14;    // 战术
 
     required int32 biaoyan = 15;    // 表演
-    required int32 youmo = 16;      // 幽默
-    required int32 yingxiao = 17;   // 营销
-    required int32 shichang = 18;   // 市场
+    required int32 yingxiao = 16;   // 营销
 
-    required int32 zhimingdu = 19;  // 知名度
+    required int32 zhimingdu = 17;  // 知名度
 }
 
 
