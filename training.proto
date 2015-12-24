@@ -154,7 +154,7 @@ message TrainingBroadcastNotify {
     message BroadcastSlot {
         message TrainingStaff {
             required int32 id = 1;          // 员工ID
-            required int32 got_gold = 2;    // 当前获得的金币
+            required int32 got_gold = 2;         // 当前获得
             required int64 end_at = 3;      // 结束时间戳
         }
 
@@ -166,6 +166,17 @@ message TrainingBroadcastNotify {
     required bytes session = 1;
     required Action act = 2;
     repeated BroadcastSlot slots = 3;   // 全发
+}
+
+message TrainingBroadcastDetailRequest {
+    required bytes session = 1;
+    required int32 slot_id = 2;
+}
+
+message TrainingBroadcastDetailResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 2;
 }
 
 // 直播开始
