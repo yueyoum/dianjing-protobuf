@@ -109,6 +109,8 @@
         <protocol name = "TrainingBroadcastSpeedupResponse" type = "936" reqtype = "935" />
         <protocol name = "TrainingBroadcastGetRewardRequest" type = "937" command = "/game/training/broadcast/getreward/" />
         <protocol name = "TrainingBroadcastGetRewardResponse" type = "938" reqtype = "937" />
+        <protocol name = "TrainingBroadcastDetailRequest" type = "960" command = "/game/training/broadcast/detail/" />
+        <protocol name = "TrainingBroadcastDetailResponse" type = "961" reqtype = "960" />
 
         <protocol name = "TrainingShopNotify" type = "940" />
         <protocol name = "TrainingShopStartRequest" type = "941" command = "/game/training/shop/start/" />

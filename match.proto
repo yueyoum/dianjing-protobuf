@@ -4,7 +4,7 @@ import "club.proto";
 
 // 员工比赛
 message StaffMatch {
-    message MatchStaff {
+    message Staff {
         required int32 id = 1;
         required int32 caozuo = 2;      // 操作
         required int32 jingying = 3;    // 经营
@@ -12,8 +12,8 @@ message StaffMatch {
         required int32 zhanshu = 5;    // 战术
     }
 
-    required MatchStaff staff_one = 1;
-    required MatchStaff staff_two = 2;
+    required Staff staff_one = 1;
+    required Staff staff_two = 2;
 }
 
 // 俱乐部比赛
