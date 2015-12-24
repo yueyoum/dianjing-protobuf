@@ -176,7 +176,7 @@ message TrainingBroadcastDetailRequest {
 message TrainingBroadcastDetailResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Drop drop = 2;
+    optional Drop drop = 3;
 }
 
 // 直播开始
