@@ -115,6 +115,10 @@
         <protocol name = "TrainingShopNotify" type = "940" />
         <protocol name = "TrainingShopStartRequest" type = "941" command = "/game/training/shop/start/" />
         <protocol name = "TrainingShopStartResponse" type = "942" reqtype = "941" />
+        <protocol name = "TrainingShopSellRequest" type = "943" command = "/game/training/shop/sell/" />
+        <protocol name = "TrainingShopSellResponse" type = "944" reqtype = "943" />
+        <protocol name = "TrainingShopCancelRequest" type = "945" command = "/game/training/shop/cancel/" />
+        <protocol name = "TrainingShopCancelResponse" type = "946" reqtype = "945" />
 
         <protocol name = "TrainingSponsorNotify" type = "950" />
         <protocol name = "TrainingSponsorStartRequest" type = "951" command = "/game/training/sponsor/start/" />

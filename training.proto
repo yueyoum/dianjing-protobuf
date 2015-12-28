@@ -229,27 +229,52 @@ message TrainingBroadcastGetRewardResponse {
 
 // 网店
 message TrainingShopNotify {
-    message ShopSlot {
+    message Shop {
         required int32 id = 1;
         required TrainingSlotStatus status = 2; // NOT_OPEN 没有开启, EMPTY 没人, TRAINING 有人
-        optional int32 staff_id = 3;
+        required int32 staff_id = 3;    // 没人为0
+        required int32 goods_cur_amount = 4;
+        required int64 start_at = 5;    // 可能为0
     }
 
     required bytes session = 1;
     required Action act = 2;
-    repeated ShopSlot slots = 3;
+    repeated Shop shop = 3;
 }
 
 // 网店开始
 message TrainingShopStartRequest {
     required bytes session = 1;
-    required int32 slot_id = 2;
+    required int32 shop_id = 2;
     required int32 staff_id = 3;
 }
 
 message TrainingShopStartResponse {
     required int32 ret = 1;
     required bytes session = 2;
+}
+
+// 网点卖货
+message TrainingShopSellRequest {
+    required bytes session = 1;
+    required int32 shop_id = 2;
+}
+
+message TrainingShopSellResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 网点取消
+message TrainingShopCancelRequest {
+    required bytes session = 1;
+    required int32 shop_id = 2;
+}
+
+message TrainingShopCancelResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
 }
 
 // 赞助
