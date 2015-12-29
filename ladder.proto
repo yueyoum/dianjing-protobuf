@@ -2,7 +2,7 @@ package Dianjing.protocol;
 
 import "match.proto";
 import "package.proto";
-import "training_match.proto"
+import "training_match.proto";
 
 
 message LadderClub {
