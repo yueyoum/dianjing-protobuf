@@ -44,8 +44,8 @@ message TrainingMatchStartResponse {
 }
 
 message MatchResult{
-    required int staff_one = 1;                 // staff id
-    required int staff_two = 2;
+    required int32 staff_one = 1;                 // staff id
+    required int32 staff_two = 2;
     required bool staff_one_win = 3;
 }
 
