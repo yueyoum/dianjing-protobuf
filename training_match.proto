@@ -54,7 +54,7 @@ message TrainingMatchReportRequest {
     required int32 club_index = 2;
     required bool is_win = 3;
     required string key = 4;
-    repeat MatchResult result = 5;
+    repeated MatchResult result = 5;
 }
 
 message TrainingMatchReportResponse {
