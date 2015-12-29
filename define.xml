@@ -268,8 +268,8 @@
         <protocol name = "TrainingMatchNotify" type = "2500" />
         <protocol name = "TrainingMatchStartRequest" type = "2501" command = "/game/trainingmatch/start/" />
         <protocol name = "TrainingMatchStartResponse" type = "2502" reqtype = "2501" />
-        <protocol name = "TrainingMatchGetAdditionalRewardRequest" type = "2503" command = "/game/trainingmatch/reward/" />
-        <protocol name = "TrainingMatchGetAdditionalRewardResponse" type = "2504" reqtype = "2503" />
+        <protocol name = "TrainingMatchReportRequest" type = "2503" command = "/game/trainingmatch/reward/" />
+        <protocol name = "TrainingMatchReportResponse" type = "2504" reqtype = "2503" />
     </file>
 
     <file name = "elite_match">

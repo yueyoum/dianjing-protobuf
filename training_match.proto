@@ -39,16 +39,25 @@ message TrainingMatchStartRequest {
 message TrainingMatchStartResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional ClubMatch match = 3;
-    optional Drop drop = 4;
+    required string key = 3;
+    optional ClubMatch match = 4;
 }
 
-message TrainingMatchGetAdditionalRewardRequest {
+message MatchResult{
+    required int staff_one = 1;                 // staff id
+    required int staff_two = 2;
+    required bool staff_one_win = 3;
+}
+
+message TrainingMatchReportRequest {
     required bytes session = 1;
     required int32 club_index = 2;
+    required bool is_win = 3;
+    required string key = 4;
+    repeat MatchResult result = 5;
 }
 
-message TrainingMatchGetAdditionalRewardResponse {
+message TrainingMatchReportResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Drop drop = 3;
