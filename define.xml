@@ -211,6 +211,8 @@
         <protocol name = "LadderLeaderBoardResponse" type = "1709" reqtype = "1708" />
         <protocol name = "LadderStoreRefreshRequest" type = "1710" command = "/game/ladder/store/refresh/" />
         <protocol name = "LadderStoreRefreshResponse" type = "1711" reqtype = "1710" />
+        <protocol name = "LadderMatchReportRequest" type = "1712" command = "/game/ladder/store/report/" />
+        <protocol name = "LadderMatchReportResponse" type = "1713" reqtype = "1712" />
     </file>
 
     <file name = "cup">
@@ -268,7 +270,7 @@
         <protocol name = "TrainingMatchNotify" type = "2500" />
         <protocol name = "TrainingMatchStartRequest" type = "2501" command = "/game/trainingmatch/start/" />
         <protocol name = "TrainingMatchStartResponse" type = "2502" reqtype = "2501" />
-        <protocol name = "TrainingMatchReportRequest" type = "2503" command = "/game/trainingmatch/reward/" />
+        <protocol name = "TrainingMatchReportRequest" type = "2503" command = "/game/trainingmatch/report/" />
         <protocol name = "TrainingMatchReportResponse" type = "2504" reqtype = "2503" />
     </file>
 

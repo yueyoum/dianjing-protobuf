@@ -43,7 +43,7 @@ message TrainingMatchStartResponse {
     optional ClubMatch match = 4;
 }
 
-message MatchResult{
+message StaffMatchResult{
     required int32 staff_one = 1;                 // staff id
     required int32 staff_two = 2;
     required bool staff_one_win = 3;
@@ -51,10 +51,9 @@ message MatchResult{
 
 message TrainingMatchReportRequest {
     required bytes session = 1;
-    required int32 club_index = 2;
-    required bool is_win = 3;
-    required string key = 4;
-    repeated MatchResult result = 5;
+    required bool is_win = 2;
+    required string key = 3;
+    repeated StaffMatchResult result = 4;
 }
 
 message TrainingMatchReportResponse {

@@ -2,6 +2,7 @@ package Dianjing.protocol;
 
 import "match.proto";
 import "package.proto";
+import "training_match.proto"
 
 
 message LadderClub {
@@ -48,8 +49,23 @@ message LadderMatchRequest {
 message LadderMatchResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional ClubMatch match = 3;
-    optional Drop drop = 4;
+    required string key = 3;
+    required ClubMatch match = 4;
+}
+
+//receive client match report
+message LadderMatchReportRequest {
+    required bytes session = 1;
+    required bytes video = 2;
+    required string key = 3;                    // return the LadderMatchResponse key field
+    required string win_club = 4;               // winner's club_id
+    repeated StaffMatchResult result = 5;
+}
+
+message LadderMatchReportResponse{
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
 }
 
 
