@@ -231,11 +231,12 @@ message TrainingBroadcastGetRewardResponse {
 message TrainingShopNotify {
     message Shop {
         required int32 id = 1;
-        required TrainingSlotStatus status = 2; // NOT_OPEN 没有开启, EMPTY 没人, TRAINING 有人
+        required TrainingSlotStatus status = 2; // NOT_OPEN 没有开启, EMPTY 没开始, TRAINING 开始了
         required int32 staff_id = 3;    // 没人为0
         required int32 sells_per_hour = 4;
         required int64 start_at = 5;    // 可能为0
         required int64 end_at = 6;    // 可能为0
+        required int32 goods_amount = 7; // 放上去的总量，并不是当前实时剩余数量
     }
 
     required bytes session = 1;
