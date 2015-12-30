@@ -30,11 +30,13 @@ message LeagueCLub {
     required int32 flag = 2;
     required int32 score = 3;
     required int32 win_rate = 4;
+    optional int32 status = 5;
 }
 
 message LeagueCLubNotify {
     required bytes session = 1;
     repeated LeagueCLub clubs = 2;
+    required Action act = 3;
 }
 
 message LeagueMatchReportRequest {
