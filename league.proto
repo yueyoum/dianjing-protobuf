@@ -4,6 +4,7 @@ import "common.proto";
 import "match.proto";
 import "club.proto";
 import "training_match.proto";
+import "package.proto";
 
 
 message LeagueUserNotify {
@@ -39,7 +40,8 @@ message LeagueCLubNotify {
 message LeagueMatchReportRequest {
     required bytes session = 1;
     required string key = 2;
-    required StaffMatchResult result= 3;
+    required string win_club = 3;
+    required StaffMatchResult result= 4;
 }
 
 message LeagueMatchReportResponse {
@@ -54,4 +56,13 @@ message LeagueMatchRefreshRequest {
 message LeagueMatchRefreshResponse {
     required int32 ret = 1;
     required bytes session = 2;
+}
+
+message LeagueGetRewardRequest {
+    required bytes session = 1;
+}
+
+message LeagueGetRewardResponse {
+    required int32 ret = 1;
+    required Drop drop = 2;
 }

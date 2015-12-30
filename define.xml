@@ -64,6 +64,8 @@
         <protocol name = "LeagueMatchReportResponse" type = "605" reqtype = "604" />
         <protocol name = "LeagueMatchRefreshRequest" type = "606" command = "/game/league/refresh/" />
         <protocol name = "LeagueMatchRefreshResponse" type = "607" reqtype = "606" />
+        <protocol name = "LeagueGetRewardRequest" type = "608" command = "/game/league/reward/" />
+        <protocol name = "LeagueGetRewardResponse" type = "609" reqtype = "608" />
     </file>
 
     <file name = "challenge">
