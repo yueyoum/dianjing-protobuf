@@ -56,8 +56,9 @@ message LadderMatchResponse {
 message LadderMatchReportRequest {
     required bytes session = 1;
     required bytes video = 2;
-    required string win_club = 3;               // winner's club_id
-    repeated StaffMatchResult result = 4;
+    required string key = 3;                    // return the LadderMatchResponse key field
+    required string win_club = 4;               // winner's club_id
+    repeated StaffMatchResult result = 5;
 }
 
 message LadderMatchReportResponse{

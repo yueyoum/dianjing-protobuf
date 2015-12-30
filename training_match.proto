@@ -51,7 +51,8 @@ message StaffMatchResult{
 message TrainingMatchReportRequest {
     required bytes session = 1;
     required bool is_win = 2;
-    repeated StaffMatchResult result = 3;
+    required string key = 3;
+    repeated StaffMatchResult result = 4;
 }
 
 message TrainingMatchReportResponse {
