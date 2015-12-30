@@ -3,85 +3,55 @@ package Dianjing.protocol;
 import "common.proto";
 import "match.proto";
 import "club.proto";
-
-// 联赛小组信息
-message League {
-    message LeagueRank {
-        // 排名
-        required string club_id = 1;
-
-        required int32 battle_times = 2;    // 已赛场数
-        required int32 score = 3;           // 积分
-        required int32 winning_rate = 4;    // 胜率
-    }
-
-    message LeagueEvent {
-        // 定点分组比赛 一周14组，里面有7对比赛
-        message LeaguePair {
-            // 比赛对手
-            required string pair_id = 1;
-            required string club_one_id = 2;
-            required string club_two_id = 3;
-            required bool club_one_win = 4;
-            repeated int32 points = 5;  // 比分
-        }
-
-        required int32 battle_at = 1; // UTC timestamp
-        required bool finished = 2;   // 是否结束
-        repeated LeaguePair pairs = 3;
-    }
+import "training_match.proto";
 
 
-    required LeagueLevel level = 1;     // 联赛等级
-    required int32 current_order=  2;   // 当前第几轮
-
-    repeated Club clubs = 3;
-
-    repeated LeagueRank ranks = 4;      // 排名
-    repeated LeagueEvent events = 5;    // 场次
+message LeagueUserNotify {
+    required int32 score = 1;
+    required int32 level = 2;
+    required int32 win_rate = 3;
 }
 
-
-message LeagueNotify {
+message LeagueChallengeRequest {
     required bytes session = 1;
-    required League league = 2;
+    required string club_id = 2;
 }
 
-
-
-// 获取统计请求
-message LeagueGetStatisticsRequest {
-    required bytes session = 1;
-    required string id = 2;
-}
-
-
-message LeagueGetStatisticsResponse {
-    message LeagueStatistics {
-        required int32 staff_id = 1;
-        required int32 winning_rate_to_terran = 2;  // 对人族胜率
-        required int32 winning_rate_to_zerg = 3;    // 对种族胜率
-        required int32 winning_rate_to_protoss = 4; // 对神族胜率
-    }
-
-
+message LeagueChallengeResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    repeated LeagueStatistics statistics = 3;
+    required ClubMatch match = 3;
 }
 
 
+message LeagueCLub {
+    required string name = 1;
+    required int32 flag = 2;
+    required int32 score = 3;
+    required int32 win_rate = 4;
+}
 
-// 查看一场比赛
-message LeagueGetBattleLogRequest {
+message LeagueCLubNotify {
     required bytes session = 1;
-    required string pair_id = 2;
+    repeated LeagueCLub clubs = 2;
 }
 
-message LeagueGetBattleLogResponse {
+message LeagueMatchReportRequest {
+    required bytes session = 1;
+    required string key = 2;
+    required StaffMatchResult result= 3;
+}
+
+message LeagueMatchReportResponse {
+    required bytes session = 1;
+    required int32 ret = 2;
+}
+
+message LeagueMatchRefreshRequest {
+    required bytes session = 1;
+}
+
+message LeagueMatchRefreshResponse {
     required int32 ret = 1;
     required bytes session = 2;
-
-    optional ClubMatch match_log = 3;
 }
-

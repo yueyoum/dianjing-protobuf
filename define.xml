@@ -56,11 +56,14 @@
     </file>
 
     <file name = "league">
-        <protocol name = "LeagueNotify" type = "600" />
-        <protocol name = "LeagueGetStatisticsRequest" type = "601" command = "/game/league/statistics/" />
-        <protocol name = "LeagueGetStatisticsResponse" type = "602" reqtype = "601" />
-        <protocol name = "LeagueGetBattleLogRequest" type = "603" command = "/game/league/log/" />
-        <protocol name = "LeagueGetBattleLogResponse" type = "604" reqtype = "603" />
+        <protocol name = "LeagueCLubNotify" type = "600" />
+        <protocol name = "LeagueUserNotify" type = "601" />
+        <protocol name = "LeagueChallengeRequest" type = "602" command = "/game/league/challenge/" />
+        <protocol name = "LeagueChallengeResponse" type = "603" reqtype = "602" />
+        <protocol name = "LeagueMatchReportRequest" type = "604" command = "/game/league/report/" />
+        <protocol name = "LeagueMatchReportResponse" type = "605" reqtype = "604" />
+        <protocol name = "LeagueMatchRefreshRequest" type = "606" command = "/game/league/refresh/" />
+        <protocol name = "LeagueMatchRefreshResponse" type = "607" reqtype = "606" />
     </file>
 
     <file name = "challenge">
