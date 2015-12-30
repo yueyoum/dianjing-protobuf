@@ -49,17 +49,15 @@ message LadderMatchRequest {
 message LadderMatchResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    required string key = 3;
-    required ClubMatch match = 4;
+    required ClubMatch match = 3;
 }
 
 //receive client match report
 message LadderMatchReportRequest {
     required bytes session = 1;
     required bytes video = 2;
-    required string key = 3;                    // return the LadderMatchResponse key field
-    required string win_club = 4;               // winner's club_id
-    repeated StaffMatchResult result = 5;
+    required string win_club = 3;               // winner's club_id
+    repeated StaffMatchResult result = 4;
 }
 
 message LadderMatchReportResponse{

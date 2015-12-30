@@ -39,8 +39,7 @@ message TrainingMatchStartRequest {
 message TrainingMatchStartResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    required string key = 3;
-    optional ClubMatch match = 4;
+    optional ClubMatch match = 3;
 }
 
 message StaffMatchResult{
@@ -52,8 +51,7 @@ message StaffMatchResult{
 message TrainingMatchReportRequest {
     required bytes session = 1;
     required bool is_win = 2;
-    required string key = 3;
-    repeated StaffMatchResult result = 4;
+    repeated StaffMatchResult result = 3;
 }
 
 message TrainingMatchReportResponse {

@@ -22,6 +22,7 @@ message ClubMatch {
     required Club club_two = 2;
 
     repeated StaffMatch match = 3;
-    optional int32 seed = 4;    // 随机种子
+    required int32 seed = 4;    // 随机种子
+    required string key = 5;
 }
 
