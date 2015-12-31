@@ -9,8 +9,9 @@ import "package.proto";
 
 message LeagueUserNotify {
     required int32 score = 1;
-    required int32 level = 2;
-    required int32 win_rate = 3;
+    required bytes session = 2;
+    required int32 level = 3;
+    required int32 win_rate = 4;
 }
 
 message LeagueChallengeRequest {
@@ -66,5 +67,6 @@ message LeagueGetRewardRequest {
 
 message LeagueGetRewardResponse {
     required int32 ret = 1;
-    required Drop drop = 2;
+    required bytes session = 2;
+    required Drop drop = 3;
 }
