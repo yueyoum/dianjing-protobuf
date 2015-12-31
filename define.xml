@@ -56,7 +56,7 @@
     </file>
 
     <file name = "league">
-        <protocol name = "LeagueCLubNotify" type = "600" />
+        <protocol name = "LeagueClubNotify" type = "600" />
         <protocol name = "LeagueUserNotify" type = "601" />
         <protocol name = "LeagueChallengeRequest" type = "602" command = "/game/league/challenge/" />
         <protocol name = "LeagueChallengeResponse" type = "603" reqtype = "602" />
