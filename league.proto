@@ -12,6 +12,8 @@ message LeagueUserNotify {
     required bytes session = 2;
     required int32 level = 3;
     required int32 win_rate = 4;
+    required int32 challenge_times = 5;
+    optional bool has_reward = 6;
 }
 
 message LeagueChallengeRequest {
@@ -37,7 +39,8 @@ message LeagueCLub {
 message LeagueCLubNotify {
     required bytes session = 1;
     repeated LeagueCLub clubs = 2;
-    required Action act = 3;
+    required int32 end_time = 3;
+    required Action act = 4;
 }
 
 message LeagueMatchReportRequest {
