@@ -82,6 +82,7 @@ message LeagueGetRewardResponse {
 
 message LeagueGetClubDetailInfoRequest {
     required bytes session = 1;
+    required string club_index = 2;
 }
 
 message LeagueGetClubDetailInfoResponse {
