@@ -2,7 +2,6 @@ package Dianjing.protocol;
 
 import "common.proto";
 import "match.proto";
-import "club.proto";
 import "training_match.proto";
 import "package.proto";
 import "staff.proto";
