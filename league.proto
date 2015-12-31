@@ -5,7 +5,7 @@ import "match.proto";
 import "club.proto";
 import "training_match.proto";
 import "package.proto";
-import "staff.proto"
+import "staff.proto";
 
 
 message LeagueUserNotify {
