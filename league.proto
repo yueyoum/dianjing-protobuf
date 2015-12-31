@@ -38,7 +38,7 @@ message LeagueClub {
 
 message LeagueClubNotify {
     required bytes session = 1;
-    repeated LeagueCLub clubs = 2;
+    repeated LeagueClub clubs = 2;
     required int64 end_time = 3;
     required Action act = 4;
 }
