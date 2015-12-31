@@ -54,7 +54,7 @@ message LeagueMatchReportRequest {
     required bytes session = 1;
     required string key = 2;
     required string win_club = 3;
-    required StaffMatchResult result= 4;
+    repeated StaffMatchResult result= 4;
 }
 
 message LeagueMatchReportResponse {
