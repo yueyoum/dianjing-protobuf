@@ -5,6 +5,7 @@ import "match.proto";
 import "club.proto";
 import "training_match.proto";
 import "package.proto";
+import "staff.proto"
 
 
 message LeagueUserNotify {
@@ -28,7 +29,7 @@ message LeagueChallengeResponse {
 }
 
 
-message LeagueCLub {
+message LeagueClub {
     required string name = 1;
     required int32 flag = 2;
     required int32 score = 3;
@@ -36,10 +37,10 @@ message LeagueCLub {
     optional int32 status = 5;
 }
 
-message LeagueCLubNotify {
+message LeagueClubNotify {
     required bytes session = 1;
     repeated LeagueCLub clubs = 2;
-    required int32 end_time = 3;
+    required int64 end_time = 3;
     required Action act = 4;
 }
 
@@ -72,4 +73,14 @@ message LeagueGetRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
     required Drop drop = 3;
+}
+
+message LeagueGetClubDetailInfoRequest {
+    required bytes session = 1;
+}
+
+message LeagueGetClubDetailInfoResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Staff staff = 3;
 }
