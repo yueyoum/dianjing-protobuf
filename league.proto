@@ -27,13 +27,19 @@ message LeagueChallengeResponse {
     required ClubMatch match = 3;
 }
 
+enum LeagueChallengeStatus {
+    ABLE = 0;       // can challenge
+    FAIL = 1;       // challenge fail
+    SUCCESS = 2;    // challenge challenge
+    UNABLE = 3;     // can not challenge
+}
 
 message LeagueClub {
     required string name = 1;
     required int32 flag = 2;
     required int32 score = 3;
     required int32 win_rate = 4;
-    optional int32 status = 5;
+    optional LeagueChallengeStatus status = 5;
 }
 
 message LeagueClubNotify {
