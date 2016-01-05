@@ -24,7 +24,7 @@ message LeagueChallengeRequest {
 message LeagueChallengeResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional ClubMatch match = 3;           # sometime it may be null, like exception
+    optional ClubMatch match = 3;           // sometime it may be null, like exception
 }
 
 enum LeagueChallengeStatus {
@@ -78,7 +78,7 @@ message LeagueGetRewardRequest {
 message LeagueGetRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Drop drop = 3;                     # sometime it may be null, like exception
+    optional Drop drop = 3;                     //   sometime it may be null, like exception
 }
 
 message LeagueGetClubDetailInfoRequest {
