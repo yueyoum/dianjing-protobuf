@@ -2,8 +2,8 @@ package Dianjing.protocol;
 
 import "match.proto";
 import "package.proto";
-import "common.proto"
-import "training_match.proto"
+import "common.proto";
+import "training_match.proto";
 
 enum AreaStatus {
     CHALLENGE_NOT_OPEN = 1;
