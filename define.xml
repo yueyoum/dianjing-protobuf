@@ -292,9 +292,9 @@
         <protocol name = "EliteNotify" type = "2600" />
         <protocol name = "EliteStartRequest" type = "2601" command = "/game/elite/start/" />
         <protocol name = "EliteStartResponse" type = "2602" reqtype = "2601" />
-        <protocol name = "EliteGetStarRewardRequest" type = "2603" command = "/game/elite/report/" />
+        <protocol name = "EliteGetStarRewardRequest" type = "2603" command = "/game/elite/reward/" />
         <protocol name = "EliteGetStarRewardResponse" type = "2604" reqtype = "2603" />
-        <protocol name = "EliteMatchReportRequest" type = "2605" reqtype = "/game/elite/reward/" />
+        <protocol name = "EliteMatchReportRequest" type = "2605" reqtype = "/game/elite/report/" />
         <protocol name = "EliteMatchReportResponse" type = "2606" reqtype = "2605" />
     </file>
 
