@@ -4,6 +4,7 @@ import "common.proto";
 import "package.proto";
 import "match.proto";
 import "challenge.proto";
+import "training_match.proto";
 
 
 message EliteNotify {
