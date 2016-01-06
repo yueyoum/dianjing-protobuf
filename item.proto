@@ -26,6 +26,7 @@ enum ItemType {
     ITEM_BUILDING_CERTIFICATE = 3;  // 建筑许可证
     ITEM_SKILL_TRAINING_BOOK = 4;   // 技能训练书
     ITEM_EQUIPMENT = 11;            // 装备
+    ITEM_STAFF_CARD = 21;           // 员工卡
 }
 
 message Item {
