@@ -3,47 +3,50 @@ package Dianjing.protocol;
 import "common.proto";
 import "package.proto";
 import "match.proto";
+import "challenge.proto"
 
-enum EliteAreaStatus {
-    ELITE_AREA_NOT_OPEN = 1;
-    ELITE_AREA_OPEN = 2;
-    ELITE_AREA_FINISH = 3;
-}
-
-message EliteArea {
-    message Match {
-        required int32 id = 1;
-        required int32 cur_times = 2;   // 已经打过的次数，-1表示不能打
-    }
-
-    required int32 id = 1;
-    required EliteAreaStatus status = 2;
-    repeated Match match = 3;
-}
 
 message EliteNotify {
     required bytes session = 1;
-    required Action act = 2;
-    repeated EliteArea area = 3;
+    repeated Area area = 2;
+    required Action act = 3;
 }
-
-message EliteTimesNotify {
-    required bytes session = 1;
-    required int32 max_times = 2;
-    required int32 cur_times = 3;
-    required int64 next_timestamp = 4;  // 下次恢复的时间戳 0 表示不再恢复
-}
-
 
 message EliteStartRequest {
     required bytes session = 1;
-    required int32 match_id = 2;        // 关卡ID
+    required int32 area_id = 2;
+    required int32 challenge_id = 3;
 }
 
 message EliteStartResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional ClubMatch match = 3;
-    optional Drop drop = 4;
 }
+
+message EliteGetStarRewardRequest {
+    required bytes session = 1;
+    required int32 area_id = 2;
+    required int32 index = 3;
+}
+
+message EliteGetStarRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+message EliteMatchReportRequest {
+    required bytes session = 1;
+    required string key = 2;
+    required string win_club = 3;
+    repeated StaffMatchResult result= 4;
+}
+
+message EliteMatchReportResponse {
+    required bytes session = 1;
+    required int32 ret = 2;
+    optional Drop drop = 3;
+}
+
 
