@@ -259,11 +259,11 @@
         <protocol name = "ActiveValueGetRewardResponse" type = "2103" reqtype = "2102" />
     </file>
 
-    <file name = "bag">
-        <protocol name = "TrainingSkillItemNotify" type = "2200" />
-        <protocol name = "TrainingSkillItemRemoveNotify" type = "2201" />
-        <protocol name = "ItemNotify" type = "2202" />
-        <protocol name = "ItemRemoveNotify" type = "2203" />
+    <file name = "item">
+        <protocol name = "ItemNotify" type = "2200" />
+        <protocol name = "ItemRemoveNotify" type = "2201" />
+        <!-- <protocol name = "ItemSellRequest" type = "2202" command = "/game/item/sell/" /> -->
+        <!-- <protocol name = "ItemSellResponse" type = "2203" reqtype = "2202" /> -->
     </file>
 
     <file name = "shop">

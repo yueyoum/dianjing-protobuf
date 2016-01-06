@@ -1,0 +1,63 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+message Attribute {
+    required int32 star = 1;
+
+    optional int32 luoji = 2;       // 逻辑
+    optional int32 minjie = 3;      // 敏捷
+    optional int32 lilun = 4;       // 理论
+    optional int32 wuxing = 5;      // 五行
+    optional int32 meili = 6;      // 魅力
+
+    optional int32 caozuo = 7;      // 操作
+    optional int32 jingying = 8;    // 经营
+    optional int32 baobing = 9;    // 暴兵
+    optional int32 zhanshu = 10;    // 战术
+
+    optional int32 biaoyan = 11;    // 表演
+    optional int32 yingxiao = 12;   // 营销
+}
+
+enum ItemType {
+    ITEM_TRAINING_EXPENDABLE = 1;   // 培训耗材
+    ITEM_SHOP_GOODS = 2;            // 网店货物
+    ITEM_BUILDING_CERTIFICATE = 3;  // 建筑许可证
+    ITEM_SKILL_TRAINING_BOOK = 4;   // 技能训练书
+    ITEM_EQUIPMENT = 11;            // 装备
+    ITEM_STAFF_CARD = 21;           // 员工卡
+}
+
+message Item {
+    required string id = 1;         // 唯一ID
+    required int32 oid = 2;
+    required int32 amount = 3;
+    required ItemType tp = 4;
+    optional Attribute attr = 5;
+}
+
+
+message ItemNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Item items = 3;
+}
+
+message ItemRemoveNotify {
+    required bytes session = 1;
+    repeated string ids = 2;
+}
+
+
+/* message ItemSellRequest { */
+/*     required bytes session = 1; */
+/*     required string id = 2; */
+/*     required int32 amount = 3; */
+/* } */
+/*  */
+/* message ItemSellResponse { */
+/*     required int32 ret = 1; */
+/*     required bytes session = 2; */
+/* } */
+/*  */
