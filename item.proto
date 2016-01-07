@@ -27,6 +27,7 @@ enum ItemType {
     ITEM_SKILL_TRAINING_BOOK = 4;   // 技能训练书
     ITEM_EQUIPMENT = 11;            // 装备
     ITEM_STAFF_CARD = 21;           // 员工卡
+    ITEM_BOX = 99;                  // 箱子
 }
 
 message Item {
@@ -50,14 +51,14 @@ message ItemRemoveNotify {
 }
 
 
-/* message ItemSellRequest { */
-/*     required bytes session = 1; */
-/*     required string id = 2; */
-/*     required int32 amount = 3; */
-/* } */
-/*  */
-/* message ItemSellResponse { */
-/*     required int32 ret = 1; */
-/*     required bytes session = 2; */
-/* } */
-/*  */
+message ItemSellRequest {
+    required bytes session = 1;
+    required string id = 2;
+    required int32 amount = 3;
+}
+
+message ItemSellResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+

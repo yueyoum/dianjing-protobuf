@@ -9,18 +9,12 @@ message Resource {
 // 软妹币，钻石，声望， 联赛积分，天梯赛积分
 // 训练道具
 message Drop {
-    message TrainingSkill {
-        required int32 id = 1;
-        required int32 amount = 2;
-    }
-
     message Item {
         required int32 id = 1;
         required int32 amount = 2;
     }
 
     repeated Resource resources = 1;
-    repeated TrainingSkill trainings = 2;
     repeated Item items = 3;
 }
 
@@ -30,24 +24,3 @@ message Property {
 }
 
 
-message ItemSellRequest {
-    required bytes session = 1;
-    required int32 id = 2;
-    required int32 amount = 3;
-}
-
-message ItemSellResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-message TrainingSkillSellRequest {
-    required bytes session = 1;
-    required int32 id = 2;
-    required int32 amount = 3;
-}
-
-message TrainingSkillSellResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
