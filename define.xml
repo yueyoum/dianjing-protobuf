@@ -72,10 +72,15 @@
 
     <file name = "challenge">
         <protocol name = "ChallengeNotify" type = "700" />
-        <protocol name = "ChallengeStartRequest" type = "701" command = "/game/challenge/start/" />
-        <protocol name = "ChallengeStartResponse" type = "702" reqtype = "701" />
-        <protocol name = "ChallengeAreaSwitchRequest" type = "703" command = "/game/challenge/area/switch/" />
-        <protocol name = "ChallengeAreaSwitchResponse" type = "704" reqtype = "703" />
+        <protocol name = "ChallengeEnergyNotify" type = "701" />
+        <protocol name = "ChallengeStartRequest" type = "702" command = "/game/challenge/start/" />
+        <protocol name = "ChallengeStartResponse" type = "703" reqtype = "702" />
+        <protocol name = "ChallengeGetStarRewardRequest" type = "704" command = "/game/challenge/reward/" />
+        <protocol name = "ChallengeGetStarRewardResponse" type = "705" reqtype = "704" />
+        <protocol name = "ChallengeMatchReportRequest" type = "706" command = "/game/challenge/report/" />
+        <protocol name = "ChallengeMatchReportResponse" type = "707" reqtype = "706" />
+        <protocol name = "ChallengeBuyEnergyRequest" type = "708" command = "/game/challenge/buy/" />
+        <protocol name = "ChallengeBuyEnergyResponse" type = "709" reqtype = "708" />
     </file>
 
     <file name = "building">
@@ -278,9 +283,12 @@
 
     <file name = "elite_match">
         <protocol name = "EliteNotify" type = "2600" />
-        <protocol name = "EliteTimesNotify" type = "2601" />
-        <protocol name = "EliteStartRequest" type = "2602" command = "/game/elite/start/" />
-        <protocol name = "EliteStartResponse" type = "2603" reqtype = "2602" />
+        <protocol name = "EliteStartRequest" type = "2601" command = "/game/elite/start/" />
+        <protocol name = "EliteStartResponse" type = "2602" reqtype = "2601" />
+        <protocol name = "EliteGetStarRewardRequest" type = "2603" command = "/game/elite/reward/" />
+        <protocol name = "EliteGetStarRewardResponse" type = "2604" reqtype = "2603" />
+        <protocol name = "EliteMatchReportRequest" type = "2605" command = "/game/elite/report/" />
+        <protocol name = "EliteMatchReportResponse" type = "2606" reqtype = "2605" />
     </file>
 
     <file name = "auction">

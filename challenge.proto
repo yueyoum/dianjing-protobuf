@@ -2,6 +2,8 @@ package Dianjing.protocol;
 
 import "match.proto";
 import "package.proto";
+import "common.proto";
+import "training_match.proto";
 
 enum AreaStatus {
     CHALLENGE_NOT_OPEN = 1;
@@ -9,37 +11,76 @@ enum AreaStatus {
     CHALLENGE_FINISH = 3;
 }
 
+message ChallengeDetail {
+    required int32 id = 1;                      // challenge id
+    required int32 stars = 2;                   // challenge stars
+    required int32 times = 3;
+}
+
 message Area {
-    required int32 id = 1;
-    required AreaStatus status = 2;
-    optional int32 challenge_id = 3;    // 将要打的关卡ID
+    required int32 id = 1;                      // area id
+    repeated ChallengeDetail challenge = 2;
+    required bool package_one = 3;             // package status true: not get  false: already get
+    required bool package_two = 4;
+    required bool package_three = 5;
 }
 
 message ChallengeNotify {
     required bytes session = 1;
-    required int32 current_area_id = 2;
-    repeated Area area = 3;
+    repeated Area area = 2;
+    required Action act = 3;
+}
+
+message ChallengeEnergyNotify {
+    required bytes session = 1;
+    required int32 cur_energy = 2;              // current energy
+    required int32 max_energy = 3;              // max energy
+    required int64 refresh_time = 4;            // next energy refresh time
 }
 
 message ChallengeStartRequest {
     required bytes session = 1;
     required int32 area_id = 2;
+    required int32 challenge_id = 3;
 }
 
 message ChallengeStartResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional ClubMatch match = 3;
-    optional Drop drop = 4;
 }
 
-message ChallengeAreaSwitchRequest {
+message ChallengeGetStarRewardRequest {
     required bytes session = 1;
     required int32 area_id = 2;
+    required int32 index = 3;
 }
 
-message ChallengeAreaSwitchResponse {
+message ChallengeGetStarRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+message ChallengeMatchReportRequest {
+    required bytes session = 1;
+    required string key = 2;
+    required string win_club = 3;
+    repeated StaffMatchResult result= 4;
+}
+
+message ChallengeMatchReportResponse {
+    required bytes session = 1;
+    required int32 ret = 2;
+    optional Drop drop = 3;
+}
+
+message ChallengeBuyEnergyRequest {
+    required bytes session = 1;
+}
+
+message ChallengeBuyEnergyResponse {
+    required bytes session = 1;
+    required int32 ret = 2;
 }
 
