@@ -1,5 +1,7 @@
 package Dianjing.protocol;
 
+import "item.proto";
+
 message Resource {
     required string resource_id = 1;
     required int32 value = 2;
@@ -10,12 +12,13 @@ message Resource {
 // 训练道具
 message Drop {
     message Item {
-        required int32 id = 1;
+        required int32 id = 1;      // 原始ID
         required int32 amount = 2;
+        required ItemType tp = 3;
     }
 
     repeated Resource resources = 1;
-    repeated Item items = 3;
+    repeated Item items = 2;
 }
 
 // 员工属性
