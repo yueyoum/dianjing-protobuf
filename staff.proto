@@ -1,6 +1,7 @@
 package Dianjing.protocol;
 
 import "common.proto";
+import "item_define.proto";
 
 enum StaffRecruitType {
     RECRUIT_HOT = 1;
@@ -72,6 +73,8 @@ message Staff {
     required int32 yingxiao = 16;   // 营销
 
     required int32 zhimingdu = 17;  // 知名度
+
+    repeated Item items = 18;       // 装备
 }
 
 
@@ -86,4 +89,17 @@ message StaffRemoveNotify {
     required bytes session = 1;
     repeated int32 id = 2;
 }
+
+
+message StaffEquipOnRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+    required string item_id = 3;
+}
+
+message StaffEquipOnResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 

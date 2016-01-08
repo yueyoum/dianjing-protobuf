@@ -53,6 +53,8 @@
         <protocol name = "StaffRecruitResponse" type = "524" reqtype = "523" />
         <protocol name = "StaffFireRequest" type = "525" command = "/game/staff/fire/" />
         <protocol name = "StaffFireResponse" type = "526" reqtype = "525" />
+        <protocol name = "StaffEquipOnRequest" type = "527" command = "/game/staff/equipon/" />
+        <protocol name = "StaffEquipOnResponse" type = "528" reqtype = "525" />
     </file>
 
     <file name = "league">
