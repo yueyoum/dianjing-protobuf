@@ -62,3 +62,16 @@ message ItemSellResponse {
     required bytes session = 2;
 }
 
+
+message ItemUseRequest {
+    required bytes session = 1;
+    required string id = 2;
+    required int32 amount = 3;
+}
+
+message ItemUseResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+

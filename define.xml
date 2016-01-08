@@ -264,6 +264,8 @@
         <protocol name = "ItemRemoveNotify" type = "2201" />
         <protocol name = "ItemSellRequest" type = "2202" command = "/game/item/sell/" />
         <protocol name = "ItemSellResponse" type = "2203" reqtype = "2202" />
+        <protocol name = "ItemUseRequest" type = "2204" command = "/game/item/use/" />
+        <protocol name = "ItemUseResponse" type = "2205" reqtype = "2204" />
     </file>
 
     <file name = "shop">
