@@ -2,6 +2,7 @@ package Dianjing.protocol;
 
 import "package.proto";
 import "item_define.proto";
+import "common.proto";
 
 message ItemNotify {
     required bytes session = 1;
