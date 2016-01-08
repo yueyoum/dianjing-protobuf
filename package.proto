@@ -1,6 +1,6 @@
 package Dianjing.protocol;
 
-import "item.proto";
+import "item_define.proto";
 
 message Resource {
     required string resource_id = 1;
