@@ -40,3 +40,12 @@ message ItemUseResponse {
     optional Drop drop = 3;
 }
 
+message ItemMergeRequest {
+    required bytes session = 1;
+    repeated string item_ids = 2;
+}
+
+message ItemMergeResponse
+    required int32 ret = 1;
+    required bytes session = 2;
+}
