@@ -45,7 +45,7 @@ message ItemMergeRequest {
     repeated string item_ids = 2;
 }
 
-message ItemMergeResponse
+message ItemMergeResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
