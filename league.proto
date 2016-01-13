@@ -87,13 +87,10 @@ message LeagueGetClubDetailInfoRequest {
 }
 
 message ClubDetail {
-    message RaceRate {
-        required int32 race = 1;
-        required int32 rate = 2;
-    }
-
     required int32 staff_id = 1;
-    repeated RaceRate rate = 2;
+    required int32 rate_human = 2;
+    required int32 rate_bug = 3;
+    required int32 rate_god = 4;
 }
 
 message LeagueGetClubDetailInfoResponse {
