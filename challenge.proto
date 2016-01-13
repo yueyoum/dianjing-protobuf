@@ -86,8 +86,8 @@ message ChallengeBuyEnergyResponse {
 
 message ChallengeRefreshTimesRequest {
     required bytes session = 1;
-    required int32 area_id = 1;
-    required int32 challenge_id = 1;
+    required int32 area_id = 2;
+    required int32 challenge_id = 3;
 }
 
 message ChallengeRefreshTimesResponse {
