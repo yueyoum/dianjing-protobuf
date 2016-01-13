@@ -83,6 +83,8 @@
         <protocol name = "ChallengeMatchReportResponse" type = "707" reqtype = "706" />
         <protocol name = "ChallengeBuyEnergyRequest" type = "708" command = "/game/challenge/buy/" />
         <protocol name = "ChallengeBuyEnergyResponse" type = "709" reqtype = "708" />
+        <protocol name = "ChallengeRefreshTimesRequest" type = "710" command = "/game/challenge/refresh/" />
+        <protocol name = "ChallengeRefreshTimesResponse" type = "711" reqtype = "710" />
     </file>
 
     <file name = "building">
