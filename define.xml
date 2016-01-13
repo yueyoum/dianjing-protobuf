@@ -295,6 +295,8 @@
         <protocol name = "EliteGetStarRewardResponse" type = "2604" reqtype = "2603" />
         <protocol name = "EliteMatchReportRequest" type = "2605" command = "/game/elite/report/" />
         <protocol name = "EliteMatchReportResponse" type = "2606" reqtype = "2605" />
+        <protocol name = "EliteChallengeTimesRefreshRequest" type = "2607" command = "/game/elite/refresh/" />
+        <protocol name = "EliteChallengeTimesRefreshResponse" type = "2608" reqtype = "2607" />
     </file>
 
     <file name = "auction">
