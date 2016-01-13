@@ -49,7 +49,7 @@ message LadderMatchRequest {
 message LadderMatchResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    required ClubMatch match = 3;
+    optional ClubMatch match = 3;
 }
 
 //receive client match report
