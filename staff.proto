@@ -73,6 +73,8 @@ message Staff {
     required int32 yingxiao = 16;   // 营销
 
     required int32 zhimingdu = 17;  // 知名度
+    required int32 star = 18;
+    required int32 power = 19;
 
     repeated Item items = 18;       // 装备
 }
