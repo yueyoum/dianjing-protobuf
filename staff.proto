@@ -106,8 +106,8 @@ message StaffEquipOnResponse {
 
 message StaffStrengthenRequest {
     required bytes session = 1;
-    required int32 staff_id = 1;
-    required string item_id = 2;
+    required int32 staff_id = 2;
+    required string item_id = 3;
 }
 
 message StaffStrengthenResponse {
