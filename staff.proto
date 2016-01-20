@@ -76,7 +76,7 @@ message Staff {
     required int32 star = 18;
     required int32 power = 19;
 
-    repeated Item items = 18;       // 装备
+    repeated Item items = 20;       // 装备
 }
 
 
