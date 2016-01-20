@@ -21,13 +21,14 @@ message Attribute {
 }
 
 enum ItemType {
-    ITEM_TRAINING_EXPENDABLE = 1;   // 培训耗材
-    ITEM_SHOP_GOODS = 2;            // 网店货物
-    ITEM_BUILDING_CERTIFICATE = 3;  // 建筑许可证
-    ITEM_SKILL_TRAINING_BOOK = 4;   // 技能训练书
-    ITEM_EQUIPMENT = 11;            // 装备
-    ITEM_STAFF_CARD = 21;           // 员工卡
-    ITEM_BOX = 99;                  // 箱子
+    ITEM_DRINKS = 100;                  // 饮品
+    ITEM_BADGE = 200;                   // 徽章
+    ITEM_BUILDING_CERTIFICATE = 300;    // 建筑许可证
+    ITEM_SHOP_GOODS = 400;              // 网店货物
+    ITEM_TALENT_STONE = 500;            // 天赋石
+    ITEM_STAFF_CARD = 900;              // 员工卡
+    ITEM_EQUIPMENT = 1000;              // 装备
+    ITEM_BOX = 9000;                    // 箱子
 }
 
 message Item {
@@ -37,5 +38,4 @@ message Item {
     required ItemType tp = 4;
     optional Attribute attr = 5;
 }
-
 
