@@ -1,5 +1,6 @@
 package Dianjing.protocol;
 
+import "package.proto";
 import "item_define.proto";
 import "common.proto";
 
