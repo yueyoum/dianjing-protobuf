@@ -10,6 +10,7 @@ message StaffMatch {
         required int32 jingying = 3;    // 经营
         required int32 baobing = 4;    // 暴兵
         required int32 zhanshu = 5;    // 战术
+        repeated int32 skills = 6;      // 技能ID
     }
 
     required Staff staff_one = 1;
