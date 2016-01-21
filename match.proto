@@ -11,6 +11,7 @@ message StaffMatch {
         required int32 baobing = 4;    // 暴兵
         required int32 zhanshu = 5;    // 战术
         repeated int32 skills = 6;      // 技能ID
+        required int32 power = 7;
     }
 
     required Staff staff_one = 1;
