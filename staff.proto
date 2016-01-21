@@ -52,6 +52,13 @@ message StaffFireResponse {
 }
 
 message Staff {
+    message Skill {
+        required int32 id = 1;
+        required int32 level = 2;
+        required bool locked = 3;
+        required int64 upgrade_end_at = 4;  // 升级结束时间戳，0 表示没有升级
+    }
+
     required int32 id = 1;
     required int32 level = 2;
     required int32 cur_exp = 3;     // 当前经验
@@ -77,6 +84,7 @@ message Staff {
     required int32 power = 19;
 
     repeated Item items = 20;       // 装备
+    repeated Skill skills = 21;     // 技能
 }
 
 
