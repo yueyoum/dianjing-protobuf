@@ -9,6 +9,6 @@ message BroadcastNotify {
     }
     required bytes session = 1;
     required Action act = 2;
-    repeated Broadcast Broadcast = 3;
+    repeated Broadcast broadcast = 3;
 }
 
