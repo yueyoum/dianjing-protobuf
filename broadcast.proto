@@ -1,0 +1,14 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+message BroadcastNotify {
+    message Broadcast {
+        required string text = 1;
+        required int32 repeat_times = 2;
+    }
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Broadcast Broadcast = 3;
+}
+

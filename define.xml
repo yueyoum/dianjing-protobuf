@@ -317,5 +317,9 @@
         <protocol name = "StaffAuctionBidingRemoveNotify" type = "2711" />
     </file>
 
+    <file name = "broadcast.proto">
+        <protocol name = "BroadcastNotify" type = "2800" />
+    </file>
+
 </namespace>
 
