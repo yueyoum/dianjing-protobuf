@@ -55,6 +55,8 @@
         <protocol name = "StaffFireResponse" type = "526" reqtype = "525" />
         <protocol name = "StaffEquipOnRequest" type = "527" command = "/game/staff/equipon/" />
         <protocol name = "StaffEquipOnResponse" type = "528" reqtype = "525" />
+        <protocol name = "StaffStrengthenRequest" type = "529" command = "/game/staff/strengthen/" />
+        <protocol name = "StaffStrengthenResponse" type = "530" reqtype = "529" />
     </file>
 
     <file name = "league">
@@ -140,7 +142,6 @@
     </file>    
 
     <file name = "skill">
-        <protocol name = "SkillNotify" type = "1000" />
         <protocol name = "SkillLockToggleRequest" type = "1001" command = "/game/skill/locktoggle/" />
         <protocol name = "SkillLockToggleResponse" type = "1002" reqtype = "1001" />
         <protocol name = "SkillWashRequest" type = "1003" command = "/game/skill/wash/" />
@@ -314,6 +315,10 @@
 
         <protocol name = "StaffAuctionBidingListNotify" type = "2710" />
         <protocol name = "StaffAuctionBidingRemoveNotify" type = "2711" />
+    </file>
+
+    <file name = "broadcast.proto">
+        <protocol name = "BroadcastNotify" type = "2800" />
     </file>
 
 </namespace>
