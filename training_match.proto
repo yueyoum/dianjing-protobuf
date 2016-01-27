@@ -61,14 +61,19 @@ message TrainingMatchReportResponse {
     optional Drop drop = 3;
 }
 
-message TrainingMatchGetAdditionalRewardRequest {
+message TrainingMatchGetMatchClubDetailRequest {
     required bytes session = 1;
     required int32 club_index = 2;
 }
 
-message TrainingMatchGetAdditionalRewardResponse {
+message ClubStaff {
+	required int32 staff_id = 1;
+	required int32 staff_level = 2;
+}
+
+message TrainingMatchGetMatchClubDetailResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Drop drop = 3;
+    repeated ClubStaff staffs = 3;
 }
 
