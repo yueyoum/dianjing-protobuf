@@ -10,7 +10,8 @@ enum MailFromType {
 }
 
 enum MailFunction {
-    MAIL_FUNCTION_NONE = 1;                 // 没有功能
+    MAIL_FUNCTION_NONE = 0;                 // 没有功能
+    MAIL_FUNCTION_VIDEO = 1;                 // match video
 }
 
 message MailFrom {
@@ -28,6 +29,7 @@ message Mail {
     required int32 remained_seconds = 7;                // 到自动删除，剩余秒数
     optional Drop attachment = 8;                       // 附件
     optional MailFunction function = 9 [default = MAIL_FUNCTION_NONE];   // 功能
+    optional bytes data = 10;
 }
 
 
