@@ -29,6 +29,7 @@ message TrainingMatchNotify {
     required int32 remained_relive_times = 3;   // 剩余复活次数
     required int32 relive_cost = 4;
     repeated OppositeClub clubs = 5;
+    required int32 score = 6;
 }
 
 message TrainingMatchStartRequest {
