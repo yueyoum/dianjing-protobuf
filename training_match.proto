@@ -42,12 +42,6 @@ message TrainingMatchStartResponse {
     optional ClubMatch match = 3;
 }
 
-message StaffMatchResult{
-    required int32 staff_one = 1;                 // staff id
-    required int32 staff_two = 2;
-    required bool staff_one_win = 3;
-}
-
 message TrainingMatchReportRequest {
     required bytes session = 1;
     required bool is_win = 2;
@@ -61,14 +55,29 @@ message TrainingMatchReportResponse {
     optional Drop drop = 3;
 }
 
-message TrainingMatchGetAdditionalRewardRequest {
+
+message TrainingMatchStoreNotify {
     required bytes session = 1;
-    required int32 club_index = 2;
+    required int64 next_refresh_time = 2;   // UTC timestamp
+    repeated int32 ids = 3;
 }
 
-message TrainingMatchGetAdditionalRewardResponse {
+message TrainingMatchStoreBuyRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+
+message TrainingMatchStoreBuyResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional Drop drop = 3;
 }
 
+message TrainingMatchStoreRefreshRequest {
+    required bytes session = 1;
+}
+
+message TrainingMatchStoreRefreshResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}

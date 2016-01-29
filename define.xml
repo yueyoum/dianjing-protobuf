@@ -284,8 +284,11 @@
         <protocol name = "TrainingMatchStartResponse" type = "2502" reqtype = "2501" />
         <protocol name = "TrainingMatchReportRequest" type = "2503" command = "/game/trainingmatch/report/" />
         <protocol name = "TrainingMatchReportResponse" type = "2504" reqtype = "2503" />
-        <protocol name = "TrainingMatchGetAdditionalRewardRequest" type = "2505" command = "/game/trainingmatch/additional/" />
-        <protocol name = "TrainingMatchGetAdditionalRewardResponse" type = "2506" reqtype = "2505" />
+        <protocol name = "TrainingMatchStoreNotify" type = "2510" />
+        <protocol name = "TrainingMatchStoreBuyRequest" type = "2511" command = "/game/trainingmatch/store/buy/" />
+        <protocol name = "TrainingMatchStoreBuyResponse" type = "2512" reqtype = "2511" />
+        <protocol name = "TrainingMatchStoreRefreshRequest" type = "2513" command = "/game/trainingmatch/store/refresh/" />
+        <protocol name = "TrainingMatchStoreRefreshResponse" type = "2514" reqtype = "2513" />
     </file>
 
     <file name = "elite_match">

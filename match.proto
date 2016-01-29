@@ -28,3 +28,10 @@ message ClubMatch {
     required string key = 5;
 }
 
+
+message StaffMatchResult{
+    required int32 staff_one = 1;                 // staff id
+    required int32 staff_two = 2;
+    required bool staff_one_win = 3;
+}
+

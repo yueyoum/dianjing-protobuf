@@ -2,8 +2,6 @@ package Dianjing.protocol;
 
 import "match.proto";
 import "package.proto";
-import "training_match.proto";
-
 
 message LadderClub {
     required string id = 1;
@@ -73,7 +71,6 @@ message LadderStoreNotify {
     required int64 next_refresh_time = 2;   // UTC timestamp
     repeated int32 ids = 3;
 }
-
 
 message LadderStoreBuyRequest {
     required bytes session = 1;
