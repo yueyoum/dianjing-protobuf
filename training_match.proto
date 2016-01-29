@@ -29,6 +29,7 @@ message TrainingMatchNotify {
     required int32 remained_relive_times = 3;   // 剩余复活次数
     required int32 relive_cost = 4;
     repeated OppositeClub clubs = 5;
+    required int32 score = 6;
 }
 
 message TrainingMatchStartRequest {
@@ -55,6 +56,21 @@ message TrainingMatchReportResponse {
     optional Drop drop = 3;
 }
 
+message TrainingMatchGetMatchClubDetailRequest {
+    required bytes session = 1;
+    required int32 club_index = 2;
+}
+
+message ClubStaff {
+    required int32 staff_id = 1;
+    required int32 staff_level = 2;
+}
+
+message TrainingMatchGetMatchClubDetailResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated ClubStaff staffs = 3;
+}
 
 message TrainingMatchStoreNotify {
     required bytes session = 1;

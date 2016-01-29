@@ -26,6 +26,7 @@ message LadderNotify {
     required int32 my_order = 4;        // 我的排名
     required int32 my_score = 5;        // 我的积分
     repeated LadderLog logs = 6;        // 战报
+    required int64 next_challenge_time = 7;        // 战报
 }
 
 message LadderRefreshRequest {
@@ -103,3 +104,11 @@ message LadderLeaderBoardResponse {
     repeated LadderClub clubs = 3;
 }
 
+message LadderBuyChallengeTimesRequest {
+    required bytes session = 1;
+}
+
+message LadderBuyChallengeTimesResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
