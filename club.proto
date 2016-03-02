@@ -89,8 +89,9 @@ message ClubStaffSlotBuyResponse {
 
 message ClubSetUnitRequest {
     required bytes session = 1;
-    required int32 staff_id = 2;
-    required int32 unit_id = 3;
+    required int32 index = 2;
+    required int32 staff_id = 3;
+    required int32 unit_id = 4;
 }
 
 message ClubSetUnitResponse {
