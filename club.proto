@@ -22,7 +22,9 @@ message Club {
     required int32 diamond = 9;
 
     repeated MatchStaff match_staffs = 10;        // 出战成员
-    required int32 policy = 11;                      // 战术ID
+    required int32 policy = 11;                   // 战术ID
+    required int32 opened_slots = 12;             // 开启的槽位
+    required int32 max_slots = 13;                // 最大槽位
 }
 
 
