@@ -12,6 +12,8 @@ message StaffMatch {
         required int32 zhanshu = 5;    // 战术
         repeated int32 skills = 6;      // 技能ID
         required int32 power = 7;
+        required int32 unit_id = 8;     // 兵种ID
+        required int32 position = 9;    // 阵型中的位置
     }
 
     required Staff staff_one = 1;

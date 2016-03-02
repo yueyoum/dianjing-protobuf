@@ -41,6 +41,11 @@
         <protocol name = "ClubStaffSlotsAmountNotify" type = "420" />
         <protocol name = "ClubStaffSlotBuyRequest" type = "421" command = "/game/club/staffslots/buy/" />
         <protocol name = "ClubStaffSlotBuyResponse" type = "422" reqtype = "421" />
+
+        <protocol name = "ClubSetUnitRequest" type = "423" command = "/game/club/setunit/" />
+        <protocol name = "ClubSetUnitResponse" type = "424" reqtype = "423" />
+        <protocol name = "ClubSetFormationRequest" type = "425" command = "/game/club/setformation/" />
+        <protocol name = "ClubSetFormationResponse" type = "426" reqtype = "425" />
     </file>
 
     <file name = "staff">

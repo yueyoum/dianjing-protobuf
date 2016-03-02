@@ -6,6 +6,8 @@ message MatchStaff {
     required int32 id = 1;
     required int32 level = 2;
     repeated int32 qianban = 3;     // 激活的牵绊ID
+    required int32 unit_id = 4;     // 兵种ID
+    required int32 position = 5;    // 阵型中的位置
 }
 
 message Club {
@@ -79,6 +81,31 @@ message ClubStaffSlotBuyRequest {
 }
 
 message ClubStaffSlotBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message ClubSetUnitRequest {
+    required bytes session = 1;
+    required int32 staff_id = 2;
+    required int32 unit_id = 3;
+}
+
+message ClubSetUnitResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message ClubSetFormationRequest {
+    message StaffPosition {
+        required int32 staff_id = 1;
+        required int32 position = 2;
+    }
+    required bytes session = 1;
+    repeated StaffPosition position = 2;
+}
+
+message ClubSetFormationResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
