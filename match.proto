@@ -37,3 +37,45 @@ message StaffMatchResult{
     required bool staff_one_win = 3;
 }
 
+message Troop
+{
+	message Hero
+	{
+		required int32 heroAttack = 1;（基础进攻能力）
+		required int32 heroAttackPercent = 2;（进攻能力百分比）
+		required int32 heroDefense = 3;（基础防守能力）
+		required int32 heroDefensePercent = 4;（防守能力百分比）
+		required int32 heroManage = 5;（基础运营能力）
+		required int32 heroManagePercent = 6;（运营能力百分比）
+		required int32 heroOperation = 7;（基础操作能力）
+		required int32 heroOperationPercent = 8;（操作能力百分比）
+	}
+	message Army
+	{	
+		required int32 armyHp = 1;(兵基础最大生命值)
+		required int32 armyHpPercent = 2;（最大生命值百分比）
+		required int32 armyAttack = 3;(基础攻击)
+		required int32 armyAttackPercent = 4;(攻击百分比)
+		required int32 armyDefense = 5;(基础防御力)
+		required int32 armyDefensePercent = 6;(防御力百分比)
+		required int32 armyAttackSpeed = 7;(基础攻击速度)
+		required int32 armyAttackSpeedPercent = 8;(攻击速度百分比)
+		required int32 armyAttackDistance = 9;(基础攻击射程)
+		required int32 armyAttackDistancePercent = 10;(攻击射程百分比)
+		required int32 armyMoveSpeed = 11;(基础移动速度)
+		required int32 armyMoveSpeedPercent = 12;(移动速度百分比)
+		required int32 armyHitRate = 13;(命中率)
+		required int32 armyDodgeRate = 14;(闪避率)
+		required int32 armyCritRate = 15;(暴击率)
+		required int32 armyCriteMulti = 16;(暴击伤害倍率)
+		required int32 armyCritAntiRate = 17;(抗暴率)
+		required int32 armyAppendAttackHuman = 18;      (对人族伤害加成)
+		required int32 armyAppendAttackGod = 19;        (对神族伤害加成)
+		required int32 armyAppendAttackBug = 20;        (对虫族伤害加成)
+		required int32 armyAppendAttackedByHuman = 21;  (受到人族伤害加成)
+		required int32 armyAppendAttackedByGod = 22;    (受到神族伤害加成)
+		required int32 armyAppendAttackedByBug = 23;    (受到虫族伤害加成)
+		required int32 armyFinalHurtAppend = 24;          (最终伤害加成
+		required int32 armyFinalHurtReduce = 25;          (最终伤害减免)
+	}
+}
