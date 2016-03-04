@@ -29,41 +29,44 @@ message Troop
         required int32 id = 1;
         required int32 position = 2;
 		required int32 attack = 3;
-		required int32 attackPercent = 4;
+		required float attackPercent = 4;
 		required int32 defense = 5;
-		required int32 defensePercent = 6;
+		required float defensePercent = 6;
 		required int32 manage = 7;
-		required int32 managePercent = 8;
+		required float managePercent = 8;
 		required int32 operation = 9;
-		required int32 operationPercent = 10;
+		required float operationPercent = 10;
 	}
 	message Army
 	{	
         required int32 id = 1;
 		required int32 hp = 2;
-		required int32 hpPercent = 3;
+		required float hpPercent = 3;
 		required int32 attack = 4;
-		required int32 attackPercent = 5;
+		required float attackPercent = 5;
 		required int32 defense = 6;
-		required int32 defensePercent = 7;
-		required int32 attackSpeed = 8;
-		required int32 attackSpeedPercent = 9;
-		required int32 attackDistance = 10;
-		required int32 attackDistancePercent = 11;
-		required int32 moveSpeed = 12;
-		required int32 moveSpeedPercent = 13;
-		required int32 hitRate = 14;
-		required int32 dodgeRate = 15;
-		required int32 critRate = 16;
-		required int32 criteMulti = 17;
-		required int32 critAntiRate = 18;
-		required int32 appendAttackHuman = 19;
-		required int32 appendAttackGod = 20;
-		required int32 appendAttackBug = 21;
-		required int32 appendAttackedByHuman = 22;
-		required int32 appendAttackedByGod = 23;
-		required int32 appendAttackedByBug = 24;
+		required float defensePercent = 7;
+		required float attackSpeed = 8;
+		required float attackSpeedPercent = 9;
+		required float attackDistance = 10;
+		required float attackDistancePercent = 11;
+		required float moveSpeed = 12;
+		required float moveSpeedPercent = 13;
+		required float hitRate = 14;
+		required float dodgeRate = 15;
+		required float critRate = 16;
+		required float critMulti = 17;
+		required float critAntiRate = 18;
+		required float appendAttackTerran = 19;
+		required float appendAttackProtoss = 20;
+		required float appendAttackZerg = 21;
+		required float appendAttackedByTerran = 22;
+		required float appendAttackedByProtoss = 23;
+		required float appendAttackedByZerg = 24;
 		required int32 finalHurtAppend = 25;
 		required int32 finalHurtReduce = 26;
 	}
+
+    required Hero hero = 1;
+    required Army army = 2;
 }
