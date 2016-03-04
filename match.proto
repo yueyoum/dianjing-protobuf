@@ -2,35 +2,20 @@ package Dianjing.protocol;
 
 import "club.proto";
 
-// 员工比赛
-message StaffMatch {
-    message Staff {
-        required int32 id = 1;
-        required int32 caozuo = 2;      // 操作
-        required int32 jingying = 3;    // 经营
-        required int32 baobing = 4;    // 暴兵
-        required int32 zhanshu = 5;    // 战术
-        repeated int32 skills = 6;      // 技能ID
-        required int32 power = 7;
-        required int32 unit_id = 8;     // 兵种ID
-        required int32 position = 9;    // 阵型中的位置
-    }
-
-    required Staff staff_one = 1;
-    required Staff staff_two = 2;
-}
-
 // 俱乐部比赛
 message ClubMatch {
-    required Club club_one = 1;
-    required Club club_two = 2;
-
-    repeated StaffMatch match = 3;
-    required int32 seed = 4;    // 随机种子
-    required string key = 5;
+    message ClubTroop {
+        required Club club = 1;
+        repeated Troop troop = 2;
+    }
+    required ClubTroop club_one = 1;
+    required ClubTroop club_two = 2;
+    required int32 seed = 3;    // 随机种子
+    required string key = 4;
 }
 
 
+// not use, remove this
 message StaffMatchResult{
     required int32 staff_one = 1;                 // staff id
     required int32 staff_two = 2;
@@ -41,41 +26,44 @@ message Troop
 {
 	message Hero
 	{
-		required int32 heroAttack = 1;（基础进攻能力）
-		required int32 heroAttackPercent = 2;（进攻能力百分比）
-		required int32 heroDefense = 3;（基础防守能力）
-		required int32 heroDefensePercent = 4;（防守能力百分比）
-		required int32 heroManage = 5;（基础运营能力）
-		required int32 heroManagePercent = 6;（运营能力百分比）
-		required int32 heroOperation = 7;（基础操作能力）
-		required int32 heroOperationPercent = 8;（操作能力百分比）
+        required int32 id = 1;
+        required int32 position = 2;
+		required int32 attack = 3;
+		required int32 attackPercent = 4;
+		required int32 defense = 5;
+		required int32 defensePercent = 6;
+		required int32 manage = 7;
+		required int32 managePercent = 8;
+		required int32 operation = 9;
+		required int32 operationPercent = 10;
 	}
 	message Army
 	{	
-		required int32 armyHp = 1;(兵基础最大生命值)
-		required int32 armyHpPercent = 2;（最大生命值百分比）
-		required int32 armyAttack = 3;(基础攻击)
-		required int32 armyAttackPercent = 4;(攻击百分比)
-		required int32 armyDefense = 5;(基础防御力)
-		required int32 armyDefensePercent = 6;(防御力百分比)
-		required int32 armyAttackSpeed = 7;(基础攻击速度)
-		required int32 armyAttackSpeedPercent = 8;(攻击速度百分比)
-		required int32 armyAttackDistance = 9;(基础攻击射程)
-		required int32 armyAttackDistancePercent = 10;(攻击射程百分比)
-		required int32 armyMoveSpeed = 11;(基础移动速度)
-		required int32 armyMoveSpeedPercent = 12;(移动速度百分比)
-		required int32 armyHitRate = 13;(命中率)
-		required int32 armyDodgeRate = 14;(闪避率)
-		required int32 armyCritRate = 15;(暴击率)
-		required int32 armyCriteMulti = 16;(暴击伤害倍率)
-		required int32 armyCritAntiRate = 17;(抗暴率)
-		required int32 armyAppendAttackHuman = 18;      (对人族伤害加成)
-		required int32 armyAppendAttackGod = 19;        (对神族伤害加成)
-		required int32 armyAppendAttackBug = 20;        (对虫族伤害加成)
-		required int32 armyAppendAttackedByHuman = 21;  (受到人族伤害加成)
-		required int32 armyAppendAttackedByGod = 22;    (受到神族伤害加成)
-		required int32 armyAppendAttackedByBug = 23;    (受到虫族伤害加成)
-		required int32 armyFinalHurtAppend = 24;          (最终伤害加成
-		required int32 armyFinalHurtReduce = 25;          (最终伤害减免)
+        required int32 id = 1;
+		required int32 hp = 2;
+		required int32 hpPercent = 3;
+		required int32 attack = 4;
+		required int32 attackPercent = 5;
+		required int32 defense = 6;
+		required int32 defensePercent = 7;
+		required int32 attackSpeed = 8;
+		required int32 attackSpeedPercent = 9;
+		required int32 attackDistance = 10;
+		required int32 attackDistancePercent = 11;
+		required int32 moveSpeed = 12;
+		required int32 moveSpeedPercent = 13;
+		required int32 hitRate = 14;
+		required int32 dodgeRate = 15;
+		required int32 critRate = 16;
+		required int32 criteMulti = 17;
+		required int32 critAntiRate = 18;
+		required int32 appendAttackHuman = 19;
+		required int32 appendAttackGod = 20;
+		required int32 appendAttackBug = 21;
+		required int32 appendAttackedByHuman = 22;
+		required int32 appendAttackedByGod = 23;
+		required int32 appendAttackedByBug = 24;
+		required int32 finalHurtAppend = 25;
+		required int32 finalHurtReduce = 26;
 	}
 }
