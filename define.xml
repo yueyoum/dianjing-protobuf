@@ -344,6 +344,8 @@
         <protocol name = "BagItemDestroyResponse" type = "3007" reqtype = "3006" />
         <protocol name = "BagEquipmentOnRequest" type = "3008" command = "/game/bagequipment/on/" />
         <protocol name = "BagEquipmentOnResponse" type = "3009" reqtype = "3008" />
+        <protocol name = "BagEquipmentLevelupRequest" type = "3010" command = "/game/bagequipment/levelup/" />
+        <protocol name = "BagEquipmentLevelupResponse" type = "3011" reqtype = "3010" />
     </file>
 
 </namespace>
