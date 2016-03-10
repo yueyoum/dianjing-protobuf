@@ -1,0 +1,78 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+message Slot {
+    message Equipment {
+        required int32 level = 1;
+        required int32 attack = 2;
+        required float attack_percent = 3;
+        required int32 defense = 2;
+        required float defense_percent = 3;
+        required int32 manage = 2;
+        required float manage_percent = 3;
+        required int32 operation = 2;
+        required float operation_percent = 3;
+    }
+
+    required string id = 1;
+    required int32 item_id = 2;
+    optional int32 amount = 3 [default = 1];
+    optional Equipment equipment = 4;
+}
+
+message BagSlotsNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Slot slots = 3;
+    required int32 equipment_max_amount = 4;
+    required int32 fragment_max_amount = 5;
+    required int32 other_max_amount = 6;
+}
+
+message BagSlotsRemoveNotify {
+    required bytes session = 1;
+    repeated string slot_id = 2;
+}
+
+message BagItemUseRequest {
+    required bytes session = 1;
+    required string slot_id = 2;
+}
+
+message BagItemUseResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message BagItemMergeRequest {
+    required bytes session = 1;
+    required string slot_id = 2;
+}
+
+message BagItemMergeResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message BagItemDestroyRequest {
+    required bytes session = 1;
+    required string slot_id = 2;
+}
+
+message BagItemDestroyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message BagEquipmentOnRequest {
+    required bytes session = 1;
+    required string slot_id = 2;
+    required int32 staff_id = 3;
+}
+
+message BagEquipmentOnResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+

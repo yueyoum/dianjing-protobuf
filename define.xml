@@ -333,5 +333,18 @@
         <protocol name = "BroadcastNotify" type = "2800" />
     </file>
 
+    <file name = "bag.proto">
+        <protocol name = "BagSlotsNotify" type = "3000" />
+        <protocol name = "BagSlotsRemoveNotify" type = "3001" />
+        <protocol name = "BagItemUseRequest" type = "3002" command = "/game/bagitem/use/" />
+        <protocol name = "BagItemUseResponse" type = "3003" reqtype = "3002" />
+        <protocol name = "BagItemMergeRequest" type = "3004" command = "/game/bagitem/merge/" />
+        <protocol name = "BagItemMergeResponse" type = "3005" reqtype = "3004" />
+        <protocol name = "BagItemDestroyRequest" type = "3006" command = "/game/bagitem/destroy/" />
+        <protocol name = "BagItemDestroyResponse" type = "3007" reqtype = "3006" />
+        <protocol name = "BagEquipmentOnRequest" type = "3008" command = "/game/bagequipment/on/" />
+        <protocol name = "BagEquipmentOnResponse" type = "3009" reqtype = "3008" />
+    </file>
+
 </namespace>
 
