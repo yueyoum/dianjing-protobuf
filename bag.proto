@@ -41,7 +41,7 @@ message BagItemUseRequest {
 }
 
 message BagItemUseResponse {
-    required Result {
+    message Result {
         required int32 item_id = 1;
         required int32 amount = 2;
     }
