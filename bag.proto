@@ -7,12 +7,12 @@ message Slot {
         required int32 level = 1;
         required int32 attack = 2;
         required float attack_percent = 3;
-        required int32 defense = 2;
-        required float defense_percent = 3;
-        required int32 manage = 2;
-        required float manage_percent = 3;
-        required int32 operation = 2;
-        required float operation_percent = 3;
+        required int32 defense = 3;
+        required float defense_percent = 4;
+        required int32 manage = 5;
+        required float manage_percent = 6;
+        required int32 operation = 7;
+        required float operation_percent = 8;
     }
 
     required string id = 1;
