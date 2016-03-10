@@ -329,11 +329,11 @@
         <protocol name = "StaffAuctionBidingRemoveNotify" type = "2711" />
     </file>
 
-    <file name = "broadcast.proto">
+    <file name = "broadcast">
         <protocol name = "BroadcastNotify" type = "2800" />
     </file>
 
-    <file name = "bag.proto">
+    <file name = "bag">
         <protocol name = "BagSlotsNotify" type = "3000" />
         <protocol name = "BagSlotsRemoveNotify" type = "3001" />
         <protocol name = "BagItemUseRequest" type = "3002" command = "/game/bagitem/use/" />
