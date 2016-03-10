@@ -41,8 +41,14 @@ message BagItemUseRequest {
 }
 
 message BagItemUseResponse {
+    required Result {
+        required int32 item_id = 1;
+        required int32 amount = 2;
+    }
+
     required int32 ret = 1;
     required bytes session = 2;
+    repeated Result results = 3;
 }
 
 message BagItemMergeRequest {
