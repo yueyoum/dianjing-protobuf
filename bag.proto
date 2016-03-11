@@ -2,19 +2,19 @@ package Dianjing.protocol;
 
 import "common.proto";
 
-message Slot {
-    message Equipment {
-        required int32 level = 1;
-        required int32 attack = 2;
-        required float attack_percent = 3;
-        required int32 defense = 4;
-        required float defense_percent = 5;
-        required int32 manage = 6;
-        required float manage_percent = 7;
-        required int32 operation = 8;
-        required float operation_percent = 9;
-    }
+message Equipment {
+    required int32 level = 1;
+    required int32 attack = 2;
+    required float attack_percent = 3;
+    required int32 defense = 4;
+    required float defense_percent = 5;
+    required int32 manage = 6;
+    required float manage_percent = 7;
+    required int32 operation = 8;
+    required float operation_percent = 9;
+}
 
+message Slot {
     required string id = 1;
     required int32 item_id = 2;
     optional int32 amount = 3 [default = 1];
@@ -71,12 +71,40 @@ message BagItemDestroyResponse {
     required bytes session = 2;
 }
 
+message BagEquipmentDestroyRequest {
+    required bytes session = 1;
+    required string slot_id = 2;
+    required bool use_sycee = 3;
+}
+
+message BagEquipmentDestroyResponse {
+    message Result {
+        required int32 item_id = 1;
+        required int32 amount = 2;
+    }
+
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Result results = 3;
+}
+
 message BagEquipmentLevelupRequest {
     required bytes session = 1;
     required string slot_id = 2;
 }
 
 message BagEquipmentLevelupResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Equipment equipment = 3;
+}
+
+message BagEquipmentLevelupConfirmRequest {
+    required bytes session = 1;
+    required string slot_id = 2;
+}
+
+message BagEquipmentLevelupConfirmResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
