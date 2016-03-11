@@ -99,7 +99,7 @@ message BagEquipmentLevelupConfirmRequest {
 message BagEquipmentLevelupConfirmResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    repeated Equipment levels = 3;
+    optional Equipment equipment = 3;
 }
 
 message BagEquipmentOnRequest {
