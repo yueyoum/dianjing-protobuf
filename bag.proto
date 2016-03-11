@@ -102,6 +102,7 @@ message BagEquipmentLevelupResponse {
 message BagEquipmentLevelupConfirmRequest {
     required bytes session = 1;
     required string slot_id = 2;
+    required bool single = 3;
 }
 
 message BagEquipmentLevelupConfirmResponse {
