@@ -5,6 +5,11 @@ import "package.proto";
 import "common.proto";
 import "training_match.proto";
 
+// delete area
+message Area {
+    required int32 id = 1;
+}
+
 enum ChapterRewardStatus {
     CHAPTER_REWARD_NOT = 0;
     CHAPTER_REWARD_OK = 1;
