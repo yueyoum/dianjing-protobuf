@@ -84,12 +84,15 @@
         <protocol name = "ChallengeEnergyNotify" type = "701" />
         <protocol name = "ChallengeStartRequest" type = "702" command = "/game/challenge/start/" />
         <protocol name = "ChallengeStartResponse" type = "703" reqtype = "702" />
-        <protocol name = "ChallengeGetStarRewardRequest" type = "704" command = "/game/challenge/reward/" />
-        <protocol name = "ChallengeGetStarRewardResponse" type = "705" reqtype = "704" />
+        <protocol name = "ChapterGetStarRewardRequest" type = "704" command = "/game/challenge/chapter/reward/" />
+        <protocol name = "ChapterGetStarRewardResponse" type = "705" reqtype = "704" />
         <protocol name = "ChallengeMatchReportRequest" type = "706" command = "/game/challenge/report/" />
         <protocol name = "ChallengeMatchReportResponse" type = "707" reqtype = "706" />
         <protocol name = "ChallengeBuyEnergyRequest" type = "708" command = "/game/challenge/buy/" />
         <protocol name = "ChallengeBuyEnergyResponse" type = "709" reqtype = "708" />
+
+        <protocol name = "ChapterNotify" type = "720" />
+
     </file>
 
     <file name = "building">

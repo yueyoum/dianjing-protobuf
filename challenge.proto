@@ -5,30 +5,39 @@ import "package.proto";
 import "common.proto";
 import "training_match.proto";
 
-enum AreaStatus {
-    CHALLENGE_NOT_OPEN = 1;
-    CHALLENGE_OPEN = 2;
-    CHALLENGE_FINISH = 3;
+enum ChapterRewardStatus {
+    CHAPTER_REWARD_NOT = 0;
+    CHAPTER_REWARD_OK = 1;
+    CHAPTER_REWARD_DONE = 2;
 }
 
-message ChallengeDetail {
-    required int32 id = 1;                      // challenge id
-    required int32 stars = 2;                   // challenge stars
-    required int32 times = 3;
+message ChapterNotify {
+    message Chapter {
+        message Reward {
+            required int32 index = 1;
+            required ChapterRewardStatus status = 2;
+        }
+
+        required int32 id = 1;
+        repeated Reward rewards = 2;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Chapter chapters = 3;
 }
 
-message Area {
-    required int32 id = 1;                      // area id
-    repeated ChallengeDetail challenge = 2;
-    required bool package_one = 3;             // package status true: not get  false: already get
-    required bool package_two = 4;
-    required bool package_three = 5;
-}
 
 message ChallengeNotify {
+    message Challenge {
+        required int32 id = 1;
+        required int32 star = 2;
+        required int32 remained_times = 3;
+    }
+
     required bytes session = 1;
-    repeated Area area = 2;
-    required Action act = 3;
+    required Action act = 2;
+    repeated Challenge challenge = 3;
 }
 
 message ChallengeEnergyNotify {
@@ -40,8 +49,7 @@ message ChallengeEnergyNotify {
 
 message ChallengeStartRequest {
     required bytes session = 1;
-    required int32 area_id = 2;
-    required int32 challenge_id = 3;
+    required int32 id = 2;
 }
 
 message ChallengeStartResponse {
@@ -50,13 +58,13 @@ message ChallengeStartResponse {
     optional ClubMatch match = 3;
 }
 
-message ChallengeGetStarRewardRequest {
+message ChapterGetStarRewardRequest {
     required bytes session = 1;
-    required int32 area_id = 2;
+    required int32 id = 2;
     required int32 index = 3;
 }
 
-message ChallengeGetStarRewardResponse {
+message ChapterGetStarRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Drop drop = 3;
@@ -65,8 +73,7 @@ message ChallengeGetStarRewardResponse {
 message ChallengeMatchReportRequest {
     required bytes session = 1;
     required string key = 2;
-    required string win_club = 3;
-    repeated StaffMatchResult result= 4;
+    required int32 star = 3;
 }
 
 message ChallengeMatchReportResponse {
