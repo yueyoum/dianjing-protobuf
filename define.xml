@@ -91,6 +91,9 @@
         <protocol name = "ChallengeBuyEnergyRequest" type = "708" command = "/game/challenge/buy/" />
         <protocol name = "ChallengeBuyEnergyResponse" type = "709" reqtype = "708" />
 
+        <protocol name = "ChallengeSweepRequest" type = "710" command = "/game/challenge/sweep/" />
+        <protocol name = "ChallengeSweepResponse" type = "711" reqtype = "710" />
+
         <protocol name = "ChapterNotify" type = "720" />
 
     </file>

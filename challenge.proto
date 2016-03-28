@@ -63,6 +63,17 @@ message ChallengeStartResponse {
     optional ClubMatch match = 3;
 }
 
+message ChallengeSweepRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message ChallengeSweepResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Drop drop = 3;
+}
+
 message ChapterGetStarRewardRequest {
     required bytes session = 1;
     required int32 id = 2;
