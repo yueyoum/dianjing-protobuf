@@ -46,8 +46,6 @@
         <protocol name = "ClubSetUnitResponse" type = "424" reqtype = "423" />
         <protocol name = "ClubSetFormationRequest" type = "425" command = "/game/club/setformation/" />
         <protocol name = "ClubSetFormationResponse" type = "426" reqtype = "425" />
-
-        <protocol name = "FormationNotify" type = "430" />
     </file>
 
     <file name = "staff">
