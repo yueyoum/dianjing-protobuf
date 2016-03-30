@@ -26,16 +26,17 @@ message Troop
 {
 	message Hero
 	{
-        required int32 id = 1;
-        required int32 position = 2;
-		required int32 attack = 3;
-		required float attackPercent = 4;
-		required int32 defense = 5;
-		required float defensePercent = 6;
-		required int32 manage = 7;
-		required float managePercent = 8;
-		required int32 operation = 9;
-		required float operationPercent = 10;
+        required string id = 1;
+        required int32 oid = 2;
+        required int32 position = 3;
+		required int32 attack = 4;
+		required float attackPercent = 5;
+		required int32 defense = 6;
+		required float defensePercent = 7;
+		required int32 manage = 8;
+		required float managePercent = 9;
+		required int32 operation = 10;
+		required float operationPercent = 11;
 	}
 	message Army
 	{	
