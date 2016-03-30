@@ -102,14 +102,3 @@ message BagEquipmentLevelupConfirmResponse {
     optional Equipment equipment = 3;
 }
 
-message BagEquipmentOnRequest {
-    required bytes session = 1;
-    required string slot_id = 2;
-    required int32 staff_id = 3;
-}
-
-message BagEquipmentOnResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-

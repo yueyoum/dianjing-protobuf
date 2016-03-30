@@ -1,7 +1,6 @@
 package Dianjing.protocol;
 
 import "common.proto";
-import "item_define.proto";
 
 enum StaffRecruitType {
     RECRUIT_HOT = 1;
@@ -41,50 +40,26 @@ message StaffRecruitResponse {
     required bytes session = 2;
 }
 
-message StaffFireRequest {
-    required bytes session = 1;
-    required int32 staff_id = 2;
-}
-
-message StaffFireResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
+///////////////////////////////////////////////
 
 message Staff {
-    message Skill {
-        required int32 id = 1;
-        required int32 level = 2;
-        required bool locked = 3;
-        required int64 upgrade_end_at = 4;  // 升级结束时间戳，0 表示没有升级
-    }
+    required string id = 1;
+    required int32 oid = 2;     // 原始ID
+    required int32 level = 3;   // 等级
+    required int32 step = 4;    // 阶
+    required int32 star = 5;    // 星
+    required int32 level_exp = 6;   // 当前等级经验
+    required int32 star_exp = 7;    // 当前星级经验
+    
+    required int32 attack = 8;
+    required int32 defense = 9;
+    required int32 manage = 10;
+    required int32 operation = 11;
 
-    required int32 id = 1;
-    required int32 level = 2;
-    required int32 cur_exp = 3;     // 当前经验
-    required int32 max_exp = 4;     // 当前等级最大经验
-    required int32 status = 5;      // 状态， 对应 staff_status.json
-
-    required int32 luoji = 6;       // 逻辑
-    required int32 minjie = 7;      // 敏捷
-    required int32 lilun = 8;       // 理论
-    required int32 wuxing = 9;      // 五行
-    required int32 meili = 10;      // 魅力
-
-    required int32 caozuo = 11;      // 操作
-    required int32 jingying = 12;    // 经营
-    required int32 baobing = 13;    // 暴兵
-    required int32 zhanshu = 14;    // 战术
-
-    required int32 biaoyan = 15;    // 表演
-    required int32 yingxiao = 16;   // 营销
-
-    required int32 zhimingdu = 17;  // 知名度
-    required int32 star = 18;
-    required int32 power = 19;
-
-    repeated Item items = 20;       // 装备
-    repeated Skill skills = 21;     // 技能
+    required string equip_mouse_slot_id = 12;   // 鼠标
+    required string equip_keyboard_slot_id = 13;   // 键盘
+    required string equip_monitor_slot_id = 14;   // 显示器
+    required string equip_decoration_slot_id = 15;   // 装饰
 }
 
 
@@ -97,27 +72,69 @@ message StaffNotify {
 
 message StaffRemoveNotify {
     required bytes session = 1;
-    repeated int32 id = 2;
+    repeated string ids = 2;
 }
 
 
-message StaffEquipOnRequest {
+// 更换装备
+message StaffEquipChangeRequest {
     required bytes session = 1;
-    required int32 staff_id = 2;
-    required string item_id = 3;
+    required string staff_id = 2;
+    required string slot_id = 3;   // 背包格子， 空表示卸下
 }
 
-message StaffEquipOnResponse {
+message StaffEquipChangeResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
 
-message StaffStrengthenRequest {
+
+// 升级
+message StaffLevelUpRequest {
+    message Item {
+        required int32 id = 1;
+        required int32 amount = 2;
+    }
+
     required bytes session = 1;
-    required int32 staff_id = 2;
+    required string staff_id = 2;
+    repeated Item item = 3;
 }
 
-message StaffStrengthenResponse {
+message StaffLevelUpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 升阶
+message staffStepUpRequest {
+    required bytes session = 1;
+    required string staff_id = 2;
+}
+
+message StaffStepUpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 升星
+message StaffStarUpRequest {
+    required bytes session = 1;
+    required string staff_id = 2;
+}
+
+message StaffStarUpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 分解
+message StaffDestroyRequest {
+    required bytes session = 1;
+    required string staff_id = 2;
+}
+
+message StaffDestroyResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }

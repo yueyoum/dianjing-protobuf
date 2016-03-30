@@ -2,13 +2,19 @@ package Dianjing.protocol;
 
 import "common.proto";
 
-message MatchStaff {
-    required int32 id = 1;
-    required int32 level = 2;
-    repeated int32 qianban = 3;     // 激活的牵绊ID
-    required int32 unit_id = 4;     // 兵种ID
-    required int32 position = 5;    // 阵型中的位置
+
+message Formation {
+    required int32 position = 1;
+    required string staff_id = 2;
+    required int32 unit_id = 3;
+    repeated int32 qianban = 4;     // 激活的牵绊ID
 }
+
+message FormationNotify {
+    required bytes session = 1;
+    repeated Formation formation = 2;
+}
+
 
 message Club {
     required string id = 1;
@@ -21,10 +27,9 @@ message Club {
     required int32 gold = 8;
     required int32 diamond = 9;
 
-    repeated MatchStaff match_staffs = 10;        // 出战成员
-    required int32 policy = 11;                   // 战术ID
-    required int32 opened_slots = 12;             // 开启的槽位
-    required int32 max_slots = 13;                // 最大槽位
+    required int32 policy = 10;                   // 战术ID
+    required int32 opened_slots = 11;             // 开启的槽位
+    required int32 max_slots = 12;                // 最大槽位
 }
 
 

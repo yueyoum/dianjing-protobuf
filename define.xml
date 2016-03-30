@@ -46,6 +46,8 @@
         <protocol name = "ClubSetUnitResponse" type = "424" reqtype = "423" />
         <protocol name = "ClubSetFormationRequest" type = "425" command = "/game/club/setformation/" />
         <protocol name = "ClubSetFormationResponse" type = "426" reqtype = "425" />
+
+        <protocol name = "FormationNotify" type = "430" />
     </file>
 
     <file name = "staff">
@@ -56,12 +58,17 @@
         <protocol name = "StaffRecruitRefreshResponse" type = "522" reqtype = "521" />
         <protocol name = "StaffRecruitRequest" type = "523" command = "/game/staff/recruit/" />
         <protocol name = "StaffRecruitResponse" type = "524" reqtype = "523" />
-        <protocol name = "StaffFireRequest" type = "525" command = "/game/staff/fire/" />
-        <protocol name = "StaffFireResponse" type = "526" reqtype = "525" />
-        <protocol name = "StaffEquipOnRequest" type = "527" command = "/game/staff/equipon/" />
-        <protocol name = "StaffEquipOnResponse" type = "528" reqtype = "525" />
-        <protocol name = "StaffStrengthenRequest" type = "529" command = "/game/staff/strengthen/" />
-        <protocol name = "StaffStrengthenResponse" type = "530" reqtype = "529" />
+
+        <protocol name = "StaffEquipChangeRequest" type = "530" command = "/game/staff/equipchange/" />
+        <protocol name = "StaffEquipChangeResponse" type = "531" reqtype = "530" />
+        <protocol name = "StaffLevelUpRequest" type = "532" command = "/game/staff/levelup/" />
+        <protocol name = "StaffLevelUpResponse" type = "533" reqtype = "532" />
+        <protocol name = "staffStepUpRequest" type = "534" command = "/game/staff/stepup/" />
+        <protocol name = "StaffStepUpResponse" type = "535" reqtype = "534" />
+        <protocol name = "StaffStarUpRequest" type = "536" command = "/game/staff/starup/" />
+        <protocol name = "StaffStarUpResponse" type = "537" reqtype = "536" />
+        <protocol name = "StaffDestroyRequest" type = "538" command = "/game/staff/destroy/" />
+        <protocol name = "StaffDestroyResponse" type = "539" reqtype = "538" />
     </file>
 
     <file name = "league">
@@ -348,8 +355,6 @@
         <protocol name = "BagItemMergeResponse" type = "3005" reqtype = "3004" />
         <protocol name = "BagItemDestroyRequest" type = "3006" command = "/game/bagitem/destroy/" />
         <protocol name = "BagItemDestroyResponse" type = "3007" reqtype = "3006" />
-        <protocol name = "BagEquipmentOnRequest" type = "3008" command = "/game/bagequipment/on/" />
-        <protocol name = "BagEquipmentOnResponse" type = "3009" reqtype = "3008" />
         <protocol name = "BagEquipmentLevelupRequest" type = "3010" command = "/game/bagequipment/levelup/" />
         <protocol name = "BagEquipmentLevelupResponse" type = "3011" reqtype = "3010" />
         <protocol name = "BagEquipmentDestroyRequest" type = "3012" command = "/game/bagequipment/destroy/" />
