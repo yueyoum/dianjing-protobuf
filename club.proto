@@ -59,18 +59,6 @@ message ClubSetPolicyResponse {
 }
 
 
-// 安排参赛队员
-message ClubSetMatchStaffRequest {
-    required bytes session = 1;
-    repeated int32 staff_ids = 2;
-}
-
-message ClubSetMatchStaffResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-
 // 队员格子
 message ClubStaffSlotsAmountNotify {
     required bytes session = 1;
@@ -90,7 +78,7 @@ message ClubStaffSlotBuyResponse {
 message ClubSetUnitRequest {
     required bytes session = 1;
     required int32 index = 2;
-    required int32 staff_id = 3;
+    required string staff_id = 3;
     required int32 unit_id = 4;
 }
 
@@ -101,7 +89,7 @@ message ClubSetUnitResponse {
 
 message ClubSetFormationRequest {
     message StaffPosition {
-        required int32 staff_id = 1;
+        required string staff_id = 1;
         required int32 position = 2;
     }
     required bytes session = 1;
