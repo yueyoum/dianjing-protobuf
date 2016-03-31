@@ -3,7 +3,7 @@ package Dianjing.protocol;
 import "common.proto";
 
 message MatchStaff {
-    required int32 id = 1;
+    required string id = 1;
     required int32 level = 2;
     repeated int32 qianban = 3;     // 激活的牵绊ID
     required int32 unit_id = 4;     // 兵种ID
