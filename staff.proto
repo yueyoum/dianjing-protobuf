@@ -1,6 +1,8 @@
 package Dianjing.protocol;
 
 import "common.proto";
+import "bag.proto";
+import "package.proto";
 
 enum StaffRecruitType {
     RECRUIT_HOT = 1;
@@ -81,6 +83,7 @@ message StaffEquipChangeRequest {
     required bytes session = 1;
     required string staff_id = 2;
     required string slot_id = 3;   // 背包格子， 空表示卸下
+    required EquipmentType tp = 4;
 }
 
 message StaffEquipChangeResponse {
@@ -137,5 +140,6 @@ message StaffDestroyRequest {
 message StaffDestroyResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
 
