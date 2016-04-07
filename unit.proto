@@ -14,7 +14,7 @@ message Unit {
 message UnitNotify {
     required bytes session = 1;
     required Action act = 2;
-    repeated Staff staffs = 3;
+    repeated Unit units = 3;
 }
 
 // 升级
