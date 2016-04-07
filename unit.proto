@@ -1,0 +1,41 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+message Unit {
+    required string id = 1;
+    required int32 oid = 2;
+    required int32 level = 3;
+    required int32 step = 4;
+}
+
+
+// 只发已经解锁的
+message UnitNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Staff staffs = 3;
+}
+
+// 升级
+message UnitLevelUpRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+message UnitLevelUpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 升阶
+message UnitStepUpRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+message UnitStepUpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
