@@ -7,6 +7,9 @@ message Unit {
     required int32 oid = 2;
     required int32 level = 3;
     required int32 step = 4;
+    required int32 hp = 5;
+    required int32 attack = 6;
+    required int32 defense = 7;
 }
 
 
