@@ -3,13 +3,12 @@ package Dianjing.protocol;
 import "common.proto";
 
 message Unit {
-    required string id = 1;
-    required int32 oid = 2;
-    required int32 level = 3;
-    required int32 step = 4;
-    required int32 hp = 5;
-    required int32 attack = 6;
-    required int32 defense = 7;
+    required int32 id = 1;
+    required int32 level = 2;
+    required int32 step = 3;
+    required int32 hp = 4;
+    required int32 attack = 5;
+    required int32 defense = 6;
 }
 
 
@@ -23,7 +22,7 @@ message UnitNotify {
 // 升级
 message UnitLevelUpRequest {
     required bytes session = 1;
-    required string id = 2;
+    required int32 id = 2;
 }
 
 message UnitLevelUpResponse {
@@ -34,7 +33,7 @@ message UnitLevelUpResponse {
 // 升阶
 message UnitStepUpRequest {
     required bytes session = 1;
-    required string id = 2;
+    required int32 id = 2;
 }
 
 message UnitStepUpResponse {
