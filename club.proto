@@ -6,7 +6,7 @@ message MatchStaff {
     required string id = 1;
     required int32 level = 2;
     repeated int32 qianban = 3;     // 激活的牵绊ID
-    required int32 unit_id = 4;     // 兵种ID
+    required string unit_id = 4;     // 兵种ID
     required int32 position = 5;    // 阵型中的位置
 }
 
@@ -79,7 +79,7 @@ message ClubSetUnitRequest {
     required bytes session = 1;
     required int32 index = 2;
     required string staff_id = 3;
-    required int32 unit_id = 4;
+    required string unit_id = 4;
 }
 
 message ClubSetUnitResponse {
