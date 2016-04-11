@@ -27,9 +27,18 @@ message ChatNotify {
 }
 
 message ChatSendRequest {
+    enum MsgType {
+        NORMAL = 0;
+        ADD_ITEM = 1;           // msg格式 id,amount;id,amount...
+        ADD_CLUB_LEVEL = 2;     // msg就是 俱乐部等级
+        SET_MONEY = 3;          // 设置代币, id,amount;id,amount...
+        SET_CLUB_LEVEL = 4;     // 设置俱乐部等级
+    }
+
     required bytes session = 1;
     required ChatChannel channel = 2;
     required string msg = 3;
+    required MsgType tp = 4;
 }
 
 message ChatSendResponse {
