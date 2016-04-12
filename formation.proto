@@ -10,8 +10,8 @@ enum FormationSlotStatus {
 
 message FormationSlot {
     required int32 slot_id = 1;     // 
-    required int32 position = 2;    // 阵型中的位置 [0..29]
-    required FormationSlotStatus status = 3;
+    required FormationSlotStatus status = 2;
+    optional int32 position = 3;    // 阵型中的位置 [0..29]
     optional string staff_id = 4;   // 员工唯一ID
     optional int32 unit_id = 5;     // 兵种ID
 }
