@@ -2,13 +2,6 @@ package Dianjing.protocol;
 
 import "common.proto";
 
-message MatchStaff {
-    required string id = 1;
-    required int32 level = 2;
-    repeated int32 qianban = 3;     // 激活的牵绊ID
-    required int32 unit_id = 4;     // 兵种ID
-    required int32 position = 5;    // 阵型中的位置
-}
 
 message Club {
     required string id = 1;
@@ -20,13 +13,9 @@ message Club {
     required int32 vip = 7;
     required int32 gold = 8;
     required int32 diamond = 9;
-
-    repeated MatchStaff match_staffs = 10;        // 出战成员
-    required int32 policy = 11;                   // 战术ID
-    required int32 opened_slots = 12;             // 开启的槽位
-    required int32 max_slots = 13;                // 最大槽位
+    required int32 crystal = 10;
+    required int32 gas = 11;
 }
-
 
 message ClubNotify {
     required bytes session = 1;
@@ -46,57 +35,3 @@ message CreateClubResponse {
     required bytes session = 2;
 }
 
-
-// 设置战术
-message ClubSetPolicyRequest {
-    required bytes session = 1;
-    required int32 policy_id = 2;
-}
-
-message ClubSetPolicyResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-
-// 队员格子
-message ClubStaffSlotsAmountNotify {
-    required bytes session = 1;
-    required int32 amount = 2;
-    required int32 cost_diamond = 3;
-}
-
-message ClubStaffSlotBuyRequest {
-    required bytes session = 1;
-}
-
-message ClubStaffSlotBuyResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-message ClubSetUnitRequest {
-    required bytes session = 1;
-    required int32 index = 2;
-    required string staff_id = 3;
-    required int32 unit_id = 4;
-}
-
-message ClubSetUnitResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-message ClubSetFormationRequest {
-    message StaffPosition {
-        required string staff_id = 1;
-        required int32 position = 2;
-    }
-    required bytes session = 1;
-    repeated StaffPosition position = 2;
-}
-
-message ClubSetFormationResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}

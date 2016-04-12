@@ -1,29 +1,11 @@
 package Dianjing.protocol;
 
-import "item_define.proto";
-
-message Resource {
-    required string resource_id = 1;
-    required int32 value = 2;
-}
-
-// 货物 - 可以直接加到角色/俱乐部身上
-// 软妹币，钻石，声望， 联赛积分，天梯赛积分
-// 训练道具
 message Drop {
     message Item {
         required int32 id = 1;      // 原始ID
         required int32 amount = 2;
-        required ItemType tp = 3;
     }
 
-    repeated Resource resources = 1;
     repeated Item items = 2;
 }
-
-// 员工属性
-message Property {
-    repeated Resource resources = 1;
-}
-
 
