@@ -368,5 +368,13 @@
         <protocol name = "UnitStepUpResponse" type = "3104" reqtype = "3103" />
     </file>
 
+    <file name = "talent">
+        <protocol name = "TalentNotify" type = "3200"/>
+        <protocol name = "TalentLevelUpRequest" type = "3201" command="/game/talent/levelup/" />
+        <protocol name = "TalentLevelUpResponse" type = "3202" reqtype = "3201" />
+        <protocol name = "TalentResetTalentRequest" type = "3203" command="/game/talent/reset/" />
+        <protocol name = "TalentResetTalentResponse" type = "3204" reqtype = "3203" />
+    </file>
+
 </namespace>
 
