@@ -2,27 +2,16 @@ package Dianjing.protocol;
 
 import "common.proto";
 
-message TalentInfo {
-    required int32 position = 1;
-    required int32 talent_id = 2;
-}
-
-message Talent {
-    required int32 tp = 1;
-    repeated TalentInfo info = 2;
-}
-
 message TalentNotify {
     required bytes session = 1;
-    required Action act = 2;
-    required int32 free_point = 3;
-    repeated Talent talents = 4;
+    required int32 free_point = 2;
+    required int32 reset_cost = 3;
+    repeated int32 talent = 4;
 }
 
 message TalentLevelUpRequest {
     required bytes session = 1;
-    required int32 tp = 2;
-    required int32 positions = 3;
+    required int32 talent_id = 2;
 }
 
 message TalentLevelUpResponse {
