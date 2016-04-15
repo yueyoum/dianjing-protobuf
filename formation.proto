@@ -1,0 +1,57 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+enum FormationSlotStatus {
+    FORMATION_SLOT_NOT_OPEN = 0;    // 没有开启
+    FORMATION_SLOT_EMPTY = 1;       // 开启了，但是为空
+    FORMATION_SLOT_USE = 2;         // 开启了，并且有选手（或者选手带着兵种）
+}
+
+message FormationSlot {
+    required int32 slot_id = 1;     // 
+    required FormationSlotStatus status = 2;
+    optional int32 position = 3;    // 阵型中的位置 [0..29]
+    optional string staff_id = 4;   // 员工唯一ID
+    optional int32 unit_id = 5;     // 兵种ID
+}
+
+message FormationNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated FormationSlot formation = 3;        // 阵型
+}
+
+message FormationSetStaffRequest {
+    required bytes session = 1;
+    required int32 slot_id = 2;
+    required string staff_id = 3;
+}
+
+message FormationSetStaffResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message FormationSetUnitRequest {
+    required bytes session = 1;
+    required int32 slot_id = 2;
+    required int32 unit_id = 3;
+}
+
+message FormationSetUnitResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message FormationMoveSlotRequest {
+    required bytes session = 1;
+    required int32 slot_id = 2;
+    required int32 to_index = 3;
+}
+
+message FormationMoveSlotResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
