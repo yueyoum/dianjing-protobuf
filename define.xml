@@ -286,5 +286,13 @@
         <protocol name = "FormationMoveSlotResponse" type = "3206" reqtype = "3205" />
     </file>
 
+    <file name = "talent">
+        <protocol name = "TalentNotify" type = "3300"/>
+        <protocol name = "TalentLevelUpRequest" type = "3301" command="/game/talent/levelup/" />
+        <protocol name = "TalentLevelUpResponse" type = "3302" reqtype = "3301" />
+        <protocol name = "TalentResetTalentRequest" type = "3303" command="/game/talent/reset/" />
+        <protocol name = "TalentResetTalentResponse" type = "3304" reqtype = "3303" />
+    </file>
+
 </namespace>
 

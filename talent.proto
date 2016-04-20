@@ -1,0 +1,29 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+message TalentNotify {
+    required bytes session = 1;
+    required int32 points = 2;
+    required int32 reset_cost = 3;
+    repeated int32 talent_id = 4;
+}
+
+message TalentLevelUpRequest {
+    required bytes session = 1;
+    required int32 talent_id = 2;
+}
+
+message TalentLevelUpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message TalentResetTalentRequest {
+    required bytes session = 1;
+}
+
+message TalentResetTalentResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
