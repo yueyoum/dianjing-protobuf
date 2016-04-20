@@ -5,41 +5,38 @@ import "bag.proto";
 import "package.proto";
 
 enum StaffRecruitType {
-    RECRUIT_HOT = 1;
-    RECRUIT_NORMAL = 2;
-    RECRUIT_GOLD = 3;
-    RECRUIT_DIAMOND = 4;
+    RECRUIT_GOLD = 1;
+    RECRUIT_DIAMOND = 2;
+}
+
+enum StaffRecruitMode {
+    RECRUIT_MODE_1 = 1;
+    RECRUIT_MODE_2 = 2;
 }
 
 message StaffRecruitNotify {
-    message Recruit {
-        required int32 staff_id = 1;
-        required bool has_recruit = 2;
+    message RecruitInfo {
+        required StaffRecruitType tp = 1;
+        required int64 cd = 2;
+        optional int32 cur_free_times = 3;
+        optional int32 max_free_times = 4;
     }
 
     required bytes session = 1;
-    required StaffRecruitType tp = 2;
-    repeated Recruit recruits = 3;
-}
-
-message StaffRecruitRefreshRequest {
-    required bytes session = 1;
-    required StaffRecruitType tp = 2;
-}
-
-message StaffRecruitRefreshResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
+    repeated RecruitInfo info = 2;
+    required int32 score = 3;
 }
 
 message StaffRecruitRequest {
     required bytes session = 1;
-    required int32 staff_id = 2;
+    required StaffRecruitType tp = 2;
+    required StaffRecruitMode mode = 3;
 }
 
 message StaffRecruitResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
 
 ///////////////////////////////////////////////
