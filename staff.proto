@@ -21,8 +21,8 @@ message StaffRecruitNotify {
         // 下面两个只有 gold 才有
         optional int32 cur_free_times = 3;
         optional int32 max_free_times = 4;
-        // 还有几次必得卡
-        required int32 next_times = 5;
+        // 下面这个只有diamond才有 还有几次必得卡
+        optional int32 next_times = 5;
     }
 
     required bytes session = 1;
