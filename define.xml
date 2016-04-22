@@ -72,15 +72,14 @@
 
     <file name = "challenge">
         <protocol name = "ChallengeNotify" type = "700" />
-        <protocol name = "ChallengeEnergyNotify" type = "701" />
         <protocol name = "ChallengeStartRequest" type = "702" command = "/game/challenge/start/" />
         <protocol name = "ChallengeStartResponse" type = "703" reqtype = "702" />
+
         <protocol name = "ChapterGetStarRewardRequest" type = "704" command = "/game/challenge/chapter/reward/" />
         <protocol name = "ChapterGetStarRewardResponse" type = "705" reqtype = "704" />
+
         <protocol name = "ChallengeMatchReportRequest" type = "706" command = "/game/challenge/report/" />
         <protocol name = "ChallengeMatchReportResponse" type = "707" reqtype = "706" />
-        <protocol name = "ChallengeBuyEnergyRequest" type = "708" command = "/game/challenge/buy/" />
-        <protocol name = "ChallengeBuyEnergyResponse" type = "709" reqtype = "708" />
 
         <protocol name = "ChallengeSweepRequest" type = "710" command = "/game/challenge/sweep/" />
         <protocol name = "ChallengeSweepResponse" type = "711" reqtype = "710" />
@@ -215,20 +214,6 @@
         <protocol name = "ItemShopBuyResponse" type = "2301" reqtype = "2300" />
     </file>
     
-    <file name = "training_match">
-        <protocol name = "TrainingMatchNotify" type = "2500" />
-        <protocol name = "TrainingMatchStartRequest" type = "2501" command = "/game/trainingmatch/start/" />
-        <protocol name = "TrainingMatchStartResponse" type = "2502" reqtype = "2501" />
-        <protocol name = "TrainingMatchReportRequest" type = "2503" command = "/game/trainingmatch/report/" />
-        <protocol name = "TrainingMatchReportResponse" type = "2504" reqtype = "2503" />
-        <protocol name = "TrainingMatchGetMatchClubDetailRequest" type = "2505" command = "/game/trainingmatch/detail/" />
-        <protocol name = "TrainingMatchGetMatchClubDetailResponse" type = "2506" reqtype = "2505" />
-        <protocol name = "TrainingMatchStoreNotify" type = "2510" />
-        <protocol name = "TrainingMatchStoreBuyRequest" type = "2511" command = "/game/trainingmatch/store/buy/" />
-        <protocol name = "TrainingMatchStoreBuyResponse" type = "2512" reqtype = "2511" />
-        <protocol name = "TrainingMatchStoreRefreshRequest" type = "2513" command = "/game/trainingmatch/store/refresh/" />
-        <protocol name = "TrainingMatchStoreRefreshResponse" type = "2514" reqtype = "2513" />
-    </file>
 
     <file name = "auction">
         <protocol name = "StaffAuctionSellListNotify" type = "2700" />
