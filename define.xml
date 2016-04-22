@@ -54,22 +54,6 @@
         <protocol name = "StaffDestroyResponse" type = "539" reqtype = "538" />
     </file>
 
-
-    <file name = "league">
-        <protocol name = "LeagueClubNotify" type = "600" />
-        <protocol name = "LeagueUserNotify" type = "601" />
-        <protocol name = "LeagueChallengeRequest" type = "602" command = "/game/league/challenge/" />
-        <protocol name = "LeagueChallengeResponse" type = "603" reqtype = "602" />
-        <protocol name = "LeagueMatchReportRequest" type = "604" command = "/game/league/report/" />
-        <protocol name = "LeagueMatchReportResponse" type = "605" reqtype = "604" />
-        <protocol name = "LeagueMatchRefreshRequest" type = "606" command = "/game/league/refresh/" />
-        <protocol name = "LeagueMatchRefreshResponse" type = "607" reqtype = "606" />
-        <protocol name = "LeagueGetRewardRequest" type = "608" command = "/game/league/reward/" />
-        <protocol name = "LeagueGetRewardResponse" type = "609" reqtype = "608" />
-        <protocol name = "LeagueGetClubDetailInfoRequest" type = "610" command = "/game/league/detail/" />
-        <protocol name = "LeagueGetClubDetailInfoResponse" type = "611" reqtype = "610" />
-    </file>
-
     <file name = "challenge">
         <protocol name = "ChallengeNotify" type = "700" />
         <protocol name = "ChallengeStartRequest" type = "702" command = "/game/challenge/start/" />
@@ -174,13 +158,6 @@
         <protocol name = "LadderMatchReportResponse" type = "1713" reqtype = "1712" />
         <protocol name = "LadderBuyChallengeTimesRequest" type = "1714" command = "/game/ladder/buy/" />
         <protocol name = "LadderBuyChallengeTimesResponse" type = "1715" reqtype = "1714" />
-    </file>
-
-    <file name = "cup">
-        <protocol name = "CupInfomationRequest" type = "1800" command = "/game/cup/infomation/" />
-        <protocol name = "CupInfomationResponse" type = "1801" reqtype = "1800" />
-        <protocol name = "CupJoinRequest" type = "1802" command = "/game/cup/join/" />
-        <protocol name = "CupJoinResponse" type = "1803" reqtype = "1802" />
     </file>
 
     <file name = "spread">
