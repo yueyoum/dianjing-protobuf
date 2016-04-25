@@ -71,7 +71,7 @@ message ChallengeSweepRequest {
 message ChallengeSweepResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    repeated Drop drop = 3;
+    optional Drop drop = 3;
 }
 
 message ChapterGetStarRewardRequest {
