@@ -9,7 +9,7 @@ message Club {
     required string manager = 3;    // 经理人， 玩家名字
     required int32 flag = 4;        // 战旗
     required int32 level = 5;       // 等级
-    required int32 renown = 6;      // 声望
+    required int32 exp = 6;         // 经验
     required int32 vip = 7;
     required int32 gold = 8;
     required int32 diamond = 9;
