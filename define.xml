@@ -261,7 +261,7 @@
         <protocol name = "DungeonMatchRequest" type = "3401" command="/game/dungeon/start/" />
         <protocol name = "DungeonMatchResponse" type = "3402" reqtype = "3401" />
         <protocol name = "DungeonMatchReportRequest" type = "3403" command="/game/dungeon/report/" />
-        <protocol name = "DungeonMathReportResponse" type = "3404" reqtype = "3403" />
+        <protocol name = "DungeonMatchReportResponse" type = "3404" reqtype = "3403" />
     </file>
 
 </namespace>

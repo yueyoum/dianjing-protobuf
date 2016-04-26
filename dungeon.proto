@@ -33,7 +33,7 @@ message DungeonMatchReportRequest {
     required string key = 3;
 }
 
-message DungeonMathReportResponse {
+message DungeonMatchReportResponse {
     required bytes session = 1;
     required int32 ret = 2;
     optional Drop drop = 3;
