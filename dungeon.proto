@@ -1,0 +1,40 @@
+package Dianjing.protocol;
+
+import "match.proto";
+import "package.proto";
+import "common.proto";
+
+message DungeonInfo {
+    required int32 tp = 1;
+    required int32 times = 2;
+    repeated int32 id = 3;
+}
+
+message DungeonNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated DungeonInfo info = 3;
+}
+
+message DungeonMathRequest {
+    required bytes session = 1;
+    requires int32 id = 2;
+}
+
+message DungeonMathResponse {
+    required bytes session = 1;
+    required string key = 2;
+    optional ClubMatch match = 3;
+}
+
+message DungeonMathReport {
+    required bytes session = 1;
+    required int32 star = 2;
+    requires string key = 3;
+}
+
+message DungeonMathReportResponse {
+    required bytes session = 1;
+    required int32 ret = 2;
+    optional Drop drop = 3;
+}
