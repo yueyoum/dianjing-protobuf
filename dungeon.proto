@@ -23,7 +23,7 @@ message DungeonMathRequest {
 
 message DungeonMathResponse {
     required bytes session = 1;
-    required string key = 2;
+    required int32 ret = 2;
     optional ClubMatch match = 3;
 }
 

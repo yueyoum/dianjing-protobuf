@@ -258,9 +258,9 @@
 
         <file name = "dungeon">
         <protocol name = "DungeonNotify" type = "3400"/>
-        <protocol name = "DungeonMathRequest" type = "3401" command="/game/dungeon/match/" />
+        <protocol name = "DungeonMathRequest" type = "3401" command="/game/dungeon/start/" />
         <protocol name = "DungeonMathResponse" type = "3402" reqtype = "3401" />
-        <protocol name = "DungeonMathReport" type = "3403" command="/game/dungeon/match_report/" />
+        <protocol name = "DungeonMathReport" type = "3403" command="/game/dungeon/report/" />
         <protocol name = "DungeonMathReportResponse" type = "3404" reqtype = "3403" />
     </file>
 
