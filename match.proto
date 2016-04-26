@@ -37,6 +37,7 @@ message Troop
 		required float managePercent = 9;
 		required int32 operation = 10;
 		required float operationPercent = 11;
+        required int32 star = 12;
 	}
 	message Army
 	{	
