@@ -18,7 +18,7 @@ message DungeonNotify {
 
 message DungeonMathRequest {
     required bytes session = 1;
-    requires int32 id = 2;
+    required int32 id = 2;
 }
 
 message DungeonMathResponse {
@@ -30,7 +30,7 @@ message DungeonMathResponse {
 message DungeonMathReport {
     required bytes session = 1;
     required int32 star = 2;
-    requires string key = 3;
+    required string key = 3;
 }
 
 message DungeonMathReportResponse {
