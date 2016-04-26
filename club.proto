@@ -15,7 +15,8 @@ message Club {
     required int32 diamond = 9;
     required int32 crystal = 10;
     required int32 gas = 11;
-    required int32 energy = 12;     // 体力
+    required int32 renown = 12;     // 声望
+    required int32 energy = 13;     // 体力
 }
 
 message ClubNotify {
