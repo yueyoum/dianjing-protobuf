@@ -16,18 +16,18 @@ message DungeonNotify {
     repeated DungeonInfo info = 3;
 }
 
-message DungeonMathRequest {
+message DungeonMatchRequest {
     required bytes session = 1;
     required int32 id = 2;
 }
 
-message DungeonMathResponse {
+message DungeonMatchResponse {
     required bytes session = 1;
     required int32 ret = 2;
     optional ClubMatch match = 3;
 }
 
-message DungeonMathReport {
+message DungeonMatchReportRequest {
     required bytes session = 1;
     required int32 star = 2;
     required string key = 3;
