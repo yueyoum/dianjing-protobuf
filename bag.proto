@@ -110,5 +110,6 @@ message BagEquipmentLevelupConfirmResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Equipment equipment = 3;
+    required bool levelup = 4;  // 是否升级
 }
 
