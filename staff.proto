@@ -133,8 +133,13 @@ message StaffStarUpResponse {
 
 // 分解
 message StaffDestroyRequest {
+    enum DestroyType {
+        NORMAL = 0;
+        ADVANCED = 1;
+    }
     required bytes session = 1;
     required string staff_id = 2;
+    required DestroyType tp = 3;
 }
 
 message StaffDestroyResponse {
