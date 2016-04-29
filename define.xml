@@ -256,12 +256,27 @@
         <protocol name = "TalentResetTalentResponse" type = "3304" reqtype = "3303" />
     </file>
 
-        <file name = "dungeon">
+    <file name = "dungeon">
         <protocol name = "DungeonNotify" type = "3400"/>
         <protocol name = "DungeonMatchRequest" type = "3401" command="/game/dungeon/start/" />
         <protocol name = "DungeonMatchResponse" type = "3402" reqtype = "3401" />
         <protocol name = "DungeonMatchReportRequest" type = "3403" command="/game/dungeon/report/" />
         <protocol name = "DungeonMatchReportResponse" type = "3404" reqtype = "3403" />
+    </file>
+
+    <file name = "arena">
+        <protocol name = "ArenaNotify" type = "3500" />
+        <protocol name = "ArenaRefreshRequest" type = "3501" command = "/game/arena/refresh/" />
+        <protocol name = "ArenaRefreshResponse" type = "3502" reqtype = "3501" />
+        <protocol name = "ArenaLeaderBoardRequest" type = "3503" command = "/game/arena/leaderboard/" />
+        <protocol name = "ArenaLeaderBoardResponse" type = "3504" reqtype = "3503" />
+
+        <protocol name = "ArenaHonorStatusNotify" type = "3505" />
+        <protocol name = "ArenaHonorGetRewardRequest" type = "3507" command = "/game/arena/honorreward/" />
+        <protocol name = "ArenaHonorGetRewardResponse" type = "3508" reqtype = "3507" />
+
+        <protocol name = "ArenaMatchReqeust" type = "3509" command = "/game/arena/match/" />
+        <protocol name = "ArenaMatchResponse" type = "3510" reqtype = "3509" />
     </file>
 
 </namespace>

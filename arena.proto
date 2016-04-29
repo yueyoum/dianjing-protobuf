@@ -1,0 +1,82 @@
+package Dianjing.protocol;
+
+import "package.proto";
+import "match.proto";
+
+message ArenaRival {
+    required string id = 1;
+    required string name = 2;
+    required int32 club_flag = 3;
+    required int32 level = 4;
+    required int32 power = 5;
+    required int32 rank = 6;
+}
+
+message ArenaNotify {
+    required bytes session = 1;
+    repeated ArenaRival rival = 2;
+    required int32 my_rank = 3;
+    required int32 match_cd = 4;
+    required int32 match_times = 5;
+}
+
+message ArenaRefreshRequest {
+    required bytes session = 1;
+}
+
+message ArenaRefreshResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message ArenaMatchReqeust {
+    required bytes session = 1;
+    required string rival_id = 2;
+}
+
+message ArenaMatchResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional ClubMatch match = 3;
+    optional Drop drop = 4;
+}
+
+message ArenaLeaderBoardRequest {
+    required bytes session = 1;
+}
+
+message ArenaLeaderBoardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated ArenaRival rival = 3;
+}
+
+
+enum ArenaHonorStatus {
+    ARENA_HONOR_CAN_NOT = 0;
+    ARENA_HONOR_CAN_GET = 1;
+    ARENA_HONOR_ALREADY_GOT = 2;
+}
+
+message ArenaHonorStatusNotify {
+    message HonorStatus {
+        required int32 honor = 1;
+        required ArenaHonorStatus status = 2;
+    }
+
+    required bytes session = 1;
+    required int32 my_honor = 2;
+    repeated HonorStatus honors = 3;
+}
+
+message ArenaHonorGetRewardRequest {
+    required bytes session = 1;
+    required int32 honor = 2;
+}
+
+message ArenaHonorGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
