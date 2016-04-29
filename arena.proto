@@ -17,7 +17,8 @@ message ArenaNotify {
     repeated ArenaRival rival = 2;
     required int32 my_rank = 3;
     required int32 match_cd = 4;
-    required int32 match_times = 5;
+    required int32 match_times = 5;  // 剩余次数
+    required int32 refresh_cd = 6;
 }
 
 message ArenaRefreshRequest {
@@ -29,16 +30,27 @@ message ArenaRefreshResponse {
     required bytes session = 2;
 }
 
-message ArenaMatchReqeust {
+message ArenaMatchStartReqeust {
     required bytes session = 1;
     required string rival_id = 2;
 }
 
-message ArenaMatchResponse {
+message ArenaMatchStartResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional ClubMatch match = 3;
-    optional Drop drop = 4;
+}
+
+message ArenaMatchReportReqeust {
+    required bytes session = 1;
+    required string key = 2;
+    required bool win = 3;
+}
+
+message ArenaMatchReportResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
 }
 
 message ArenaLeaderBoardRequest {

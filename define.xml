@@ -275,8 +275,11 @@
         <protocol name = "ArenaHonorGetRewardRequest" type = "3507" command = "/game/arena/honorreward/" />
         <protocol name = "ArenaHonorGetRewardResponse" type = "3508" reqtype = "3507" />
 
-        <protocol name = "ArenaMatchReqeust" type = "3509" command = "/game/arena/match/" />
-        <protocol name = "ArenaMatchResponse" type = "3510" reqtype = "3509" />
+        <protocol name = "ArenaMatchStartReqeust" type = "3509" command = "/game/arena/matchstart/" />
+        <protocol name = "ArenaMatchStartResponse" type = "3510" reqtype = "3509" />
+
+        <protocol name = "ArenaMatchReportReqeust" type = "3511" command = "/game/arena/matchreport/" />
+        <protocol name = "ArenaMatchReportResponse" type = "3512" reqtype = "3511" />
     </file>
 
 </namespace>
