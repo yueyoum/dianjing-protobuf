@@ -280,6 +280,8 @@
 
         <protocol name = "ArenaMatchReportReqeust" type = "3511" command = "/game/arena/matchreport/" />
         <protocol name = "ArenaMatchReportResponse" type = "3512" reqtype = "3511" />
+
+        <protocol name = "ArenaMatchLogNotify" type = "3513" />
     </file>
 
 </namespace>
