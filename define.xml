@@ -82,14 +82,9 @@
 
     <file name = "task">
         <protocol name = "TaskNotify" type = "1100" />
-        <protocol name = "TaskGetRewardRequest" type = "1103" command = "/game/task/getreward/" />
-        <protocol name = "TaskGetRewardResponse" type = "1104" reqtype = "1103" />
-        <protocol name = "TaskDoingRequest" type = "1105" command = "/game/task/doing/" />
-        <protocol name = "TaskDoingResponse" type = "1106" reqtype = "1105" />
         <protocol name = "RandomEventDoneRequest" type = "1107" command = "/game/randomevent/done/" />
         <protocol name = "RandomEventDoneResponse" type = "1108" reqtype = "1107" />
         <protocol name = "RandomEventNotify" type = "1109" />
-        <protocol name = "TaskRemoveNotify" type = "1110" />
     </file>
 
     <file name = "friend">

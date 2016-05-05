@@ -3,59 +3,13 @@ package Dianjing.protocol;
 import "common.proto";
 import "package.proto";
 
-enum TaskStatus{
-    TASK_DOING = 1;
-    TASK_FINISH = 2;
-    TASK_DONE = 3;
-}
-
-message Target {
-    required int32 id = 1;
-    required int32 param = 2;
-    required int32 current_value = 3;
-}
 
 message TaskNotify {
-    message Task {
-        required int32 id = 1;              //  task id
-        required TaskStatus status = 2;     //  task status
-        repeated Target targets = 3;        // 如果任务完成了，就不发
-    }
-
     required bytes session = 1;
     required Action act = 2;
-    repeated Task task = 3;
+    required int32 doing = 3;       // 正在做的, 0 表示已经做完了
 }
 
-
-message TaskRemoveNotify {
-    required bytes session = 1;
-    required int32 id = 2;          // task ID
-}
-
-
-message TaskGetRewardRequest {
-    required bytes session = 1;
-    required int32 id = 2;          // task ID
-}
-
-
-message TaskGetRewardResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    optional Drop drop = 3;
-}
-
-
-message TaskDoingRequest {
-    required bytes session = 1;
-    required int32 id = 2;
-}
-
-message TaskDoingResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
 
 message RandomEventNotify {
     required bytes session = 1;
