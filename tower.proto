@@ -1,0 +1,53 @@
+package Dianjing.protocol;
+
+import "common.proto";
+import "package.proto";
+
+
+enum TowerLevelStatus {
+    TOWER_LEVEL_PASSED = 1;     // 已经通过
+    TOWER_LEVEL_CURRENT = 2;    // 当前要打的
+    TOWER_LEVEL_FAILURE = 3;    // 失败
+    TOWER_LEVEL_NOT_OPEN = 4;   // 没有开启
+}
+
+message TowerNotify {
+    message Level {
+        required int32 level = 1;
+        required TowerLevelStatus status = 2;
+        optional int32 star = 3;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Level levels = 3;
+    required int32 rank = 4;        // 排名
+    required int32 talent_ids = 5;  // 购买的天赋列表   对应的 talent_skill 表
+}
+
+
+message TowerMatchStartRequest {
+    required bytes session = 1;
+    required int32 level = 2;
+}
+
+
+message TowerMatchStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional ClubMatch match = 3;
+}
+
+message TowerMatchReportReqeust {
+    required bytes session = 1;
+    required string key = 2;
+    required int32 star = 3;
+}
+
+message TowerMatchReportResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+    optional bool show_turntable = 4;
+}
+

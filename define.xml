@@ -279,5 +279,13 @@
         <protocol name = "ArenaMatchLogNotify" type = "3513" />
     </file>
 
+     <file name = "tower">
+         <protocol name = "TowerNotify" type = "3600" />
+         <protocol name = "TowerMatchStartRequest" type = "3601" command = "/game/tower/matchstart/" />
+         <protocol name = "TowerMatchStartResponse" type = "3602" reqtype = "3601" />
+         <protocol name = "TowerMatchReportReqeust" type = "3603" command = "/game/tower/matchreport/" />
+         <protocol name = "TowerMatchReportResponse" type = "3604" reqtype = "3603" />
+    </file>
+
 </namespace>
 
