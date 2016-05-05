@@ -285,6 +285,11 @@
          <protocol name = "TowerMatchStartResponse" type = "3602" reqtype = "3601" />
          <protocol name = "TowerMatchReportReqeust" type = "3603" command = "/game/tower/matchreport/" />
          <protocol name = "TowerMatchReportResponse" type = "3604" reqtype = "3603" />
+
+         <protocol name = "TowerResetRequest" type = "3605" command = "/game/tower/reset/" />
+         <protocol name = "TowerResetResponse" type = "3606" reqtype = "3605" />
+         <protocol name = "TowerToMaxStarLevelRequest" type = "3607" command = "/game/tower/tomaxlevel/" />
+         <protocol name = "TowerToMaxStarLevelResponse" type = "3608" reqtype = "3607" />
     </file>
 
 </namespace>

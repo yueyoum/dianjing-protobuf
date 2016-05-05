@@ -52,3 +52,23 @@ message TowerMatchReportResponse {
     optional bool show_turntable = 4;
 }
 
+message TowerResetRequest {
+    required bytes session = 1;
+}
+
+message TowerResetResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message TowerToMaxStarLevelRequest {
+    required bytes session = 1;
+}
+
+message TowerToMaxStarLevelResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+
