@@ -22,7 +22,7 @@ message TowerNotify {
     required bytes session = 1;
     required Action act = 2;
     repeated Level levels = 3;
-    repeated int32 star = 4;
+    required int32 star = 4;
     required int32 rank = 5;        // 排名
     repeated int32 talent_ids = 6;  // 购买的天赋列表   对应的 talent_skill 表
     required int32 reset_times = 7; //　可以重置的次数
