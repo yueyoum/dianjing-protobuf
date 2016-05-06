@@ -50,7 +50,8 @@ message TowerMatchReportResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Drop drop = 3;
-    optional bool show_turntable = 4;
+    optional int32 star = 4;
+    repeated int32 turntable_talent_ids = 5;
 }
 
 message TowerResetRequest {
@@ -70,6 +71,19 @@ message TowerToMaxStarLevelResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Drop drop = 3;
+}
+
+
+// 转盘抽奖
+message TowerTurnTableRequest {
+    required bytes session = 1;
+    required int32 star = 2;    //  要消耗的star数
+}
+
+message TowerTurnTableResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional int32 got_index = 3;   // 抽中的
 }
 
 

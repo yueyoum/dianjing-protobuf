@@ -290,6 +290,9 @@
          <protocol name = "TowerResetResponse" type = "3606" reqtype = "3605" />
          <protocol name = "TowerToMaxStarLevelRequest" type = "3607" command = "/game/tower/tomaxlevel/" />
          <protocol name = "TowerToMaxStarLevelResponse" type = "3608" reqtype = "3607" />
+
+         <protocol name = "TowerTurnTableRequest" type = "3609" command = "/game/tower/turntable/" />
+         <protocol name = "TowerTurnTableResponse" type = "3610" reqtype = "3609" />
     </file>
 
 </namespace>
