@@ -31,7 +31,6 @@ message TowerNotify {
 
 message TowerMatchStartRequest {
     required bytes session = 1;
-    required int32 level = 2;
 }
 
 
@@ -72,6 +71,5 @@ message TowerToMaxStarLevelResponse {
     required bytes session = 2;
     optional Drop drop = 3;
 }
-
 
 
