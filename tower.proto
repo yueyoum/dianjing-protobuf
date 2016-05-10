@@ -95,6 +95,16 @@ message TowerSweepFinishResponse {
 }
 
 
+// 扫荡完成确认
+message TowerSweepFinishConfirmRequest {
+    required bytes session = 1;
+}
+
+message TowerSweepFinishConfirmResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 // 转盘抽奖
 message TowerTurnTableRequest {
     required bytes session = 1;
