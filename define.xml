@@ -296,8 +296,6 @@
          <protocol name = "TowerSweepResponse" type = "3612" />
          <protocol name = "TowerSweepFinishRequest" type = "3613" command = "/game/tower/sweepfinish/" />
          <protocol name = "TowerSweepFinishResponse" type = "3614" />
-         <protocol name = "TowerSweepFinishConfirmRequest" type = "3615" command = "/game/tower/sweepfinishconfirm/" />
-         <protocol name = "TowerSweepFinishConfirmResponse" type = "3616" />
     </file>
 
 </namespace>

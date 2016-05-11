@@ -36,7 +36,6 @@ message TowerNotify {
     required int32 max_star_level = 8;  // 最大连续三星关卡
     required TowerSweepStatus sweep_status = 9;
     optional int64 sweep_end_at = 10;
-    optional Drop sweep_drop = 11;
 }
 
 
@@ -92,18 +91,9 @@ message TowerSweepFinishRequest {
 message TowerSweepFinishResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
 
-
-// 扫荡完成确认
-message TowerSweepFinishConfirmRequest {
-    required bytes session = 1;
-}
-
-message TowerSweepFinishConfirmResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
 
 // 转盘抽奖
 message TowerTurnTableRequest {
