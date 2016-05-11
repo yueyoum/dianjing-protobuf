@@ -293,9 +293,9 @@
          <protocol name = "TowerTurnTableResponse" type = "3610" reqtype = "3609" />
 
          <protocol name = "TowerSweepRequest" type = "3611" command = "/game/tower/sweep/" />
-         <protocol name = "TowerSweepResponse" type = "3612" />
+         <protocol name = "TowerSweepResponse" type = "3612" reqtype = "3611" />
          <protocol name = "TowerSweepFinishRequest" type = "3613" command = "/game/tower/sweepfinish/" />
-         <protocol name = "TowerSweepFinishResponse" type = "3614" />
+         <protocol name = "TowerSweepFinishResponse" type = "3614" reqtype = "3613" />
     </file>
 
 </namespace>
