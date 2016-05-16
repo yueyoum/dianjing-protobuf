@@ -290,5 +290,15 @@
          <protocol name = "TowerSweepFinishResponse" type = "3614" reqtype = "3613" />
     </file>
 
+    <file name = "territory.proto">
+        <protocol name = "TerritoryNotify" type = "3700" />
+        <protocol name = "TerritoryTrainingPrepareRequest" type = "3701" command = "/game/territory/prepare/" />
+        <protocol name = "TerritoryTrainingPrepareResponse" type = "3702" reqtype = "3701" />
+        <protocol name = "TerritoryTrainingStartReqeust" type = "3703" command = "/game/territory/start/" />
+        <protocol name = "TerritoryTrainingStartResponse" type = "3704" reqtype = "3706" />
+        <protocol name = "TerritoryTrainingGetRewardReqeust" type = "3705" command = "/game/territory/getreward/" />
+        <protocol name = "TerritoryTrainingGetRewardResponse" type = "3706" reqtype = "3705" />
+    </file>
+
 </namespace>
 

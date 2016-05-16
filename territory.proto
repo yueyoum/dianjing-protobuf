@@ -1,0 +1,89 @@
+package Dianjing.protocol;
+
+import "common.proto";
+import "package.proto";
+
+
+enum TerritoryBuildingStatus {
+    TERRITORY_BUILDING_OPEN = 1;
+    TERRITORY_BUILDING_LOCK = 2;
+}
+
+enum TerritorySlotStatus {
+    TERRITORY_SLOT_OPEN = 1;
+    TERRITORY_SLOT_LOCK = 2;
+}
+    
+message TerritorySlot {
+    message Report {
+        required int32 id = 1;
+        repeated string param = 2;
+    }
+
+    required int32 id = 1;
+    required TerritorySlotStatus status = 2;
+    optional int32 staff_id = 3;
+    optional int32 hour = 4;
+    optional int64 end_at = 5;
+    optional string key = 6;
+    repeated Report report = 8;
+}
+
+message TerritoryBuilding {
+    required int32 id = 1;
+    required TerritoryBuildingStatus status = 2;
+    optional int32 level = 3;
+    optional int32 exp = 4;
+    optional int32 product = 5; //产出
+    optional int32 inpire_cost = 6;    // 鼓舞花费
+    optional int32 remained_inpire_times = 7;   // 剩余鼓舞次数
+    
+    repeated TerritorySlot slots = 8;
+}
+
+message TerritoryNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated TerritoryBuilding buildings = 3;
+    repeated int32 training_hours = 4;  // 可以选择的训练时间
+}
+
+
+message TerritoryTrainingPrepareRequest {
+    required bytes session = 1; 
+    required int32 building_id = 2;
+    required int32 slot_id = 3;
+    required int32 staff_id = 4;
+    required int32 hour = 5;
+}
+
+message TerritoryTrainingPrepareResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional int32 exp = 3;
+    optional int32 item_amount = 4;
+    optional string key = 5;
+}
+
+message TerritoryTrainingStartReqeust {
+    required bytes session = 1;
+    required string key = 2;
+}
+
+message TerritoryTrainingStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message TerritoryTrainingGetRewardReqeust {
+    required bytes session = 1;
+    required string key = 2;
+}
+
+message TerritoryTrainingGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
