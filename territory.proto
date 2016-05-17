@@ -64,8 +64,8 @@ message TerritoryTrainingPrepareResponse {
     required bytes session = 2;
     optional int32 exp = 3;
     optional int32 product_id = 4;
-    optional int32 product_amount = 4;
-    optional string key = 5;
+    optional int32 product_amount = 5;
+    optional string key = 6;
 }
 
 message TerritoryTrainingStartReqeust {
