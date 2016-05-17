@@ -38,7 +38,7 @@ message TerritoryBuilding {
     optional int32 product_id = 5;
     optional int32 product_amount = 6; //产出
     optional int32 inspire_cost = 7;    // 鼓舞花费
-    optional int32 remained_inpire_times = 8;   // 剩余鼓舞次数
+    optional int32 remained_inspire_times = 8;   // 剩余鼓舞次数
     
     repeated TerritorySlot slots = 9;
 }
