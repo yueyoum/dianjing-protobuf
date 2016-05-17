@@ -37,7 +37,7 @@ message TerritoryBuilding {
     optional int32 exp = 4;
     optional int32 product_id = 5;
     optional int32 product_amount = 6; //产出
-    optional int32 inpire_cost = 7;    // 鼓舞花费
+    optional int32 inspire_cost = 7;    // 鼓舞花费
     optional int32 remained_inpire_times = 8;   // 剩余鼓舞次数
     
     repeated TerritorySlot slots = 9;
@@ -48,6 +48,7 @@ message TerritoryNotify {
     required Action act = 2;
     repeated TerritoryBuilding buildings = 3;
     repeated int32 training_hours = 4;  // 可以选择的训练时间
+    required int32 work_card = 5;
 }
 
 
