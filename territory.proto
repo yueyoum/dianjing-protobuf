@@ -26,8 +26,7 @@ message TerritorySlot {
     optional string staff_id = 3;
     optional int32 hour = 4;
     optional int64 end_at = 5;
-    optional string key = 6;
-    repeated Report report = 8;
+    repeated Report report = 6;
 }
 
 message TerritoryBuilding {
@@ -51,27 +50,12 @@ message TerritoryNotify {
     required int32 work_card = 5;
 }
 
-
-message TerritoryTrainingPrepareRequest {
-    required bytes session = 1; 
+message TerritoryTrainingStartReqeust {
+    required bytes session = 1;
     required int32 building_id = 2;
     required int32 slot_id = 3;
     required string staff_id = 4;
     required int32 hour = 5;
-}
-
-message TerritoryTrainingPrepareResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    optional int32 exp = 3;
-    optional int32 product_id = 4;
-    optional int32 product_amount = 5;
-    optional string key = 6;
-}
-
-message TerritoryTrainingStartReqeust {
-    required bytes session = 1;
-    required string key = 2;
 }
 
 message TerritoryTrainingStartResponse {
@@ -82,7 +66,8 @@ message TerritoryTrainingStartResponse {
 
 message TerritoryTrainingGetRewardReqeust {
     required bytes session = 1;
-    required string key = 2;
+    required int32 building_id = 2;
+    required int32 slot_id = 3;
 }
 
 message TerritoryTrainingGetRewardResponse {
