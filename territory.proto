@@ -2,6 +2,7 @@ package Dianjing.protocol;
 
 import "common.proto";
 import "package.proto";
+import "match.proto";
 
 
 enum TerritoryBuildingStatus {
@@ -71,6 +72,93 @@ message TerritoryTrainingGetRewardReqeust {
 }
 
 message TerritoryTrainingGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+
+
+// 商店
+message TerritoryStoreNotify {
+    message StoreItem {
+        required int32 id = 1;
+        required int32 remained_times = 2;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated StoreItem items = 3;
+}
+
+message TerritoryStoreBuyRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message TerritoryStoreBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+// 好友帮助
+message TerritoryFriendListRequest {
+    required bytes session = 1;
+}
+
+message TerritoryFriendListResponse {
+    message Friend {
+        required int32 id = 1;
+        required string name = 2;
+        required int32 club_flag = 3;
+        required int32 lv = 4;
+        required bool help = 5;
+    }
+
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Friend friends = 3;
+}
+
+message TerritoryFriendVisitRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message TerritoryFriendVisitResponse {
+    message Building {
+        required int32 id = 1;
+        required int32 level = 2;
+        required bool help = 3;
+    }
+
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Building buildings = 3;
+}
+
+message TerritoryFriendHelpRequest {
+    required bytes session = 1;
+    required int32 friend_id = 2;
+    required int32 building_id = 3;
+}
+
+message TerritoryFriendHelpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    
+    optional ClubMatch match = 3;
+    optional Drop drop = 4;
+}
+
+message TerritoryMatchReportRequest {
+    required bytes session = 1;
+    required string key = 2;
+    required bool win = 3;
+}
+
+message TerritoryMatchReportResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Drop drop = 3;

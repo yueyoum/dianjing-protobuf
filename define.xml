@@ -296,6 +296,18 @@
         <protocol name = "TerritoryTrainingStartResponse" type = "3704" reqtype = "3703" />
         <protocol name = "TerritoryTrainingGetRewardReqeust" type = "3705" command = "/game/territory/getreward/" />
         <protocol name = "TerritoryTrainingGetRewardResponse" type = "3706" reqtype = "3705" />
+
+        <protocol name = "TerritoryStoreNotify" type = "3710" />
+        <protocol name = "TerritoryStoreBuyRequest" type = "3711" command = "/game/territory/store/buy/" />
+        <protocol name = "TerritoryStoreBuyResponse" type = "3712" reqtype = "3711" />
+        <protocol name = "TerritoryFriendListRequest" type = "3713" command = "/game/territory/friend/list/" />
+        <protocol name = "TerritoryFriendListResponse" type = "3714" reqtype = "3713" />
+        <protocol name = "TerritoryFriendVisitRequest" type = "3715" command = "/game/territory/friend/visit/" />
+        <protocol name = "TerritoryFriendVisitResponse" type = "3716" reqtype = "3715" />
+        <protocol name = "TerritoryFriendHelpRequest" type = "3717" command = "/game/territory/friend/help/" />
+        <protocol name = "TerritoryFriendHelpResponse" type = "3718" reqtype = "3717" />
+        <protocol name = "TerritoryMatchReportRequest" type = "3719" command = "/game/territory/friend/report/" />
+        <protocol name = "TerritoryMatchReportResponse" type ="3720" reqtype = "3719" />
     </file>
 
 </namespace>
