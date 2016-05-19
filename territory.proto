@@ -109,11 +109,17 @@ message TerritoryFriendListRequest {
 
 message TerritoryFriendListResponse {
     message Friend {
+        message Building {
+            required int32 id = 1;
+            required int32 level = 2;
+            optional int32 event_id = 3;
+        }
+
         required int32 id = 1;
         required string name = 2;
         required int32 club_flag = 3;
         required int32 lv = 4;
-        required bool help = 5;
+        repeated Building buildings = 5;
     }
 
     required int32 ret = 1;
@@ -121,22 +127,6 @@ message TerritoryFriendListResponse {
     repeated Friend friends = 3;
 }
 
-message TerritoryFriendVisitRequest {
-    required bytes session = 1;
-    required int32 id = 2;
-}
-
-message TerritoryFriendVisitResponse {
-    message Building {
-        required int32 id = 1;
-        required int32 level = 2;
-        required bool help = 3;
-    }
-
-    required int32 ret = 1;
-    required bytes session = 2;
-    repeated Building buildings = 3;
-}
 
 message TerritoryFriendHelpRequest {
     required bytes session = 1;
