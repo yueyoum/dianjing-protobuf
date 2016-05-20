@@ -116,10 +116,7 @@ message TerritoryFriendListResponse {
             optional int32 event_id = 3;
         }
 
-        required int32 id = 1;
-        required string name = 2;
-        required int32 club_flag = 3;
-        required int32 lv = 4;
+        required string id = 1;
         repeated Building buildings = 5;
     }
 
@@ -131,7 +128,7 @@ message TerritoryFriendListResponse {
 
 message TerritoryFriendHelpRequest {
     required bytes session = 1;
-    required int32 friend_id = 2;
+    required string friend_id = 2;
     required int32 building_id = 3;
 }
 
