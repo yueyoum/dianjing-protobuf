@@ -1,0 +1,61 @@
+package Dianjing.protocol;
+
+import "common.proto";
+import "package.proto";
+
+message Goods {
+    required int32 id = 1;
+    required int32 content_index = 2;
+    required int32 remained_times = 3;
+}
+
+
+message StoreNotify {
+    message StoreType {
+        required int32 tp = 1;
+        required int64 auto_refresh_at = 2; // 下次自动刷新时间戳
+        required int32 remained_refresh_times = 3;  // 剩余手动刷新次数
+        required int32 refresh_cost = 4;    // 需要钻石
+
+        repeated Goods goods = 5;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated StoreType store_types = 3;
+}
+
+
+message StoreBuyRequest {
+    required bytes session = 1;
+    required int32 tp = 2;
+    required int32 goods_id = 3;
+}
+
+message StoreBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message StoreRefreshRequest {
+    required bytes session = 1;
+    required int32 tp = 2;
+}
+
+message StoreRefreshResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message StoreAutoRefreshRequest {
+    required bytes session = 1;
+    required int32 tp = 2;
+}
+
+message StoreAutoRefreshResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
