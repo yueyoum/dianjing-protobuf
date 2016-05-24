@@ -16,9 +16,8 @@ message StoreNotify {
         required int64 auto_refresh_at = 2; // 下次自动刷新时间戳
         required int32 remained_refresh_times = 3;  // 剩余手动刷新次数
         required int32 refresh_cost = 4;    // 需要钻石
-        required int32 money_value = 5; 
 
-        repeated Goods goods = 6;
+        repeated Goods goods = 5;
     }
 
     required bytes session = 1;

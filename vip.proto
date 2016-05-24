@@ -1,5 +1,6 @@
 package Dianjing.protocol;
 
+import "package.proto";
 
 message VIPNotify {
     required bytes session = 1;
@@ -16,6 +17,7 @@ message VIPBuyRewardRequest {
 message VIPBuyRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
 
 
