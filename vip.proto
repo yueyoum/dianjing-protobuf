@@ -1,0 +1,21 @@
+package Dianjing.protocol;
+
+
+message VIPNotify {
+    required bytes session = 1;
+    required int32 vip = 2;
+    required int32 exp = 3;
+    repeated int32 rewarded = 4;
+}
+
+message VIPBuyRewardRequest {
+    required bytes session = 1;
+    required int32 vip = 2;
+}
+
+message VIPBuyRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+

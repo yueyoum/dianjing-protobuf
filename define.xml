@@ -318,5 +318,11 @@
         <protocol name = "StoreAutoRefreshRequest" type = "3805" command = "/game/store/autorefresh/" />
         <protocol name = "StoreAutoRefreshResponse" type = "3806" reqtype = "3805" />
     </file>
+
+    <file name = "vip">
+        <protocol name = "VIPNotify" type = "3900" />
+        <protocol name = "VIPBuyRewardRequest" type = "3901" command = "/game/vip/buyreward/" />
+        <protocol name = "VIPBuyRewardResponse" type = "3902" reqtype = "3901" />
+    </file>
 </namespace>
 
