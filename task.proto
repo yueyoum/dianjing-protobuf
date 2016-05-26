@@ -10,6 +10,28 @@ message TaskNotify {
     required int32 doing = 3;       // 正在做的, 0 表示已经做完了
 }
 
+message TaskDailyNotify {
+    message Task {
+        required int32 id = 1;
+        required int32 value = 2;
+        required bool finished = 3;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Task tasks = 3;
+}
+
+message TaskDailyGetRewardRequest {
+    required bytes session = 1;
+    required int32 task_id = 2;
+}
+
+message TaskDailyGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 
 message RandomEventNotify {
     required bytes session = 1;
