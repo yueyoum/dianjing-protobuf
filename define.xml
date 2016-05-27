@@ -328,5 +328,9 @@
         <protocol name = "VIPBuyRewardRequest" type = "3901" command = "/game/vip/buyreward/" />
         <protocol name = "VIPBuyRewardResponse" type = "3902" reqtype = "3901" />
     </file>
+
+    <file name = "collection">
+        <protocol name = "CollectionNotify" type = "4000" />
+    </file>
 </namespace>
 

@@ -1,0 +1,9 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+message CollectionNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated int32 collected_ids = 3;
+}
