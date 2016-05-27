@@ -10,11 +10,18 @@ message TaskNotify {
     required int32 doing = 3;       // 正在做的, 0 表示已经做完了
 }
 
+enum TaskStatus {
+    TASK_DOING = 0;
+    TASK_FINISH = 1;
+    TASK_DONE = 2;
+}
+
+
 message TaskDailyNotify {
     message Task {
         required int32 id = 1;
         required int32 value = 2;
-        required bool finished = 3;
+        required TaskStatus status = 3;
     }
 
     required bytes session = 1;
