@@ -7,7 +7,9 @@ import "common.proto";
 // 大类
 message DungeonInfo {
     required int32 id = 1;
-    required int32 times = 2;    // 剩余次数
+    required int32 free_times = 2;    // 剩余次数
+    required int32 buy_times = 3;   // 可购买次数
+    required int32 buy_cost = 4;    // 购买花费钻石
 }
 
 message DungeonNotify {
