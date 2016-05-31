@@ -70,6 +70,9 @@
 
         <protocol name = "ChapterNotify" type = "720" />
 
+        <protocol name = "ChallengeResetRequest" type = "721" command = "/game/challenge/reset/" />
+        <protocol name = "ChallengeResetResponse" type = "722" reqtype = "721" />
+
     </file>
 
     <file name = "task">

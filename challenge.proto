@@ -31,12 +31,24 @@ message ChallengeNotify {
     message Challenge {
         required int32 id = 1;
         required int32 star = 2;
-        required int32 remained_times = 3;
+        required int32 free_times = 3;
+        required int32 buy_times = 4;
+        required int32 buy_cost = 5;
     }
 
     required bytes session = 1;
     required Action act = 2;
     repeated Challenge challenge = 3;
+}
+
+message ChallengeResetRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message ChallengeResetResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
 }
 
 message ChallengeStartRequest {
