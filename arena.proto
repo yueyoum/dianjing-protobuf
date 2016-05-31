@@ -32,6 +32,15 @@ message ArenaRefreshResponse {
     required bytes session = 2;
 }
 
+message ArenaBuyTimesRequest {
+    required bytes session = 1;
+}
+
+message ArenaBuyTimesResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 message ArenaMatchStartReqeust {
     required bytes session = 1;
     required string rival_id = 2;

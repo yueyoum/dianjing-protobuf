@@ -256,6 +256,8 @@
         <protocol name = "DungeonMatchResponse" type = "3402" reqtype = "3401" />
         <protocol name = "DungeonMatchReportRequest" type = "3403" command="/game/dungeon/report/" />
         <protocol name = "DungeonMatchReportResponse" type = "3404" reqtype = "3403" />
+        <protocol name = "DungeonBuyTimesRequest" type = "3405" command = "/game/dungeon/buytimes/" />
+        <protocol name = "DungeonBuyTimesResponse" type = "3406" reqtype = "3405" />
     </file>
 
     <file name = "arena">
@@ -276,6 +278,9 @@
         <protocol name = "ArenaMatchReportResponse" type = "3512" reqtype = "3511" />
 
         <protocol name = "ArenaMatchLogNotify" type = "3513" />
+
+        <protocol name = "ArenaBuyTimesRequest" type = "3514" command = "/game/arena/buytimes/" />
+        <protocol name = "ArenaBuyTimesResponse" type = "3515" reqtype = "3514" />
     </file>
 
      <file name = "tower">
