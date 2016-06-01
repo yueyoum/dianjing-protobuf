@@ -95,14 +95,9 @@ message StaffEquipChangeResponse {
 
 // 升级
 message StaffLevelUpRequest {
-    message Item {
-        required int32 id = 1;
-        required int32 amount = 2;
-    }
-
     required bytes session = 1;
     required string staff_id = 2;
-    repeated Item item = 3;
+    required int32 up_level = 3;
 }
 
 message StaffLevelUpResponse {
