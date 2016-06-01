@@ -47,6 +47,7 @@ message BagSlotsRemoveNotify {
 message BagItemUseRequest {
     required bytes session = 1;
     required string slot_id = 2;
+    required int32 amount = 3;
 }
 
 message BagItemUseResponse {
