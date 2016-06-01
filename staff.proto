@@ -69,6 +69,7 @@ message StaffNotify {
     required bytes session = 1;
     required Action act = 2;
     repeated Staff staffs = 3;
+    required int32 exp_pool = 4;
 }
 
 
