@@ -7,7 +7,7 @@ message EnergyNotify {
     required int32 remained_buy_times = 4;
     required int32 buy_cost = 5;
     required int32 recover_interval = 6;    // 秒
-    required int32 next_recover_timestamp = 7;  // 下次恢复的时间戳， 0表示不再恢复
+    required int64 next_recover_timestamp = 7;  // 下次恢复的时间戳， 0表示不再恢复
 }
 
 
