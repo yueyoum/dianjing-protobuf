@@ -340,5 +340,11 @@
     <file name = "collection">
         <protocol name = "CollectionNotify" type = "4000" />
     </file>
+
+    <file name = "energy">
+        <protocol name = "EnergyNotify" type = "4100" />
+        <protocol name = "EnergyBuyRequest" type = "4101" command = "/game/energy/buy/" />
+        <protocol name = "EnergyBuyResponse" type = "4102" reqtype = "4101" />
+    </file>
 </namespace>
 
