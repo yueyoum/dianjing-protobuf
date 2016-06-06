@@ -118,4 +118,24 @@ message TowerLeaderBoardResponse {
     required int32 ret = 1;
     required bytes session = 2;
     repeated Leader leaders = 3;
+    required int32 my_rank = 4;
+    required int32 my_star = 5;
 }
+
+// 星级奖励
+message TowerStarRewardNotify {
+    required bytes session = 1;
+    repeated int32 rewarded = 2; // 已经领奖的星数
+}
+
+message TowerStarGetRewardReqeust {
+    required bytes session = 1;
+    required int32 star = 2;
+}
+
+message TowerStarGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+

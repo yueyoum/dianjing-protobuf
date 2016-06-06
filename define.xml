@@ -303,6 +303,10 @@
 
          <protocol name = "TowerLeaderBoardRequest" type = "3615" command = "/game/tower/leaderboard/" />
          <protocol name = "TowerLeaderBoardResponse" type = "3616" reqtype = "3615" />
+
+         <protocol name = "TowerStarRewardNotify" type = "3617" />
+         <protocol name = "TowerStarGetRewardReqeust" type = "3618" command = "/game/tower/starreward/" />
+         <protocol name = "TowerStarGetRewardResponse" type = "3619" reqtype = "3618" />
     </file>
 
     <file name = "territory">
