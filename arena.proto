@@ -21,6 +21,7 @@ message ArenaNotify {
     required int32 refresh_cd = 6;
     required int32 buy_times = 7;
     required int32 buy_cost = 8;
+    required int32 point = 9;   // 积分
 }
 
 message ArenaRefreshRequest {
