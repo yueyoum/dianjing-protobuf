@@ -103,3 +103,19 @@ message TowerTurnTableResponse {
 }
 
 
+// 排行榜
+message TowerLeaderBoardRequest {
+    required bytes session = 1;
+}
+
+message TowerLeaderBoardResponse {
+    message Leader {
+        required int32 id = 1;
+        required string name = 2;
+        required int32 star = 3;
+    }
+
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated Leader leaders = 3;
+}

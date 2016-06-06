@@ -300,6 +300,9 @@
          <protocol name = "TowerSweepResponse" type = "3612" reqtype = "3611" />
          <protocol name = "TowerSweepFinishRequest" type = "3613" command = "/game/tower/sweepfinish/" />
          <protocol name = "TowerSweepFinishResponse" type = "3614" reqtype = "3613" />
+
+         <protocol name = "TowerLeaderBoardRequest" type = "3615" command = "/game/tower/leaderboard/" />
+         <protocol name = "TowerLeaderBoardResponse" type = "3616" reqtype = "3615" />
     </file>
 
     <file name = "territory">
