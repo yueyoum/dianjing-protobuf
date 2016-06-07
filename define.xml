@@ -307,6 +307,10 @@
          <protocol name = "TowerStarRewardNotify" type = "3617" />
          <protocol name = "TowerStarGetRewardReqeust" type = "3618" command = "/game/tower/starreward/" />
          <protocol name = "TowerStarGetRewardResponse" type = "3619" reqtype = "3618" />
+
+         <protocol name = "TowerGoodsNotify" type = "3620" />
+         <protocol name = "TowerGoodsBuyRequest" type = "3621" command = "/game/tower/goodsbuy/" />
+         <protocol name = "TowerGoodsBuyResponse" type = "3622" reqtype = "3621" />
     </file>
 
     <file name = "territory">

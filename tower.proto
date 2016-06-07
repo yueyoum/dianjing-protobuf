@@ -20,7 +20,6 @@ message TowerNotify {
         optional int32 star = 3;
     }
     
-
     required bytes session = 1;
     required Action act = 2;
     repeated Level levels = 3;
@@ -33,6 +32,26 @@ message TowerNotify {
     required int32 reset_cost = 10; // 重置花费
 }
 
+message TowerGoodsNotify {
+    message Goods {
+        required int32 id = 1;
+        required bool has_bought = 2;
+    }
+
+    message bytes session = 1;
+    repeated Goods goods = 2;
+}
+
+message TowerGoodsBuyRequest {
+    required bytes session = 1;
+    required int32 goods_id = 2;
+}
+
+message TowerGoodsBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
 
 message TowerMatchStartRequest {
     required bytes session = 1;
@@ -57,6 +76,7 @@ message TowerMatchReportResponse {
     optional Drop drop = 3;
     optional int32 star = 4;
     repeated int32 turntable_talent_ids = 5;
+    optional bool sale_goods = 6;
 }
 
 message TowerResetRequest {
