@@ -38,7 +38,7 @@ message TowerGoodsNotify {
         required bool has_bought = 2;
     }
 
-    message bytes session = 1;
+    required bytes session = 1;
     repeated Goods goods = 2;
 }
 
