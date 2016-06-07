@@ -44,7 +44,7 @@ message TowerGoodsNotify {
 
 message TowerGoodsBuyRequest {
     required bytes session = 1;
-    required int32 goods_id = 2;
+    required int32 goods_index = 2;
 }
 
 message TowerGoodsBuyResponse {
