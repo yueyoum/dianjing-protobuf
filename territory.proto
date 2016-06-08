@@ -51,6 +51,17 @@ message TerritoryNotify {
     required int32 work_card = 5;
 }
 
+message TerritoryInspireRequest {
+    required bytes session = 1;
+    required int32 building_id = 2;
+}
+
+message TerritoryInspireResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
 message TerritoryTrainingStartReqeust {
     required bytes session = 1;
     required int32 building_id = 2;

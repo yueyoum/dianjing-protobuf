@@ -329,6 +329,9 @@
         <protocol name = "TerritoryFriendHelpResponse" type = "3718" reqtype = "3717" />
         <protocol name = "TerritoryMatchReportRequest" type = "3719" command = "/game/territory/friend/report/" />
         <protocol name = "TerritoryMatchReportResponse" type ="3720" reqtype = "3719" />
+
+        <protocol name = "TerritoryInspireRequest" type = "3721" command = "/game/territory/inspire/" />
+        <protocol name = "TerritoryInspireResponse" type = "3722" reqtype = "3721" />
     </file>
 
 
