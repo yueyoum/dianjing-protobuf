@@ -66,6 +66,7 @@ message ArenaMatchReportResponse {
     optional Drop drop = 3;
     optional int32 rank_changed = 4;
     optional int32 max_rank = 5;   // 历史最高名次
+    optional int32 my_rank = 6;
 }
 
 message ArenaLeaderBoardRequest {
