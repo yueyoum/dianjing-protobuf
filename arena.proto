@@ -22,6 +22,7 @@ message ArenaNotify {
     required int32 buy_times = 7;
     required int32 buy_cost = 8;
     required int32 point = 9;   // 积分
+    required int32 max_rank = 10;   // 历史最高名次
 }
 
 message ArenaRefreshRequest {
@@ -63,6 +64,8 @@ message ArenaMatchReportResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Drop drop = 3;
+    optional int32 rank_changed = 4;
+    optional int32 max_rank = 5;   // 历史最高名次
 }
 
 message ArenaLeaderBoardRequest {
