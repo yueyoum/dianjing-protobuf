@@ -126,6 +126,7 @@ message StaffStarUpResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional bool crit = 3;
+    optional int32 increase = 4;
 }
 
 // 分解
