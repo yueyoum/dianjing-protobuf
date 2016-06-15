@@ -115,6 +115,12 @@ message TerritoryStoreBuyResponse {
 
 
 // 好友帮助
+message TerritoryFriendHelpRemainedTimesNotify {
+    required bytes session = 1;
+    required int32 times = 2;
+}
+
+
 message TerritoryFriendListRequest {
     required bytes session = 1;
 }
