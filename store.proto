@@ -35,6 +35,7 @@ message StoreBuyRequest {
 message StoreBuyResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
 
 
