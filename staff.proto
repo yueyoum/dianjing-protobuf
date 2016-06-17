@@ -62,6 +62,8 @@ message Staff {
     required string equip_keyboard_slot_id = 13;   // 键盘
     required string equip_monitor_slot_id = 14;   // 显示器
     required string equip_decoration_slot_id = 15;   // 装饰
+
+    repeated int32 qianban_ids = 16;        // 激活的牵绊ID列表
 }
 
 
