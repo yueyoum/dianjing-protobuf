@@ -22,6 +22,7 @@ message FriendNotify {
     required bytes session = 1;
     required Action act = 2;
     repeated Friend friends = 3;
+    required int32 max_amount = 4;
 }
 
 message FriendRemoveNotify {
