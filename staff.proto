@@ -130,7 +130,8 @@ message StaffStarUpResponse {
     required bytes session = 2;
     optional bool crit = 3;
     optional int32 increase = 4;
-    optional int32 cost_item_amount = 5;
+    optional int32 cost_item_id = 5;
+    optional int32 cost_item_amount = 6;
 }
 
 // 分解
