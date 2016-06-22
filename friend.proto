@@ -14,13 +14,8 @@ enum FriendStatus {
 
 message Friend {
     required FriendStatus status = 1;
-    required string id = 2;
-    required string name = 3;
-    required string avatar = 4;
-    required string club_name = 5;
-    required int32 club_flag = 6;
-    required int32 club_gold = 7;
-    required int32 club_level = 8;
+    required bool online = 2;
+    required Club club = 3;
 }
 
 message FriendNotify {
