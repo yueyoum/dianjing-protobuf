@@ -122,6 +122,7 @@ message StaffStepUpResponse {
 message StaffStarUpRequest {
     required bytes session = 1;
     required string staff_id = 2;
+    required bool single = 3;   // 是否只升一次
 }
 
 message StaffStarUpResponse {
@@ -129,6 +130,7 @@ message StaffStarUpResponse {
     required bytes session = 2;
     optional bool crit = 3;
     optional int32 increase = 4;
+    optional int32 cost_item_amount = 5;
 }
 
 // 分解

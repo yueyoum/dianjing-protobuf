@@ -23,6 +23,7 @@ message UnitNotify {
 message UnitLevelUpRequest {
     required bytes session = 1;
     required int32 id = 2;
+    required bool single = 3;   // 是否只升一次
 }
 
 message UnitLevelUpResponse {
