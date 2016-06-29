@@ -2,8 +2,7 @@ package Dianjing.protocol;
 
 enum NextOperate {
     OPT_OK = 1;             // 无
-    OPT_CREATE_CHAR = 2;    // 建立角色
-    OPT_CREATE_CLUB = 3;    // 建立俱乐部
+    OPT_CREATE_CLUB = 2;    // 建立俱乐部
 }
 
 enum UploadStatus {
@@ -15,18 +14,6 @@ enum UploadStatus {
 enum Action {
     ACT_INIT = 1;           // 初始化
     ACT_UPDATE = 2;         // 更新
-}
-
-enum LeagueLevel {
-    LEAGUE_LEVEL_1 = 1;     // 青铜三
-    LEAGUE_LEVEL_2 = 2;     // 青铜二
-    LEAGUE_LEVEL_3 = 3;     // 青铜一
-    LEAGUE_LEVEL_4 = 4;     // 白银三
-    LEAGUE_LEVEL_5 = 5;     // 白银二
-    LEAGUE_LEVEL_6 = 6;     // 白银一
-    LEAGUE_LEVEL_7 = 7;     // 黄金三
-    LEAGUE_LEVEL_8 = 8;     // 黄金二
-    LEAGUE_LEVEL_9 = 9;     // 黄金一
 }
 
 

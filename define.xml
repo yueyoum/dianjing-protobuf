@@ -21,14 +21,6 @@
         <protocol name = "LoginResponse" type = "203" reqtype = "202" />
     </file>
     
-    <file name = "character">
-        <protocol name = "CharacterNotify" type = "300" />
-        <protocol name = "CreateCharacterRequest" type = "301" command = "/game/character/create/" />
-        <protocol name = "CreateCharacterResponse" type = "302" reqtype = "301" />
-        <protocol name = "CharacterUploadAvatarRequest" type = "303" command = "/game/character/avatar/upload/" />
-        <protocol name = "CharacterUploadAvatarResponse" type = "304" reqtype = "303" />
-    </file>
-    
     <file name = "club">
         <protocol name = "ClubNotify" type = "400" />
         <protocol name = "CreateClubRequest" type = "401" command = "/game/club/create/" />
@@ -135,24 +127,6 @@
         <protocol name = "FinanceStatisticsNotify" type = "1600" />
     </file>
 
-    <file name = "ladder">
-        <protocol name = "LadderNotify" type = "1700" />
-        <protocol name = "LadderRefreshRequest" type = "1701" command = "/game/ladder/refresh/" />
-        <protocol name = "LadderRefreshResponse" type = "1702" reqtype = "1701" />
-        <protocol name = "LadderMatchRequest" type = "1703" command = "/game/ladder/match/" />
-        <protocol name = "LadderMatchResponse" type = "1704" reqtype = "1703" />
-        <protocol name = "LadderStoreNotify" type = "1705" />
-        <protocol name = "LadderStoreBuyRequest" type = "1706" command = "/game/ladder/store/buy/" />
-        <protocol name = "LadderStoreBuyResponse" type = "1707" reqtype = "1706" />
-        <protocol name = "LadderLeaderBoardRequest" type = "1708" command = "/game/ladder/leaderboard/" />
-        <protocol name = "LadderLeaderBoardResponse" type = "1709" reqtype = "1708" />
-        <protocol name = "LadderStoreRefreshRequest" type = "1710" command = "/game/ladder/store/refresh/" />
-        <protocol name = "LadderStoreRefreshResponse" type = "1711" reqtype = "1710" />
-        <protocol name = "LadderMatchReportRequest" type = "1712" command = "/game/ladder/store/report/" />
-        <protocol name = "LadderMatchReportResponse" type = "1713" reqtype = "1712" />
-        <protocol name = "LadderBuyChallengeTimesRequest" type = "1714" command = "/game/ladder/buy/" />
-        <protocol name = "LadderBuyChallengeTimesResponse" type = "1715" reqtype = "1714" />
-    </file>
 
     <file name = "spread">
         <protocol name = "SponsorNotify" type = "1900" />
@@ -179,29 +153,6 @@
         <protocol name = "ActiveValueGetRewardResponse" type = "2103" reqtype = "2102" />
     </file>
 
-
-    <file name = "shop">
-        <protocol name = "ItemShopBuyRequest" type = "2300" command = "/game/itemshop/buy/" />
-        <protocol name = "ItemShopBuyResponse" type = "2301" reqtype = "2300" />
-    </file>
-    
-
-    <file name = "auction">
-        <protocol name = "StaffAuctionSellListNotify" type = "2700" />
-        <protocol name = "StaffAuctionSellRemoveNotify" type = "2701" />
-        
-        <protocol name = "StaffAuctionSearchRequest" type = "2702" command = "/game/auction/search/" />
-        <protocol name = "StaffAuctionSearchResponse" type = "2703" reqtype = "2702" />
-        <protocol name = "StaffAuctionSellRequest" type = "2704" command = "/game/auction/sell/" />
-        <protocol name = "StaffAuctionSellResponse" type = "2705" reqtype = "2704" />
-        <protocol name = "StaffAuctionCancelRequest" type = "2706" command = "/game/auction/cancel/" />
-        <protocol name = "StaffAuctionCancelResponse" type = "2707" reqtype = "2706" />
-        <protocol name = "StaffAuctionBidingRequest" type = "2708" command = "/game/auction/bidding/" />
-        <protocol name = "StaffAuctionBiddingResponse" type = "2709" reqtype = "2708" />
-
-        <protocol name = "StaffAuctionBidingListNotify" type = "2710" />
-        <protocol name = "StaffAuctionBidingRemoveNotify" type = "2711" />
-    </file>
 
     <file name = "broadcast">
         <protocol name = "BroadcastNotify" type = "2800" />
