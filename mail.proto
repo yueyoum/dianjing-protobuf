@@ -1,6 +1,6 @@
 package Dianjing.protocol;
 
-import "character.proto";
+import "club.proto";
 import "common.proto";
 import "package.proto";
 
@@ -16,7 +16,7 @@ enum MailFunction {
 
 message MailFrom {
     required MailFromType from_type = 1;
-    optional Character char = 2;
+    optional Club club = 2;
 }
 
 message Mail {

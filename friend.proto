@@ -1,6 +1,5 @@
 package Dianjing.protocol;
 
-import "character.proto";
 import "club.proto";
 import "common.proto";
 import "match.proto";
@@ -40,8 +39,7 @@ message FriendGetInfoResponse {
     required int32 ret = 1;
     required bytes session = 2;
 
-    required Character char = 3;
-    required Club club = 4;
+    required Club club = 3;
 }
 
 message FriendCandidatesRequest {
