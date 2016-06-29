@@ -5,12 +5,6 @@ enum NextOperate {
     OPT_CREATE_CLUB = 2;    // 建立俱乐部
 }
 
-enum UploadStatus {
-    UPLOAD_NONE = 1;
-    UPLOAD_VERIFY = 2;
-    UPLOAD_DONE = 3;
-}
-
 enum Action {
     ACT_INIT = 1;           // 初始化
     ACT_UPDATE = 2;         // 更新
@@ -25,12 +19,6 @@ enum ClubType {
 message UTCNotify {
     required bytes session = 1;
     required int64 timestamp = 2;     // utc timestamp
-}
-
-
-message StaffBaseInfo {
-    required int32 id = 1;
-    required int32 level = 2;
 }
 
 

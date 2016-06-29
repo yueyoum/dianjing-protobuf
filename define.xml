@@ -136,15 +136,6 @@
         <protocol name = "SponsorGetIncomeResponse" type = "1906" reqtype = "1905" />
     </file>
 
-    <file name = "activity">
-        <protocol name = "ActivityCategoryNotify" type = "2000" />
-        <protocol name = "ActivitySignInNotify" type = "2001" />
-        <protocol name = "ActivitySignInRequest" type = "2002" command = "/game/signin/" />
-        <protocol name = "ActivitySignInResponse" type = "2003" reqtype = "2002" />
-        <protocol name = "ActivityLoginRewardNotify" type = "2004" />
-        <protocol name = "ActivityLoginRewardRequest" type = "2005" command = "/game/activity/loginreward/" />
-        <protocol name = "ActivityLoginRewardResponse" type = "2006" reqtype = "2005" />
-    </file>
 
     <file name = "active_value">
         <protocol name = "ActiveValueNotify" type = "2100" />
