@@ -362,5 +362,21 @@
         <protocol name = "EnergyBuyRequest" type = "4101" command = "/game/energy/buy/" />
         <protocol name = "EnergyBuyResponse" type = "4102" reqtype = "4101" />
     </file>
+
+    <file name = "welfare">
+         <protocol name = "WelfareSignInNotify" type = "4200" />
+         <protocol name = "WelfareNewPlayerNotify" type = "4201" />
+         <protocol name = "WelfareLevelRewardNotify" type = "4202" />
+         <protocol name = "WelfareEnergyRewardNotify" type = "4203" />
+
+         <protocol name = "WelfareSignInRequest" type = "4204" command = "/game/welfare/signin/" />
+         <protocol name = "WelfareSignInResponse" type = "4205" reqtype = "4204" />
+         <protocol name = "WelfareNewPlayerGetRequest" type = "4206" command = "/game/welfare/newplayer/" />
+         <protocol name = "WelfareNewPlayerGetResponse" type = "4207" reqtype = "4206" />
+         <protocol name = "WelfareLevelRewardGetRequest" type = "4208" command = "/game/welfare/levelreward/" />
+         <protocol name = "WelfareLevelRewardGetResponse" type = "4209" reqtype = "4208" />
+         <protocol name = "WelfareEnergyRewardGetReqeust" type = "4210" command = "/game/welfare/energyreward/" />
+         <protocol name = "WelfareEnergyRewardGetResponse" type = "4211" reqtype = "4210" />
+    </file>
 </namespace>
 

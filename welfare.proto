@@ -1,0 +1,97 @@
+package Dianjing.protocol;
+
+import "common.proto";
+import "package.proto";
+
+enum WelfareStatus {
+    WELFARE_CAN_GET = 1;
+    WELFARE_HAS_GOT = 2;
+    WELFARE_CAN_NOT = 3;
+}
+
+message WelfareItem {
+    required int32 id = 1;
+    required WelfareStatus status = 2;
+}
+
+
+// 签到奖励
+message WelfareSignInNotify {
+    required bytes session = 1;
+    required int32 day = 3;  // 当前要签到的
+    required bool signed = 4;
+}
+
+
+// 新手礼包
+message WelfareNewPlayerNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated WelfareItem items = 3;
+}
+
+// 等级礼包
+message WelfareLevelRewardNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated WelfareItem items = 3;
+}
+
+// 体力奖励
+message WelfareEnergyRewardNotify {
+    message TimeRange {
+        required int32 start = 1;
+        required int32 end = 2;
+    }
+
+    required bytes session = 1;
+    repeated TimeRange time_range = 2;
+    required bool can_get = 3;
+}
+
+
+message WelfareSignInRequest {
+    required bytes session = 1;
+}
+
+message WelfareSignInResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+
+message WelfareNewPlayerGetRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message WelfareNewPlayerGetResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+
+message WelfareLevelRewardGetRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message WelfareLevelRewardGetResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+
+message WelfareEnergyRewardGetReqeust {
+    required bytes session = 1;
+}
+
+message WelfareEnergyRewardGetResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
