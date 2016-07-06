@@ -40,20 +40,3 @@ message TaskDailyGetRewardResponse {
     optional Drop drop = 3;
 }
 
-
-message RandomEventNotify {
-    required bytes session = 1;
-    required int32 times = 2;
-}
-
-message RandomEventDoneRequest {
-    required bytes session = 1;
-    required int32 id = 2;
-}
-
-message RandomEventDoneResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    optional Drop drop = 3;
-}
-
