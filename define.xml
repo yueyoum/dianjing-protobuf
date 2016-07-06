@@ -127,24 +127,6 @@
         <protocol name = "FinanceStatisticsNotify" type = "1600" />
     </file>
 
-
-    <file name = "spread">
-        <protocol name = "SponsorNotify" type = "1900" />
-        <protocol name = "SponsorRequest" type = "1903" command = "/game/sponsor/" />
-        <protocol name = "SponsorResponse" type = "1904" reqtype = "1903" />
-        <protocol name = "SponsorGetIncomeRequest" type = "1905" command = "/game/sponsor/getincome/" />
-        <protocol name = "SponsorGetIncomeResponse" type = "1906" reqtype = "1905" />
-    </file>
-
-
-    <file name = "active_value">
-        <protocol name = "ActiveValueNotify" type = "2100" />
-        <protocol name = "ActiveFunctionNotify" type = "2101" />
-        <protocol name = "ActiveValueGetRewardRequest" type = "2102" command = "/game/activevalue/getreward/" />
-        <protocol name = "ActiveValueGetRewardResponse" type = "2103" reqtype = "2102" />
-    </file>
-
-
     <file name = "broadcast">
         <protocol name = "BroadcastNotify" type = "2800" />
     </file>
