@@ -10,19 +10,21 @@ message ArenaRival {
     required int32 level = 4;
     required int32 power = 5;
     required int32 rank = 6;
+    required int32 score = 7;
 }
 
 message ArenaNotify {
     required bytes session = 1;
-    repeated ArenaRival rival = 2;
+    optional ArenaRival rival = 2;
     required int32 my_rank = 3;
-    required int32 match_cd = 4;
-    required int32 match_times = 5;  // 剩余次数
-    required int32 refresh_cd = 6;
-    required int32 buy_times = 7;
-    required int32 buy_cost = 8;
-    required int32 point = 9;   // 积分
-    required int32 max_rank = 10;   // 历史最高名次
+    required int32 remained_match_times = 4;  // 剩余挑战次数
+    required int32 refresh_cd = 5;
+    required int32 remained_refresh_times = 6;  // 剩余刷新次数
+    required int32 refresh_cost = 7;            // 强制刷新花费
+    required int32 remained_buy_times = 8;
+    required int32 buy_cost = 9;
+    required int32 point = 10;      // 积分
+    required int32 max_rank = 11;   // 历史最高名次
 }
 
 message ArenaRefreshRequest {
@@ -45,7 +47,6 @@ message ArenaBuyTimesResponse {
 
 message ArenaMatchStartReqeust {
     required bytes session = 1;
-    required string rival_id = 2;
 }
 
 message ArenaMatchStartResponse {
@@ -64,9 +65,11 @@ message ArenaMatchReportResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Drop drop = 3;
-    optional int32 rank_changed = 4;
-    optional int32 max_rank = 5;   // 历史最高名次
-    optional int32 my_rank = 6;
+    optional int32 score_changed = 4;
+    optional int32 rank_changed = 5;
+    optional int32 max_rank = 6;   // 历史最高名次
+    optional int32 my_rank = 7;
+    optional int32 my_score = 8;
 }
 
 message ArenaLeaderBoardRequest {
