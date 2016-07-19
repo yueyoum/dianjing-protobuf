@@ -161,6 +161,13 @@
         <protocol name = "FormationSetUnitResponse" type = "3204" reqtype = "3203" />
         <protocol name = "FormationMoveSlotRequest" type = "3205" command = "/game/formation/moveslot/" />
         <protocol name = "FormationMoveSlotResponse" type = "3206" reqtype = "3205" />
+
+        <protocol name = "FormationActiveRequest" type = "3207" command = "/game/formation/active/" />
+        <protocol name = "FormationActiveResponse" type = "3208" reqtype = "3207" />
+        <protocol name = "FormationLevelUpRequest" type = "3209" command = "/game/formation/levelup/" />
+        <protocol name = "FormationLevelUpResponse" type = "3210" reqtype = "3209" />
+        <protocol name = "FormationUseRequest" type = "3211" command = "/game/formation/use/" />
+        <protocol name = "FormationUseResponse" type = "3212" reqtype = "3211" />
     </file>
 
     <file name = "talent">

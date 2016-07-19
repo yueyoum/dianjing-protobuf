@@ -17,9 +17,16 @@ message FormationSlot {
 }
 
 message FormationNotify {
+    message Formation {
+        required int32 id = 1;
+        required int32 level = 2; // level 为0 需要激活
+    }
+
     required bytes session = 1;
     required Action act = 2;
-    repeated FormationSlot formation = 3;        // 阵型
+    repeated FormationSlot slots = 3;        // 阵型
+    repeated Formation formation = 4;
+    optional int32 using_formation = 5;
 }
 
 message FormationSetStaffRequest {
@@ -55,3 +62,33 @@ message FormationMoveSlotResponse {
     required bytes session = 2;
 }
 
+
+message FormationActiveRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message FormationActiveResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message FormationLevelUpRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message FormationLevelUpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message FormationUseRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message FormationUseResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
