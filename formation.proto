@@ -24,9 +24,9 @@ message FormationNotify {
 
     required bytes session = 1;
     required Action act = 2;
-    repeated FormationSlot slots = 3;        // 阵型
-    repeated Formation formation = 4;
-    optional int32 using_formation = 5;
+    repeated FormationSlot formation = 3;        // 阵型
+    // repeated Formation formation = 4;
+    // optional int32 using_formation = 5;
 }
 
 message FormationSetStaffRequest {
