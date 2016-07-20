@@ -15,13 +15,6 @@ message ClubMatch {
 }
 
 
-// not use, remove this
-message StaffMatchResult{
-    required int32 staff_one = 1;                 // staff id
-    required int32 staff_two = 2;
-    required bool staff_one_win = 3;
-}
-
 message Troop
 {
 	message Hero
@@ -71,4 +64,5 @@ message Troop
 
     required Hero hero = 1;
     required Army army = 2;
+    required int32 policy = 3;
 }
