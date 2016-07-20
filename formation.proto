@@ -100,7 +100,7 @@ message FormationUseResponse {
 }
 
 message FormationSetPolicyRequest {
-    required int32 session = 1;
+    required bytes session = 1;
     required int32 slot_id = 2;
     required int32 policy = 3;
 }
