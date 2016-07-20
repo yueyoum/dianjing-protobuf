@@ -56,17 +56,24 @@ message FormationSetUnitResponse {
     required bytes session = 2;
 }
 
-message FormationMoveSlotRequest {
+
+////////////////////////
+message FormationSyncRequest {
+    message Slot {
+        required int32 id = 1;
+        required int32 index = 2;
+        required int32 policy = 3;
+    }
+
     required bytes session = 1;
-    required int32 slot_id = 2;
-    required int32 to_index = 3;
+    repeated Slot slots = 2;
 }
 
-message FormationMoveSlotResponse {
+message FormationSyncResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
-
+///////////////////////////
 
 message FormationActiveRequest {
     required bytes session = 1;
@@ -94,17 +101,6 @@ message FormationUseRequest {
 }
 
 message FormationUseResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-}
-
-message FormationSetPolicyRequest {
-    required bytes session = 1;
-    required int32 slot_id = 2;
-    required int32 policy = 3;
-}
-
-message FormationSetPolicyResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }

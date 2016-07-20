@@ -159,8 +159,6 @@
         <protocol name = "FormationSetStaffResponse" type = "3202" reqtype = "3201" />
         <protocol name = "FormationSetUnitRequest" type = "3203" command = "/game/formation/setunit/" />
         <protocol name = "FormationSetUnitResponse" type = "3204" reqtype = "3203" />
-        <protocol name = "FormationMoveSlotRequest" type = "3205" command = "/game/formation/moveslot/" />
-        <protocol name = "FormationMoveSlotResponse" type = "3206" reqtype = "3205" />
 
         <protocol name = "FormationActiveRequest" type = "3207" command = "/game/formation/active/" />
         <protocol name = "FormationActiveResponse" type = "3208" reqtype = "3207" />
@@ -168,8 +166,8 @@
         <protocol name = "FormationLevelUpResponse" type = "3210" reqtype = "3209" />
         <protocol name = "FormationUseRequest" type = "3211" command = "/game/formation/use/" />
         <protocol name = "FormationUseResponse" type = "3212" reqtype = "3211" />
-        <protocol name = "FormationSetPolicyRequest" type = "3213" command = "/game/formation/setpolicy/" />
-        <protocol name = "FormationSetPolicyResponse" type = "3214" reqtype = "3213" />
+        <protocol name = "FormationSyncRequest" type = "3213" command = "/game/formation/sync/" />
+        <protocol name = "FormationSyncResponse" type = "3214" reqtype = "3213" />
 
         <protocol name = "FormationSlotNotify" type = "3215" />
     </file>
