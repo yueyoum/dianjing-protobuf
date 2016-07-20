@@ -168,6 +168,10 @@
         <protocol name = "FormationLevelUpResponse" type = "3210" reqtype = "3209" />
         <protocol name = "FormationUseRequest" type = "3211" command = "/game/formation/use/" />
         <protocol name = "FormationUseResponse" type = "3212" reqtype = "3211" />
+        <protocol name = "FormationSetPolicyRequest" type = "3213" common = "/game/formaton/setpolicy/" />
+        <protocol name = "FormationSetPolicyResponse" type = "3214" reqtype = "3213" />
+
+        <protocol name = "FormationSlotNotify" type = "3215" />
     </file>
 
     <file name = "talent">

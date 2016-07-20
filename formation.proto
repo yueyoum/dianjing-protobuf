@@ -14,6 +14,13 @@ message FormationSlot {
     optional int32 position = 3;    // 阵型中的位置 [0..29]
     optional string staff_id = 4;   // 员工唯一ID
     optional int32 unit_id = 5;     // 兵种ID
+    optional int32 policy = 6;
+}
+
+message FormationSlotNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated FormationSlot slots = 3;
 }
 
 message FormationNotify {
@@ -24,9 +31,8 @@ message FormationNotify {
 
     required bytes session = 1;
     required Action act = 2;
-    repeated FormationSlot formation = 3;        // 阵型
-    // repeated Formation formation = 4;
-    // optional int32 using_formation = 5;
+    repeated Formation formation = 3;
+    required int32 using_formation = 4;
 }
 
 message FormationSetStaffRequest {
@@ -92,3 +98,15 @@ message FormationUseResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
+
+message FormationSetPolicyRequest {
+    required int32 session = 1;
+    required int32 slot_id = 2;
+    required int32 policy = 3;
+}
+
+message FormationSetPolicyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
