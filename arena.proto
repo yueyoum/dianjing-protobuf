@@ -26,6 +26,7 @@ message ArenaNotify {
     required int32 buy_cost = 9;
     required int32 point = 10;      // 积分
     required int32 max_rank = 11;   // 历史最高名次
+    required int32 my_score = 12;
 }
 
 message ArenaRefreshRequest {
