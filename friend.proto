@@ -83,16 +83,3 @@ message FriendAcceptResponse {
     required bytes session = 2;
 }
 
-message FriendMatchRequest {
-    required bytes session = 1;
-    required string id = 2;
-}
-
-
-message FriendMatchResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    optional ClubMatch match = 3;
-}
-
-
