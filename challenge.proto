@@ -52,17 +52,6 @@ message ChallengeResetResponse {
     required bytes session = 2;
 }
 
-message ChallengePrepareRequest {
-    required bytes session = 1;
-    required int32 id = 2;
-}
-
-message ChallengePrepareResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    optional ClubMatch match = 3;
-}
-
 message ChallengeStartRequest {
     required bytes session = 1;
     required int32 id = 2;

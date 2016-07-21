@@ -57,18 +57,6 @@ message TowerGoodsBuyResponse {
 }
 
 
-message TowerMatchPrepareRequest {
-    required bytes session = 1;
-}
-
-
-message TowerMatchPrepareResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    optional ClubMatch match = 3;
-}
-
-
 message TowerMatchStartRequest {
     required bytes session = 1;
     repeated SyncFormationSlot slots = 2;
