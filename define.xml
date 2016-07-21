@@ -65,6 +65,8 @@
         <protocol name = "ChallengeResetRequest" type = "721" command = "/game/challenge/reset/" />
         <protocol name = "ChallengeResetResponse" type = "722" reqtype = "721" />
 
+        <protocol name = "ChallengePrepareRequest" type = "723" command = "/game/challenge/prepare/" />
+        <protocol name = "ChallengePrepareResponse" type = "724" reqtype = "723" />
     </file>
 
     <file name = "task">
@@ -166,8 +168,6 @@
         <protocol name = "FormationLevelUpResponse" type = "3210" reqtype = "3209" />
         <protocol name = "FormationUseRequest" type = "3211" command = "/game/formation/use/" />
         <protocol name = "FormationUseResponse" type = "3212" reqtype = "3211" />
-        <protocol name = "FormationSyncRequest" type = "3213" command = "/game/formation/sync/" />
-        <protocol name = "FormationSyncResponse" type = "3214" reqtype = "3213" />
 
         <protocol name = "FormationSlotNotify" type = "3215" />
     </file>
@@ -188,6 +188,9 @@
         <protocol name = "DungeonMatchReportResponse" type = "3404" reqtype = "3403" />
         <protocol name = "DungeonBuyTimesRequest" type = "3405" command = "/game/dungeon/buytimes/" />
         <protocol name = "DungeonBuyTimesResponse" type = "3406" reqtype = "3405" />
+
+        <protocol name = "DungeonPrepareRequest" type = "3407" command = "/game/dungeon/prepare/" />
+        <protocol name = "DungeonPrepareResponse" type = "3408" reqtype = "3407" />
     </file>
 
     <file name = "arena">
@@ -211,6 +214,9 @@
 
         <protocol name = "ArenaBuyTimesRequest" type = "3514" command = "/game/arena/buytimes/" />
         <protocol name = "ArenaBuyTimesResponse" type = "3515" reqtype = "3514" />
+
+        <protocol name = "ArenaMatchPrepareRequest" type = "3516" command = "/game/arena/matchprepare/" />
+        <protocol name = "ArenaMatchPrepareResponse" type = "3517" reqtype = "3516" />
     </file>
 
      <file name = "tower">
@@ -241,6 +247,9 @@
          <protocol name = "TowerGoodsNotify" type = "3620" />
          <protocol name = "TowerGoodsBuyRequest" type = "3621" command = "/game/tower/goodsbuy/" />
          <protocol name = "TowerGoodsBuyResponse" type = "3622" reqtype = "3621" />
+
+         <protocol name = "TowerMatchPrepareRequest" type = "3623" command = "/game/tower/matchprepare/" />
+         <protocol name = "TowerMatchPrepareResponse" type = "3624" reqtype = "3623" />
     </file>
 
     <file name = "territory">
@@ -264,6 +273,9 @@
         <protocol name = "TerritoryInspireResponse" type = "3722" reqtype = "3721" />
 
         <protocol name = "TerritoryFriendHelpRemainedTimesNotify" type = "3723" />
+
+        <protocol name = "TerritoryMatchStartRequest" type = "3724" command = "/game/territory/friend/match/" />
+        <protocol name = "TerritoryMatchStartResponse" type = "3725" reqtype = "3724" />
     </file>
 
 

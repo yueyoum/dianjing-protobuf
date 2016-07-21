@@ -3,6 +3,7 @@ package Dianjing.protocol;
 import "common.proto";
 import "package.proto";
 import "match.proto";
+import "formation.proto";
 
 
 enum TerritoryBuildingStatus {
@@ -155,6 +156,18 @@ message TerritoryFriendHelpResponse {
     
     optional ClubMatch match = 3;
     optional Drop drop = 4;
+}
+
+message TerritoryMatchStartRequest {
+    required bytes session = 1;
+    required string key = 2;
+    repeated SyncFormationSlot slots = 3;
+}
+
+message TerritoryMatchStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional ClubMatch match = 3;
 }
 
 message TerritoryMatchReportRequest {

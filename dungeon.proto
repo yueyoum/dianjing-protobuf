@@ -3,6 +3,7 @@ package Dianjing.protocol;
 import "match.proto";
 import "package.proto";
 import "common.proto";
+import "formation.proto";
 
 // 大类
 message DungeonInfo {
@@ -28,9 +29,22 @@ message DungeonBuyTimesResponse {
     required int32 ret = 2;
 }
 
+
+message DungeonPrepareRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message DungeonPrepareResponse {
+    required bytes session = 1;
+    required int32 ret = 2;
+    optional ClubMatch match = 3;
+}
+
 message DungeonMatchRequest {
     required bytes session = 1;
     required int32 id = 2;
+    repeated SyncFormationSlot slots = 3;
 }
 
 message DungeonMatchResponse {

@@ -2,6 +2,7 @@ package Dianjing.protocol;
 
 import "package.proto";
 import "match.proto";
+import "formation.proto";
 
 message ArenaRival {
     required string id = 1;
@@ -45,8 +46,19 @@ message ArenaBuyTimesResponse {
     required bytes session = 2;
 }
 
+message ArenaMatchPrepareReqeust {
+    required bytes session = 1;
+}
+
+message ArenaMatchPrepareResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional ClubMatch match = 3;
+}
+
 message ArenaMatchStartReqeust {
     required bytes session = 1;
+    repeated SyncFormationSlot slots = 2;
 }
 
 message ArenaMatchStartResponse {
