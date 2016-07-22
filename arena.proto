@@ -115,12 +115,3 @@ message ArenaHonorGetRewardResponse {
 }
 
 
-message ArenaMatchLogNotify {
-    message Log {
-        required int32 id = 1;
-        repeated string arguments = 2;
-    }
-
-    required bytes session = 1;
-    repeated Log logs = 2;
-}
