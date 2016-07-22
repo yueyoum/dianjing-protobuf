@@ -306,5 +306,9 @@
          <protocol name = "WelfareEnergyRewardGetReqeust" type = "4210" command = "/game/welfare/energyreward/" />
          <protocol name = "WelfareEnergyRewardGetResponse" type = "4211" reqtype = "4210" />
     </file>
+
+    <file name = "resource">
+        <protocol name = "ResourceNotify" type = "4300" />
+    </file>
 </namespace>
 

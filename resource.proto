@@ -1,0 +1,12 @@
+package Dianjing.protocol;
+
+message ResourceNotify {
+    message Resource {
+        required int32 id = 1;
+        required int32 amount = 2;
+    }
+
+    required bytes session = 1;
+    repeated Resource resource = 2;
+}
+
