@@ -1,5 +1,7 @@
 package Dianjing.protocol;
 
+import "package.proto";
+
 message UnionMember {
     required string id = 1;
     required int32 flag = 2;
@@ -155,4 +157,5 @@ message UnionSigninRequest {
 message UnionSigninResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
