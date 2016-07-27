@@ -1,7 +1,7 @@
 package Dianjing.protocol;
 
 message UnionMember {
-    required int32 id = 1;
+    required string id = 1;
     required int32 flag = 2;
     required string name = 3;
     required int32 level = 4;
@@ -99,7 +99,7 @@ message UnionApplyResponse {
 // 同意
 message UnionAgreeRequest {
     required bytes session = 1;
-    required int32 char_id = 2;
+    required string char_id = 2;
 }
 
 message UnionAgreeResponse {
@@ -132,7 +132,7 @@ message UnionKickResponse {
 // 转让会长
 message UnionTransferRequest {
     required bytes session = 1;
-    required int32 char_id = 2;
+    required string char_id = 2;
 }
 
 message UnionTransferResponse {
