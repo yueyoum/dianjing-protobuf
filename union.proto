@@ -11,11 +11,6 @@ message UnionMember {
 }
 
 message UnionNotify {
-    message UnionSignIn {
-        required int32 id = 1;
-        required bool has_signed = 2;
-    }
-
     required bytes session = 1;
     required string id = 2;
     required string name = 3;
@@ -27,7 +22,7 @@ message UnionNotify {
     required int32 my_contribution = 10;
 
     repeated UnionMember members = 11;
-    repeated UnionSignIn signins = 12;
+    required int32 signin_id = 12;
 }
 
 // 玩家的申请列表
