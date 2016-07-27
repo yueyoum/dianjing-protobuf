@@ -1,16 +1,16 @@
 package Dianjing.protocol;
 
-message UnionNotify {
-    message UnionMember {
-        required int32 id = 1;
-        required int32 flag = 2;
-        required string name = 3;
-        required int32 level = 4;
-        required int32 power = 5;
-        required int32 total_contribution = 6;
-        required int32 today_contribution = 7;
-    }
+message UnionMember {
+    required int32 id = 1;
+    required int32 flag = 2;
+    required string name = 3;
+    required int32 level = 4;
+    required int32 power = 5;
+    required int32 total_contribution = 6;
+    required int32 today_contribution = 7;
+}
 
+message UnionNotify {
     message UnionSignIn {
         required int32 id = 1;
         required bool has_signed = 2;
@@ -30,6 +30,17 @@ message UnionNotify {
     repeated UnionSignIn signins = 12;
 }
 
+// 玩家的申请列表
+message UnionMyAppliedNotify {
+    required bytes session = 1;
+    repeated string union_ids = 2;
+}
+
+// 需要审核的列表
+message UnionMyCheckNotify {
+    required bytes session = 1;
+    repeated UnionMember members = 2;
+}
 
 // 创建
 message UnionCreateRequest {
@@ -58,11 +69,6 @@ message UnionListRequest {
     required bytes session = 1;
 }
 
-enum UnionApplyStatus {
-    UNION_CAN_APPLY = 1;
-    UNION_ALREADY_APPLYIED = 2;
-    UNION_CANNOT_APPLY = 3;
-}
 
 message UnionListResponse {
     message Union {
@@ -71,7 +77,6 @@ message UnionListResponse {
         required int32 level = 3;
         required string name = 4;
         required string members_amount = 5;
-        required UnionApplyStatus apply_status = 6;
     }
 
     required int32 ret = 1;
@@ -144,5 +149,4 @@ message UnionQuitResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
-
 

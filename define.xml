@@ -329,6 +329,9 @@
         <protocol name = "UnionTransferResponse" type = "4416" reqtype = "4415" />
         <protocol name = "UnionQuitRequest" type = "4417" command = "/game/union/quit/" />
         <protocol name = "UnionQuitResponse" type = "4418" reqtype = "4417" />
+
+        <protocol name = "UnionMyAppliedNotify" type = "4419" />
+        <protocol name = "UnionMyCheckNotify" type = "4420" />
     </file>
 </namespace>
 
