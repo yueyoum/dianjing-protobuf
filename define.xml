@@ -332,6 +332,9 @@
 
         <protocol name = "UnionMyAppliedNotify" type = "4419" />
         <protocol name = "UnionMyCheckNotify" type = "4420" />
+
+        <protocol name = "UnionSigninRequest" type = "4421" command = "/game/union/signin/" />
+        <protocol name = "UnionSigninResponse" type = "4422" reqtype = "4421" />
     </file>
 </namespace>
 
