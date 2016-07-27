@@ -308,5 +308,27 @@
     <file name = "resource">
         <protocol name = "ResourceNotify" type = "4300" />
     </file>
+
+    <file name = "union">
+        <protocol name = "UnionNotify" type = "4400" />
+        <protocol name = "UnionCreateRequest" type = "4401" command = "/game/union/create/" />
+        <protocol name = "UnionCreateResponse" type = "4402" reqtype = "4401" />
+        <protocol name = "UnionSetBulletinRequest" type = "4403" command = "/game/union/setbulletin/" />
+        <protocol name = "UnionSetBulletinResponse" type = "4404" reqtype = "4403" />
+        <protocol name = "UnionListRequest" type = "4405" command = "/game/union/list/" />
+        <protocol name = "UnionListResponse" type = "4406" reqtype = "4405" />
+        <protocol name = "UnionApplyRequest" type = "4407" command = "/game/union/apply/" />
+        <protocol name = "UnionApplyResponse" type = "4408" reqtype = "4407" />
+        <protocol name = "UnionAgreeRequest" type = "4409" command = "/game/union/agree/" />
+        <protocol name = "UnionAgreeResponse" type = "4410" reqtype = "4409" />
+        <protocol name = "UnionRefuseRequest" type = "4411" command = "/game/union/refuse/" />
+        <protocol name = "UnionRefuseResponse" type = "4412" reqtype = "4411" />
+        <protocol name = "UnionKickRequest" type = "4413" command = "/game/union/kick/" />
+        <protocol name = "UnionKickResponse" type = "4414" reqtype = "4413" />
+        <protocol name = "UnionTransferRequest" type = "4415" command = "/game/union/transfer/" />
+        <protocol name = "UnionTransferResponse" type = "4416" reqtype = "4415" />
+        <protocol name = "UnionQuitRequest" type = "4417" command = "/game/union/quit/" />
+        <protocol name = "UnionQuitResponse" type = "4418" reqtype = "4417" />
+    </file>
 </namespace>
 
