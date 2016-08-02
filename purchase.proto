@@ -1,0 +1,35 @@
+package Purchase.protocol;
+
+
+// 给平台发送前，先发给自己的服务器
+message PurchasePrepareRequest {
+    required bytes session = 1;
+    required int32 goods_id = 2;
+    required int32 goods_amount = 3;
+}
+
+message PurchasePrepareResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional string receipt = 3;
+}
+
+message PurchaseVerifyRequest {
+    required bytes session = 1;
+    required string receipt = 2;
+}
+
+enum PurchaseStatus {
+    PURCHASE_DONE = 1;
+    PURCHASE_WAITING = 2;
+    PURCHASE_FAILURE = 3;
+}
+
+message PurchaseVerifyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional PurchaseStatus status = 3;
+    optional int32 goods_id = 4;
+    optional int32 goods_amount = 5;
+}
+
