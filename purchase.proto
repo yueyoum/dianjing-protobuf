@@ -12,7 +12,6 @@ message PurchaseNotify {
 message PurchasePrepareRequest {
     required bytes session = 1;
     required int32 goods_id = 2;
-    required int32 goods_amount = 3;
 }
 
 message PurchasePrepareResponse {
@@ -37,6 +36,5 @@ message PurchaseVerifyResponse {
     required bytes session = 2;
     optional PurchaseStatus status = 3;
     optional int32 goods_id = 4;
-    optional int32 goods_amount = 5;
 }
 
