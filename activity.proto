@@ -1,0 +1,53 @@
+package Dianjing.protocol;
+
+import "common.proto";
+import "package.proto";
+
+
+message ActivityNotify {
+    message ActivityItem {
+        required int32 id = 1;
+        required int32 current_value = 2;
+        required bool done = 3;
+    }
+
+    required bytes session = 1;
+    required Act act = 2;
+    repeated ActivityItem items = 3;
+}
+
+message ActivityRemoveNotify {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message ActivityDailyBuyNotify {
+    required bytes session = 1;
+    required int32 day = 2;
+    required int32 has_bought = 3;
+}
+
+
+message ActivityGetRewardRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message ActivityGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+message ActivityDailyBuyRequest {
+    required bytes session = 1;
+    required int32 day = 2;
+}
+
+message ActivityDailyBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+

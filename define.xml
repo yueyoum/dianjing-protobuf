@@ -344,5 +344,16 @@
         <protocol name = "PurchaseVerifyResponse" type = "4503" reqtype = "4502" />
         <protocol name = "PurchaseNotify" type = "4504" />
     </file>
+
+    <file name = "activity">
+        <protocol name = "ActivityNotify" type = "4600" />
+        <protocol name = "ActivityRemoveNotify" type = "4601" />
+        <protocol name = "ActivityGetRewardRequest" type = "4602" command = "/game/activity/getreward/" />
+        <protocol name = "ActivityGetRewardResponse" type = "4603" reqtype = "4602" />
+        <protocol name = "ActivityDailyBuyRequest" type = "4604" command = "/game/activity/dailybuy/" />
+        <protocol name = "ActivityDailyBuyResponse" type = "4605" reqtype = "4604" />
+
+        <protocol name = "ActivityDailyBuyNotify" type = "4606" />
+    </file>
 </namespace>
 
