@@ -12,7 +12,7 @@ message ActivityNotify {
     }
 
     required bytes session = 1;
-    required Act act = 2;
+    required Action act = 2;
     repeated ActivityItem items = 3;
 }
 
@@ -23,8 +23,7 @@ message ActivityRemoveNotify {
 
 message ActivityDailyBuyNotify {
     required bytes session = 1;
-    required int32 day = 2;
-    required int32 has_bought = 3;
+    required int32 has_bought = 2;
 }
 
 

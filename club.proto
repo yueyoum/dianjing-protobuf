@@ -17,9 +17,15 @@ message Club {
     required int32 power = 11;
 }
 
+// 角色创建了又多少天
 message ClubNotify {
     required bytes session = 1;
     required Club club = 2;
+}
+
+message CreateDaysNotify {
+    required bytes session = 1;
+    required int32 days = 2;
 }
 
 
