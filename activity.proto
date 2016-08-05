@@ -3,7 +3,7 @@ package Dianjing.protocol;
 import "common.proto";
 import "package.proto";
 
-message ActivityStatus {
+enum ActivityStatus {
     ACTIVITY_DOING = 1;
     ACTIVITY_REWARD = 2;  // 可以领奖
     ACTIVITY_COMPLETE = 3;  // 领完奖，完成
