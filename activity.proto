@@ -21,7 +21,7 @@ message ActivityNewPlayerNotify {
     repeated NewPlayerItem items = 3;
 }
 
-message ActivityDailyBuyNotify {
+message ActivityNewPlayerDailyBuyNotify {
     required bytes session = 1;
     required int32 has_bought = 2;
 }
@@ -37,12 +37,11 @@ message ActivityNewPlayerGetRewardResponse {
     optional Drop drop = 3;
 }
 
-message ActivityDailyBuyRequest {
+message ActivityNewPlayerDailyBuyRequest {
     required bytes session = 1;
-    required int32 day = 2;
 }
 
-message ActivityDailyBuyResponse {
+message ActivityNewPlayerDailyBuyResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Drop drop = 3;
