@@ -3,22 +3,22 @@ package Dianjing.protocol;
 import "common.proto";
 import "package.proto";
 
+message ActivityStatus {
+    ACTIVITY_DOING = 1;
+    ACTIVITY_REWARD = 2;  // 可以领奖
+    ACTIVITY_COMPLETE = 3;  // 领完奖，完成
+}
 
-message ActivityNotify {
-    message ActivityItem {
+message ActivityNewPlayerNotify {
+    message NewPlayerItem {
         required int32 id = 1;
         required int32 current_value = 2;
-        required bool done = 3;
+        required ActivityStatus status = 3;
     }
 
     required bytes session = 1;
     required Action act = 2;
-    repeated ActivityItem items = 3;
-}
-
-message ActivityRemoveNotify {
-    required bytes session = 1;
-    required int32 id = 2;
+    repeated NewPlayerItem items = 3;
 }
 
 message ActivityDailyBuyNotify {
@@ -26,13 +26,12 @@ message ActivityDailyBuyNotify {
     required int32 has_bought = 2;
 }
 
-
-message ActivityGetRewardRequest {
+message ActivityNewPlayerGetRewardRequest {
     required bytes session = 1;
     required int32 id = 2;
 }
 
-message ActivityGetRewardResponse {
+message ActivityNewPlayerGetRewardResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Drop drop = 3;
@@ -48,5 +47,4 @@ message ActivityDailyBuyResponse {
     required bytes session = 2;
     optional Drop drop = 3;
 }
-
 
