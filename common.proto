@@ -25,12 +25,14 @@ message UTCNotify {
 // 全部同步 相当与登录
 message SyncRequest {
     required bytes session = 1;
+    required int32 param = 2;
 }
 
 
 message SyncResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional int32 param = 3;
 }
 
 

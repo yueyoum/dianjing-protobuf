@@ -23,7 +23,7 @@ message ActivityNewPlayerNotify {
 
 message ActivityNewPlayerDailyBuyNotify {
     required bytes session = 1;
-    required int32 has_bought = 2;
+    required bool has_bought = 2;
 }
 
 message ActivityNewPlayerGetRewardRequest {
