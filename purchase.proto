@@ -41,3 +41,13 @@ message PurchaseVerifyResponse {
     optional int32 goods_id = 4;
 }
 
+
+message PurchaseGetFirstRewardRequest {
+    required bytes session = 1;
+}
+
+message PurchaseGetFirstRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}

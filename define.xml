@@ -345,6 +345,8 @@
         <protocol name = "PurchaseVerifyRequest" type = "4502" command = "/game/purchase/verify/" />
         <protocol name = "PurchaseVerifyResponse" type = "4503" reqtype = "4502" />
         <protocol name = "PurchaseNotify" type = "4504" />
+        <protocol name = "PurchaseGetFirstRewardRequest" type = "4505" command = "/game/purchase/getfirstreward/" />
+        <protocol name = "PurchaseGetFirstRewardResponse" type = "4506" reqtype = "4505" />
     </file>
 
     <file name = "activity">
