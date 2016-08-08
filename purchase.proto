@@ -1,10 +1,13 @@
 package Dianjing.protocol;
 
+import "package.proto";
 
 message PurchaseNotify {
     required bytes session = 1;
     required int32 yueka_remained_days = 2; // 月卡剩余天数， 0表示没有可以购买月卡
     required bool first = 3;    // True表示首冲
+    required Drop frist_reward = 4; // 首冲奖励
+    required bool first_reward_got = 5; // 是否已经领取了首冲奖励
 }
 
 
