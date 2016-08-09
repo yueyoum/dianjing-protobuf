@@ -41,3 +41,27 @@ message CreateClubResponse {
     required bytes session = 2;
 }
 
+
+// 等级排行榜
+message ClubLeaderBoardByLevelRequest {
+    required bytes session = 1;
+}
+
+message ClubLeaderBoardByLevelResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    required int64 next_update_at = 3;  // 下次更新UTC时间戳
+    repeated Club clubs = 3;
+}
+
+// 战力排行榜
+message ClubLeaderBoardByPowerRequest {
+    required bytes session = 1;
+}
+
+message ClubLeaderBoardByPowerResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    required int64 next_update_at = 3;  // 下次更新UTC时间戳
+    repeated Club clubs = 3;
+}

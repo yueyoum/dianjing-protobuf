@@ -27,6 +27,10 @@
         <protocol name = "CreateClubResponse" type = "402" reqtype = "401" />
 
         <protocol name = "CreateDaysNotify" type = "403" />
+        <protocol name = "ClubLeaderBoardByLevelRequest" type = "404" command = "/game/club/leaderboard/level/" />
+        <protocol name = "ClubLeaderBoardByLevelResponse" type = "405" reqtype = "404" />
+        <protocol name = "ClubLeaderBoardByPowerRequest" type = "406" command = "/game/club/leaderboard/power/" />
+        <protocol name = "ClubLeaderBoardByPowerResponse" type = "407" reqtype = "406" />
     </file>
 
     <file name = "staff">
