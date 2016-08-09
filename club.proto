@@ -42,26 +42,16 @@ message CreateClubResponse {
 }
 
 
-// 等级排行榜
-message ClubLeaderBoardByLevelRequest {
+// 排行榜
+message ClubLeaderBoardRequest {
     required bytes session = 1;
 }
 
-message ClubLeaderBoardByLevelResponse {
+message ClubLeaderBoardResponse {
     required int32 ret = 1;
     required bytes session = 2;
     required int64 next_update_at = 3;  // 下次更新UTC时间戳
-    repeated Club clubs = 4;
+    repeated Club clubs_by_level = 4;
+    repeated Club clubs_by_power = 5;
 }
 
-// 战力排行榜
-message ClubLeaderBoardByPowerRequest {
-    required bytes session = 1;
-}
-
-message ClubLeaderBoardByPowerResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    required int64 next_update_at = 3;  // 下次更新UTC时间戳
-    repeated Club clubs = 4;
-}
