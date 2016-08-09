@@ -51,7 +51,7 @@ message ClubLeaderBoardByLevelResponse {
     required int32 ret = 1;
     required bytes session = 2;
     required int64 next_update_at = 3;  // 下次更新UTC时间戳
-    repeated Club clubs = 3;
+    repeated Club clubs = 4;
 }
 
 // 战力排行榜
@@ -63,5 +63,5 @@ message ClubLeaderBoardByPowerResponse {
     required int32 ret = 1;
     required bytes session = 2;
     required int64 next_update_at = 3;  // 下次更新UTC时间戳
-    repeated Club clubs = 3;
+    repeated Club clubs = 4;
 }
