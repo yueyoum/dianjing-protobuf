@@ -9,6 +9,7 @@ enum ActivityStatus {
     ACTIVITY_COMPLETE = 3;  // 领完奖，完成
 }
 
+
 message ActivityNewPlayerNotify {
     message NewPlayerItem {
         required int32 id = 1;
@@ -19,6 +20,8 @@ message ActivityNewPlayerNotify {
     required bytes session = 1;
     required Action act = 2;
     repeated NewPlayerItem items = 3;
+    required int64 activity_end_at = 4;
+    required int64 reward_end_at = 5;
 }
 
 message ActivityNewPlayerDailyBuyNotify {
