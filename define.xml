@@ -342,8 +342,6 @@
     </file>
 
     <file name = "purchase">
-        <protocol name = "PurchasePrepareRequest" type = "4500" command = "/game/purchase/prepare/" />
-        <protocol name = "PurchasePrepareResponse" type = "4501" reqtype = "4500" />
         <protocol name = "PurchaseVerifyRequest" type = "4502" command = "/game/purchase/verify/" />
         <protocol name = "PurchaseVerifyResponse" type = "4503" reqtype = "4502" />
         <protocol name = "PurchaseNotify" type = "4504" />
