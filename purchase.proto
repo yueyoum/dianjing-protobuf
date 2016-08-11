@@ -14,18 +14,23 @@ message PurchaseNotify {
 // 给平台发送前，先发给自己的服务器
 message PurchasePrepareRequest {
     required bytes session = 1;
-    required int32 goods_id = 2;
+    // ios, 1sdk
+    required string platform = 2;
+    required int32 goods_id = 3;
 }
 
 message PurchasePrepareResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional string receipt = 3;
+    optional string order_id = 3;
 }
 
 message PurchaseVerifyRequest {
     required bytes session = 1;
-    required string receipt = 2;
+    required string order_id = 2;
+    // 如果是 1sdk， param 为空
+    // 如果是 ios, param 是苹果返回的 receipt
+    required string param = 3;
 }
 
 enum PurchaseStatus {
@@ -51,3 +56,4 @@ message PurchaseGetFirstRewardResponse {
     required bytes session = 2;
     optional Drop drop = 3;
 }
+
