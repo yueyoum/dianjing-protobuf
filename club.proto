@@ -53,5 +53,7 @@ message ClubLeaderBoardResponse {
     required int64 next_update_at = 3;  // 下次更新UTC时间戳
     repeated Club clubs_by_level = 4;
     repeated Club clubs_by_power = 5;
+    required int32 my_level_rank = 6;
+    required int32 my_power_rank = 7;
 }
 
