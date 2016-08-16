@@ -135,7 +135,7 @@ message TowerLeaderBoardRequest {
 
 message TowerLeaderBoardResponse {
     message Leader {
-        required int32 id = 1;
+        required string id = 1;
         required string name = 2;
         required int32 star = 3;
     }
