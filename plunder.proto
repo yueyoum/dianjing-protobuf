@@ -140,7 +140,7 @@ enum PlunderWayResult {
 }
 message PlunderResultNotify {
     required bytes session = 1;
-    required string id = 2; // 空 表示没有掠夺
+    optional string id = 2; // 空 表示没有掠夺
     repeated PlunderWayResult result = 3;
 }
 
