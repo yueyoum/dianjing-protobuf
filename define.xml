@@ -379,6 +379,7 @@
         <protocol name = "PlunderReportResponse" type = "4724" reqtype = "4723" />
         <protocol name = "PlunderRevengeNotify" type = "4725" />
         <protocol name = "BaseStationNotify" type = "4726" />
+        <protocol name = "PlunderResultNotify" type = "4728" />
     </file>
 </namespace>
 

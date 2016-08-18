@@ -116,6 +116,9 @@ message BaseStationNotify {
     required int32 exp = 3;
     required int64 next_reward_at = 4;
     optional Drop drop = 5; // 有，就是可以领取
+
+    required int32 product_level = 6;
+    required int32 product_lost_percent = 7;
 }
 
 // 复仇
@@ -128,4 +131,17 @@ message PlunderRevengeNotify {
     required int32 remained_times = 2;
     repeated RevengeTarget target = 3;
 }
+
+// 正在进行的掠夺
+enum PlunderWayResult {
+    PLUNDER_WAY_NOT_START = 0;
+    PLUNDER_WAY_WIN = 1;
+    PLUNDER_WAY_LOSE = 2;
+}
+message PlunderResultNotify {
+    required bytes session = 1;
+    required string id = 2; // 空 表示没有掠夺
+    repeated PlunderWayResult result = 3;
+}
+
 
