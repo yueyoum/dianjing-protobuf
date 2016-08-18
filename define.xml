@@ -358,5 +358,27 @@
         <protocol name = "ActivityNewPlayerDailyBuyResponse" type = "4605" reqtype = "4604" />
 
     </file>
+
+    <file name = "plunder">
+        <protocol name = "PlunderFormationNotify" type = "4700" />
+        <protocol name = "PlunderFormationSetStaffRequest" type = "4701" command = "/game/plunder/formation/setstaff/" />
+        <protocol name = "PlunderFormationSetStaffResponse" type = "4702" reqtype = "4701" />
+        <protocol name = "PlunderFormationSetUnitRequest" type = "4703" command = "/game/plunder/formation/setunit/" />
+        <protocol name = "PlunderFormationSetUnitResponse" type = "4704" reqtype = "4703" />
+
+        <protocol name = "PlunderSearchNotify" type = "4705" />
+        <protocol name = "PlunderSearchRequest" type = "4706" command = "/game/plunder/search/" />
+        <protocol name = "PlunderSearchResponse" type = "4707" reqtype = "4706" />
+        <protocol name = "PlunderSpyRequest" type = "4708" command = "/game/plunder/spy/" />
+        <protocol name = "PlunderSpyResponse" type = "4709" reqtype = "4708" />
+
+        <protocol name = "PlunderTimesNotify" type = "4710" />
+        <protocol name = "PlunderStartRequest" type = "4711" command = "/game/plunder/start/" />
+        <protocol name = "PlunderStartResponse" type = "4722" reqtype = "4711" />
+        <protocol name = "PlunderReportRequest" type = "4723" command = "/game/plunder/report/" />
+        <protocol name = "PlunderReportResponse" type = "4724" reqtype = "4723" />
+        <protocol name = "PlunderRevengeNotify" type = "4725" />
+        <protocol name = "BaseStationNotify" type = "4726" />
+    </file>
 </namespace>
 

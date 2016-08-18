@@ -1,0 +1,131 @@
+package Dianjing.protocol;
+
+import "package.proto";
+import "formation.proto";
+import "match.proto";
+
+message PlunderFormation {
+    required int32 way = 1;
+    repeated FormationSlot formation = 1;
+    required int32 power = 3;
+}
+
+// 阵型
+message PlunderFormationNotify {
+    required bytes session = 1;
+    repeated PlunderFormation formation = 2;
+}
+
+message PlunderFormationSetStaffRequest {
+    required bytes session = 1;
+    required int32 way = 2;
+    required int32 slot_id = 3;
+    required string staff_id = 4;
+}
+
+message PlunderFormationSetStaffResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message PlunderFormationSetUnitRequest {
+    required bytes session = 1;
+    required int32 way = 2;
+    required int32 slot_id = 3;
+    required int32 unit_id = 4;
+}
+
+message PlunderFormationSetUnitResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 搜索
+message PlunderSearchNotify {
+    message PlunderTarget {
+        required string id = 1;
+        required int32 station_level = 2;
+        repeated PlunderFormation formation = 3;
+    }
+
+    required bytes session = 1;
+    repeated PlunderTarget target = 2;
+    required int32 cd = 3;
+}
+
+
+message PlunderSearchRequest {
+    required bytes session = 1;
+}
+
+message PlunderSearchResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 侦查
+message PlunderSpyRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+message PlunderSpyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated PlunderFormation formation = 3;
+}
+
+
+// 掠夺
+message PlunderTimesNotify {
+    required bytes session = 1;
+    required int32 max_times = 2;
+    required int32 remained_times = 3;
+    required int64 next_recover_at = 4; // 0 表示不恢复
+}
+
+message PlunderStartRequest {
+    required bytes session = 1;
+    required string id = 2;
+    repeated SyncFormationSlot slots = 3;
+}
+
+message PlunderStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional ClubMatch match = 3;
+}
+
+message PlunderReportRequest {
+    required bytes session = 1;
+    required string key = 2;
+    required bool win = 3;
+}
+
+message PlunderReportResponse {
+    required bytes session = 1;
+    required int32 ret = 2;
+    optional Drop drop = 3;
+}
+
+
+// 基地
+message BaseStationNotify {
+    required bytes session = 1;
+    required int32 level = 2;
+    required int32 exp = 3;
+    required int64 next_reward_at = 4;
+    optional Drop drop = 5; // 有，就是可以领取
+}
+
+// 复仇
+message PlunderRevengeNotify {
+    message RevengeTarget {
+        required string id = 1;
+        required string name = 2;
+    }
+    required bytes session = 1;
+    required int32 remained_times = 2;
+    repeated RevengeTarget target = 3;
+}
+
