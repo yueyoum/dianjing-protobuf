@@ -6,7 +6,7 @@ import "match.proto";
 
 message PlunderFormation {
     required int32 way = 1;
-    repeated FormationSlot formation = 1;
+    repeated FormationSlot formation = 2;
     required int32 power = 3;
 }
 
