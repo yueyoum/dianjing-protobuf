@@ -76,7 +76,12 @@ message PlunderSpyResponse {
 }
 
 
-// 掠夺
+// 掠夺 或者 复仇
+enum PlunderType {
+    PLUNDER_TYPE_PLUNDER = 1;
+    PLUNDER_TYPE_REVENGE = 2;
+}
+
 message PlunderTimesNotify {
     required bytes session = 1;
     required int32 max_times = 2;
@@ -84,10 +89,21 @@ message PlunderTimesNotify {
     required int64 next_recover_at = 4; // 0 表示不恢复
 }
 
+message PlunderRevengeNotify {
+    message RevengeTarget {
+        required string id = 1;
+        required string name = 2;
+    }
+    required bytes session = 1;
+    required int32 remained_times = 2;
+    repeated RevengeTarget target = 3;
+}
+
 message PlunderStartRequest {
     required bytes session = 1;
     required string id = 2;
     repeated SyncFormationSlot slots = 3;
+    required PlunderType tp = 4;
 }
 
 message PlunderStartResponse {
@@ -140,19 +156,6 @@ message BaseStationSyncRequest {
 message BaseStationSyncResponse {
     required int32 ret = 1;
     required bytes session = 2;
-}
-
-
-
-// 复仇
-message PlunderRevengeNotify {
-    message RevengeTarget {
-        required string id = 1;
-        required string name = 2;
-    }
-    required bytes session = 1;
-    required int32 remained_times = 2;
-    repeated RevengeTarget target = 3;
 }
 
 // 正在进行的掠夺
