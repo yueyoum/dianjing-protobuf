@@ -101,7 +101,7 @@ message PlunderRevengeNotify {
 
 message PlunderStartRequest {
     required bytes session = 1;
-    required string id = 2;
+    required int32 index = 2;
     repeated SyncFormationSlot slots = 3;
     required PlunderType tp = 4;
 }
