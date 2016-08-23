@@ -383,7 +383,7 @@
         <protocol name = "PlunderGetRewardRequest" type = "4729" command = "/game/plunder/getreward/" />
         <protocol name = "PlunderGetRewardResponse" type = "4730" reqtype = "4729" />
         <protocol name = "BaseStationSyncRequest" type = "4731" command = "/game/plunder/station/sync/" />
-        <protocol name = "BaseStationSyncResponse" reqtype = "4732" />
+        <protocol name = "BaseStationSyncResponse" type = "4732"  reqtype = "4731" />
     </file>
 </namespace>
 
