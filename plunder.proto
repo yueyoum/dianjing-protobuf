@@ -46,6 +46,7 @@ message PlunderSearchNotify {
         required string id = 1;
         required int32 station_level = 2;
         repeated PlunderFormation formation = 3;
+        required bool spied = 4;
     }
 
     required bytes session = 1;
@@ -93,6 +94,7 @@ message PlunderRevengeNotify {
     message RevengeTarget {
         required string id = 1;
         required string name = 2;
+        repeated PlunderFormation formation = 3;
     }
     required bytes session = 1;
     required int32 remained_times = 2;
