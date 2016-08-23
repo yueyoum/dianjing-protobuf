@@ -105,8 +105,20 @@ message PlunderReportRequest {
 message PlunderReportResponse {
     required bytes session = 1;
     required int32 ret = 2;
-    optional Drop drop = 3;
 }
+
+message PlunderGetRewardRequest {
+    required bytes session = 1;
+    required string id = 2;
+}
+
+message PlunderGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated PlunderWayResult result = 3;
+    optional Drop drop = 4;
+}
+
 
 
 // 基地
@@ -120,6 +132,17 @@ message BaseStationNotify {
     required int32 product_level = 6;
     required int32 product_lost_percent = 7;
 }
+
+message BaseStationSyncRequest {
+    required bytes session = 1;
+}
+
+message BaseStationSyncResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
 
 // 复仇
 message PlunderRevengeNotify {
