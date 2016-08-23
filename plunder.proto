@@ -125,7 +125,6 @@ message PlunderReportResponse {
 
 message PlunderGetRewardRequest {
     required bytes session = 1;
-    required string id = 2;
 }
 
 message PlunderGetRewardResponse {
