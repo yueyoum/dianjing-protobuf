@@ -105,6 +105,7 @@ message PlunderStartRequest {
     required string id = 2;
     repeated SyncFormationSlot slots = 3;
     required PlunderType tp = 4;
+    optional bool win = 5;  // 不进入战斗直接结束
 }
 
 message PlunderStartResponse {
