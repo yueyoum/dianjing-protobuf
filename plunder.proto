@@ -45,7 +45,7 @@ message PlunderSearchNotify {
     message PlunderTarget {
         required string id = 1;
         required int32 station_level = 2;
-        repeated PlunderFormation formation = 3;
+        repeated ClubTroop troop = 3;
         required bool spied = 4;
     }
 
@@ -73,7 +73,6 @@ message PlunderSpyRequest {
 message PlunderSpyResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    repeated PlunderFormation formation = 3;
 }
 
 
@@ -94,7 +93,7 @@ message PlunderRevengeNotify {
     message RevengeTarget {
         required string id = 1;
         required string name = 2;
-        repeated PlunderFormation formation = 3;
+        repeated ClubTroop troop = 3;
     }
     required bytes session = 1;
     required int32 remained_times = 2;
@@ -111,7 +110,7 @@ message PlunderStartRequest {
 message PlunderStartResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional ClubMatch match = 3;
+    optional ClubMatch match = 3;   // 只有 club_one
 }
 
 message PlunderReportRequest {
