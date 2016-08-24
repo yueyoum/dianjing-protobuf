@@ -13,6 +13,7 @@ message ClubMatch {
 message ClubTroop {
     required Club club = 1;
     repeated Troop troop = 2;
+    optional int32 power = 3;
 }
 
 message Troop
