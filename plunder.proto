@@ -101,6 +101,15 @@ message PlunderRevengeNotify {
     repeated RevengeTarget target = 3;
 }
 
+message PlunderBuyTimesRequest {
+    required bytes session = 1;
+}
+
+message PlunderBuyTimesResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 message PlunderStartRequest {
     required bytes session = 1;
     required string id = 2;
