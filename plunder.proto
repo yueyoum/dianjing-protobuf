@@ -87,6 +87,7 @@ message PlunderTimesNotify {
     required int32 max_times = 2;
     required int32 remained_times = 3;
     required int64 next_recover_at = 4; // 0 表示不恢复
+    required int32 buy_cost = 5;    // 购买花费
 }
 
 message PlunderRevengeNotify {
