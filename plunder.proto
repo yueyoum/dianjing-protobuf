@@ -184,15 +184,23 @@ message PlunderResultNotify {
 
 
 // 特殊装备打造
+
+enum SpecialEquipmentGenerateType {
+    SPECIAL_EQUIPMENT_GENERATE_NORMAL = 1;
+    SPECIAL_EQUIPMENT_GENERATE_ADVANCE = 2;
+}
+
 message SpecialEquipmentGenerateNotify {
     required bytes session = 1;
     required int32 id = 2;  // 制造书ID
     required int64 finish_timestamp = 3;    // 结束的UTC时间戳
+    required SpecialEquipmentGenerateType tp = 4;
 }
 
 message SpecialEquipmentGenerateRequest {
     required bytes session = 1;
     required string slot_id = 2;  // 包裹格子ID
+    required SpecialEquipmentGenerateType tp = 3;
 }
 
 message SpecialEquipmentGenerateResponse {
