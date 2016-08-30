@@ -36,7 +36,7 @@ message SpecialEquipment {
     }
     required int32 level = 1;
     required int32 growing = 2; // 成长率
-    repeated SpeicalProperty properties = 3;
+    repeated SpecialProperty properties = 3;
     repeated SpecialSkill skills = 4;
 }
 
