@@ -27,8 +27,8 @@ message Equipment {
     required int32 level = 2;
     optional int32 growing = 3; // 成长率
 
-    repeated EquipmentProperty properties = 3;
-    repeated EquipmentSkill skills = 4;
+    repeated EquipmentProperty properties = 4;
+    repeated EquipmentSkill skills = 5;
 }
 
 message Slot {
