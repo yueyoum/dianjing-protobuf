@@ -8,8 +8,8 @@ enum EquipmentType {
     EQUIP_KEYBOARD = 2;
     EQUIP_MONITOR = 3;
     EQUIP_DECORATION = 4;
+    EQUIP_SPECIAL = 5;
 }
-
 
 message Equipment {
     required int32 level = 1;
@@ -23,11 +23,29 @@ message Equipment {
     required float operation_percent = 9;
 }
 
+message SpecialEquipment {
+    message SpecialProperty {
+        required PropertyType tp = 1;
+        required int32 level = 2;   // 激活需要等级
+    }
+
+    message SpecialSkill {
+        required int32 id = 1;
+        required int32 level = 2;
+        
+    }
+    required int32 level = 1;
+    required int32 growing = 2; // 成长率
+    repeated SpeicalProperty properties = 3;
+    repeated SpecialSkill skills = 4;
+}
+
 message Slot {
     required string id = 1;
     required int32 item_id = 2;
     optional int32 amount = 3 [default = 1];
     optional Equipment equipment = 4;
+    optional SpecialEquipment special_equipment = 5;
 }
 
 message BagSlotsNotify {

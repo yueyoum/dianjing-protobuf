@@ -3,6 +3,7 @@ package Dianjing.protocol;
 import "package.proto";
 import "formation.proto";
 import "match.proto";
+import "bag.proto";
 
 message PlunderFormation {
     required int32 way = 1;
@@ -181,4 +182,40 @@ message PlunderResultNotify {
     repeated PlunderWayResult result = 3;
 }
 
+
+// 特殊装备打造
+message SpecialEquipmentGenerateNotify {
+    required bytes session = 1;
+    required int32 id = 2;  // 制造书ID
+    required int64 finish_timestamp = 3;    // 结束的UTC时间戳
+}
+
+message SpecialEquipmentGenerateRequest {
+    required bytes session = 1;
+    required int32 id = 2;  // 制造书ID
+}
+
+message SpecialEquipmentGenerateResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message SpecialEquipmentGenerateSpeedUpRequest {
+    required bytes session = 1;
+}
+
+message SpecialEquipmentGenerateSpeedUpResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message SpecialEquipmentGetRequest {
+    required bytes session = 1;
+}
+
+message SpecialEquipmentGetResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional SpecialEquipment special_equipment = 3;
+}
 

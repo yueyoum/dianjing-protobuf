@@ -387,6 +387,14 @@
 
         <protocol name = "PlunderBuyTimesRequest" type = "4733" command = "/game/plunder/buytimes/" />
         <protocol name = "PlunderBuyTimesResponse" type = "4734" reqtype = "4733" />
+
+        <protocol name = "SpecialEquipmentGenerateNotify" type = "4750" />
+        <protocol name = "SpecialEquipmentGenerateRequest" type = "4751" command = "/game/plunder/specialequip/generate/" />
+        <protocol name = "SpecialEquipmentGenerateResponse" type = "4752" reqtype = "4751" />
+        <protocol name = "SpecialEquipmentGenerateSpeedUpRequest" type = "4753" command = "/game/plunder/specialequip/speedup/" />
+        <protocol name = "SpecialEquipmentGenerateSpeedUpResponse" type = "4754" reqtype = "4753" />
+        <protocol name = "SpecialEquipmentGetRequest" type = "4755" command = "/game/plunder/specialequip/get/" />
+        <protocol name = "SpecialEquipmentGetResponse" type = "4756" reqtype = "4755" />
     </file>
 </namespace>
 
