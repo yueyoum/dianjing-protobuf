@@ -192,7 +192,7 @@ message SpecialEquipmentGenerateNotify {
 
 message SpecialEquipmentGenerateRequest {
     required bytes session = 1;
-    required int32 id = 2;  // 制造书ID
+    required string slot_id = 2;  // 包裹格子ID
 }
 
 message SpecialEquipmentGenerateResponse {
@@ -216,6 +216,6 @@ message SpecialEquipmentGetRequest {
 message SpecialEquipmentGetResponse {
     required int32 ret = 1;
     required bytes session = 2;
-    optional SpecialEquipment special_equipment = 3;
+    optional Equipment equipment = 3;
 }
 

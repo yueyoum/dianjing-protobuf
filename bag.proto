@@ -12,32 +12,23 @@ enum EquipmentType {
 }
 
 message Equipment {
-    required int32 level = 1;
-    required int32 attack = 2;
-    required float attack_percent = 3;
-    required int32 defense = 4;
-    required float defense_percent = 5;
-    required int32 manage = 6;
-    required float manage_percent = 7;
-    required int32 operation = 8;
-    required float operation_percent = 9;
-}
-
-message SpecialEquipment {
-    message SpecialProperty {
+    message EquipmentProperty {
         required PropertyType tp = 1;
-        required int32 level = 2;   // 激活需要等级
+        required float value = 2;
+        optional int32 level = 3;   // 激活需要等级 只有特殊装备才需要
     }
 
-    message SpecialSkill {
+    message EquipmentSkill {
         required int32 id = 1;
         required int32 level = 2;
-        
-    }
-    required int32 level = 1;
-    required int32 growing = 2; // 成长率
-    repeated SpecialProperty properties = 3;
-    repeated SpecialSkill skills = 4;
+    } 
+
+    required int32 id = 1;  // 原始ID
+    required int32 level = 2;
+    optional int32 growing = 3; // 成长率
+
+    repeated EquipmentProperty properties = 3;
+    repeated EquipmentSkill skills = 4;
 }
 
 message Slot {
@@ -45,7 +36,6 @@ message Slot {
     required int32 item_id = 2;
     optional int32 amount = 3 [default = 1];
     optional Equipment equipment = 4;
-    optional SpecialEquipment special_equipment = 5;
 }
 
 message BagSlotsNotify {
@@ -111,21 +101,10 @@ message BagEquipmentDestroyResponse {
 message BagEquipmentLevelupRequest {
     required bytes session = 1;
     required string slot_id = 2;
-}
-
-message BagEquipmentLevelupResponse {
-    required int32 ret = 1;
-    required bytes session = 2;
-    optional Equipment equipment = 3;
-}
-
-message BagEquipmentLevelupConfirmRequest {
-    required bytes session = 1;
-    required string slot_id = 2;
     required bool single = 3;
 }
 
-message BagEquipmentLevelupConfirmResponse {
+message BagEquipmentLevelupResponse {
     required int32 ret = 1;
     required bytes session = 2;
     optional Equipment equipment = 3;

@@ -142,8 +142,6 @@
         <protocol name = "BagEquipmentLevelupResponse" type = "3011" reqtype = "3010" />
         <protocol name = "BagEquipmentDestroyRequest" type = "3012" command = "/game/bagequipment/destroy/" />
         <protocol name = "BagEquipmentDestroyResponse" type = "3013" reqtype = "3012" />
-        <protocol name = "BagEquipmentLevelupConfirmRequest" type = "3014" command = "/game/bagequipment/levelup/confirm/" />
-        <protocol name = "BagEquipmentLevelupConfirmResponse" type = "3015" reqtype = "3014" />
     </file>
 
     <file name = "unit">
