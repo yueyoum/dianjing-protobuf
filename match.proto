@@ -65,4 +65,5 @@ message Troop
     required Hero hero = 1;
     required Army army = 2;
     required int32 policy = 3;
+    repeated int32 special_equipment_skills = 4;
 }
