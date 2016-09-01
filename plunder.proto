@@ -1,5 +1,6 @@
 package Dianjing.protocol;
 
+import "common.proto";
 import "package.proto";
 import "formation.proto";
 import "match.proto";
