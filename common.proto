@@ -76,11 +76,3 @@ enum SpecialEquipmentGenerateType {
     SPECIAL_EQUIPMENT_GENERATE_ADVANCE = 2;
 }
 
-enum EquipmentType {
-    EQUIP_MOUSE = 1;
-    EQUIP_KEYBOARD = 2;
-    EQUIP_MONITOR = 3;
-    EQUIP_DECORATION = 4;
-    EQUIP_SPECIAL = 5;
-}
-

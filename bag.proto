@@ -3,6 +3,14 @@ package Dianjing.protocol;
 import "common.proto";
 import "package.proto";
 
+enum EquipmentType {
+    EQUIP_MOUSE = 1;
+    EQUIP_KEYBOARD = 2;
+    EQUIP_MONITOR = 3;
+    EQUIP_DECORATION = 4;
+    EQUIP_SPECIAL = 5;
+}
+
 message Equipment {
     message EquipmentProperty {
         required PropertyType tp = 1;

@@ -1,9 +1,9 @@
 package Dianjing.protocol;
 
-import "common.proto";
 import "package.proto";
 import "formation.proto";
 import "match.proto";
+import "bag.proto";
 
 message PlunderFormation {
     required int32 way = 1;
