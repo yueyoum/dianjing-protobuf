@@ -70,3 +70,17 @@ enum PropertyType {
     PROPERTY_UNIT_FINAL_HURT_ADDITION = 23;
     PROPERTY_UNIT_FINAL_HURT_REDUCE = 24;
 }
+
+enum SpecialEquipmentGenerateType {
+    SPECIAL_EQUIPMENT_GENERATE_NORMAL = 1;
+    SPECIAL_EQUIPMENT_GENERATE_ADVANCE = 2;
+}
+
+enum EquipmentType {
+    EQUIP_MOUSE = 1;
+    EQUIP_KEYBOARD = 2;
+    EQUIP_MONITOR = 3;
+    EQUIP_DECORATION = 4;
+    EQUIP_SPECIAL = 5;
+}
+

@@ -1,9 +1,9 @@
 package Dianjing.protocol;
 
+import "common.proto";
 import "package.proto";
 import "formation.proto";
 import "match.proto";
-import "bag.proto";
 
 message PlunderFormation {
     required int32 way = 1;
@@ -185,10 +185,6 @@ message PlunderResultNotify {
 
 // 特殊装备打造
 
-enum SpecialEquipmentGenerateType {
-    SPECIAL_EQUIPMENT_GENERATE_NORMAL = 1;
-    SPECIAL_EQUIPMENT_GENERATE_ADVANCE = 2;
-}
 
 message SpecialEquipmentGenerateNotify {
     required bytes session = 1;
