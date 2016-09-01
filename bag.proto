@@ -29,7 +29,7 @@ message Equipment {
 
     repeated EquipmentProperty properties = 4;
     repeated EquipmentSkill skills = 5;
-    optional SpecialEquipmentGenerateType gen_tp = 6;
+    optional SpecialEquipmentGenerateType gen_tp = 6 [default = SPECIAL_EQUIPMENT_GENERATE_NORMAL];
 }
 
 message Slot {
