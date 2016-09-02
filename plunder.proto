@@ -171,6 +171,17 @@ message BaseStationSyncResponse {
     required bytes session = 2;
 }
 
+message BaseStationGetProductRequest {
+    required bytes session = 1;
+}
+
+message BaseStationGetProductResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+
 // 正在进行的掠夺
 enum PlunderWayResult {
     PLUNDER_WAY_NOT_START = 0;
