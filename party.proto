@@ -1,5 +1,7 @@
 package Dianjing.protocol;
 
+import "common.proto";
+
 enum PartyMessageType {
     PARTY_MESSAGE_TYPE_CHAT = 1;
     PARTY_MESSAGE_TYPE_BUY = 2;
@@ -7,10 +9,16 @@ enum PartyMessageType {
     PARTY_MESSAGE_TYPE_LEAVE = 4;
 }
 
-message PartyMessage {
-    required int32 id = 1;
-    required PartyMessageType tp = 2;
-    required string msg = 3;    // tp 是 buy, 这里就是 buy_id, item_id
+message PartyMessageNotify {
+    message PartyMessage {
+        required int32 id = 1;
+        required PartyMessageType tp = 2;
+        required string msg = 3;    // tp 是 buy, 这里就是 buy_id, item_id
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated PartyMessage messages = 3;
 }
 
 message PartyInfo {
@@ -30,7 +38,6 @@ message PartyInfo {
     required bool started = 2;
     required int64 end_at = 3;  // 没有start， end_at 为0
     repeated PartyMember members = 4;   // 第一个是房主
-    repeated PartyMessage messages = 5;
 }
 
 message PartyNotify {

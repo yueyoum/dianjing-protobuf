@@ -40,6 +40,17 @@ message PingResponse {
     required bytes session = 2;
 }
 
+// Socket连接， socket连上后发送的第一个消息
+message SocketConnectRequest {
+    required bytes session = 1;
+}
+
+message SocketConnectResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    required int64 next_try_at = 3; // 连接成功，这里为0， 否则服务器会主动断开连接
+}
+
 enum PropertyType {
     PROPERTY_STAFF_ATTACK = 1;
     PROPERTY_STAFF_DEFENSE = 2;
