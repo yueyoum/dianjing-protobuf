@@ -6,7 +6,7 @@
         <protocol name = "PingRequest" type = "13" command = "/game/ping/" />
         <protocol name = "PingResponse" type = "14" reqtype = "13" />
         <protocol name = "SocketConnectRequest" type = "50" command = "" />
-        <protocol name = "SocketConnectResponse" type = "51", reqtype = "50" />
+        <protocol name = "SocketConnectResponse" type = "51" reqtype = "50" />
     </file>
 
     <file name = "server">
