@@ -5,8 +5,8 @@
         <protocol name = "SyncResponse" type = "12" reqtype = "11" />
         <protocol name = "PingRequest" type = "13" command = "/game/ping/" />
         <protocol name = "PingResponse" type = "14" reqtype = "13" />
-        <protocol name = "SocketConnectRequest" type = "50" command = "" />
-        <protocol name = "SocketConnectResponse" type = "51" reqtype = "50" />
+        <protocol name = "SocketConnectRequest" type = "50" command = "" socket = "1" />
+        <protocol name = "SocketConnectResponse" type = "51" reqtype = "50" socket = "2" />
     </file>
 
     <file name = "server">
@@ -401,22 +401,22 @@
     </file>
 
     <file name = "party">
-        <protocol name = "PartyNotify" type = "4800" />
-        <protocol name = "PartyMessageNotify" type = "4801" />
-        <protocol name = "PartyRoomRequest" type = "4802" command = "" />
-        <protocol name = "PartyRoomResponse" type = "4803" reqtype = "4802" />
-        <protocol name = "PartyCreateRequest" type = "4804" command = "" />
-        <protocol name = "PartyCreateResponse" type = "4805" reqtype = "4803" />
-        <protocol name = "PartyJoinRequest" type = "4806" command = "" />
-        <protocol name = "PartyJoinResponse" type = "4807" reqtype = "4806" />
-        <protocol name = "PartyQuitRequest" type = "4808" command = "" />
-        <protocol name = "PartyQuitResponse" type = "4809" reqtype = "4808" />
-        <protocol name = "PartyKickRequest" type = "4810" command = "" />
-        <protocol name = "PartyKickResponse" type = "4811" reqtype = "4810" />
-        <protocol name = "PartyChatRequest" type = "4812" command = "" />
-        <protocol name = "PartyChatResponse" type = "4813" reqtype = "4812" />
-        <protocol name = "PartyBuyRequest" type = "4814" command = "" />
-        <protocol name = "PartyBuyResponse" type = "4815" reqtype = "4814" />
+        <protocol name = "PartyNotify" type = "4800" socket = "2" />
+        <protocol name = "PartyMessageNotify" type = "4801" socket = "2" />
+        <protocol name = "PartyRoomRequest" type = "4802" command = "" socket = "1" />
+        <protocol name = "PartyRoomResponse" type = "4803" reqtype = "4802" socket = "2" />
+        <protocol name = "PartyCreateRequest" type = "4804" command = "" socket = "1" />
+        <protocol name = "PartyCreateResponse" type = "4805" reqtype = "4803" socket = "2" />
+        <protocol name = "PartyJoinRequest" type = "4806" command = "" socket = "1" />
+        <protocol name = "PartyJoinResponse" type = "4807" reqtype = "4806" socket = "2" />
+        <protocol name = "PartyQuitRequest" type = "4808" command = "" socket = "1" />
+        <protocol name = "PartyQuitResponse" type = "4809" reqtype = "4808" socket = "2" />
+        <protocol name = "PartyKickRequest" type = "4810" command = "" socket = "1" />
+        <protocol name = "PartyKickResponse" type = "4811" reqtype = "4810" socket = "2" />
+        <protocol name = "PartyChatRequest" type = "4812" command = "" socket = "1" />
+        <protocol name = "PartyChatResponse" type = "4813" reqtype = "4812" socket = "2" />
+        <protocol name = "PartyBuyRequest" type = "4814" command = "" socket = "1" />
+        <protocol name = "PartyBuyResponse" type = "4815" reqtype = "4814" socket = "2" />
     </file>
 </namespace>
 
