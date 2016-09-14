@@ -28,16 +28,15 @@ message PartyInfo {
             required int32 remained_times = 2;
         }
 
-        required int32 id = 1;
+        required string id = 1;
         required int32 flag = 2;
         required string name = 3;
         repeated BuyInfo buy_info = 4;
     }
     
     required int32 level = 1;
-    required bool started = 2;
-    required int64 end_at = 3;  // 没有start， end_at 为0
-    repeated PartyMember members = 4;   // 第一个是房主
+    required int64 end_at = 2;  // 没有start， end_at 为0
+    repeated PartyMember members = 3;   // 第一个是房主
 }
 
 message PartyNotify {
@@ -58,7 +57,7 @@ message PartyRoomRequest {
 
 message PartyRoomResponse {
     message PartyRoom {
-        required int32 owner_id = 1;
+        required string owner_id = 1;
         required string owner_name = 2;
         required int32 level = 3;
         required int32 current_amount = 4;
@@ -83,7 +82,7 @@ message PartyCreateResponse {
 // 加入
 message PartyJoinRequest {
     required bytes session = 1;
-    required int32 owner_id = 2;
+    required string owner_id = 2;
 }
 
 message PartyJoinResponse {
@@ -104,7 +103,7 @@ message PartyQuitResponse {
 // 踢人
 message PartyKickRequest {
     required bytes session = 1;
-    required int32 id = 2;
+    required string id = 2;
 }
 
 message PartyKickResponse {
