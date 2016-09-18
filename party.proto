@@ -24,18 +24,19 @@ message PartyInfo {
     message PartyMember {
         message BuyInfo {
             required int32 buy_id = 1;
-            required int32 remained_times = 2;
+            required int32 buy_times = 2;   // 已经购买的次数
         }
 
         required string id = 1;
         required int32 flag = 2;
         required string name = 3;
-        repeated BuyInfo buy_info = 4;
+        required int32 seat_id = 4;     // 座位ID， 1, 2, 3
+        repeated BuyInfo buy_info = 5;  // 只发送购买过的商品
     }
     
     required int32 level = 1;
     required int64 end_at = 2;  // 没有start， end_at 为0
-    repeated PartyMember members = 3;   // 第一个是房主
+    repeated PartyMember members = 3;   // 座位ID为1的是房主
 }
 
 message PartyNotify {
