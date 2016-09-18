@@ -417,6 +417,10 @@
         <protocol name = "PartyChatResponse" type = "4813" reqtype = "4812" socket = "2" />
         <protocol name = "PartyBuyRequest" type = "4814" command = "" socket = "1" />
         <protocol name = "PartyBuyResponse" type = "4815" reqtype = "4814" socket = "2" />
+        <protocol name = "PartyStartRequest" type = "4816" command = "" socket = "1" />
+        <protocol name = "PartyStartResponse" type = "4817" reqtype = "4816" socket = "2" />
+        <protocol name = "PartyDismissRequest" type = "4818" command = "" socket = "1" />
+        <protocol name = "PartyDismissResponse" type = "4819" reqtype = "4818" socket = "2" />
     </file>
 </namespace>
 

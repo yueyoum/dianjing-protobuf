@@ -11,9 +11,8 @@ enum PartyMessageType {
 
 message PartyMessageNotify {
     message PartyMessage {
-        required int32 id = 1;
-        required PartyMessageType tp = 2;
-        required string msg = 3;    // tp 是 buy, 这里就是 buy_id, item_id
+        required PartyMessageType tp = 1;
+        repeated string args = 2;
     }
 
     required bytes session = 1;
@@ -129,6 +128,27 @@ message PartyBuyRequest {
 }
 
 message PartyBuyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+// 开始
+message PartyStartRequest {
+    required bytes session = 1;
+}
+
+message PartyStartResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 解散
+message PartyDismissRequest {
+    required bytes session = 1;
+}
+
+message PartyDismissResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
