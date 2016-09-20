@@ -5,6 +5,7 @@
         <protocol name = "SyncResponse" type = "12" reqtype = "11" />
         <protocol name = "PingRequest" type = "13" command = "/game/ping/" />
         <protocol name = "PingResponse" type = "14" reqtype = "13" />
+        <protocol name = "SocketServerNotify" type = "49" />
         <protocol name = "SocketConnectRequest" type = "50" command = "" socket = "1" />
         <protocol name = "SocketConnectResponse" type = "51" reqtype = "50" socket = "2" />
     </file>

@@ -40,6 +40,12 @@ message PingResponse {
     required bytes session = 2;
 }
 
+message SocketServerNotify {
+    required bytes session = 1;
+    required string ip = 2;
+    required int32 port = 3;
+}
+
 // Socket连接， socket连上后发送的第一个消息
 message SocketConnectRequest {
     required bytes session = 1;
