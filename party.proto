@@ -9,6 +9,12 @@ enum PartyMessageType {
     PARTY_MESSAGE_TYPE_LEAVE = 4;
 }
 
+message PartyOpenTimeNotify {
+    required bytes session = 1;
+    required int64 start_at = 2;
+    required int64 close_at = 3;
+}
+
 message PartyMessageNotify {
     message PartyMessage {
         required PartyMessageType tp = 1;
@@ -41,13 +47,11 @@ message PartyInfo {
 
 message PartyNotify {
     required bytes session = 1;
-    required int64 open_at = 2;
-    required int64 close_at = 3;
-    required int32 talent_id = 4;
-    required int64 talent_end_at = 5; 
-    required int32 remained_create_times = 6;
-    required int32 remained_join_times = 7;
-    optional PartyInfo info = 8;
+    required int32 talent_id = 2;
+    required int64 talent_end_at = 3; 
+    required int32 remained_create_times = 4;
+    required int32 remained_join_times = 5;
+    optional PartyInfo info = 6;
 }
 
 // 获取房间列表
