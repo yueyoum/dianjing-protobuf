@@ -422,6 +422,8 @@
         <protocol name = "PartyStartResponse" type = "4817" reqtype = "4816" socket = "2" />
         <protocol name = "PartyDismissRequest" type = "4818" command = "" socket = "1" />
         <protocol name = "PartyDismissResponse" type = "4819" reqtype = "4818" socket = "2" />
+
+        <protocol name = "PartyOpenTimeNotify" type = "4820" />
     </file>
 </namespace>
 
