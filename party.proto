@@ -51,7 +51,11 @@ message PartyInfo {
 
 message PartyInfoNotify {
     required bytes session = 1;
-    optional PartyInfo info = 2;
+    required int32 talent_id = 2;
+    required int64 talent_end_at = 3; 
+    required int32 remained_create_times = 4;
+    required int32 remained_join_times = 5;
+    optional PartyInfo info = 6;
 }
 
 // 获取房间列表
