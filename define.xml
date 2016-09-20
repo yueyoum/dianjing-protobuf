@@ -402,7 +402,7 @@
     </file>
 
     <file name = "party">
-        <protocol name = "PartyNotify" type = "4800" socket = "2" />
+        <protocol name = "PartyInfoNotify" type = "4800" socket = "2" />
         <protocol name = "PartyMessageNotify" type = "4801" socket = "2" />
         <protocol name = "PartyRoomRequest" type = "4802" command = "" socket = "1" />
         <protocol name = "PartyRoomResponse" type = "4803" reqtype = "4802" socket = "2" />
@@ -423,7 +423,7 @@
         <protocol name = "PartyDismissRequest" type = "4818" command = "" socket = "1" />
         <protocol name = "PartyDismissResponse" type = "4819" reqtype = "4818" socket = "2" />
 
-        <protocol name = "PartyOpenTimeNotify" type = "4820" />
+        <protocol name = "PartyNotify" type = "4820" />
     </file>
 </namespace>
 

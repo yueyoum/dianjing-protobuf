@@ -9,9 +9,14 @@ enum PartyMessageType {
     PARTY_MESSAGE_TYPE_LEAVE = 4;
 }
 
-message PartyOpenTimeNotify {
+message PartyNotify {
     required bytes session = 1;
     repeated TimeRange time_range = 2;
+
+    required int32 talent_id = 3;
+    required int64 talent_end_at = 4; 
+    required int32 remained_create_times = 5;
+    required int32 remained_join_times = 6;
 }
 
 message PartyMessageNotify {
@@ -44,13 +49,9 @@ message PartyInfo {
     repeated PartyMember members = 3;   // 座位ID为1的是房主
 }
 
-message PartyNotify {
+message PartyInfoNotify {
     required bytes session = 1;
-    required int32 talent_id = 2;
-    required int64 talent_end_at = 3; 
-    required int32 remained_create_times = 4;
-    required int32 remained_join_times = 5;
-    optional PartyInfo info = 6;
+    optional PartyInfo info = 2;
 }
 
 // 获取房间列表
