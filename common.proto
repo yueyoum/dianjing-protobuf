@@ -15,6 +15,11 @@ message UTCNotify {
     required int64 timestamp = 2;     // utc timestamp
 }
 
+message TimeRange {
+    required int64 start_at = 1;
+    required int64 close_at = 2;
+}
+
 
 // 全部同步 相当与登录
 message SyncRequest {
