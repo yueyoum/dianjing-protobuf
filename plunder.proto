@@ -49,6 +49,7 @@ message PlunderSearchNotify {
         required int32 station_level = 2;
         repeated ClubTroop troop = 3;
         required bool spied = 4;
+        optional bool is_npc = 5 [default = false];
     }
 
     required bytes session = 1;
