@@ -399,6 +399,10 @@
         <protocol name = "SpecialEquipmentGenerateSpeedUpResponse" type = "4754" reqtype = "4753" />
         <protocol name = "SpecialEquipmentGetRequest" type = "4755" command = "/game/plunder/specialequip/get/" />
         <protocol name = "SpecialEquipmentGetResponse" type = "4756" reqtype = "4755" />
+
+        <protocol name = "PlunderDailyRewardNotify" type = "4757" />
+        <protocol name = "PlunderDailyRewardGetRequest" type = "4758" command = "/game/plunder/dailyreward/get/" />
+        <protocol name = "PlunderDailyRewardGetResponse" type = "4759" reqtype = "4758" />
     </file>
 
     <file name = "party">

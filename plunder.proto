@@ -150,6 +150,34 @@ message PlunderGetRewardResponse {
     optional Drop drop = 4;
 }
 
+// 每日领奖
+message PlunderDailyRewardNotify {
+    message Reward {
+        enum Status 
+        {
+            CAN_NOT = 0;
+            CAN_GET = 1;
+            ALREADY_GOT = 2;
+        }
+
+        required int32 id = 1;
+        required Status status = 2;
+    }
+
+    required bytes session = 1;
+    required int32 win_ways = 2;
+    repeated Reward reward = 3;
+}
+
+message PlunderDailyRewardGetRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message PlunderDailyRewardGetResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 
 
 // 基地
