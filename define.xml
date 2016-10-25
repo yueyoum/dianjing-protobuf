@@ -51,6 +51,9 @@
         <protocol name = "StaffStarUpResponse" type = "537" reqtype = "536" />
         <protocol name = "StaffDestroyRequest" type = "538" command = "/game/staff/destroy/" />
         <protocol name = "StaffDestroyResponse" type = "539" reqtype = "538" />
+
+        <protocol name = "StaffBatchDestroyRequest" type = "540" command = "/game/staff/batchdestroy/" />
+        <protocol name = "StaffBatchDestroyResponse" type = "541" reqtype = "540" />
     </file>
 
     <file name = "challenge">
@@ -145,6 +148,8 @@
         <protocol name = "BagEquipmentLevelupResponse" type = "3011" reqtype = "3010" />
         <protocol name = "BagEquipmentDestroyRequest" type = "3012" command = "/game/bagequipment/destroy/" />
         <protocol name = "BagEquipmentDestroyResponse" type = "3013" reqtype = "3012" />
+        <protocol name = "BagEquipmentBatchDestroyRequest" type = "3014" command = "/game/bagequipment/batchdestroy/" />
+        <protocol name = "BagEquipmentBatchDestroyResponse" type = "3015" reqtype = "3014" />
     </file>
 
     <file name = "unit">

@@ -101,6 +101,17 @@ message BagEquipmentDestroyResponse {
     optional Drop drop = 3;
 }
 
+message BagEquipmentBatchDestroyRequest {
+    required bytes session = 1;
+    repeated string slot_ids = 2;
+}
+
+message BagEquipmentBatchDestroyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
 message BagEquipmentLevelupRequest {
     required bytes session = 1;
     required string slot_id = 2;
