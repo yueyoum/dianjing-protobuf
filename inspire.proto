@@ -1,0 +1,34 @@
+package Dianjing.protocol;
+
+import "common.proto";
+
+enum InspireSlotStatus {
+    INSPIRE_SLOT_LOCK = 0;
+    INSPIRE_SLOT_EMPTY = 1;
+    INSPIRE_SLOT_USING = 2;
+}
+
+message InspireNotify {
+    message InspireSlot {
+        required int32 id = 1;
+        required InspireSlotStatus status = 2;
+        optional string staff_id = 3;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated InspireSlot slots = 3;
+}
+
+message InspireSetStaffRequest {
+    required bytes session = 1;
+    required int32 slot_id = 2;
+    required string staff_id = 3;
+}
+
+message InspireSetStaffResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+

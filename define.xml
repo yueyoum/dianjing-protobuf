@@ -434,5 +434,11 @@
 
         <protocol name = "PartyNotify" type = "4820" />
     </file>
+
+    <file name = "inspire">
+        <protocol name = "InspireNotify" type = "4900" />
+        <protocol name = "InspireSetStaffRequest" type = "4901" command = "/game/inspire/setstaff/" />
+        <protocol name = "InspireSetStaffResponse" type = "4902" reqtype = "4901" />
+    </file>
 </namespace>
 
