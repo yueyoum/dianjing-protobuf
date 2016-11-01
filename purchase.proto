@@ -1,5 +1,6 @@
 package Dianjing.protocol;
 
+import "common.proto";
 import "package.proto";
 
 message PurchaseNotify {
@@ -13,9 +14,10 @@ message PurchaseNotify {
 
 message PurchaseVerifyRequest {
     required bytes session = 1;
+    required GamePlatform platform = 2;
     // 如果是 1sdk， param 为空
     // 如果是 ios, param 是苹果返回的 receipt
-    required string param = 2;
+    required string param = 3;
 }
 
 enum PurchaseStatus {

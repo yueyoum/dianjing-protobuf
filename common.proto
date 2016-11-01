@@ -1,5 +1,10 @@
 package Dianjing.protocol;
 
+enum GamePlatform {
+    PLATFORM_1SDK = 1;
+    PLATFORM_IOS = 2;
+}
+
 enum NextOperate {
     OPT_OK = 1;             // 无
     OPT_CREATE_CLUB = 2;    // 建立俱乐部
