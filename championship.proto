@@ -1,4 +1,4 @@
-package Dianjing.championship;
+package Dianjing.protocol;
 
 import "formation.proto";
 
