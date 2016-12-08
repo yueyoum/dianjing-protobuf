@@ -440,5 +440,22 @@
         <protocol name = "InspireSetStaffRequest" type = "4901" command = "/game/inspire/setstaff/" />
         <protocol name = "InspireSetStaffResponse" type = "4902" reqtype = "4901" />
     </file>
+
+    <file name = "championship">
+        <protocol name = "ChampionFormationNotify" type = "5000" />
+        <protocol name = "ChampionFormationSetStaffRequest" type = "5001" command = "/game/champion/formation/setstaff/" />
+        <protocol name = "ChampionFormationSetStaffResponse" type = "5002" reqtype = "5001" />
+        <protocol name = "ChampionFormationSetUnitRequest" type = "5003" command = "/game/champion/formation/setunit/" />
+        <protocol name = "ChampionFormationSetUnitResponse" type = "5004" reqtype = "5003" />
+        <protocol name = "ChampionFormationSetPositionRequest" type = "5005" command = "/game/champion/formation/setposition/" />
+        <protocol name = "ChampionFormationSetPositionResponse" type = "5006" reqtype = "5005" />
+        <protocol name = "ChampionHistoryNotify" type = "5007" />
+        <protocol name = "ChampionGroupNotify" type = "5008" />
+        <protocol name = "ChampionLevelNotify" type = "5009" />
+        <protocol name = "ChampionApplyRequest" type = "5010" command = "/game/champion/apply/" />
+        <protocol name = "ChampionApplyResponse" type = "5011" reqtype = "5010" />
+        <protocol name = "ChampionBetRequest" type = "5012" command = "/game/champion/bet/" />
+        <protocol name = "ChampionBetResponse" type = "5013" reqtype = "5012" />
+    </file>
 </namespace>
 

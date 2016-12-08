@@ -1,0 +1,124 @@
+package Dianjing.championship;
+
+import "formation.proto";
+
+// 阵型
+message ChampionFormation {
+    required int32 way = 1;
+    repeated FormationSlot formation = 2;
+    required int32 power = 3;
+}
+
+message ChampionFormationNotify {
+    required bytes session = 1;
+    repeated ChampionFormation formation = 2;
+}
+
+message ChampionFormationSetStaffRequest {
+    required bytes session = 1;
+    required int32 way = 2;
+    required int32 slot_id = 3;
+    required string staff_id = 4;
+}
+
+message ChampionFormationSetStaffResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message ChampionFormationSetUnitRequest {
+    required bytes session = 1;
+    required int32 way = 2;
+    required int32 slot_id = 3;
+    required int32 unit_id = 4;
+}
+
+message ChampionFormationSetUnitResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message ChampionFormationSetPositionRequest {
+    required bytes session  =1;
+    repeated SyncFormationSlot slots = 3;
+}
+
+message ChampionFormationSetPositionResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+message Club {
+    required string id = 1;
+    required string name = 2;
+    required int32 flag = 3;
+    optional int32 rank = 4;    // 小组赛中排名
+    optional int32 score = 5;   // 小组赛中分数
+}
+
+// 历史前三
+message ChampionHistoryNotify {
+    required bytes session = 1;
+    repeated Club club = 2;
+}
+
+// 小组赛
+message ChampionGroupNotify {
+    message Log {
+        required int32 hour = 1;
+        required string target_name = 2;
+        required int32 got_score = 3;
+        repeated int32 way_wins = 4;    // 1 表示胜利，0表示失败
+    }
+
+    required bytes session = 1;
+    repeated Club clubs = 2;
+    repeated Log logs = 3;
+    
+    optional Club next_target = 4;  // 不填充表示打完了
+    optional int64 next_match_at = 5;   // 下次战斗时间戳
+}
+
+
+enum ChampionLevel {
+    CHAMPION_LEVEL_16 = 0;  // 16强
+    CHAMPION_LEVEL_8 = 1;   // 8强
+    CHAMPION_LEVEL_4 = 2;   // 4强
+    CHAMPION_LEVEL_2 = 3;   // 冠亚军
+    CHAMPION_LEVEL_1 = 4;   // 冠军
+}
+
+message ChampionLevelNotify {
+    required bytes session = 1;
+    required ChampionLevel this_level = 2;      // 这个notify的level
+    required ChampionLevel current_level = 3;   // 当前level
+    repeated Club clubs = 4;
+    optional string bet_for = 5;    // 下注的club id
+    optional int64 next_match_at = 6;
+}
+
+
+// 报名
+message ChampionApplyRequest {
+    required bytes session = 1;
+}
+
+message ChampionApplyResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
+// 下注
+message ChampionBetRequest {
+    required bytes session = 1;
+    required string club_id = 2;
+    required int32 bet_id = 3;
+}
+
+message ChampionBetResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
