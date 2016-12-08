@@ -49,7 +49,7 @@ message ChampionFormationSetPositionResponse {
 }
 
 
-message Club {
+message ChampionClub {
     required string id = 1;
     required string name = 2;
     required int32 flag = 3;
@@ -60,7 +60,7 @@ message Club {
 // 历史前三
 message ChampionHistoryNotify {
     required bytes session = 1;
-    repeated Club club = 2;
+    repeated ChampionClub club = 2;
 }
 
 // 小组赛
@@ -73,10 +73,10 @@ message ChampionGroupNotify {
     }
 
     required bytes session = 1;
-    repeated Club clubs = 2;
+    repeated ChampionClub clubs = 2;
     repeated Log logs = 3;
     
-    optional Club next_target = 4;  // 不填充表示打完了
+    optional ChampionClub next_target = 4;  // 不填充表示打完了
     optional int64 next_match_at = 5;   // 下次战斗时间戳
 }
 
@@ -93,7 +93,7 @@ message ChampionLevelNotify {
     required bytes session = 1;
     required ChampionLevel this_level = 2;      // 这个notify的level
     required ChampionLevel current_level = 3;   // 当前level
-    repeated Club clubs = 4;
+    repeated ChampionClub clubs = 4;
     optional string bet_for = 5;    // 下注的club id
     optional int64 next_match_at = 6;
 }
