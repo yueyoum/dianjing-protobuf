@@ -57,6 +57,12 @@ message ChampionClub {
     optional int32 score = 5;   // 小组赛中分数
 }
 
+// 基本信息
+message ChampionNotify {
+    required bytes session = 1;
+    required bool applied = 2;
+}
+
 // 历史前三
 message ChampionHistoryNotify {
     required bytes session = 1;
@@ -82,11 +88,11 @@ message ChampionGroupNotify {
 
 
 enum ChampionLevel {
-    CHAMPION_LEVEL_16 = 0;  // 16强
-    CHAMPION_LEVEL_8 = 1;   // 8强
-    CHAMPION_LEVEL_4 = 2;   // 4强
-    CHAMPION_LEVEL_2 = 3;   // 冠亚军
-    CHAMPION_LEVEL_1 = 4;   // 冠军
+    CHAMPION_LEVEL_16 = 16;  // 16强
+    CHAMPION_LEVEL_8 = 8;   // 8强
+    CHAMPION_LEVEL_4 = 4;   // 4强
+    CHAMPION_LEVEL_2 = 2;   // 冠亚军
+    CHAMPION_LEVEL_1 = 1;   // 冠军
 }
 
 message ChampionLevelNotify {

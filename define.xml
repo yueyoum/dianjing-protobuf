@@ -456,6 +456,7 @@
         <protocol name = "ChampionApplyResponse" type = "5011" reqtype = "5010" />
         <protocol name = "ChampionBetRequest" type = "5012" command = "/game/champion/bet/" />
         <protocol name = "ChampionBetResponse" type = "5013" reqtype = "5012" />
+        <protocol name = "ChampionNotify" type = "5014" />
     </file>
 </namespace>
 
