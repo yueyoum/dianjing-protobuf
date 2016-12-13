@@ -1,17 +1,12 @@
 package Dianjing.protocol;
 
-import "formation.proto";
+import "common.proto";
+import "plunder.proto";
 
 // 阵型
-message ChampionFormation {
-    required int32 way = 1;
-    repeated FormationSlot formation = 2;
-    required int32 power = 3;
-}
-
 message ChampionFormationNotify {
     required bytes session = 1;
-    repeated ChampionFormation formation = 2;
+    repeated PlunderFormation formation = 2;
 }
 
 message ChampionFormationSetStaffRequest {
@@ -40,6 +35,7 @@ message ChampionFormationSetUnitResponse {
 
 message ChampionFormationSetPositionRequest {
     required bytes session  =1;
+    required int32 way = 2;
     repeated SyncFormationSlot slots = 3;
 }
 
@@ -57,10 +53,25 @@ message ChampionClub {
     optional int32 score = 5;   // 小组赛中分数
 }
 
+enum ChampionLevel {
+    CHAMPION_LEVEL_16 = 16; // 16强
+    CHAMPION_LEVEL_8 = 8;   // 8强
+    CHAMPION_LEVEL_4 = 4;   // 4强
+    CHAMPION_LEVEL_2 = 2;   // 冠亚军
+    CHAMPION_LEVEL_1 = 1;   // 冠军
+}
+
 // 基本信息
 message ChampionNotify {
+    message Bet {
+        required ChampionLevel level = 1;
+        optional string bet_for = 2;
+        optional int32 bet_id = 3;
+    }
+
     required bytes session = 1;
     required bool applied = 2;
+    repeated Bet bet = 3;
 }
 
 // 历史前三
@@ -73,7 +84,7 @@ message ChampionHistoryNotify {
 message ChampionGroupNotify {
     message Log {
         required int32 hour = 1;
-        required string target_name = 2;
+        required string target_id = 2;
         required int32 got_score = 3;
         repeated int32 way_wins = 4;    // 1 表示胜利，0表示失败
     }
@@ -87,23 +98,18 @@ message ChampionGroupNotify {
 }
 
 
-enum ChampionLevel {
-    CHAMPION_LEVEL_16 = 16;  // 16强
-    CHAMPION_LEVEL_8 = 8;   // 8强
-    CHAMPION_LEVEL_4 = 4;   // 4强
-    CHAMPION_LEVEL_2 = 2;   // 冠亚军
-    CHAMPION_LEVEL_1 = 1;   // 冠军
-}
 
 message ChampionLevelNotify {
-    required bytes session = 1;
-    required ChampionLevel this_level = 2;      // 这个notify的level
-    required ChampionLevel current_level = 3;   // 当前level
-    repeated ChampionClub clubs = 4;
-    optional string bet_for = 5;    // 下注的club id
-    optional int64 next_match_at = 6;
-}
+    message Level {
+        required ChampionLevel level = 1;
+        repeated ChampionClub clubs = 2;
+        optional int64 next_match_at = 3;
+    }
 
+    required bytes session = 1;
+    required Action act = 2;
+    repeated Level levels = 3;
+}
 
 // 报名
 message ChampionApplyRequest {
