@@ -2,6 +2,7 @@ package Dianjing.protocol;
 
 import "common.proto";
 import "plunder.proto";
+import "formation.proto";
 
 // 阵型
 message ChampionFormationNotify {
