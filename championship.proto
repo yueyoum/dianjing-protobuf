@@ -92,8 +92,8 @@ message ChampionGroupNotify {
     required int32 my_rank = 4;
     repeated Log logs = 5;
     
-    optional ChampionClub next_target = 4;  // 不填充表示打完了
-    optional int64 next_match_at = 5;   // 下次战斗时间戳
+    optional ChampionClub next_target = 6;  // 不填充表示打完了
+    optional int64 next_match_at = 7;   // 下次战斗时间戳
 }
 
 
