@@ -97,12 +97,6 @@ message ChampionGroupNotify {
 }
 
 
-// 16强俱乐部
-message ChampionLevel16ClubsNotify {
-    required bytes session = 1;
-    repeated ChampionClub clubs = 2;
-}
-
 message ChampionLevelNotify {
     message Level {
         required ChampionLevel level = 1;
@@ -112,7 +106,9 @@ message ChampionLevelNotify {
 
     required bytes session = 1;
     required Action act = 2;
-    repeated Level levels = 3;
+    // 16强俱乐部，update的时候 不发
+    repeated ChampionClub clubs = 3;
+    repeated Level levels = 4;
 }
 
 // 报名
