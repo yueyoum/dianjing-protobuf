@@ -449,7 +449,6 @@
         <protocol name = "ChampionFormationSetUnitResponse" type = "5004" reqtype = "5003" />
         <protocol name = "ChampionFormationSetPositionRequest" type = "5005" command = "/game/champion/formation/setposition/" />
         <protocol name = "ChampionFormationSetPositionResponse" type = "5006" reqtype = "5005" />
-        <protocol name = "ChampionHistoryNotify" type = "5007" />
         <protocol name = "ChampionGroupNotify" type = "5008" />
         <protocol name = "ChampionLevelNotify" type = "5009" />
         <protocol name = "ChampionApplyRequest" type = "5010" command = "/game/champion/apply/" />
@@ -457,6 +456,7 @@
         <protocol name = "ChampionBetRequest" type = "5012" command = "/game/champion/bet/" />
         <protocol name = "ChampionBetResponse" type = "5013" reqtype = "5012" />
         <protocol name = "ChampionNotify" type = "5014" />
+        <protocol name = "ChampionLevel16ClubsNotify" type = "5015" />
     </file>
 </namespace>
 

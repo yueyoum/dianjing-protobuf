@@ -73,37 +73,40 @@ message ChampionNotify {
     required bytes session = 1;
     required bool applied = 2;
     repeated Bet bet = 3;
-}
-
-// 历史前三
-message ChampionHistoryNotify {
-    required bytes session = 1;
-    repeated ChampionClub club = 2;
+    // 历史前三
+    repeated ChampionClub top_clubs = 4;
 }
 
 // 小组赛
 message ChampionGroupNotify {
     message Log {
-        required int32 hour = 1;
-        required string target_id = 2;
+        required int64 timestamp = 1;
+        required string target_name = 2;
         required int32 got_score = 3;
         repeated int32 way_wins = 4;    // 1 表示胜利，0表示失败
     }
 
     required bytes session = 1;
     repeated ChampionClub clubs = 2;
-    repeated Log logs = 3;
+    required int32 my_score = 3;
+    required int32 my_rank = 4;
+    repeated Log logs = 5;
     
     optional ChampionClub next_target = 4;  // 不填充表示打完了
     optional int64 next_match_at = 5;   // 下次战斗时间戳
 }
 
 
+// 16强俱乐部
+message ChampionLevel16ClubsNotify {
+    required bytes session = 1;
+    repeated ChampionClub clubs = 2;
+}
 
 message ChampionLevelNotify {
     message Level {
         required ChampionLevel level = 1;
-        repeated ChampionClub clubs = 2;
+        repeated string club_ids = 2;
         optional int64 next_match_at = 3;
     }
 
