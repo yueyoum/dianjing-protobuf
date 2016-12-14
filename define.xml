@@ -456,6 +456,10 @@
         <protocol name = "ChampionBetRequest" type = "5012" command = "/game/champion/bet/" />
         <protocol name = "ChampionBetResponse" type = "5013" reqtype = "5012" />
         <protocol name = "ChampionNotify" type = "5014" />
+        <protocol name = "ChampionGroupSyncRequest" type = "5015" command = "/game/champion/group/sync/" />
+        <protocol name = "ChampionGroupSyncResponse" type = "5016" reqtype = "5015" />
+        <protocol name = "ChampionLevelSyncRequest" type = "5017" command = "/game/champion/level/sync/" />
+        <protocol name = "ChampionLevelSyncResponse" type = "5018" reqtype = "5017" />
     </file>
 </namespace>
 

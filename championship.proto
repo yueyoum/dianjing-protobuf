@@ -111,6 +111,25 @@ message ChampionLevelNotify {
     repeated Level levels = 4;
 }
 
+// 同步
+message ChampionGroupSyncRequest {
+    required bytes session = 1;
+}
+
+message ChampionGroupSyncResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message ChampionLevelSyncRequest {
+    required bytes session = 1;
+}
+
+message ChampionLevelSyncResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 // 报名
 message ChampionApplyRequest {
     required bytes session = 1;
