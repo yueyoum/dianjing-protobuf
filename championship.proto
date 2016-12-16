@@ -101,7 +101,7 @@ message ChampionLevelNotify {
     message Level {
         required ChampionLevel level = 1;
         repeated string club_ids = 2;
-        optional int64 next_match_at = 3;
+        optional int64 match_at = 3;
     }
 
     required bytes session = 1;
