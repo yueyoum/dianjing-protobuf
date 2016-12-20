@@ -1,6 +1,7 @@
 package Dianjing.protocol;
 
 import "common.proto";
+import "package.proto";
 
 message Unit {
     required int32 id = 1;
