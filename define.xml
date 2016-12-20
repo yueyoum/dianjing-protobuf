@@ -158,6 +158,8 @@
         <protocol name = "UnitLevelUpResponse" type = "3102" reqtype = "3101" />
         <protocol name = "UnitStepUpRequest" type = "3103" command = "/game/unit/stepup/" />
         <protocol name = "UnitStepUpResponse" type = "3104" reqtype = "3103" />
+        <protocol name = "UnitDestroyRequest" type = "3105" command = "/game/unit/destroy/" />
+        <protocol name = "UnitDestroyResponse" type = "3106" reqtype = "3105" />
     </file>
 
     <file name = "formation">
