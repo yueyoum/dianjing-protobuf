@@ -201,6 +201,7 @@ message UnionExploreNotify {
     required int32 explore_cd = 4; // 秒
     required int32 harass_staff = 5;
     required int32 harass_remained_times = 6;
+    required int32 harass_buy_times = 7;    // 已经购买的次数
 }
 
 message UnionExploreRequest {
