@@ -1,5 +1,6 @@
 package Dianjing.protocol;
 
+import "common.proto";
 import "package.proto";
 
 message UnionMember {
@@ -159,3 +160,104 @@ message UnionSigninResponse {
     required bytes session = 2;
     optional Drop drop = 3;
 }
+
+
+// 探索/骚扰
+message ExploreClub {
+    required int32 rank = 1;
+    required string id = 2;
+    required string name = 3;
+    required int32 explore_point = 4;
+}
+
+message ExploreUnion {
+    required int32 rank = 1;
+    required string id = 2;
+    required string name = 3;
+    required int32 explore_point = 4;
+}
+
+// 排行榜
+message UnionExploreLeaderboardRequest {
+    required bytes session = 1;
+}
+
+message UnionExploreLeaderboardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+
+    repeated ExploreClub club = 3;
+    repeated ExploreUnion union = 4;
+
+    required ExploreClub my_club = 5;
+    required ExploreUnion my_union = 6;
+}
+
+
+message UnionExploreNotify {
+    required bytes session = 1;
+    required int32 explore_staff = 2;
+    required int32 explore_remained_times = 3;
+    required int32 explore_cd = 4; // 秒
+    required int32 harass_staff = 5;
+    required int32 harass_remained_times = 6;
+}
+
+message UnionExploreRequest {
+    required bytes session = 1;
+    required string staff_id = 2;
+}
+
+message UnionExploreResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional int32 explore_point = 3; // 自己增加
+    optional Drop drop = 4;
+}
+
+message UnionHarassQueryRequest {
+    required bytes session = 1;
+}
+
+message UnionHarassQueryResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    repeated ExploreUnion union = 3;
+    required ExploreUnion my_union = 4;
+}
+
+message UnionHarassRequest {
+    required bytes session = 1;
+    required string union_id = 2;
+    required string staff_id = 3;
+}
+
+message UnionHarassResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional int32 explore_point = 3; // 对方减少
+    optional Drop drop = 4;
+}
+
+// 公会技能
+message UnionSkillNotify {
+    message UnionSkill {
+        required int32 id = 1;
+        required int32 level = 2;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated UnionSkill skill = 3;
+}
+
+message UnionSkillLevelupRequest {
+    required bytes session = 1;
+    required int32 skill_id = 2;
+}
+
+message UnionSkillLevelupResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+

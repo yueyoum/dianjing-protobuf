@@ -347,6 +347,21 @@
 
         <protocol name = "UnionSigninRequest" type = "4421" command = "/game/union/signin/" />
         <protocol name = "UnionSigninResponse" type = "4422" reqtype = "4421" />
+
+        <protocol name = "UnionExploreLeaderboardRequest" type = "4423" command = "/game/union/explore/leaderboard/" />
+        <protocol name = "UnionExploreLeaderboardResponse" type = "4424" reqtype = "4423" />
+
+        <protocol name = "UnionExploreNotify" type = "4425" />
+        <protocol name = "UnionExploreRequest" type = "4426" command = "/game/union/explore/" />
+        <protocol name = "UnionExploreResponse" type = "4427" reqtype = "4426" />
+        <protocol name = "UnionHarassQueryRequest" type = "4428" command = "/game/union/harass/query/" />
+        <protocol name = "UnionHarassQueryResponse" type = "4429" reqtype = "4428" />
+        <protocol name = "UnionHarassRequest" type = "4430" command = "/game/union/harass/" />
+        <protocol name = "UnionHarassResponse" type = "4431" reqtype = "4430" />
+
+        <protocol name = "UnionSkillNotify" type = "4432" />
+        <protocol name = "UnionSkillLevelupRequest" type = "4433" command = "/game/union/skill/levelup/" />
+        <protocol name = "UnionSkillLevelupResponse" type = "4434" reqtype = "4433" />
     </file>
 
     <file name = "purchase">
