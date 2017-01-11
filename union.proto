@@ -240,6 +240,15 @@ message UnionHarassResponse {
     optional Drop drop = 4;
 }
 
+message UnionHarassBuyTimesRequest {
+    required bytes session = 1;
+}
+
+message UnionHarassBuyTimesResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 // 公会技能
 message UnionSkillNotify {
     message UnionSkill {

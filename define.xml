@@ -362,6 +362,9 @@
         <protocol name = "UnionSkillNotify" type = "4432" />
         <protocol name = "UnionSkillLevelupRequest" type = "4433" command = "/game/union/skill/levelup/" />
         <protocol name = "UnionSkillLevelupResponse" type = "4434" reqtype = "4433" />
+
+        <protocol name = "UnionHarassBuyTimesRequest" type = "4435" command = "/game/union/harass/buytimes/" />
+        <protocol name = "UnionHarassBuyTimesResponse" type = "4436" reqtype = "4435" />
     </file>
 
     <file name = "purchase">
