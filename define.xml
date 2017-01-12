@@ -23,6 +23,11 @@
         <protocol name = "LoginRequest" type = "202" command = "/game/account/login/" />
         <protocol name = "LoginResponse" type = "203" reqtype = "202" />
     </file>
+
+    <file name = "match">
+        <protocol name = "ClubMatchLogRequest" type = "300" command = "/game/match/log/" />
+        <protocol name = "ClubMatchLogResponse" type = "301" reqtype = "300" />
+    </file>
     
     <file name = "club">
         <protocol name = "ClubNotify" type = "400" />

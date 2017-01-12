@@ -10,6 +10,12 @@ message ClubMatch {
     required string key = 4;
 }
 
+message ClubMatchResult {
+    required string key = 1;
+    required int32 star = 2;
+    required bytes record = 3;
+}
+
 message ClubTroop {
     required Club club = 1;
     repeated Troop troop = 2;
@@ -67,3 +73,30 @@ message Troop
     required int32 policy = 3;
     repeated int32 special_equipment_skills = 4;
 }
+
+
+// 投递到战斗服务器的消息
+message ClubMatchServerSideRequest {
+    required ClubMatch match = 1;
+    optional bytes record = 2; // 有，仅仅是验证
+}
+
+// 战斗服务器返回
+message ClubMatchServerSideResponse {
+    required int32 star = 1;    // club_one 的star 数量
+    required bytes record = 2;
+}
+
+message ClubMatchLogRequest {
+    required bytes session = 1;
+    required string log_id = 2;
+}
+
+message ClubMatchLogResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+
+    required ClubMatch match = 3;
+    required bytes record = 4;
+}
+
