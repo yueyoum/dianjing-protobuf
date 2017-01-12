@@ -202,6 +202,7 @@ message UnionExploreNotify {
     required int32 harass_staff = 5;
     required int32 harass_remained_times = 6;
     required int32 harass_buy_times = 7;    // 已经购买的次数
+    required int32 harass_buy_cost = 8;     // 购买花费钻石
 }
 
 message UnionExploreRequest {
