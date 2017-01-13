@@ -8,6 +8,7 @@ message ClubMatch {
     optional ClubTroop club_two = 2;
     required int32 seed = 3;    // 随机种子
     required string key = 4;
+    required string map_name = 5;
 }
 
 message ClubMatchResult {
