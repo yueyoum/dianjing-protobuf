@@ -73,7 +73,7 @@ message ChampionNotify {
     required bytes session = 1;
     required bool applied = 2;
     repeated Bet bet = 3;
-    // 历史前三
+    // 历史前四
     repeated ChampionClub top_clubs = 4;
 }
 
@@ -84,6 +84,7 @@ message ChampionGroupNotify {
         required string target_name = 2;
         required int32 got_score = 3;
         repeated int32 way_wins = 4;    // 1 表示胜利，0表示失败
+        repeated string match_record_ids = 5;   // 战斗录像id列表
     }
 
     required bytes session = 1;
@@ -99,8 +100,13 @@ message ChampionGroupNotify {
 
 message ChampionLevelNotify {
     message Level {
+        message _Club {
+            required string id = 1;
+            repeated int32 way_wins = 2;    // 1 表示胜利，0表示失败
+            repeated string match_record_ids = 3;
+        }
         required ChampionLevel level = 1;
-        repeated string club_ids = 2;
+        repeated _Club clubs = 2;
         optional int64 match_at = 3;
     }
 
