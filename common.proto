@@ -3,6 +3,7 @@ package Dianjing.protocol;
 enum GamePlatform {
     PLATFORM_1SDK = 1;
     PLATFORM_IOS = 2;
+    PLATFORM_STARS_CLOUD = 3;
 }
 
 enum NextOperate {

@@ -40,6 +40,8 @@ message CreateClubRequest {
 message CreateClubResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Club club = 3;
+    optional int64 create_at = 4;
 }
 
 
