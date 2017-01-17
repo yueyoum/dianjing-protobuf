@@ -8,9 +8,10 @@ message RegularAccount {
 
 // 第三方帐号
 message ThirdAccount {
-    required string platform = 1;       // 平台
-    required string uid = 2;            // 第三方帐号在平台的ID
-    optional string param = 3;          // 其他参数
+    required string provider = 1;
+    required string platform = 2;       // 平台
+    required string uid = 3;            // 第三方帐号在平台的ID
+    repeated string param = 4;          // 其他参数
 }
 
 message Account {
