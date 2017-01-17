@@ -8,10 +8,10 @@ message RegularAccount {
 
 // 第三方帐号
 message ThirdAccount {
-    required string provider = 1;
+    required string provider = 1;       // '1sdk', 'stars-cloud'
     required string platform = 2;       // 平台
     required string uid = 3;            // 第三方帐号在平台的ID
-    repeated string param = 4;          // 其他参数
+    optional string param = 4;          // 其他参数, 只有一个参数，直接填充，多个用json格式
 }
 
 message Account {
