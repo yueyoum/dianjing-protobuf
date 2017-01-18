@@ -14,10 +14,9 @@ message PurchaseNotify {
 
 message PurchaseVerifyRequest {
     required bytes session = 1;
-    required GamePlatform platform = 2;
     // 如果是 1sdk， param 为空
     // 如果是 ios, param 是苹果返回的 receipt
-    required string param = 3;
+    required string param = 2;
 }
 
 enum PurchaseStatus {

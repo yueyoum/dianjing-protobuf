@@ -1,5 +1,6 @@
 package Dianjing.protocol;
 
+
 // 自有帐号
 message RegularAccount {
     required string email = 1;
@@ -8,19 +9,13 @@ message RegularAccount {
 
 // 第三方帐号
 message ThirdAccount {
-    required string provider = 1;       // '1sdk', 'stars-cloud'
-    required string platform = 2;       // 平台
-    required string uid = 3;            // 第三方帐号在平台的ID
-    optional string param = 4;          // 其他参数, 只有一个参数，直接填充，多个用json格式
+    required string platform = 1;       // 平台
+    required string uid = 2;            // 第三方帐号在平台的ID
+    optional string param = 3;          // 其他参数, 只有一个参数，直接填充，多个用json格式
 }
 
 message Account {
-    enum AccountType {
-        REGULAR = 1;
-        THIRD = 2;
-    }
-
-    required AccountType tp = 1;
+    required string provider = 1; // "debug", "ios", 1sdk, stars-cloud
     optional RegularAccount regular = 2;
     optional ThirdAccount third = 3;
 }
