@@ -15,6 +15,7 @@ message FormationSlot {
     optional string staff_id = 4;   // 员工唯一ID
     optional int32 unit_id = 5;     // 兵种ID
     optional int32 staff_oid = 6;   // 员工原始ID
+    optional int32 policy = 7;
 }
 
 message FormationSlotNotify {
