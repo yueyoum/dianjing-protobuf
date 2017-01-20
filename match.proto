@@ -97,7 +97,7 @@ message ClubMatchLogResponse {
     required int32 ret = 1;
     required bytes session = 2;
 
-    required ClubMatch match = 3;
-    required bytes record = 4;
+    optional ClubMatch match = 3;
+    optional bytes record = 4;
 }
 
