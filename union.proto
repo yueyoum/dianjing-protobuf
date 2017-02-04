@@ -239,6 +239,7 @@ message UnionHarassResponse {
     required bytes session = 2;
     optional int32 explore_point = 3; // 对方减少
     optional Drop drop = 4;
+    optional int32 my_explore_point = 5;    // 自己增加
 }
 
 message UnionHarassBuyTimesRequest {
