@@ -1,0 +1,142 @@
+package Dianjing.protocol;
+
+import "common.proto";
+import "formation.proto";
+import "plunder.proto";
+
+// 昨日竞技场胜率
+message LeaderboardArenaWinningNotify {
+    required bytes session = 1;
+    repeated FormationSlot slots = 2;
+}
+
+// 昨日掠夺胜率
+message LeaderboardPlunderWinningNotify {
+    required bytes session = 1;
+    repeated PlunderFormation formation = 2;
+}
+
+// 上轮争霸赛
+message LeaderboardChampionshipNotify {
+    required bytes session = 1;
+    repeated PlunderFormation formation = 2;
+}
+
+// 膜拜
+message LeaderboardWorshipNotify {
+    required bytes session = 1;
+    required bool can_worship = 2;  // 是否可以膜拜
+}
+
+message LeaderboardWorshipRequest {
+    required bytes session = 1;
+}
+
+message LeaderboardWorshipResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+// 聊天
+message LeaderboardChatMessage {
+    required string msg_id = 1;     // 消息id
+    required string club_id = 2;
+    required string name = 3;
+    required string content = 4;
+    required int64 timestamp = 5;   // 根据这个排序
+    required int32 approval = 6;    // 赞 的数量
+}
+
+message LeaderboardArenaChatNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated LeaderboardChatMessage messages = 3;
+}
+
+message LeaderboardArenaChatRemoveNotify {
+    required bytes session = 1;
+    required string msg_id = 2;
+}
+
+message LeaderboardPlunderChatNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated LeaderboardChatMessage messages = 3;
+}
+
+message LeaderboardPlunderChatRemoveNotify {
+    required bytes session = 1;
+    required string msg_id = 2;
+}
+
+message LeaderboardChampionshipChatNotify {
+    required bytes session = 1;
+    required Action act = 2;
+    repeated LeaderboardChatMessage messages = 3;
+}
+
+message LeaderboardChampionshipChatRemoveNotify {
+    required bytes session = 1;
+    required string msg_id = 2;
+}
+
+message LeaderboardArenaChatRequest {
+    required bytes session = 1;
+    required string content = 2;
+}
+
+message LeaderboardAreaChatResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message LeaderboardArenaChatApprovalRequest {
+    required bytes session = 1;
+    required string msg_id = 2;
+}
+
+message LeaderboardAreaChatApprovalResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message LeaderboardPlunderChatRequest {
+    required bytes session = 1;
+    required string content = 2;
+}
+
+message LeaderboardPlunderChatResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message LeaderboardPlunderChatApprovalRequest {
+    required bytes session = 1;
+    required string msg_id = 2;
+}
+
+message LeaderboardPlunderChatApprovalResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message LeaderboardChampionshipChatRequest {
+    required bytes session = 1;
+    required string content = 2;
+}
+
+message LeaderboardChampionshipChatResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message LeaderboardChampionshipChatApprovalRequest {
+    required bytes session = 1;
+    required string msg_id = 2;
+}
+
+message LeaderboardChampionshipChatApprovalResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+

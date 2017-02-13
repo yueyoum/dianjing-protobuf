@@ -486,5 +486,32 @@
         <protocol name = "ChampionLevelSyncRequest" type = "5017" command = "/game/champion/level/sync/" />
         <protocol name = "ChampionLevelSyncResponse" type = "5018" reqtype = "5017" />
     </file>
+
+    <file name = "leaderboard">
+        <protocol name = "LeaderboardArenaWinningNotify" type = "6000" />
+        <protocol name = "LeaderboardPlunderWinningNotify" type = "6001" />
+        <protocol name = "LeaderboardChampionshipNotify" type = "6002" />
+        <protocol name = "LeaderboardWorshipNotify" type = "6003" />
+        <protocol name = "LeaderboardWorshipRequest" type = "6004" command = "/game/leaderboard/worship/" />
+        <protocol name = "LeaderboardWorshipResponse" type = "6005" reqtype = "6004" />
+        <protocol name = "LeaderboardArenaChatNotify" type = "6006" />
+        <protocol name = "LeaderboardArenaChatRemoveNotify" type = "6007" />
+        <protocol name = "LeaderboardPlunderChatNotify" type= "6008" />
+        <protocol name = "LeaderboardPlunderChatRemoveNotify" type = "6009" />
+        <protocol name = "LeaderboardChampionshipChatNotify" type = "6010" />
+        <protocol name = "LeaderboardChampionshipChatRemoveNotify" type = "6011" />
+        <protocol name = "LeaderboardArenaChatRequest" type = "6012" command = "/game/leaderboard/arena/chat/" />
+        <protocol name = "LeaderboardAreaChatResponse" type = "6013" reqtype = "6012" />
+        <protocol name = "LeaderboardArenaChatApprovalRequest" type = "6014" command = "/game/leaderboard/arena/approval/" />
+        <protocol name = "LeaderboardAreaChatApprovalResponse" type = "6015" reqtype = "6014" />
+        <protocol name = "LeaderboardPlunderChatRequest" type = "6016" command = "/game/leaderboard/plunder/chat/" />
+        <protocol name = "LeaderboardPlunderChatResponse" type = "6017" reqtype = "6016" />
+        <protocol name = "LeaderboardPlunderChatApprovalRequest" type = "6018" command = "/game/leaderboard/plunder/approval/" />
+        <protocol name = "LeaderboardPlunderChatApprovalResponse" type = "6019" reqtype = "6018" />
+        <protocol name = "LeaderboardChampionshipChatRequest" type = "6020" command = "/game/leaderboard/championship/chat/" />
+        <protocol name = "LeaderboardChampionshipChatResponse" type = "6021" reqtype = "6020" />
+        <protocol name = "LeaderboardChampionshipChatApprovalRequest" type = "6022" command = "/game/leaderboard/championship/approval/" />
+        <protocol name = "LeaderboardChampionshipChatApprovalResponse" type = "6023" reqtype = "6022" />
+    </file>
 </namespace>
 
