@@ -3,23 +3,37 @@ package Dianjing.protocol;
 import "common.proto";
 import "formation.proto";
 import "plunder.proto";
+import "club.proto";
 
 // 昨日竞技场胜率
 message LeaderboardArenaWinningNotify {
+    message ArenaClub {
+        required Club club = 1;
+        repeated FormationSlot slots = 2;
+        
+    }
     required bytes session = 1;
-    repeated FormationSlot slots = 2;
+    repeated ArenaClub clubs = 2;
 }
 
 // 昨日掠夺胜率
 message LeaderboardPlunderWinningNotify {
+    message PlunderClub {
+        required Club club = 1;
+        repeated PlunderFormation formation = 2;
+    }
     required bytes session = 1;
-    repeated PlunderFormation formation = 2;
+    repeated PlunderClub clubs = 2;
 }
 
 // 上轮争霸赛
 message LeaderboardChampionshipNotify {
+    message ChampionshipClub {
+        required Club club = 1;
+        repeated PlunderFormation formation = 2;
+    }
     required bytes session = 1;
-    repeated PlunderFormation formation = 2;
+    repeated ChampionshipClub clubs = 2;
 }
 
 // 膜拜
