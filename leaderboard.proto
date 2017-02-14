@@ -11,7 +11,7 @@ message LeaderboardArenaWinningNotify {
     message ArenaClub {
         required Club club = 1;
         repeated FormationSlot slots = 2;
-        
+        required float point = 3;
     }
     required bytes session = 1;
     repeated ArenaClub clubs = 2;
@@ -22,6 +22,7 @@ message LeaderboardPlunderWinningNotify {
     message PlunderClub {
         required Club club = 1;
         repeated PlunderFormation formation = 2;
+        required float point = 3;
     }
     required bytes session = 1;
     repeated PlunderClub clubs = 2;
