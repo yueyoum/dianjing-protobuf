@@ -4,6 +4,7 @@ import "common.proto";
 import "formation.proto";
 import "plunder.proto";
 import "club.proto";
+import "package.proto";
 
 // 昨日竞技场胜率
 message LeaderboardArenaWinningNotify {
@@ -49,6 +50,7 @@ message LeaderboardWorshipRequest {
 message LeaderboardWorshipResponse {
     required int32 ret = 1;
     required bytes session = 2;
+    optional Drop drop = 3;
 }
 
 // 聊天
@@ -99,7 +101,7 @@ message LeaderboardArenaChatRequest {
     required string content = 2;
 }
 
-message LeaderboardAreaChatResponse {
+message LeaderboardArenaChatResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }
@@ -109,7 +111,7 @@ message LeaderboardArenaChatApprovalRequest {
     required string msg_id = 2;
 }
 
-message LeaderboardAreaChatApprovalResponse {
+message LeaderboardArenaChatApprovalResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }

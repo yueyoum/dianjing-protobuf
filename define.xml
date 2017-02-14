@@ -501,9 +501,9 @@
         <protocol name = "LeaderboardChampionshipChatNotify" type = "6010" />
         <protocol name = "LeaderboardChampionshipChatRemoveNotify" type = "6011" />
         <protocol name = "LeaderboardArenaChatRequest" type = "6012" command = "/game/leaderboard/arena/chat/" />
-        <protocol name = "LeaderboardAreaChatResponse" type = "6013" reqtype = "6012" />
+        <protocol name = "LeaderboardArenaChatResponse" type = "6013" reqtype = "6012" />
         <protocol name = "LeaderboardArenaChatApprovalRequest" type = "6014" command = "/game/leaderboard/arena/approval/" />
-        <protocol name = "LeaderboardAreaChatApprovalResponse" type = "6015" reqtype = "6014" />
+        <protocol name = "LeaderboardArenaChatApprovalResponse" type = "6015" reqtype = "6014" />
         <protocol name = "LeaderboardPlunderChatRequest" type = "6016" command = "/game/leaderboard/plunder/chat/" />
         <protocol name = "LeaderboardPlunderChatResponse" type = "6017" reqtype = "6016" />
         <protocol name = "LeaderboardPlunderChatApprovalRequest" type = "6018" command = "/game/leaderboard/plunder/approval/" />
