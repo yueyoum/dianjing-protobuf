@@ -77,9 +77,14 @@ message ChallengeMatchReportResponse {
 }
 
 // 扫荡
+enum ChallengeSweepType {
+    CHALLENGE_SWEEP_TYPE_ONE = 1;
+    CHALLENGE_SWEEP_TYPE_TWO = 2;
+}
 message ChallengeSweepRequest {
     required bytes session = 1;
     required int32 id = 2;
+    required ChallengeSweepType tp = 3;
 }
 
 message ChallengeSweepResponse {
