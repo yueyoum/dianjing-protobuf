@@ -54,3 +54,43 @@ message ActivityNewPlayerDailyBuyResponse {
     optional Drop drop = 3;
 }
 
+
+// 在线时长
+message ActivityOnlineTimeNotify {
+    required bytes session = 1;
+    required int32 id = 2;  // 可领奖ID， 0表示已经全部领完了
+}
+
+message ActivityOnlineTimeGetRewardRequest {
+    required bytes session = 1;
+}
+
+message ActivityOnlineTimeGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+// 冲关奖励
+message ActivityChallengeNotify {
+    message ChallengeItem {
+        required int32 id = 1;
+        required ActivityStatus status = 2;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated ChallengeItem items = 3;
+}
+
+message ActivityChallengeGetRewardRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message ActivityChallengeGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+

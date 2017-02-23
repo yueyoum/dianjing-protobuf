@@ -388,6 +388,13 @@
         <protocol name = "ActivityNewPlayerDailyBuyRequest" type = "4604" command = "/game/activity/newplayer/dailybuy/" />
         <protocol name = "ActivityNewPlayerDailyBuyResponse" type = "4605" reqtype = "4604" />
 
+        <protocol name = "ActivityOnlineTimeNotify" type = "4610" />
+        <protocol name = "ActivityOnlineTimeGetRewardRequest" type = "4611" command = "/game/activity/onlinetime/getreward/" />
+        <protocol name = "ActivityOnlineTimeGetRewardResponse" type = "4612" reqtype = "4611" />
+        <protocol name = "ActivityChallengeNotify" type = "4613" />
+        <protocol name = "ActivityChallengeGetRewardRequest" type = "4614" command = "/game/activity/challenge/getreward/" />
+        <protocol name = "ActivityChallengeGetRewardResponse" type = "4615" reqtype = "4614" />
+
     </file>
 
     <file name = "plunder">
