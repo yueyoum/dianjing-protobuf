@@ -45,3 +45,15 @@ message LoginResponse {
     optional Account account = 3;
 }
 
+
+// 个推client id
+message GeTuiClientIdRequest {
+    required bytes session = 1;
+    required string client_id = 2;
+}
+
+message GeTuiClientIdResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+

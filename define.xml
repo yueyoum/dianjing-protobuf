@@ -22,6 +22,8 @@
         <protocol name = "RegisterResponse" type = "201" reqtype = "200" />
         <protocol name = "LoginRequest" type = "202" command = "/game/account/login/" />
         <protocol name = "LoginResponse" type = "203" reqtype = "202" />
+        <protocol name = "GeTuiClientIdRequest" type = "210" command = "/game/account/getui/clientid/" />
+        <protocol name = "GeTuiClientIdResponse" type = "211" reqtype = "210" />
     </file>
 
     <file name = "match">
