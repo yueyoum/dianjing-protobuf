@@ -4,13 +4,15 @@ import "common.proto";
 
 message Server {
     enum ServerStatus {
-        NEW = 1;
+        NORMAL = 1;
         HOT = 2;
+        MAINTAIN = 3;
     }
 
     required int32 id = 1;
     required string name = 2; 
     required ServerStatus status = 3;
+    required bool is_new = 4;
 }
 
 
