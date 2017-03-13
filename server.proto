@@ -24,6 +24,8 @@ message GetServerListResponse {
     required int32 ret = 1;
     required bytes session = 2;
     repeated Server servers = 3;
+    required int32 recommend_id = 4;
+    repeated int32 recent_ids = 5;
 }
 
 message StartGameRequest {
