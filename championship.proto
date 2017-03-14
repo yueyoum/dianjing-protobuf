@@ -8,6 +8,7 @@ import "formation.proto";
 message ChampionFormationNotify {
     required bytes session = 1;
     repeated PlunderFormation formation = 2;
+    repeated SkillSequence skill_sequence = 3;
 }
 
 message ChampionFormationSetStaffRequest {
@@ -45,6 +46,17 @@ message ChampionFormationSetPositionResponse {
     required bytes session = 2;
 }
 
+message ChampionSkillSequenceSetStaffRequest {
+    required bytes session = 1;
+    required int32 way = 2;
+    required int32 seq_id = 3;
+    required string staff_id = 4;
+}
+
+message ChampionSkillSequenceSetStaffResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
 
 message ChampionClub {
     required string id = 1;

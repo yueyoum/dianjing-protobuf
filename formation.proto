@@ -2,6 +2,24 @@ package Dianjing.protocol;
 
 import "common.proto";
 
+// 技能序列
+message SkillSequence {
+    required int32 id = 1; //序列ID
+    repeated string staff_id = 2;
+}
+
+message SkillSequenceSetStaffRequest {
+    required bytes session = 1;
+    required int32 seq_id = 2;
+    required string staff_id = 3;
+}
+
+message SkillSequenceSetStaffResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+
 enum FormationSlotStatus {
     FORMATION_SLOT_NOT_OPEN = 0;    // 没有开启
     FORMATION_SLOT_EMPTY = 1;       // 开启了，但是为空
@@ -22,6 +40,7 @@ message FormationSlotNotify {
     required bytes session = 1;
     required Action act = 2;
     repeated FormationSlot slots = 3;
+    repeated SkillSequence skill_sequence = 4;
 }
 
 message FormationNotify {

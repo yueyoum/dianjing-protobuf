@@ -10,6 +10,7 @@ message PlunderFormation {
     required int32 way = 1;
     repeated FormationSlot formation = 2;
     required int32 power = 3;
+    repeated SkillSequence skill_sequence = 4;
 }
 
 // 阵型
@@ -38,6 +39,18 @@ message PlunderFormationSetUnitRequest {
 }
 
 message PlunderFormationSetUnitResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
+message PlunderSkillSequenceSetStaffRequest {
+    required bytes session = 1;
+    required int32 way = 2;
+    required int32 seq_id = 3;
+    required string staff_id = 4;
+}
+
+message PlunderSkillSequenceSetStaffResponse {
     required int32 ret = 1;
     required bytes session = 2;
 }

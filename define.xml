@@ -184,6 +184,8 @@
         <protocol name = "FormationUseResponse" type = "3212" reqtype = "3211" />
 
         <protocol name = "FormationSlotNotify" type = "3215" />
+        <protocol name = "SkillSequenceSetStaffRequest" type = "3216" command = "/game/formation/skillsequence/setstaff/" />
+        <protocol name = "SkillSequenceSetStaffResponse" type = "3217" reqtype = "3216" />
     </file>
 
     <file name = "talent">
@@ -442,6 +444,9 @@
         <protocol name = "PlunderDailyRewardNotify" type = "4757" />
         <protocol name = "PlunderDailyRewardGetRequest" type = "4758" command = "/game/plunder/dailyreward/get/" />
         <protocol name = "PlunderDailyRewardGetResponse" type = "4759" reqtype = "4758" />
+
+        <protocol name = "PlunderSkillSequenceSetStaffRequest" type = "4760" command = "/game/plunder/skillsequence/setstaff/" />
+        <protocol name = "PlunderSkillSequenceSetStaffResponse" type = "4761" reqtype = "4760" />
     </file>
 
     <file name = "party">
@@ -494,6 +499,9 @@
         <protocol name = "ChampionGroupSyncResponse" type = "5016" reqtype = "5015" />
         <protocol name = "ChampionLevelSyncRequest" type = "5017" command = "/game/champion/level/sync/" />
         <protocol name = "ChampionLevelSyncResponse" type = "5018" reqtype = "5017" />
+
+        <protocol name = "ChampionSkillSequenceSetStaffRequest" type = "5019" command = "/game/champion/skillsequence/setstaff/" />
+        <protocol name = "ChampionSkillSequenceSetStaffResponse" type = "5020" reqtype = "5019" />
     </file>
 
     <file name = "leaderboard">

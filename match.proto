@@ -1,6 +1,7 @@
 package Dianjing.protocol;
 
 import "club.proto";
+import "formation.proto";
 
 // 俱乐部比赛
 message ClubMatch {
@@ -20,6 +21,7 @@ message ClubMatchResult {
 message ClubTroop {
     required Club club = 1;
     repeated Troop troop = 2;
+    repeated SkillSequence sequence = 3;
 }
 
 message Troop
