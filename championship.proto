@@ -50,7 +50,8 @@ message ChampionSkillSequenceSetStaffRequest {
     required bytes session = 1;
     required int32 way = 2;
     required int32 seq_id = 3;
-    required string staff_id = 4;
+    required int32 index = 4;    // 0,1,2
+    required string staff_id = 5;
 }
 
 message ChampionSkillSequenceSetStaffResponse {

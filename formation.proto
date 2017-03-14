@@ -11,7 +11,8 @@ message SkillSequence {
 message SkillSequenceSetStaffRequest {
     required bytes session = 1;
     required int32 seq_id = 2;
-    required string staff_id = 3;
+    required int32 index = 3;    // 0,1,2
+    required string staff_id = 4;
 }
 
 message SkillSequenceSetStaffResponse {
