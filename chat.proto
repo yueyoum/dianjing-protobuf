@@ -33,6 +33,7 @@ message ChatSendRequest {
         SET_MONEY = 2;          // 设置代币, id,amount;id,amount...
         SET_CLUB_LEVEL = 3;     // 设置俱乐部等级
         OPEN_ALL_CHALLENGE = 4; // 开启所有的挑战赛
+        TEST_PURCHASE = 5;      // 充值
     }
 
     required bytes session = 1;
