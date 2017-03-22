@@ -94,3 +94,68 @@ message ActivityChallengeGetRewardResponse {
     optional Drop drop = 3;
 }
 
+// 每日充值
+message ActivityPurchaseDailyNotify {
+    required bytes session = 1;
+    required Drop items = 2;
+    required ActivityStatus status = 3;
+}
+
+message ActivityPurchaseDailyGetRewardRequest {
+    required bytes session = 1;
+}
+
+message ActivityPurchaseDailyGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+// 连续充值
+message ActivityPurchaseContinuesNotify {
+    message PurchaseContinuesItem {
+        required int32 id = 1;
+        required ActivityStatus status = 2;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    repeated PurchaseContinuesItems items = 3;
+}
+
+message ActivityPurchaseContinuesGetRewardRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message ActivityPurchaseContinuesGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+
+
+// 等级成长
+message ActivityLevelGrowingNotify {
+    message LevelGrowingItem {
+        required int32 id = 1;
+        required ActivityStatus status = 2;
+    }
+
+    required bytes session = 1;
+    required Action act = 2;
+    required bool has_joined = 3;
+    repeated LevelGrowingItem items = 4;
+}
+
+message ActivityLevelGrowingGetRewardRequest {
+    required bytes session = 1;
+    required int32 id = 2;
+}
+
+message ActivityLevelGrowingGetRewardResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+    optional Drop drop = 3;
+}
+

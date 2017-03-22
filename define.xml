@@ -399,6 +399,16 @@
         <protocol name = "ActivityChallengeGetRewardRequest" type = "4614" command = "/game/activity/challenge/getreward/" />
         <protocol name = "ActivityChallengeGetRewardResponse" type = "4615" reqtype = "4614" />
 
+        <protocol name = "ActivityPurchaseDailyNotify" type = "4616" />
+        <protocol name = "ActivityPurchaseDailyGetRewardRequest" type = "4617" command = "/game/activity/purchasedaily/getreward/" />
+        <protocol name = "ActivityPurchaseDailyGetRewardResponse" type = "4618" reqtype = "4617" />
+        <protocol name = "ActivityPurchaseContinuesNotify" type = "4619" />
+        <protocol name = "ActivityPurchaseContinuesGetRewardRequest" type = "4620" command = "/game/activity/purchasecontinues/getreward/" />
+        <protocol name = "ActivityPurchaseContinuesGetRewardResponse" type = "4621" reqtype = "4620" />
+        <protocol name = "ActivityLevelGrowingNotify" type = "4622" />
+        <protocol name = "ActivityLevelGrowingGetRewardRequest" type = "4623" command = "/game/activity/levelgrowing/getreward/" />
+        <protocol name = "ActivityLevelGrowingGetRewardResponse" type = "4624" reqtype = "4623" />
+
     </file>
 
     <file name = "plunder">
