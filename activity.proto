@@ -120,7 +120,7 @@ message ActivityPurchaseContinuesNotify {
 
     required bytes session = 1;
     required Action act = 2;
-    repeated PurchaseContinuesItems items = 3;
+    repeated PurchaseContinuesItem items = 3;
 }
 
 message ActivityPurchaseContinuesGetRewardRequest {
