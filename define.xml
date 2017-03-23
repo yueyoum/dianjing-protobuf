@@ -408,6 +408,8 @@
         <protocol name = "ActivityLevelGrowingNotify" type = "4622" />
         <protocol name = "ActivityLevelGrowingGetRewardRequest" type = "4623" command = "/game/activity/levelgrowing/getreward/" />
         <protocol name = "ActivityLevelGrowingGetRewardResponse" type = "4624" reqtype = "4623" />
+        <protocol name = "ActivityLevelGrowingJoinRequest" type = "4625" command = "/game/activity/levelgrowing/join/" />
+        <protocol name = "ActivityLevelGrowingJoinResponse" type = "4626" reqtype = "4625" />
 
     </file>
 

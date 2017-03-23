@@ -148,6 +148,15 @@ message ActivityLevelGrowingNotify {
     repeated LevelGrowingItem items = 4;
 }
 
+message ActivityLevelGrowingJoinRequest {
+    required bytes session = 1;
+}
+
+message ActivityLevelGrowingJoinResponse {
+    required int32 ret = 1;
+    required bytes session = 2;
+}
+
 message ActivityLevelGrowingGetRewardRequest {
     required bytes session = 1;
     required int32 id = 2;
